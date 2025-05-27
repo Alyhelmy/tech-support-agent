@@ -1,0 +1,181 @@
+1. Connect to the VeriBalance PC.
+
+  - If you cannot connect, or ping the PC see You Cannot Connect, or Ping VeriBalance PC/PC Has No Power/No Display.
+
+  - Important:  If the store is stating that they installed a check scanner and need to have the VB license renewed, follow the steps below to force the red license screen to display and then enter a new license number.  Otherwise, proceed directly to step 2 to generate a new license number. 
+
+Utilities-> Setup->
+
+
+
+Setup->Database
+
+
+
+Database->Configure->Enter New Software Key
+
+
+
+Add New License-
+
+
+
+ 
+
+2.  You can also go to licensing.balanceinnovations.com/ and get the license number from here.
+
+Note:  If you have issues with the website, you can call or have the store call Balance's Customer Care line at 913-322-5790.
+
+3.  Ask the store associate if they know their customer number and password, if not, reference the chart below, give the store their id/password and advise to call the phone # on the screen, which should be: (913) 322-5750.
+
+- The call will be directed to a Balance Innovations Support Tech who can then provide the license number.
+
+Note: Make sure to try generating license number as per steps provided in step 1 bullet point and Step 2, If both the options won’t work then only follow Step 3 and call BI for assistance
+
+ 
+
+ 
+
+Division
+
+ Customer#  
+
+ Password  
+
+ Atlanta
+
+285
+
+ 576
+
+ Central
+
+463
+
+ 576
+
+ Cincinnati
+
+246
+
+ 576
+
+ Columbus
+
+473
+
+ 576
+
+ Delta
+
+636
+
+ 576
+
+ Dallas
+
+332
+
+ 576
+
+ Dillons
+
+345
+
+ 576
+
+ Food4Less
+
+366
+
+ 576
+
+ Food4Less (Mid-West)
+
+371
+
+ 173
+
+ Fred Meyer
+
+350
+
+ 576
+
+ Frys
+
+379
+
+ 576
+
+ Houston
+
+768
+
+ 576
+
+ Jay C
+
+592
+
+ 576
+
+ King Sooper
+
+546
+
+ 576
+
+ Louisville
+
+568
+
+ 576
+
+ Mid-Atlantic
+
+625
+
+ 576
+
+ Michigan
+
+483
+
+ 576
+
+ Nashville
+
+637
+
+ 576
+
+ QFC
+
+782
+
+ 576
+
+ Ralphs
+
+567
+
+ 576
+
+ Roundy's
+
+759
+
+ 957
+
+ Smith's
+
+764
+
+ 576
+
+ Lab (Store #: 9901)
+
+768
+
+ 576

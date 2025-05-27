@@ -1,0 +1,135 @@
+Printer Queue Is Backed Up
+
+Note:  If this is a Fred Meyer location, see Controller Printing At A Fred Meyer Store
+
+1.  Log into the acting master controller
+
+2.  Go into 7.  Command Mode
+
+3.  At the C:> type in Print
+
+4.  It will either show you jobs in queue or show you the print queue is empty.  If there are jobs in Queue, you can assume the report is stuck.
+
+5.  If there are jobs stuck you can perform Print -h and then Print -a  to activate queue and see if the jobs start printing.
+
+6. Log into TUNA>Store segment>F9 to sort and find your printer and highlight>F6>F8 to send a test page. and try and send a test page.
+
+7.  If this doesn't work, troubleshoot the printer.  There may be a possibility the controller will need to be coldbooted.  Warm transfer call to Frontend Tier 2 to coldboot the controller.
+
+See:  How to Cancel Print Queues on a POS Controller And Print Commands
+
+ 
+
+Verify Store Close Completed:
+1. Connect to the Master Controller.
+
+2. Select 1. ACE Menu <Enter>
+
+3. Press A For Accounting.
+
+4. Press Alt+ O to access the close menu. (If that does not do anything try F10 - O)
+
+5. Arrow down to "System Status" <Enter>
+
+  - On the System Status page look to see if the "Last Close" is for today's date and "Close in Progress" = N.
+
+  - If the close did not complete for today's date, go to background application Acecsmll and see if there are error messages, then proceed to Basic Store Close Troubleshooting.
+
+  - If the Auto Close has completed, press F3 to exit back to the System Menu.
+
+
+Reprint Auto Close Reports:
+Note - it is OK to ask the store if they want to learn how to do this in the future, and walk them through it.
+
+1. Select 1. ACE Main Menu <Enter>
+
+2. Press R for Reports.
+
+3. Press Alt + R to access the Reports menu in the upper left. (If that does not do anything try F10 - R)
+
+ 
+
+
+
+See: POS Auto Close Reports--What Reports Do I Run? To find out what report to print for what division.
+
+4. Arrow down to (or Press E for) "Execute Auto Reports" <Enter>
+
+5. Arrow down to the report you want to print.
+
+  - Examples:
+
+The "Daily" close report name will be [Division]DCLS;
+
+The "Weekly" close report name will be [Division]WCLS.
+
+(See linked entry at bottom for the correct report name to run)
+
+ 
+
+Example is SMIDCLS and SMIWCLS
+
+ 
+
+
+
+ 
+
+6. Press <Enter> to select the report.
+
+7. Press <Enter> to execute the report.
+
+--Stay on this screen until script status (at bottom) shows COMPLETE. Otherwise you, or the store, will have to restart the process.
+
+8. Press F3 to exit back to the System Main Menu.
+
+
+Fonts Too Large, or Printer requesting Larger Paper Size like D2:
+1. Power off the printer.
+
+2. Hold down Return + Stop buttons and power on the printer while holding these buttons down.
+
+3. Keep holding the Return + Stop buttons down until Activate PPDS appears.
+
+  - If it says "Deactivating PPDS Mode", then repeat the steps above.
+
+Note:  These steps may not work on newer printers like Ricoh 5300's
+
+ 
+
+New!  If Reports Are Still Not Printing Or there Is An Issue With Configuration Setup
+Frontend Tier 2 Only
+
+1.  Navigate to sdt1 directory on the acting master.
+
+2.  Type “ed adxiomcf.dat”
+
+3.  Add “-T 5” BEFORE the second “:” for each of the lines: (note make sure the T is upper case and a space after the r4310prn2)
+
+
+
+
+4.  <Ctrl> <k> <s> to Save
+
+5.  <Ctrl <k> <q> to Quit
+
+6.  The controller will need to be cold booted to take the changes.
+
+Note:  There are some possible side effects with this configuration (-T 5) that sometimes the report will print over and over again because the controller receives the print completed successfully from the print server before the print job clears from the queue.
+
+The (-T) parameter in the printer configurations which was added because of the problems with controllers not receiving end of job responses from the destination printer that cause print jobs to periodically not print and remain permanently stuck in the controller's print queue
+
+7.  If still having issues, Frontend Tier 2 escalate to APP-POS.
+
+ 
+
+If An ACE AUTO REPORTS Are Missing 
+1.  If the store says they are missing an Auto report, they need to contact their Enterprise Technology Lead (ETL) to get this resolved.  Missing Auto reports on the ACE controller are handled at Division level.
+
+Note:  Some stores may say that the In-Store Audit Report did not print with their close.  You can show the store how to reprint this. 
+See:  In-Store Audit Report Not Printing
+
+ 
+
+Duplex Printing
+Some stores may ask about duplex (double-sided) printing for ACE reports.  In many Ricoh printers, this option by default is turned off.  You can login into Ricoh printers and go to Configuration>Basic Printer Setup>and look for the Duplex option and you will get 3 choices:  Off, Long edge bind, Short edge bind.  You change it to Long Edge Bind and this should work.

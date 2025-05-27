@@ -1,0 +1,168 @@
+M424 Skimmer Tool
+Stores now have an M424 Skimmer tool that tests the PINpad for skimmers.  Here is the instructions the stores receive.  False positives on the M424's can sometimes be due to the fact that there is some wiggle room in the security mounts that are placed in.  If an associate inserts the detection tool and the terminal is not seated as far down as possible in the housing, it can generate a false positive.  The instructions above outlines that the store user must push the terminal down while inserting the tool to make sure there are no false positives.  Follow up with the store that they followed the instructions correctly.  If the test fails have them have another associate or manager double check and run the test again repeating the checks and running the test again.  
+
+Ensure there are no gaps on the bottom of the stand.
+Wait until the machine tells you to insert the tool
+While applying counter pressure downwards, slowly insert the tool into the chip reader
+If the test still fails, have them do a physical check on the PINPad to make sure it doesn't looked tampered with.  After doing the
+
+physical check, and there is something not right, follow the appropriate docs.
+
+Error "Tamper Detected and Cleared Inspect Unit " or PIN pad is Missing / Stolen
+
+POS: PIN pad Tampered with or Error " B735 PIN pad Disabled Call Support Center"
+
+
+If there doesn't appear to be anything wrong the PINPad but continues to fail the test, dispatch to have a technician
+
+inspect the PINPad.  When the technician comes to check, they should test the terminal in the stand, then out of the stand,
+
+to see if there is an issue with the terminal-stand configuration.  If that’s not the issue, they check the wiring of the terminal
+
+to ensure that checks out and tests again.  Finally, if needed, replace the terminal and test again to ensure a clear check while in
+
+the stand.
+
+ 
+
+ 
+
+PINpad Reboot
+
+1.  To get into the PINpad menu hold down 1-5-9 at the same time.
+
+Note:  If the PINpad doesn't respond to 1-5-9, hold down the red X button and it should get you to where you can reboot the PINpad.
+
+Also, every time you perform a 1-5-9 reset it automatically does a calibration on every boot up.
+
+
+
+
+2.  Tap the Control Panel option.
+
+
+
+
+
+3.  Tap the Sysmode option
+
+
+
+
+
+4.  From the above screen you can either hit the Red X on the key pad or the back arrow on the top left of the screen.
+
+
+
+
+
+5.  Select Reboot.  This fixes most issues.  If not, try sending a 9 load to the register.
+
+ 
+
+"No Command"  Error
+1.  Try the PINPad reboot above.
+
+2.  If this does not resolve, 9-Load the register
+
+3.  Test PINpad out, if this does not resolve, the PINpad will need to be replaced.
+
+ 
+
+When a Tech Calls in Because They Just Replaced a PINpad
+1.  When a tech calls in to replace an M424 PINpad, you ONLY need to update the new MAC address in TUNA if they swapped out the PINpad brick (see below pic of brick and instructions).
+
+2.  You will still need to find the dispatched incident and add to it the old and new MAC address.
+
+3.  Once this is done you can reset security.  See:  PIN pad Replacement Procedure--How to Reset PIN pad Security for MX915, M424 and E355   
+
+ 
+
+ 
+
+How to Find The MAC Address And Update TUNA
+Have the user:
+
+1. Get the MAC address from the sticker on the brick or the PINpad itself.
+
+
+
+Note:  Another way to find the MAC address on the PINpad is to hold down 1-5-9 on the PINpad, go into the menu
+
+Control Panel>Sys Mode>Supervisor (enter password 373826273)>Android Settings (3 dot symbol in the upper righthand corner)>System (at the bottom)>About Device>Status>Ethernet MAC
+
+ 
+
+2. Log into TUNA using PSY or PuTTy.  See How to Access and Navigate TUNA.  Navigate to the POS and Fuel segment.
+
+3.  Scroll down until you find the PINpad's MAC address in the far-right column. 
+
+4.  Press Ctrl-D to ping the brick.  Press Ctrl-C to stop pinging.  
+
+5.  If the brick is actively on the network the results will look similar to:
+
+     64 bytes from 10.160.205.66: icmp_seq=7 ttl=63 time=0.726 ms
+
+6.  If it is not pinging, check the cable connections.  While confirming the connections, have the user reseat the cable ends.
+
+  - Confirm an ethernet cable connects the brick to the wall outlet.
+
+  - Confirm the brick cable connects the brick to the pinpad.
+
+  - Confirm a USB cable connects the brick to the cash register.
+
+7.  If the pinpad is not pinging and the MAC addresses on the brick and in TUNA match, dispatch the appropriate vendor.
+
+8.  If the pinpad is pinging and the MAC addresses on the brick and in TUNA match, have the user test it.
+
+9.  If any issues still exist, continue with the other troubleshooting sections in this article.
+
+ 
+
+Turning off POE in Tuna
+
+
+Important Note:  You must verify if this is an MX915 or M424 Go Here for image.  
+
+1.  In the case that a PINpad is frozen and does not respond to 1-5-9 or holding down the red X, we need to make the PINpad lose power. 
+
+Since the PINpad is pulling power from the register and POE from the network, the lane
+
+will need to be powered down and POE will need to be disabled for that lane in TUNA.  
+
+
+Note:  The lane will need to be powered on and be online to find what port it is on the switch.
+
+
+2.  To turn off the POE in TUNA login and select 1. TUNA from the initial menu 
+
+
+
+
+3.  Go down to the Management section and hit enter
+
+
+
+
+
+4.  Hit CTRL+G to sort the switches by node name.  There could be different node names for the lanes, but they should be labeled at the bottom as you scroll
+
+     through. 
+
+5.  Find the correct lane and hit CTRL-A to go into the “node”.
+
+
+
+
+
+6.  The pin pad should be labeled in the node.  Highlight the pin pad and hit P to turn POE off.
+
+
+
+
+
+6.  Confirm that the pin pad lost power and has a black screen.  Once confirmed, hit P again to turn POE back on and have the store power the lane back on. 
+
+Note:  Occasionally this method will not work in rebooting the PINpad.  If this is the case, you can reseat the ethernet cable from the dongle to force a shut down.
+
+7.  Confirm the lane and pin pad are booting back up.

@@ -1,0 +1,359 @@
+Contactless Payment
+1.  If the PINpad has 4 dots across the screen this means that the PINpad is setup with ACE and has the right code for Contactless Payment.
+
+2.  If the "Tap" doesn't work, try a reboot on the register.  Verify if it's multiple cards not working with "Tap".  If so, Dispatch accordingly. 
+
+3.  If the 4 dots do not show, run Pinpad Installer from the MC Controller.  If this does not immediately fix the issue try a 1-5-9 reboot
+
+ 
+
+
+
+Broken/Worn/Loose Hardware
+  - For worn / malfunctioning buttons, PIN pad stands, mounting brackets, scratched display
+    panels and missing privacy shields, dispatch vendor per KSC Hardware Dispatching For All Pillars
+
+    - PIN pad Bracket, Stand Dispatch Procedure
+
+    - PIN pad Stylus Pen/Holder and Privacy Shield Dispatch
+
+  - If issue is intermittently reoccurring within a short amount of time (approximately a day)
+    dispatch.
+
+  - If a PIN pad is being replaced by a onsite tech.
+
+  - PIN pad Replacement Procedure—How to Reset PIN pad Security
+
+ 
+
+ 
+
+1-5-9 PINpad Quick Reset Procedure (Without Password)
+Note: Advise associate to NOT touch the screen while the unit is resetting or in its power up cycle. This can cause an encryption key loss and the subsequent “Service required” message, requiring dispatch.
+
+Use for most system messages on the lane including “B098 Check PIN pad”, freezing or erratic performance.
+
+ 
+
+1. Close/Sign-Off Lane
+
+2. Hold down 1+5+9 on PIN pad for 2 seconds and release.
+
+Note:   - You will see the message ‘***Signal 15 Caught*** Application Halted!” (or Signal 11) on the pin pad display. 
+
+
+
+3. The display will then move to a prompt for the password, press red <Cancel> (the red x) button on PIN pad.
+
+4. Press <1> to Run Application.
+
+5. PIN pad will now take 2-3 minutes to reload.
+
+6. After the PIN pad has reloaded, reopen/sign-onto to the register/lane.
+
+7. Follow the PIN pad Reboot Procedure below if the reset does not resolve your issue.
+
+ 
+
+ 
+
+PIN pad Installer to be ran by Frontend Tier 1
+PIN pad installer is typically run in conjunction with other actions such as a reload of the register or lane to resolved most simple issues.
+
+NOTE: if you are running PIN pad Installer for LO Division drive thru Registers (300 or 301) select NO on "Does this lane have a MX 760?".
+
+NOTE: if running PIN pad installer for Fuel Location registers 100-101 with Suresafe drawers:
+
+  - Suresafe drawers allows a location to slide an MX 915 towards the customer eliminating the need for a tethered 1000se or VX 805 PIN pad.
+
+  - Select YES on "Should this PIN pad accept EMV chip credit/debit cards?"
+
+  - For all other Fuel PIN pads select NO.
+
+ 
+
+NOTE: if running PIN pad Installer for Fuel Location registers 100-101 with VX 805 or 1000SE
+
+  - "Should this PIN pad accept EMV chip credit/debit cards?"
+
+  - Select NO. Some Pinpads may not ask you this question if they have a different conversion
+    from other Fuel centers (ie 1000SE split with MX915)
+
+1. Login to MC
+
+2. Press 1 then Enter to access the ACE Main Menu
+
+3. Press U to access User Procedures
+
+4. Press M to access Misc Reports & Utils
+
+5. Select the option for PINPAD INSTALLER (May need to Page Down to the 2nd or 3rd page)
+
+6. Type the Terminal Number for the PIN pad Installation and press Enter.
+
+7. Message may display, "Terminal shouldn't have terminal specific options, setting PIN pad
+    options back to base." Press Enter to continue.
+
+8. Once Complete, Press Enter
+
+9. Type Q then Enter
+
+10. Return to IBM SurePOS ACE Main Menu
+
+11. Press P to access Personalization
+
+12. Arrow over to File
+
+13. Arrow down to Load terminal/group and press Enter
+
+14. Tab down to Number:
+
+15. Arrow down and highlight the Terminal Number for the Lane and press Enter
+
+16. Press Enter to Load Personalization options.
+
+17. Press Enter to confirm/clear message.
+
+18. Options will now load to lane.
+
+19. Exit Personalization then proceed to reboot the PIN pad or reload the register/lane as per
+      the relevant Knowledge Document for the occurring issue.
+
+ 
+
+ 
+
+PIN pad Reboot Procedure
+
+Note: Rebooting the PIN pad should be considered a last resort unless directed in another knowledge Document.
+
+Note: PIN Pad Installer should be run prior to rebooting the PIN pad or reloading a register/lane (with a 7, 8, or 9-loads) to resolve a PIN pad issue.
+
+1. Document what occurred prior to the PIN pad having a problem and at what point in the transaction it occurred (if applicable).
+
+2. POS - Advise the associate to sign off / Close register. Proceed to Step 4.
+
+3. SCO - Advise the associate to close the SCO Lane, wait until it displays, "Closed" on the screen. Lane status can be checked in "System Status" on the controller to verify.
+
+4. Connect to the store's MC (Master Controller) and run PIN pad installer (refer to section above).
+
+5. Advise associate to hold 1+5+9 on the PIN pad for 1-2 seconds and release, and the PIN pad screen should prompt for password.
+
+
+
+6. At password prompt, advise associate to enter, "72963687" and press the ENTER (green) button. If PIN pad asks for 'Old' password, please enter: 166831 or 166832. The New Password is 72963687.
+
+
+
+ 
+
+7. A group of icons will appear, advise them to press the "Reboot" button.
+
+
+
+ 
+
+  - The PIN pad will lag for a second, then go black and start to reload.
+
+  - The PIN pad will now take 2-3 minutes to reload.
+
+8. Advise store to reopen / sign-on lane.
+
+9. Issue should be resolved, if not, continue below.
+
+10. Advise associate to sign off/close lane again [do not power off lane, offline lanes cannot receive loads]
+
+  - Once signed off/closed, send a 9-load from the controller. (refer to SCO - Procedural - How to Perform Lane Power On / Off, Shut Down, 9-Load, or 8 Load- add to links below]
+
+  - The register/lane will now reload and may take up to 15 minutes.
+
+11. Once reloaded, Sign on/re-open lane and re-test (See below for test instructions).
+
+12. If issue remains, advise associate to power cycle the lane.
+
+  - For SCO - press the black power button (green for system 6 lanes) once and and select Shut-down Lane from the screen menu.
+
+13. Once lane is powered off, verify PIN pad is powered off also, leave off for 2 minutes before powering the register/lane back on.
+
+  - (If a SCO PIN pad is not powering off, then have associate press "blue" power button to power off the Powervar UPS for 2 minutes).
+
+14. Once the register/lane has loaded back up, sign on/open lane and retest (See below for test instructions).
+
+15. If issue remains, escalate as follows:
+
+  - "System Information" - Follow document  POS - PIN pad Will not Communicate, Displays, "System Information"  
+
+  - Everything Else - Dispatch to vendor as per NIMS.
+
+ 
+
+No Power/Key pad unresponsive to touch or blank screen
+If the PIN pad is a blank black screen you can try holding the Enter key and the Cancel buttons at the same time for 1-3 seconds and see if it powers back on.
+
+Note: Do not "reseat" the cable if PIN pad has power. This can destroy encryption, and the PIN pad will need to be replaced if you get "Maintenance required" or "Tamper detected".
+
+  - If the PIN pad is "Frozen" and the Keypad is unresponsive, begin at Step#4.
+
+    - Do not attempt to troubleshoot cables for SCO lanes steps 1 through 3.
+
+1. (non-SCO lane) Power off the register, make sure there is no power to PIN pad.
+
+2. (non-SCO lane) Verify the cable is not damaged, and connected to the back of the register.
+
+3. (non-SCO lane) If a PIN pad screen is blank/black and the key pad is unresponsive, it could be that the PIN pad power has been disconnected. This can be fixed by reinserting the 12V adaptor plug back into the brick.
+
+  - If this is not the case,
+
+  - with the register remaining off
+
+  - try reseating the Ethernet cable in the brick and reseat cable in back of register.
+
+4. (SCO lanes begin here) Power on the PIN pad by holding the Green ENTER (or "Circle") Button for 10 seconds.
+
+  - The PIN pad can be powered off by holding the <CANCEL> (red X button) for 10 seconds.
+
+5. If this does not resolve, power cycle the SCO lane using the power off and power on instructions in document:
+SCO - Procedural - How to Perform Register Power On / Off, Shut Down, 9-Load, or 8-Load
+
+6. If issue remains, dispatch via NIMS.
+
+ 
+
+Examples of the PIN pad Brick (POS and FUEL)
+
+
+
+Other models of bricks may be found in the store and Fuel Centers.
+
+ 
+
+"Failed To Open Comm Port"
+ 
+
+If the pinpad displays "Failed to open comm port" error, this means it is either:
+
+- An ACE pinpad that has been plugged into a Star Bucks Connect system.  You can verify that the pinpad is not the correct type by logging in to the pinpad via the 1-5-9 method and navigating to Information > Basic System and checking the Build Entry.  If the Build Entry is not release-30251400 (the 1400 on the end signifies O/S 1400 is loaded) then it is not a Starbucks Connect PIN pad (O/S1200 build may be ACE).  If the pinpad is an ACE pinpad it will need to be replaced.  Dispatch per KSC Hardware Dispatching For All Pillars 
+
+"Card Read Error" Displays on PIN pad
+1. This means the card reader is having trouble reading cards.
+
+2. Ensure store has tried cleaning the card reader, with a "card reader cleaner" (a card size piece of plastic with a cleaning surface on the other side) or a card wrapped in a plastic bag.
+
+3. Dispatch to replace per KSC Hardware Dispatching For All Pillars
+
+ 
+
+PIN pad Touch Screen Problems - MX915 Screen Calibration Procedure
+Touchscreen unresponsive, or selecting wrong choices, language preferences keep switching from English to Spanish, SCO lane dispense, or Cashier offers $20 Cash back when not selected.
+
+Note: Make sure nothing is touching the screen during this procedure.
+
+See POS/SCO PIN pad Cash Back Issues for PIN pad is Giving Cash Back When Customers Selects No Cash Back.
+
+1. Sign off/Close lane if possible
+
+2. Press and hold 1+5+9 for 3 seconds, then release.
+
+3. Press the Cancel (red x button ) when prompted for password.
+
+4. Press the 2 key to select Screen Calibration. The PIN pad will recalibrate.
+
+5. After calibration is complete, press the 1 key to Run Application(s).
+
+6. After PIN pad loads, sign on/open the lane or if not closed, then close and reopen.
+
+  - if the register/lane had not been signed off/closed, then signoff/close and sign- on/reopen.
+
+7. PIN pad should display "Please Slide Card" and screen should function normally,
+
+  - If not, dispatch to replace per KSC Hardware Dispatching For All Pillars
+
+ 
+
+New!  Error "B346.." After Converting to M424 Pinpads
+If a store just converted to M424 PIN pads and they get a B346 error, please escalate to APP-INSTOREPAYMENTS as they will copy a file from another store to resolve the issue.  Please do not dispatch!
+
+ 
+
+ 
+
+"Chip Malfunction" Error
+Generally this is a hardware problem requiring an automatic dispatch as per KSC Hardware Dispatching For All Pillars
+
+ 
+
+Other Chip Errors/EMV Cards Are Not Processing/”B346 PIN pad cannot be loaded”
+
+1. Make sure chips cards are inserted face up, chip forward.
+
+2. Clean chip reader slot with a card reader cleaning card if one is available.  
+
+3. Close lane/Sign off lane.
+
+4. Run PIN pad installer. 
+
+  - Refer to PIN pad Installer and PIN pad Reboot Procedure sections above.
+
+5. If necessary, power cycle the register/lane.
+
+  - Verify that the PIN pad has lost power.
+
+    - Wait 2 minutes before powering back on
+
+6. If issue remains, dispatch per NIMS.
+
+ 
+
+WIC Error: Not configured to accept WIC at this time
+
+1. Some states do not allow WIC to be rung at Self-Checkout Lanes.
+
+2. New Mexico and Wyoming do not permit WIC to be run at SCO.
+
+3. Advise associate to process WIC at a Front-End register.
+
+ 
+
+No Sound Or Volume Too Low
+1. Sign onto the PIN pad following steps 1 through 4 of the PIN pad Reboot Procedure using password to sign in.
+
+2. Select the Administration Tab.
+
+3. Use the blue arrow in the upper right-hand corner to navigate the option tabs at the top of the PIN pad screen. The arrow will navigate the tabs from left to right only. Navigate the tabs to the last option Audio and select it. Adjust the volume to the desired level using the up and down arrows.
+
+4. Select Home in the upper left-hand corner of the screen.
+
+5. Select Run App. This may take a couple of minutes to complete. The PIN pad will stop at “System Information” have the operator sign off and on.
+
+ 
+
+Test Procedure
+1. Ring up an item on lane.
+
+2. Press "Pay Now", attempt to pay for the item with an empty Kroger (Local Banner) gift card.
+
+3. Should give a decline, insufficient funds message, or similar message if working correctly.
+
+PIN pad stuck on "System Information"
+
+  - See Linked Document: POS: PIN pad Stuck on System Information
+
+ 
+
+Pharmacy (Rx) Signature Capture "release to patient issues" or does not prompt for signature
+
+  - See Linked Document:  Patients Sign on the Sig Cap but the Signatures Doesn't Transfer to Their Profile.
+
+ 
+
+QUICK CHIP: Explanation and procedures (NEW)
+Quick Chip is a newer feature set of the EMV protocol that allows for a faster transaction by changing the data elements required for the transaction.
+
+It also alters the transaction flow at the PIN pad, allowing for the card read functions to happen sooner. Please see attachment at the bottom of this document for more information, Quick Chip.docx.
+
+ 
+
+Pinpad Disabled
+If the pinpad just says disabled, you can reload options to the terminal and have them sign off and on and should come back up. If it says Disabled due to Tampering move on to POS: PIN pad Tampered with or Error " B735 PIN pad Disabled Call Support Center".
+
+If the Pinpad Disabled is in an offsite fuel center please see the following document:

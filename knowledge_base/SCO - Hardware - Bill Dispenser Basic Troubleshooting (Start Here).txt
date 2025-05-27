@@ -1,0 +1,126 @@
+Bill Jamming Issues:
+Verify that if bills being loaded into dispenser, if they are brand new bills, they will need to be fanned so they are not so sticky in dispensing.
+
+ 
+
+Verify Issue Is Not:
+  - Due to Low Amount of Money in Dispenser - Needs to be resolved by Bookkeeper
+
+  - Due to Physical Jamming/Issues - Needs to be resolved by store and/or dispatched.
+
+  - Ask store if money has been loaded recently, if so, it may need to be ruffled and/or cash tracking needs to be updated to account for new bills (if showing that it ran out of denomination)
+
+  - Have store check Reject Bin for large quantities of bills. This will cause jamming and issues with dispensing.
+
+NOTE: If F53 Bill Dispenser gives out an error code, see attached doc and Error Code Spreadsheet: F53 Error Codes PDF. (Not all error codes may be present in spreadsheet.)
+
+ 
+
+For Bill Dispenser Cassette Issues
+ 
+
+Note: By swapping the location/order of the F53 Bill Cassettes you can test to see if it's a bill dispenser issue or an actual Cassette issue.
+
+ 
+
+If a bill dispenser cassette is damaged or worn, dispatch via CAP in linked document: Dispatching IBM for Fujitsu Bill Dispense Cassette Replacement (CAP)
+
+ 
+
+If bills are jamming inside of the cassettes or multiple bills are dispensing, see:
+
+Toshiba SCO - Procedural - Fujitsu Bill Dispenser Loading Best Practices
+
+ 
+New Cassette (F53) Rollers, Worn Cassette, (F53) Rollers
+ 
+
+
+
+ 
+
+Bill Dispenser has no power or no communication
+ 
+1. Have associate go to Cash Maintenance to check for any error codes for cash devices and clear errors if able.
+
+  - Scan barcode, touch Cash Maintenance.
+
+  - Touch Cash Maintenance again. This will display all Cash Devices.
+
+ 
+
+  - Note what status the device is in and any error codes.
+
+  - See: Toshiba SCO - Cash Maintenance Errors for steps to clear errors.
+
+ 
+
+  -See: Toshiba SCO - Genesis / NextGen Bill Dispenser (F53) Troubleshooting
+
+ 
+
+  - Power cycle the register, including the Powervar/UPS off for 2+ minutes. If this is a system 6 or 7, you do not need to power cycle the UPS. 
+See: Toshiba SCO - Power on/off procedures
+
+ 
+
+Bill Dispenser has a "Cash Machine Error"
+  - If "Cash Machine Error" lightbox is on the screen, scan SA barcode to access Cash Maintenance.
+
+ 
+
+  - If lightbox is not on screen, scan SA barcode and go to Cash Maintenance.
+
+ 
+
+  - Clear error in Cash Maintenance Mode. See:
+
+Toshiba SCO - Cash Maintenance Errors
+ 
+
+  - Follow troubleshooting per prompts on screen, if showing.
+
+ 
+
+  - Check for jams per documentation for Genesis/NextGen dispenser.
+
+ 
+
+  - See: Toshiba SCO - Genesis / NextGen Bill Dispenser (F53) Troubleshooting
+
+ 
+
+  - Power off the lane + UPS for two minutes.
+
+ 
+
+  - Test in cash diagnostics.
+
+ 
+
+  - Go to Cash Maintenance in SA Mode>Cash Diagnostics
+
+ 
+
+  - If error reoccurs, attempt clearing again. If error does not clear or reoccurs, dispatch via NIMS.
+
+ 
+
+ 
+
+Hardware Errors:
+For F53
+
+
+ 
+
+DEVICE_INIT_ERROR F8A2/F8A3 (error)
+1. Check the dispenser for jams and clear.
+
+2. Check the belts on the dispenser, make sure they are on correctly or they may possibly need to be replaced.
+
+3. Hardboot to see if this resolves.
+
+4.  You can also check Toshiba SCO - Hardware - Genesis / NextGen Bill Dispenser (F53) Troubleshooting  for further troubleshooting.
+
+5. If no resolve, dispatch per the SCO Lane Type spreadsheet. You can access it from PSY>Info>SCO Lane Types

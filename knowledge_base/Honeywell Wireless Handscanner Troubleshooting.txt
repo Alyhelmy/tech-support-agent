@@ -1,0 +1,53 @@
+1. Verify if both the scanner and base have power.
+
+2. Can you page the scanner from the base?
+
+  - Push the button on the base and see if the scanner starts chirping.
+
+ 
+
+
+
+ 
+
+3. If they are not communicating, reseat cable on bottom of base and reboot the register.
+
+ 
+
+If the scanner does not have power
+1. Reseat the battery in the handle and verify the LEDs on the back if the scanner are Green when plugged in.
+
+ 
+
+
+
+ 
+
+2. If the LEDs are red, it is not charging properly. The contacts may need to be cleaned.
+
+ 
+
+If the base is not showing power:
+1. Reseat the cable at the bottom of the base
+
+ 
+
+
+
+ 
+
+2. Power cycle register
+
+If the scanner is still not showing power or not scanning or communicating, Dispatch appropriate POS Handscanner Vendor Per NIMS
+
+Explanations of Scanner LEDs:
+
+
+
+
+
+ 
+
+If the scanner still has power/laser but still not working, you can have the store try to scan the calibration codes to try and re-program the scanner.
+
+Honeywell 1900-1950 Calibration Barcodes.docx

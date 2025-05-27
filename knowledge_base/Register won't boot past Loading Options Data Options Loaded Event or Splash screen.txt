@@ -1,0 +1,27 @@
+1. If the store has Epson printers, verify there is paper in the printer and add it if there is not. If it has paper, power cycle the printer with the power button on the front of the printer. Leave off for 30 seconds and after powering it back on, wait a few moments and the register should start loading.
+
+2. Verify there is nothing jammed inside the printer, also particularly where they frank checks.  Remove any paper or debris.
+
+3. Verify both ribbon cartridges are seated properly and tighten the ink ribbons. Check peripherals for errors (pinpad, thermal printer, etc...)
+
+4. Troubleshoot item as needed
+
+5. Determine if register loads, if not, proceed.
+
+6. Send a #9 load to the register. (If this does not resolve the issue follow these steps)
+
+7. Verify thermal printer has paper, the old paper core has been removed, it has been loaded correctly, and it's the correct type of paper.
+
+  - Instruct the user to reload paper roll, shut lid firmly.
+
+8. Power off the register at the base.
+
+9. Reseat printer cables.
+
+10. Turn printer on its side, unplug the flat cable for 30 seconds.
+
+11. If this did not resolve the issue, troubleshoot pinpad.
+
+12. Hard load the register.
+
+13. If this does not resolve the issue, dispatch per parts list.

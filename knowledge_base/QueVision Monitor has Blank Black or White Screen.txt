@@ -1,0 +1,172 @@
+Escalations
+
+NOTE: Prior to escalating an incident to Local Desktop Support, please follow the steps below:
+
+Template
+1.  Make sure you have valid callback contact info.
+
+2. Confirm the store number is correct.
+
+3. Note a summary of troubleshooting steps taken.
+
+4. Include the IP address and name of the affected device. (This can be found in BigFix)
+    - Any Thin Client, Service-Based PC, MagicInfo display, printer, or other networked device involved in the issue should have an IP address listed.
+    - For office computers, list the computer name. The IP changes constantly for people working from home.  It can be included but is only relevant for hours within the escalation time at most.
+
+5. Include the linked KB article that lists EDS as the valid escalation path.
+
+
+ 
+
+Validate the SDI is online first:
+
+1. From your pc, go to http://sdi.DDSSS.kroger.com where DD is the 2-letter division and SSS is the 3 number site or the IP address of the SDI .
+
+  - Confirm the site is up and it shows System OK at the top left.
+
+ 
+
+See QueVision - How to Connect to the SDI / Dashboard
+
+  - Should say "System Ok" at the top of the page.
+
+
+
+ 
+
+2. From your pc, go to http://wta.DDSSS.kroger.com:3127/status where DD is the 2-letter division and SSS is the 3-digit store number.
+
+ 
+
+
+
+ 
+
+3. If you press Alt+F4 to close the page and you see this on the bottom right when it reopens, the issue is with the wta site.
+
+If this site can't be reached, forward the ticket to APP-ISA, with the following notes:
+
+-----------------------------
+
+"Forwarding to APP-ISA to restart the occupancy counter application on WTA.
+
+Run the following script:
+
+DDXXXwta: /etc/init.d # s udo /usr/local/bin/qv_pid_kill.sh
+
+*Where DDXXX is, replace with Division and Store Number.
+
+ 
+
+Blank Black Screen:
+1. Verify the Thin Client(s) and Monitor(s) ping in TUNA:
+
+  - Login to TUNA
+
+  - Go to Store Segment
+
+  - Locate the Thin Clients (TC) and Monitors
+
+  - Select each one and press Control + D to ping
+
+  - If Thin Clients do not ping, use Quevision Thin Clients Have No Power . Do not continue with these steps if the TC doesn't ping.
+
+
+
+
+
+2. If the monitor is pinging, remote into the monitor by hitting F6 in TUNA. This will bring up a list of configurations for the monitor.
+
+  - Press F10 to power off the monitor. Then F9 and it should power on the monitor. After a few minutes the monitor should display the correct information.
+
+
+
+
+
+Note: If the monitor does not respond to F6 (does not display configurations) and the store cannot easily reach it to make sure it is powered on, dispatch appropriate vender. See KSC Hardware Dispatching For All Pillars.
+
+3. While still zoomed into the monitor, verify it is on input "HDMI".
+
+
+
+
+
+4. If issue remains, then follow the section blow for Quevision monitors continually going to sleep.
+
+
+Quevision Monitors are Turning Off Repeatedly or Going to Sleep:
+
+Important Note:  Divisions are updating Quevision Thin Clients to the new TP8's which will require an update pushed from HPDM to complete the update.
+
+
+
+
+ 
+
+Quevision monitors are not showing a display due to having turned off on their own. Store reports this happens repeatedly.  This can be caused by ThinPro 6 being installed on the Thin Client that Quevision runs on. The root cause is that the Display Power Management Settings (DPMS) for Quevision are not properly set. 
+
+A fix for this is on HPDM.
+
+1. Open HPDM, sign in and find the device.
+
+  - If you are unsure how to access HPDM then refer to HPDM: How to use HP Device Manager
+
+2. Send task Hotfix - Quevision. It is found in the File and Registry section in HPDM.  
+
+HPDM 4.7 is called "HotFix - Quevision DPMS And Proxy Fix".  In HPDM 5 for TP7 "HotFix - Quevision Fix" and TP8 "Hotfix - Quevision fix for TP8" these 2 jobs should also fix the DPMS issue.
+
+See images below for the different versions.
+
+
+
+
+
+
+
+ 
+
+  - If you are unsure how to send a task in HPDM then refer to How to Send a Task in HPDM. 
+
+  - If a task will not go through (hangs at Waiting status), or issues persist, AND the TC is on the network, collect system information (see template at top of document) and escalate
+    to INF-EnterpriseDesktopSupport.
+
+  - If the TC is not on the network, dispatch appropriate vendor.
+
+ 
+
+Blank White Screen:
+1. Confirm the SDI has been checked following the steps in the above section Check the SDI.
+
+2. Locate and remote into the Thin Client associated with the Monitor that has a blank white screen.
+
+  - From PSY, go to Lookup>Frontend>QueVision
+
+  - Locate the Thin Client associated with the blank white monitor
+
+  - If the Thin Client is not pinging, use Quevision Thin Clients Have No Power 
+
+  - If the monitor does not ping, see section for Blank Black Monitor.
+
+ 
+
+
+
+3. Click VNC and enter the password to connect.
+
+  - Password is found on the confidential password site, click here.
+
+  - Select HP Thin Client as the System and VNC Login as the ID.
+
+  - Use the provided password to VNC.
+
+
+
+
+
+4. Once screen loads, Hit Alt + F4 to refresh the page.
+
+  - Page should reload with the yellow circles
+
+5. If screen remains white, escalate to INF-EnterpriseDesktop, P3.
+
+  - Include info from template at the top of the document

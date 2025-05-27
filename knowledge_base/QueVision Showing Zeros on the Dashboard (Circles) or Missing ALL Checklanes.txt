@@ -1,0 +1,52 @@
+Navigate to the Quevision SDI link below, updating the store number as needed:
+
+http://sdi.DDSSS.kroger.com/web/dashboard.html
+
+ 
+
+Quevision SDI is offline
+If the SDI can’t be reached, and the web browser is displaying a message similar to the below screenshot, walk the user through a reboot of the SDI in the store ECR using the following knowledge article:
+
+QueVision: Dashboard time is not moving and/or SDI is locked up/not pinging
+
+ 
+
+
+
+ 
+
+ 
+
+Quevision sensor issues – Missing Lane error
+If the SDI dashboard can be reached, click on the ‘System Ok / System error’ button on the upper left-hand corner of the dashboard to check for SDI or sensor network errors. There are several types of system errors that can be generated here.
+
+If there is a ‘STORECONFIG.MISSINGLANE.##’ error being generated, that means the Quevision sensors for that lane are offline/disconnected from the SDI’s sensor network, and will need to be dispatched on. Follow the knowledge article listed below for Quevision dispatch instructions:
+
+ 
+
+
+Dispatch article - QueVision: Dispatching a technician for faulty Quevision sensors or SDI issues
+
+ 
+
+Quevision sensor issues – NODEDIED error
+If there is a ‘DEVICE1.NODEDIED.#’ error, that means that one of the Quevision sensors is offline/in an error state, and you will need to check the Quevision SDI Unit Status screen to determine which lane that faulty sensor is installed over.
+
+
+
+Navigate to the following page on the SDI, and login using the SDI configuration credentials:
+
+http://sdi.DDSSS.kroger.com/web/support/status.html
+
+
+Find the corresponding Node ID listed in the error message in the sensor listing. Make note of the lane number that the faulty/offline Quevision sensor is over, and follow the knowledge article listed below for Quevision dispatch instructions:
+
+
+
+Dispatch article - QueVision: Dispatching a technician for faulty Quevision sensors or SDI issues
+
+ 
+
+Quevision SDI issue – INITFAILURE error
+If there is an ‘INITFAILURE’ error message being generated, that means that the Quevision SDI software is stalled/locked up, and will require a member of the store team to reboot the SDI. Walk the user through a reboot of the SDI in the store ECR using the following knowledge article:
+

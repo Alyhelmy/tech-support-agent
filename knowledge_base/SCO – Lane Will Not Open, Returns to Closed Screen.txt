@@ -1,0 +1,28 @@
+1. Check if the issue occurs only with the SA barcode or if the same error
+    happens when attempting to sign in both ways.
+
+2. If the barcode does not work, print a new barcode and try again.
+
+3. If the password does not work, verify that the associate is using correct password.
+
+4. 8-load (terminal dump) the lane and process the dump.
+
+5. If issue remains, call Frontend Tier 2 queue to have the controller the lanes are
+    assigned to coldbooted.
+
+6. Frontend Tier 2: After the controller is rebooted, have user try to sign in, if unable to then
+    send a 9-load to the affected lane(s).
+
+7. If issue remains, cold boot the MC, then have the associate attempt to sign on.
+
+8.  If unable to resolve, Frontend Tier 2 escalate to APP-POS, P3, with extract or Terminal
+     Dump.
+
+    Escalate as P2 if all lanes.
+
+ 
+
+Required Information
+1. Extract or dump needed for all instances.
+
+2. Ask if the lane has been recently STC'd - within the last week (check location tickets) and add this information to the ticket.

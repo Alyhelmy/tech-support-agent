@@ -1,0 +1,27 @@
+Problem: Register Displays Z001
+1. Enter the register number: 10XX (XX is the terminal number, if it's a SCO or Fuel Center Register lane just put in 1 and 3 digit sco number ie SCO 500 would be 1500) and press the S2 button on the screen.
+2. After several seconds, the register should display "Z012 Configuration Complete" will be displayed, the register will reload.
+3. Once it's back up, sign on terminal and verify new terminal ID
+   - Access the 10 key display by tapping 3 times in the lower left corner, then tap once in the lower right corner to bring up the keypad.
+   - Press S1, 7, S2 to display terminal id, then Clear
+
+Problem: Touch Screen has No Power
+1. Verify the monitor has power - the power button is located on the lower right corner of the monitor.
+2. If the touch screen has no power:
+   - Check that the cable connections are securely connected to the register base unit
+   - Verify that the black cable connects to the blue display port
+   - Verify that the grey cable connects to green powered USB port on back of register
+3. If all the cables are securely connected and the touch screen appears to be dead, dispatch per the POS Parts List in NIMS.
+
+Problem: Touch Screen Flickering
+1. Dispatch a tech to replace alarm board or power supply
+
+Problem: Touch Screen Not Responding
+1. Make sure there is nothing obstructing the infrared frame
+2. Check for tape or post-it notes stuck to the touch screen
+3. Clean the infrared sensor that frames the screen with a lightly moist cloth, then a dry cloth
+4. Try a screen calibration by following the steps under the screen not aligned section
+5. Power down the register and leave off
+6. Trace the grey USB cable to the back of the base unit and reseat or locate to a different Green USB port if available
+7. Power the register back on
+8. If it still is not responding to touch, dispatch per the POS Parts List in NIMS 

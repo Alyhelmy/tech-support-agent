@@ -1,0 +1,49 @@
+Coin Recycler is Jammed
+1. Determine what the error message is and follow documentation if available.
+
+2. Open lane cover doors to gain access to the coin recycler.
+
+3. Find the 'blue strip' place your hand under it (shown below) and pull it toward you.
+
+4. Press the restart button on the coin recycler.
+
+5. Cash Machine error should clear. If it does, test via Cash Diagnostics, see
+How to Use Cash Diagnostics to Test , if error remains, press the green button behind the screen and select "shutdown system". See Toshiba SCO Register Power On/Off Procedures .
+
+6. Open the top cover and check for jammed coins in the gates; the carousel may be moved manually. The carousel normally moves in a clockwise direction therefore any jammed coins are likely to need the carousel to be reversed slightly. Apply steady pressure to the carousel fingers, move it counter-clockwise. Expect there to be some resistance when trying to move the carousel. (see picture below)
+
+7. Unlock the unit. Then push the top of the recycler/acceptor back, uncovering the hoppers.
+  - Look down into the hopper and examine if the jam is at the rotator in the bottom of the hopper.
+
+  - Rotating the blue coin disk manually to free the coin. (see picture below)
+  - Keep away from face as a stuck coin could be ejected at high velocity.
+
+  - Remove any debris from around and under the coin disk area
+
+8. Put hopper back into place.
+
+9. Open singulator door to check for jams/debris on the top track by moving the track toward the machine.
+
+  - If moving the track belt toward the machine does not resolve the issue try moving it away from the machine (see pictures below)
+
+10. Close singulator door slide in coin recycler back into lane, power back on.
+
+11. Check cash maintenance for errors, if error remains or jam could not be cleared, dispatch IBM/Toshiba.
+
+12. If issue is suspected to be software related, take an extract and escalate to FE Tier 2 to escalate to APP-POS.
+
+
+Coin is Accepted but not Deducted from Total
+
+1. Check for cash machine errors in Cash Maintenance.
+
+2. Power cycle the lane using the green button behind the screen.
+
+3. Test, using Cash Diagnostics. See How to Use Cash Diagnostics to Test
+
+4. If issue remains, send a 9-load.
+
+5. Test again.
+
+6. Dispatch Toshiba if issue remains.
+

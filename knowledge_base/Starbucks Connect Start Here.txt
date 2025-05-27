@@ -1,0 +1,363 @@
+For Techs Calling In To Check Network Configurations and Add Devices
+  - The devices on the Starbucks kiosk switch will not ping on the Kroger network as they are only added to the whitelist and do not get assigned an IP from Kroger.
+
+  - The MAC addresses of the Starbucks devices are entered into the whitelist in Tuna under the Starbucks section, which places them on VLAN 2958.
+
+Please go to THIS SECTION on adding devices to Whitelist.
+
+ 
+
+ 
+
+General Info (Click to expand this section)
+Troubleshooting:
+Note 1: Always notate in your tickets if the location calling has one POS or two and relay this information to NCR when appropriate.
+
+Note 2: Guidance on how to find the Starbucks Store Numbers for each location can be found in the Transferring calls to NCR section.
+
+ 
+
+Procedural: 
+Adding/Removing Associates to the Starbucks POS System or Changing their Pin:
+
+1. If an associate is unsure how to do this then you can refer them to this Job Aid on Feed.
+
+2. If they need to know how to change an associate's pin, Here is the Starbucks Connect POS Access Template.
+
+ 
+
+Employee Discounts:
+1. Associates previously used an “Employee Discount” button the POS.  This button has been removed.
+
+2. Kroger associates should now enter their Kroger Loyalty information to get their employee discount.
+
+  - To do this they can scan their Kroger card or Kroger mobile app, enter their Alternate ID on the PIN pad, or have the barista enter their Alt ID on the register using the
+
+     “Loyalty” button. 
+
+  - The Loyalty number must be entered before the “Pay” button is pressed on the register.
+
+3. Employee discount will automatically be applied after Loyalty number has been entered and the “Pay” button is hit on the register. 
+
+ 
+
+Receipts Printing on every Order:
+1. Receipts now print for every order by design.
+
+2. If an associate calls in about this, then advise them this was a planned change and resolve the incident.
+
+  - If they have questions then refer them to their ETL (Enterprise Technology Lead).
+
+ 
+
+Items charging, or not charging, for tax incorrectly:
+  - Refer the caller to their District Manager for any concerns regarding how items are taxed.
+
+ 
+
+Pricing and Item Availability: 
+There are two possible scenarios related to item availability and pricing:
+
+1. Items the store will never carry that need to be marked unavailable permanently:
+
+  - This will need to be directed to a Bi-Way request.
+
+  - Item pricing issues should also be resolved via Bi-Way request. 
+
+2. Inventory issues resulting in an item needing to be marked unavailable temporarily for the location:
+
+  - There is a button on the POS that the site can use to mark items unavailable. 
+
+  - The POS button also makes the item unavailable on the mobile app for the store. 
+
+  - If the button on the POS is not working then the caller should be transferred to NCR.
+
+ 
+
+Items disabled for mobile orders but enabled on POS, or vice versa:
+It is possible that specific groups of items will be "unavailable" on MOP and not be able to be marked unavailable on the register. 
+
+For example, if a kiosk does not have a second espresso machine for "blond" drinks, those may be removed from the register and listed as unavailable on the Mobile App.  
+
+Same goes for Nitro drinks -- if the kiosk does not have the equipment by design, those drinks will be unavailable on MOP, but may or may not be listed on the register. 
+
+1. If an item is disabled for mobile orders but available on the POS, or vice versa, then you will need to transfer the caller to NCR.
+
+ 
+
+Requests to Disable Mobile Orders:
+Note: If the site only needs to mark one or two items offline due to inventory, and this option on the POS is not working then refer to Pricing and Item Availability issues above.
+
+1.  Mobile Ordering can now be disabled via phone by transferring the store to NCR.  NCR should now be able to disable mobile ordering for the store upon
+     request.
+
+2.  Previously, stores engaged their District Deli Bakery Merchandising team to disable mobile orders. 
+
+     - If there are issues with NCR disabling mobile ordering, the store can still engage their District Deli Bakery Merchandising team to contact NCR about the issue.
+
+3.  If the store continues to have issues disabling mobile ordering they should escalate to their Starbucks District Manager.
+
+ 
+
+Accounting Questions:
+If the store has questions about accounting after converting to Starbucks Connect, then refer them to the job aids located on Feed.
+
+  - If the job aids do not answer their questions, then the next step is to refer them to their district manager covering Starbucks.
+
+  - If the job aids and district manager have not been able to answer the question then you can escalate the ticket to APP-Starbucks POS.
+
+Important notes:
+1. Starbucks Connect does not Connect to VeriBalance or Ace.
+
+2. The job aids attached to this document contain information on how sites should be handling their accounting once they convert.
+
+ 
+
+Espresso Machine Service:
+  - Any Espresso machine issues store needs to place a Service Hub Request.
+
+Cincinnati Store personnel places a work order on Maximo.
+
+ 
+
+Ovens
+-Ovens are serviced/ordered by placing a Service Hub Request.
+
+Cincinnati Store personnel places a work order on Maximo.
+
+ 
+
+Cash Drawer not Opening:
+  - This is due to the register not being assigned to associate ringing up the transaction.
+
+  - If needed they can be directed to go get the key from the customer service register.
+
+ 
+
+Technical:
+Register appears to freeze when trying to process payment on the PIN pad. 
+This is typically due to the PIN pad not receiving communication from the register.  Often the issue is with the PIN pad, not the register, and troubleshooting the pinpad resolves the issue.
+
+1. The barista will see a progress bar that appears to be frozen.
+
+    - The progress bar will time out, but it takes 3 minutes before the lane gives up on making a connection to the pin pad and times out. 
+
+2. To troubleshoot the PIN pad, follow the steps in the  Reboot the Pin pad section of the Starbucks Connect Troubleshooting Payment Issues knowledge article.
+
+ 
+
+Loyalty Troubleshooting:
+
+
+Issue is Affecting Only a Single Transaction:
+1. The issue is most likely a user error.  Advise the store to have customer re-enter the Loyalty information.
+
+  - If the customer did not receive their Fuel Points, advise them to go to the Customer Service desk with their receipt or call KCC to get the points added.
+
+ 
+
+Issue is Affecting Every Transaction:
+This will be either due to a network issue in the kiosk, or due to the POS losing connection to the Kroger Loyalty cloud.
+
+1. Ask the caller if they are also having issues with other electronic payments (credit/debit/Starbucks gift cards).
+
+  - If yes, then it is likely a network issue.  Refer to Starbucks Connect Network Troubleshooting.
+
+2. If only Loyalty is experiencing issues, have the caller reboot the register.
+
+  - For guidance see section Here.
+
+3. If after rebooting the register Kroger Loyalty is still not working, but electronic payments are, then assign the ticket to APP-Starbucks POS.
+
+NOTE: The prompt for Alt ID disappears when the “Pay” button is hit on the register. When “Pay” button is pressed the pin pad switches to payment mode.
+
+ 
+
+POS Reports Missing POS Data:
+Note: For directions on how to run a POS financial report on Connect, advise the caller to see the Starbucks Employee Financial Report Job Aid document.
+
+Determine if the kiosk has one or two registers, and which register the issue is affecting. 
+
+If the report prints correctly on one register but not the other, perform the below troubleshooting on the affected register:
+
+1.  Reboot the affected register.
+
+  - See Rebooting the Register section for guidance.
+
+2.  After register reboot, if the issue remains have the associate log out of the register.
+
+3.  On the Login Screen for the POS, in the bottom right corner click the “Support Functions” button.
+
+
+
+4.  Choose “Status” from the pop-up menu.
+
+5.  Check the “Check and Posting Status” (CAPS) in the window that has popped up.  Status is listed midway down the window (see below image). 
+
+  - If the status of CAPS is “Online” – do nothing. The system should self-heal, usually within an hour (exact time is unknown).  If store associate does not have an immediate need for the report, they can try re-running the report in a few hours after it has updated.
+
+  - If the status of CAPS is “Offline” – it will be necessary to have the Associate reboot the register again.  Once the register is rebooted, check the CAPS database status again.  If CAPS is still showing as offline, escalate the ticket to APP-Starbucks POS.
+
+
+
+
+Image on the left below shows an example report without MOP orders reporting. Image on the right below correctly shows MOP orders on a POS generated report.
+
+ 
+
+ 
+
+ 
+
+ 
+
+To Reboot the Register:
+Note:  If the store is having issues signing into the register call NCR as they can reboot the register remotely.
+1. Have the Associate log into the register with their user ID and pin.
+
+2. Navigate to the “Functions” menu (top left).
+
+3. Navigate to the System Tools & Support sub-menu (second tab from the top on the right menu tabs)
+
+4. Click the Reboot button and wait for the system to complete its reboot cycle. The Login screen will reappear.
+
+ 
+
+If the register does not reboot and says that there is an “active check”
+The barista will need to go back to the basket and perform the following steps:
+
+1.  Void any remaining items on the check by selecting the item and hitting the “void” button.
+
+2.  Once all items have been removed from the check and the check has a $0 value, the barista should hit the “Pay” button.
+
+3.  Barista should hit the “Exact Cash” button to cash out the check as a $0 value. 
+
+4.  Once the check is cleared (a check is cleared if there is no check number showing in the top left of the screen), attempt to reboot the POS again by following the above steps.
+
+ 
+
+
+
+ 
+
+                                    
+
+Device Replacement Procedures: 
+Note: NCR technicians will call in to the help desk when on site replacing equipment. There is no need to transfer them to front end if all they need is a MAC address update in Tuna.
+
+Note 2: If the NCR technician is replacing the register, they MUST pair the pin pad with the newly-installed register. If this is not done the pin pad will not work.
+
+New or replacement Starbucks Connect devices must have their MAC address entered into the Starbucks whitelist in Tuna before they will be able to connect to the network.
+
+ 
+
+KSC may receive a call from NCR or IBM/Toshiba when they need the MAC address of a new/replacement device added into Tuna.
+
+KSC will always need to verify a ticket number exists for the work being done before simply adding a new device into Tuna.
+
+NCR technicians may have an NCR ticket number instead of a Service Now incident number.
+
+Once KSC has verified a ticket number exists for the location, then they can go ahead and enter the new device MAC address into Tuna.
+
+   - If unsure, place the technician on hold and then call the store and speak with the manager to verify the technician on site is valid.
+
+ 
+
+Adding devices to the whitelist:
+Devices that require a MAC to be added to the whitelist on new install or replacement include but may not be limited to:
+
+  - Register (POS)
+
+  - Pin pad
+
+  - Label printers
+
+  - DPM (Mobile Order Tablet)
+
+  - SPC units (servers located in the ECR)
+
+ 
+
+1. Log in to Tuna for the appropriate store.
+
+2. Enter 2 for Network Administration.
+
+3. Enter 5 for Network.
+
+4. Enter 2 for Add/Delete MAC addresses.
+
+5. Enter 4 for Starbucks.
+
+6. Enter the MAC address of the new device and include a comment notating that device it is by using ':comment' after the MAC address.
+
+7. Press Enter to add the MAC and comment to the whitelist
+
+8. Enter Q and then hit Enter to exit and process the changes you made.  If you do not do this step the MAC will not be added to the whitelist.
+
+ 
+
+Pin Pad Replacement calls:
+1. Get the following information from the tech on site and add it to the ticket notes:
+
+  - Old and new pin pad Serial Number
+
+  - Old and new pin pad MAC
+
+2. Add the new pin pad MAC to the Starbucks whitelist in Tuna.
+
+3. Remove the old pin pad MAC from the Starbucks whitelist in Tuna.
+
+4. While the tech is still on site, page the ticket to APP-INSTORE-PAYMENTS. Make sure the ticket is set to priority P2.  APP-INSTORE-PAYMENTS team must onboard the pin pad into the Connect system.  The pin pad will not work until this is done.
+
+ 
+
+Issues Accessing Starbucks Starlink:
+1. “Starbucks StoreLink” is now LSStar.  StoreLink was decommissioned back in 09/2023 and stores should be using LS Star.  Associates occasionally call into the KSC with issues accessing Starbucks StoreLink or LS Star. Instruct the associate to access LS Star via a Quick Link in FEED.
+
+  - If the Associate doesn't know their username or password for LS Star, instruct the Associate to reach out to their Starbucks District Manager.
+
+
+Note:  This is a known issue:
+Associates at some stores are currently unable to log in to LS Star. This is preventing them from placing orders for Starbucks supplies/ingredients. We are working on a permanent fix, but currently the workaround is to have a Store Manager log in. Currently our information indicates no Store Managers are experiencing this issue with logging in, so until it is fixed they should be able to assist. If any users at the Store Manager level are also having issues logging in they should place a support ticket for us to review. 
+
+PinPad and Payment troubleshooting:
+ 
+
+All pin pad/payment issues should follow the guidance in the Starbucks Connect Troubleshooting PINpad/Payment Issues knowledge document.
+
+"Error:  Network: Could not communicate with Payment Provider":
+
+If the store sees this error on the register it is an issue with the pin pad.  Follow guidance in Starbucks Connect Troubleshooting PINpad/Payment Issues.
+
+
+
+
+ 
+
+Network troubleshooting:
+1. The most common symptom of network issues is all electronic payments failing (Credit/Debit/Starbucks Cards).
+
+  - Refer to Starbucks Connect Network Troubleshooting for guidance.
+
+ 
+
+ 
+
+ 
+
+NCR Call Transfer Procedures:
+1. Transfer the site to 800-421-5132 and use option 1.
+
+2. Advise the caller to present themselves as from Kroger. 
+
+ 
+
+3. The caller will need to provide their Starbucks Store number if possible.
+
+  - The Starbucks Store number can be found at the bottom of their POS screen.  The last 5 digits are the Starbucks Store number (59803 in this example).
+
+
+
+- The Starbucks Store number can also be located in this   Spreadsheet.
+
+4.  If the Starbucks Store number cannot be found, the store can provide the NCR agent with their Kroger Division and Store number.

@@ -1,0 +1,116 @@
+This is for KSC informational use only and should not necessarily be shared with stores as its procedural in nature.
+
+A pickup is when the manager takes money from the lane and drops it into the safe so that the register does not exceed a certain amount of money for security/safety reasons.
+
+Stores should be able to handle procedural issues on their own and should be referred to store, district, or division management/front end coordinator for assistance.
+
+ 
+
+Pickup Needed
+
+The controller believes the lane in question has enough money to trigger a "pickup needed" reminder, thus reminding the store to perform a pickup on the lane.
+
+This should still allow the lane to function, just will keep popping up reminding them they have reached the threshold and should perform a cash drop or pickup soon.
+
+A cash drop needs to be done and processed in VeriBalance/controller in order for the register alerts to clear. Once processed correctly, the alert should clear almost instantly.
+
+ 
+
+Pickup Required
+
+The register has exceeded the maximum amount of cash allowed as per the division/loss prevention rules.
+
+The register locks up and will not allow further orders to be completed/processed on the lane until the store performs a pickup in VeriBalance/controller.
+
+A cash drop needs to be done and processed in VeriBalance/controller for the register to unlock. The store should check the cash drawer limits as this could be a root cause. If the store claims that the drop was processed, then determine who their Procedural/Accounting contact is by following documents VeriBalance Procedural and Configuration Contact Information and VBInsight (Blind Accounting): Call Escalating Procedures and refer or escalate to the appropriate team. If performed correctly, the register alert should clear almost instantly.
+
+ 
+
+AT, CI, CO, DE, DI, FR, RD, RM, KS, CE, HO, LO, MA, MI
+Limits for Front End Staffed Registers
+
+Pickup needed soon: $1800.00
+
+Pickup needed now: $2200.00
+
+ 
+
+Limits for Customer Service Desk Registers(#30-#34)
+
+Pickup needed soon: $5000.00
+
+Pickup needed now: $8000.00
+
+ 
+
+All other Divisions (Varies):
+
+Limits for Front End Staffed Registers
+
+DA: Pickup needed soon: $700.00 / now: $1000.00
+
+FM: Pickup needed soon: $1500.00 / now: $5000.00
+
+RA: Pickup needed soon: $1500.00/ now: $2000.00
+
+SM: Pickup needed soon: $1500.00 / now: $5000.00
+
+QFC: Pickup needed soon: $1500.00 / now: $5000.00
+
+ 
+
+Customer Service Desk Registers (#30-#34)
+
+DA: Pickup needed soon: $5000.00 / now: $8000.00
+
+FM: Pickup needed soon: $3000.00 / now: $5000.00
+
+MI: Pickup needed soon: no limit/ now: no limit ($999999.99)
+
+RA: Pickup needed soon: $1500.00 / now: $2000.00
+
+SM: Pickup needed soon: $15000.00 / now: $19999.99
+
+QFC: Pickup needed soon: $15000.00 / now: $19999.99
+
+ 
+
+Verifying Cash Drawer Limits/Till Targets
+
+1. Login to the MC controller.
+
+2. Go to 1. ACE Main Menu
+
+3. Press P for Personalization
+
+4. For Customer Service Desk: Arrow over to File and select "Open Terminal/Group"
+
+  - For Front End (Base Options) registers, go to step 6.
+
+5. In the number field, arrow down to terminals 30, 31, or 32 (whichever the associate is calling about) and press enter to open the options for that terminal.
+
+6. Arrow over to Options, down to Security <enter>, page down to Cash Drawer
+
+
+
+ 
+
+7. Ask if the store has a smart safe.
+
+For Customer Service registers with Smart Safe:
+
+Pickup Needed Soon Limit. 5000.00
+
+Pickup Needed Now Limit. 8000.00
+
+ 
+
+For Base Options, and Customer Service registers without Smart Safe:
+
+Pickup Needed Soon Limit. 1800.00
+
+Pickup Needed Now Limit. 2200.00
+
+8. If the limits are correct, then the store needs to follow store procedures to do a pickup/drop cash. They can reach out to their division coordinator with questions.
+
+9. If the limits are not correct, please have the store contact their Division to correct as this is procedural.  If the limits do not match on one lane in a range, then options should be copied from a working lane.  Please consult and have Frontend Tier 2 copy options if this is the case.

@@ -1,0 +1,77 @@
+Follow these steps if one or more monitors are displaying dashes (intermittently or constantly).
+
+Caution: Do NOT use this document if the dashboard on the SDI indicates one or more system errors; use the appropriate document specifically related to those errors.
+
+If one of more of the monitors is blank, use document QueVision Monitor is Blank
+
+1. Note the uptime on the SDI in your ticket.
+
+  - To view this, Log into the SDI from PSY, and look at the top of the screen.
+
+  - You can do this by pulling up the site in PSY, and then clicking lookup > Quevision.
+
+  - You will then highlight the QueVision SDI selection and click on Website.
+
+  - Alternatively, you can go to sdi.ddsss.kroger.com in your web browser where dd is the two-digit store number and sss is the three-digit store number.
+
+  - For example, to go to the SDI for CE917 it would be sdi.ce917.kroger.com.
+
+  - If this screen has the same problem as the thin client, then this document does not apply.
+
+ 
+
+
+
+ 
+
+2. Ping the thin clients to verify that they are pinging. If they are pinging continue with document, otherwise have the store powercycle the thin client. If they are unable to or it doesn’t start pinging, have them remove the power cable for 2 minutes and plug back in. If it still is not pinging, dispatch the appropriate vendor.
+
+* Refer to  Quevision Thin Clients Have No Power for power issues.
+
+3. Login to the thin client using HP Device Manager. See  HPDM: How to use HP Device Manager (another option is to use VNC):
+
+  - From Device manager, search device tree by IP address, select shadow and refresh, or
+
+  - From VNC, enter IP address and shadow, and hit F5 to refresh.
+
+If predictions do not come back up on monitors, continue with document.
+
+4. In your web browser navigate to http://wta.DDXXX.kroger.com:3127/status *where DD is the two digit divsion code and XXX is the 3 digit store number.
+
+  - For example to if the site was CE917 the link would be http://wta.ce917.kroger.com:3127/status
+
+  - If this site can't be reached, forward the ticket to APP-ISA, with the following notes:
+
+-----------------------------
+
+Forwarding to APP-ISA to restart the occupancy counter application on WTA.
+
+1. Search for the PID of the Quevision/Occupancy counter app:
+
+DDXXX*wta: /etc/init.d # ps -ef |grep quevision-display-store-server
+
+2. Kill the PID in question:
+
+DDXXXwta: /etc/init.d # kill -9 #pidNumber
+
+3. Startup the app:
+
+DDXXXwta:/etc/init.d # /websphere/wlp/bin/server start quevision-display-store-server
+
+Starting server quevision-display-store-server.
+
+Server quevision-display-store-server started with process ID 20466.
+
+  - Otherwise cotinue with this document.
+
+  - *where DD is the two digit divsion code and XXX is the 3 digit store number
+
+5. If you briefly see a pink background with dots in the balls before a normal display without refreshing the screen, then send a Factory Reset to the Device (refer to linked entry HPDM - How to Use HP Device Manager . If a factory default has already been performed on this device at least two times prior to this call, escalate to INF-EnterpriseDesktop Support.
+
+6. Attempt to refresh the screen by hitting F5. If this does not cause it to display correctly, continue with document. If this works, and this has not been a recurring issue for this device (at least two other calls for this device), attach this document and close the ticket. If this is a recurring issue for this store, check the firmware on the SDI. From the SDI, navigate to Support Center -> Basic Support and note the SDI firmware under Version Information. If the version is 2.0.31028.X (where X is 1-4), notify a member of APP-ISA that the firmware needs to be upgraded here. If the firmware version is 2.0.50610.1 or greater, escalate the ticket to APP-ISA.
+
+7. If the monitors are still displaying incorrectly at this point, do Power and then Restart (HPDM). If this does not solve the problem, or the Thin Client fails to boot properly then dispatch the appropriate vendor.
+
+For rebooting via VNC, hit Ctrl+Q. This takes you to the desktop screen. From this screen, right click, and you get the option to reboot, shutdown, login as admin, or restart ice weasel. You will select reboot.
+
+ 

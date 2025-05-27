@@ -1,0 +1,184 @@
+Note:  If it's all Scales AND Pickup Label Printers not working at the same time, here are some notes:
+
+ If the issue with the printers is determined to not be related to Hardware, collect the following information (as much as you can):
+
+     - Confirmation that the issue is with the ZT230 Label Printer – (state yes or no)
+
+     - Confirmation that the issue does not appear to be hardware related/does not warrant a dispatch – (state yes or no)
+
+     - Confirmation that the printers are both down, and that power cycling them did not work to resolve - (state yes or no)
+
+     - Orders Affected (gather at least 1-2 19 digit order numbers from the store)
+
+Escalate to Store Support Tier 2 to reboot the DBA VM
+Store Support see:  Virtual Store Architecture - Non-ISP VM Rebooted to Correct a Problem 
+
+ 
+
+The "Do you have a Cart Mounted Scale," question prompt is now activated. This prompt occurs at the start of a trolley route. The prompt will be activated before the stores actually have the new Cart Mounted scale batteries. Until the stores have the batteries they simply need to select no.
+
+ 
+
+For an overview of installing the new battery packs, see the attached document, "Mobile Cart Battery Installation guide -Final."
+
+ 
+
+NOTE: See: Pickup - Mettler Scale Dispatch Procedures
+
+
+
+Stores may begin using the new battery packs immediately.
+
+Stores should not resume usage of the old, non-Kroger branded batteries. These are still on recall due to being a safety hazard and should be sent back to for collection.
+
+This document is for issues with cart-mounted scales specifically. For issues with scales not weighing or becoming stuck in a loop, seek other documentation.
+
+ 
+
+Missing Barcodes for Pairing Devices
+For Missing Barcodes Labels for Pairing Devices go here:   Pickup - Mettler Scale Dispatch Procedures
+
+ 
+
+Basic Troubleshooting
+Important!
+- Make sure to include in your incident the MAC Address or P#, DNS name and IP of the scale that the store is having an issue with.
+- Important!  If all scales are NOT Pinging the network needs to be troubleshooted.
+- Check the basics such as they are entered in TUNA correctly.  Check section on How To Enter Scales in TUNA
+- If need be, get the help of Frontend Tier 2 or Store Support.
+- Ensure WIFI enabled scales are checked in TUNA once installed.   
+- Ensure scale battery is fully charged before beginning the trolley route
+- Ensure scale is clean and free of debris before using
+- Important!  If all scales are pinging but not working (connecting to TC52's):
+escalate to APP-ESO to make sure they are setup correctly in the database only that team has access to!  If APP-ESO finds that they are listed in the database and still not working, a tech would need to be dispatched.
+- Follow produce selecting and bagging best practices
+- Scales should be placed on top of trolley with all feet level on the trolley surface
+- Scale feet should not be adjusted or removed as this may cause the scale to improperly weigh items 
+- Frequent handling of scales on/off trollies is not recommended as this can cause scales to malfunction.
+- Scales should not be left unattended or stored outside as the devices are not designed to handle extreme heat or cold
+   weather conditions. 
+- If scales must be removed from trollies overnight or when not in use, never stack the scales. Stacking scales can cause
+   damage and/or calibration. 
+
+ 
+
+Power Issues
+- If the store is calling in for power issues, ask the store to try swapping the battery, cable and charger to verify that these are not the issue.
+  Process of elimination. 
+
+If they find they need to replace the battery, cable or charger, refer the store that they can now request battery replacements through Coupa.
+
+ 
+
+Important Note:  From here on out, any replacement scales will now be wifi scales.
+
+ 
+
+ 
+
+How To Enter Scales Into TUNA
+As they convert, techs will and should be installing all scales into TUNA, please see attached TSN for further details, but scales WILL BE pingable and can be found in TUNA here as a SCALE with the METTLER sub-template. 
+
+1.  Log into TUNA
+
+
+
+2.  Go into the Store Segment of TUNA and hit Enter.
+
+
+
+3.  Scroll down until you see a line that says UNASSIGNED
+
+TIP: You can highlight any UNASSIGNED and press F9 to see a list of all UNASSIGNED IP numbers).
+
+
+
+ 
+
+4.  Hit Enter to go into Device Configuration.  Go to Device Type and press CTRL+U
+
+
+
+ 
+
+5.  Arrow down till it says More and then hit Enter, arrow down to Miscellaneous and then Enter.
+
+ 
+
+
+
+ 
+
+
+
+6.  Arrow down till you see Scale - Ariva and hit Enter
+
+7.  Fill out Comment Location with "Pickup Serial (then add the serial number)
+
+8.  Arrow down and put Y in the DHCP/Bootp
+
+9.  Arrow down to Hardware Addr and fill out MAC address
+
+Note:  MAC addresses for the Ariva scales are typically found on the actual radio.  Also puts a ziploc bag in with the radio with 5 scannable labels.
+
+
+
+10.  Hit F5 to submit
+
+ 
+
+If the Scale Displays a Weight:
+Carefully clean the scale surface and verify nothing is touching the scale. Press the 0 button when the scale is clean and the surrounding area cleared of any interference.
+
+When the scale returns to 0.00, place the item back on the scale, verify the weight, remove the item, wait for the scale to return to 0.00, and scan the tote barcode.
+
+ 
+
+If the Scale Displays Three Dashes:
+If the scale still does not return to 0.00 or displays three dashes, verify the scale is level. Re-level the scale as needed by twisting the feet of the scale until level. Once the scale appears to be level, press the 0 button.
+A leveling bubble is located under the weight plate.
+
+
+
+ 
+
+Verify the Product Being Weighed:
+If the store reports they are still stuck in a weighing loop, ask what product they are trying to weigh. If Sub Multiple was selected and a patron has ordered multiple of an item, the store will need to weigh each item individually.  If this does not apply, remove power from the scale for at least two minutes. Try re-weighing the product and scanning the tote barcode.
+
+ 
+
+ 
+
+Unable To Use Cart Scale:
+If a Selector encounters an issue with the cart mounted scale, they should attempt to cancel out of the picking task. When resuming the pick, the Selector should press No when asked if they have a cart-mounted scale and should use an existing Produce or Pickup department scale.
+
+If dispatch is needed, see doc on dispatching Mettler pickup scales linked below.
+
+ 
+
+"Cannot Connect" Error
+If stores are getting a "Cannot Connect" error, ask them:
+
+- If they are using the barcode on the bottom of the scale.  Meaning they will move the barcode to the top.  If it is missing, you will need to dispatch.
+
+- Ask the store if they can see the external wireless antenna on the scale or if it is broken off?  If so make sure to put this in your incident/dispatch notes so that if a tech goes out they can have it with them on hand.
+
+Once the scale is dispatched and replaced, the tech needs to identify the groupings/group settings.  See:
+
+ 
+
+Scale Is Not Receiving Power Or Not Charging:
+Scale battery packs contain an on/off switch. Batteries should be ON at all times, including when charging.
+
+When charging, connect the charge to the 12V input.
+
+When on the scale, verify the power adapter is connected to the 9V output on the battery and connected to the power in port on the scale's left side (when facing scale display).
+
+ 
+
+Battery Dispatching:
+When a store calls in for a wireless scale battery issues - any hardware that needs to be replaced (battery, case, cable and charger), note in the ticket what needs to be replaced. List any brands and models that are applicable from the item.  Refer the store that they can now request battery replacements through Coupa.
+
+ 
+
+If the batteries are missing all together, they must call it in to their Division DTL.

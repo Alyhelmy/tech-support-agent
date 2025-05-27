@@ -1,0 +1,27 @@
+1. Have the store find the SDI and power it off. Usually located in the ECR/Computer Room
+
+(picture of the SDI is attached below.)
+
+Hard reboot the SDI by removing power for 30 seconds.
+
+Make sure the SDI stops pinging.
+
+ 
+
+2. Have the store power the SDI back on and wait for it to start pinging again. 
+
+ 
+
+3. Log back into dashboard and make sure that the time is now moving correctly. It can take up to 5 minutes for the SDI dashboard to get out of warmup mode if it has just been rebooted. If it is not pinging, dispatch the ticket to the appropriate team listed in the following article: 
+
+QueVision: Dispatching a technician for faulty Quevision sensors or SDI issues
+
+ 
+
+4. Let the store know that it will take between 10-15 transactions at the registers before the predictions can be created on their screens.
+
+Monitor the store and make sure that the predictions do display.
+
+If they don't seek other documentation for prediction errors.
+
+If they show up ok, close the ticket.

@@ -1,0 +1,438 @@
+1. Apply the template for the device type being reported.
+
+  - InStock Devices: SS - InStock Zebra TC52
+
+  - Harvesters: FE - Harvester Zebra TC52 
+
+ 
+
+2. Log in to Airwatch MDM and select List View.
+
+  See SaaS AirWatch MDM Login and Locate Device for more information on Airwatch.
+
+3. Enter the serial number and press Enter to filter for the device being reported.
+
+ 
+
+4. Record the following information into the incident.
+
+  - Serial number
+
+  - Last seen status
+
+
+
+ 
+
+Note: If the device does not appear in Airwatch and the serial number is correct, dispatch for a replacement. Follow Zebra TC52 / TC53e / TC57 Handheld Dispatch.
+
+ 
+
+5. Verify the Last Seen status is green, indicating that the device is reachable on the network.
+
+  - If the Last seen status is green, go to Step 7.
+
+  - If the Last Seen status is red, go to the next step.
+
+
+. Query the device to make sure it is reachable.
+
+  a. Click the Query button.
+
+
+
+ 
+
+  b. Click OK on the message that appears.
+
+
+
+ 
+
+  c. Select More Actions and then Sync Device.
+
+
+
+ 
+
+d. Reload the browser page to make sure the Last Seen field updates to green.
+
+  If the Last Seen time does not update, go to the section for connectivity issues.
+
+ 
+
+7. Go to the section for the issue the store is reporting.
+
+  While troubleshooting any issue, note any error codes or messages in the incident. The next sections cover the following topics: 
+
+Connection issues
+Device hardware and software
+Charging stations
+Dispatching
+ 
+
+ 
+
+Connection issues
+This device connects on the store Wi-Fi. Like most wireless devices, there is a Wi-Fi symbol showing connectivity and signal strength. 
+
+  - Fully connected -  filled in Wi-Fi symbol
+
+  - Not connected -   empty Wi-Fi symbol
+
+ 
+
+Follow these steps to reapply the Wi-Fi profile to a single device that it is not successfully connecting to SSID InS+0cK.
+
+  - If connectivity issues are affecting devices in an entire department or the entire store, transfer to KSC-Store Support T2; see Wi-Fi Troubleshooting For Zebra and Samsung Mobile Devices.
+
+  - If the issue is happening at a fuel center, have the user try connecting to Customer Wi-Fi using a personal device at the fuel center, to isolate whether the issue is with the device or the Wi-Fi access point. If the fuel center is an Avalan P2P site, transfer to KSC-Store Support T2. They will follow OpenVPN - Devices Will Not Connect at a Remote Site.
+
+ 
+
+	Caution: All steps should be performed on the device itself. Do not attempt to reapply the profile using the Airwatch console.
+ 
+
+ 
+
+1. Find out what the Wi-Fi status is on the device.
+
+  - If the device is in airplane mode (a small airplane symbol), dispatch on the device.
+
+  - If the device is not in airplane mode, go to the next step.
+
+ 
+
+2. Open the Hub app.
+
+Note: A banner may block the cart on the login screen, so having the user tap the cart to open the Hub app may not be possible.
+
+ 
+
+  a. Select About Device on the login screen.
+
+  b. Tap the HomeBase version 10 times.
+
+
+
+ 
+
+3. Select This Device, then scroll down and select Profiles (the user may have to tap the back arrow if a login appears).
+
+
+
+ 
+
+4. Scroll down and select WifiPSK_Kart_Str_PRD.
+
+  - If the profile is missing, dispatch on the device.
+
+  - If the profile is present, go to the next step.
+
+
+
+ 
+
+5. Tap on Reapply profile and select REAPPLY to confirm.
+
+
+
+ 
+
+6. Verify the device is connecting (you can make sure it does in Airwatch by querying the device).
+
+  If the device is not connecting and the query didn’t update the Last Seen status, go to the next step.
+
+ 
+
+7. Restart the device.
+
+  If the issue continues and is only happening to one device, dispatch on the device.
+
+ 
+
+ 
+
+Device hardware and software
+The following sections cover how to troubleshoot common issues on the TC52 handhelds. This diagram shows the location of physical parts and buttons referred to in this section. 
+
+
+
+ 
+
+This section covers the following issues:
+
+Device will not power on
+Device is locked up or will not boot
+Device is set up for the wrong location
+Key icon is not moving from left to right on login
+Voice Mode is on / Green boxes appear around objects
+Screen is rotated
+Device is stuck in Battery Saver Mode / Screen is dim
+Applications are missing / Screen looks like a phone
+Missing images in all apps
+Incorrect date or time
+Unable to unlock the device / 4-digit PIN does not work
+Scanner not working
+Device is stuck on "Kart Installation in progress" screen
+Device displays "Chrome needs to be updated" or "HomeBase has failed" errors
+ 
+
+ 
+
+ 
+
+Device will not power on
+The issue could be the battery, device, or the power button is not being held in long enough. Follow these steps to resolve the issue.
+
+ 
+
+1. Make sure the battery is good by testing it in another device.
+
+ 
+
+2. Hold the Power button in for at least 30 seconds to power it on.
+
+  - If it powers on, close the incident.
+
+  - If it does not power on, go to the next step.
+
+ 
+
+3. Place a known good battery into the device.
+
+  - If the device powers on, go to the next step.
+
+  - If the device does not power on, replace the battery.
+
+ 
+
+4. Place the device into the charger to see if it powers on.
+
+Note: Device will power on automatically when placed in the charger, and it will indicate charging with a yellow or orange light. Depending how dead the battery is, it may take a few minutes to power on.
+
+  - If the device has a red blinking light, replace the battery.
+
+  - If it still does not power on, replace the device.
+
+  - If it does power on, inform the store to allow the device to fully charge before using it. Then close the incident.
+
+ 
+
+Device is locked up or will not boot
+Try removing and reseating the battery.
+
+  - If that resolves the issue, close the incident.
+
+  - If the issue keeps occurring or the store reports having to keep reseating the battery to get it to work, dispatch for a replacement. Also dispatch if the handheld won't move past the "Phone is booting" screen at all.
+
+ 
+
+Device is set up for the wrong location
+If a user gets a wrong location error, confirm whether they see it on the lock screen or in the InStock app.
+
+ 
+
+If the location is incorrect on the lock screen or login screen, gather the following information and send the incident to INF-EnterpriseMobilitySupport as a P4.
+
+  - Serial number
+
+  - Location showing on the device
+
+  - Correct location for the device
+
+ 
+
+If the user sees a "Store Location Issue" error in the InStock app, follow InStock- Store Location issue instead of the steps in this section.
+
+
+
+ 
+
+ 
+
+Key icon is not moving from left to right on login
+Follow these steps to resolve the issue where the Key icon does not move from the left side of the screen to the right, as shown in this example.
+
+
+
+ 
+
+1. Make sure the associate is logged in to the device.
+
+ 
+
+2. Log in to the AirWatch MDM and search on the serial number of the device.
+
+ 
+
+3. Select the Profiles tab and re-apply the Launcher_Retailops_Str_U_Rdhcico_Enterprise profile.
+
+Note: The user has to be logged into this device to get this profile to appear.
+
+  - If it does not appear, have the user power-cycle the device and log in again. Then retry applying the profile. If it still does not appear, send the incident to INF-EnterpriseMobilitySupport as a P3.
+
+  - If the profile appears and you applied it successfully, go to the next step.
+
+
+
+ 
+
+4. Have the user power off the device, then power it on.
+
+  - If re-applying the profile did not resolve the issue, attempt Step 3 again.
+
+  - If re-applying the profile did not work a second time, send the incident to INF-EnterpriseMobilitySupport as a P3.
+
+ 
+
+Voice Mode is on / Green boxes appear around objects
+Hold the Volume Up and Volume Down buttons at the same time for 30 seconds or until the green boxes disappear (if sound is enabled, the device will beep).
+
+  - If the issue is resolved, close the incident.
+
+  - If the issue is not resolved, send a P3 to INF-EnterpriseMobilitySupport with the device's serial number.
+
+ 
+
+Screen is rotated
+This is usually caused by the screen rotation lock being turned off. Follow these steps to enable it.
+
+ 
+
+1. Make sure the user is logged in to the device.
+
+  - If the user is logged in, go to the next step.
+
+  - If the user is unable to log in, query the device in Airwatch. If unable to query the device, have the associate reapply the Wi-Fi profile (see the "Connectivity issues" section).
+
+ 
+
+2. Swipe down to open the pull-down menu at the top of the screen.
+
+
+
+ 
+
+3. Make sure the screen rotation option is disabled.
+
+  If disabling the option does not resolve the issue, go to the next step.
+
+
+
+ 
+
+4. Record the device's serial number and send the incident to INF-EnterpriseMobilitySupport as a P4.
+
+ 
+
+Device is stuck in Battery Saver Mode / Screen is dim
+This is usually indicates a low battery. Have the user place the device on the charger until the battery is 100% and verify Dark Mode turns off.
+
+  If it does not, record the serial number and send the incident to INF-EnterpriseMobilitySupport as a P4.
+
+ 
+
+Applications are missing / Screen looks like a phone
+If the store is reporting missing applications, follow Zebra TC52 / TC57 - Checking App Version and Reinstalling Missing Apps. 
+
+ 
+
+If the screen looks like a regular Android phone or the cart is unresponsive, check Airwatch to make sure the Hub app is installed.
+
+  - If the Hub app is installed, send the incident to INF-EnterpriseMobilitySupport as a P4.
+
+  - If the handheld doesn't have the Hub app, dispatch on the device.
+
+ 
+
+Missing images in all apps
+If all apps are missing images on all devices, send the incident to INF-NOC as a P3. They will need to troubleshoot issues with mobile DNS.
+
+ 
+
+Incorrect date or time
+The issue is cause by the incorrect time zone being set on the device. Record the device serial number and send the incident to INF-EnterpriseMobilitySupport.
+
+ 
+
+Unable to unlock the device / 4-digit PIN does not work
+The device PIN is 0DDD (a zero followed by 3-digit division code).
+
+ 
+
+Example:
+
+The Cincinnati division code is 014, so 0014 would be entered.
+
+ 
+
+If the PIN does not work, record the serial number in the incident and send it to INF-EnterpriseMobilitySupport.
+
+ 
+
+Scanner not working
+Store associate may report one of these issues:
+
+  - The scanner is not emitting a beam. 
+
+  - The scanner emits a beam but is not reading the barcode. 
+
+ 
+
+If the scanner is not emitting a beam, have the associate try rebooting. If rebooting the device does not resolve the issue, send the incident to INF-EnterpriseMobilitySupport as a P3.
+
+ 
+
+If the scanner is not picking up barcodes, have the associate clean the scanner lens with a clean dry cloth and check for damage.
+
+  - If cleaning the scanner resolves the issue, close the incident.
+
+  - If cleaning the scanner does not resolve the issue, send the incident to INF-EnterpriseMobilitySupport as a P3.
+
+  - If the scanner lens is physically damaged, dispatch on the device.
+
+ 
+
+Device is stuck on "Kart Installation in progress" screen
+This means the device fell out of its organizational group (OG). Send the incident to INF-EnterpriseMobilitySupport as a P3.
+
+ 
+
+Device displays "Chrome needs to be updated" or "HomeBase has failed" errors
+Send the incident to INF-EnterpriseMobilitySupport as a P3.
+
+ 
+
+ 
+
+Charging stations
+To test whether a charging station has a bad bay, make sure a good battery is being used in a device and place it in the bay.
+
+  - Look for a lightning symbol on the battery or a light on the top right corner of the device.
+
+  - Also look for the green light on the bay itself. 
+
+  - If the bay appears to not be working but the other four do, dispatch on the charging station.
+
+
+
+ 
+
+If the charging station itself doesn't have power, make sure the power cord and power brick are connected. The power light can be found on the side with the Zebra logo.
+
+ 
+
+
+
+ 
+
+The power brick connects in back of the charging station as shown.
+
+
+
+ 
+
+Docking connector
+
+Each device will have a docking connector (also called "I/O connector" or "interface connector") attached to the bottom to allow it to charge in station (see the line diagram). This part is removable and could get lost or damaged. They can be replaced through Coupa.

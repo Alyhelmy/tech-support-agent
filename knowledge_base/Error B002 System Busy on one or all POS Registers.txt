@@ -1,0 +1,33 @@
+Note: If more than ½ of the registers are displaying “System Busy” warm transfer the call to a Frontend Tier 2.
+
+1. Ping and connect to both the MC and CC controller.
+
+  - If you can not ping, or connect to either controller or if the connection to either controller is slow, transfer the call to a FE Tier 2.
+
+2. Access background messaging and look for W971 System PD, W754 Fixed Disk errors. If errors are found, transfer the call to a FE Tier2.
+
+Note:  If all registers are displaying system busy and are not able to reload, there could be a communication issue with the controllers to the registers.  Frontend Tier 2 may need to reboot all controllers one at a time starting with the MC and waiting till it loads back up to reboot the next and so on etc.  Please reach out to APP-POS in their chat with Tier 2 if unsure.
+
+3. If less than 1/2 of the registers are affected, and there are no errors on the controllers, continue.
+
+4. Document what the user did just before the terminal went to “System Busy”
+
+5. Document if there is a different error displayed on the pole, or the customer display vs. keyboard display.
+
+6. If an error is found, search for error documentation and follow relevant troubleshooting, see: Basic POS Register Troubleshooting.
+
+7. If there are no errors indicating a problem, check the thermal printer and Sensormatic devices for possible problems.
+
+  - Reseat the thermal printer logic card for IBM printer.
+
+  - Check for paper.
+
+  - Power the printer off and on with the printer power button.
+
+8. Instruct the user to power cycle the register, if it's still not responding. See: How to Reboot Register or Load Terminal Configuration ( 9-Load )
+
+9. Verify the lights are out on keyboard and printer. Leave off for 30 to 60 seconds before powering back on.
+
+10. The register should return to the point before it froze and the user can continue with the order.
+
+11. If the register comes back with the same issue/error, warm transfer the call to Frontend Tier 2.
