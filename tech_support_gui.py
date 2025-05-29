@@ -2,12 +2,13 @@ import tkinter as tk
 from tkinter import ttk, scrolledtext, messagebox
 from tech_support_agent import TechSupportAgent
 import threading
+from datetime import datetime
 
 class TechSupportGUI:
     def __init__(self, root):
         self.root = root
-        self.root.title("Tech Support Agent")
-        self.root.geometry("1000x700")  # Increased window size
+        self.root.title("Tech Support Assistant")
+        self.root.geometry("1200x800")
         
         # Set theme colors
         self.colors = {
@@ -16,7 +17,10 @@ class TechSupportGUI:
             'background': '#F5F5F5',
             'text': '#333333',
             'success': '#4CAF50',
-            'warning': '#FFC107'
+            'warning': '#FFC107',
+            'chat_bg': '#FFFFFF',
+            'user_msg': '#E3F2FD',
+            'ai_msg': '#F5F5F5'
         }
         
         # Initialize the tech support agent
@@ -24,7 +28,7 @@ class TechSupportGUI:
         
         # Configure style
         self.style = ttk.Style()
-        self.style.theme_use('clam')  # Use clam theme as base
+        self.style.theme_use('clam')
         
         # Configure styles
         self.style.configure("TFrame", background=self.colors['background'])
@@ -41,9 +45,9 @@ class TechSupportGUI:
                            foreground='white')
         self.style.map("TButton",
                       background=[('active', self.colors['secondary'])])
-        self.style.configure("Search.TButton",
+        self.style.configure("Chat.TButton",
                            font=('Segoe UI', 10, 'bold'),
-                           padding=10)
+                           padding=5)
         self.style.configure("TLabelframe", 
                            background=self.colors['background'],
                            foreground=self.colors['text'])
@@ -59,252 +63,234 @@ class TechSupportGUI:
         root.columnconfigure(0, weight=1)
         root.rowconfigure(0, weight=1)
         self.main_frame.columnconfigure(0, weight=1)
-        self.main_frame.rowconfigure(2, weight=1)
+        self.main_frame.rowconfigure(1, weight=1)
+        
+        # Create notebook for tabs
+        self.notebook = ttk.Notebook(self.main_frame)
+        self.notebook.grid(row=1, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
+        
+        # Create tabs
+        self.chat_tab = ttk.Frame(self.notebook)
+        self.kb_tab = ttk.Frame(self.notebook)
+        
+        self.notebook.add(self.chat_tab, text="AI Chat")
+        self.notebook.add(self.kb_tab, text="Knowledge Base")
         
         # Create and place widgets
-        self.create_widgets()
+        self.create_chat_widgets()
+        self.create_kb_widgets()
+        
+        # Initialize chat history
+        self.chat_history = []
 
-    def create_widgets(self):
-        # Title Label
-        title_label = ttk.Label(
-            self.main_frame,
-            text="Tech Support Assistant",
-            style="Title.TLabel"
-        )
-        title_label.grid(row=0, column=0, pady=(0, 20))
-
-        # Query Frame
-        query_frame = ttk.Frame(self.main_frame)
-        query_frame.grid(row=1, column=0, sticky=(tk.W, tk.E), pady=(0, 20))
-        query_frame.columnconfigure(1, weight=1)
-
-        # Query Label
-        query_label = ttk.Label(
-            query_frame,
-            text="Describe your issue:",
-            font=('Segoe UI', 11)
-        )
-        query_label.grid(row=0, column=0, padx=(0, 10))
-
-        # Query Entry
-        self.query_entry = ttk.Entry(
-            query_frame,
-            width=50,
-            font=('Segoe UI', 11)
-        )
-        self.query_entry.grid(row=0, column=1, sticky=(tk.W, tk.E), padx=(0, 10))
-        self.query_entry.bind("<Return>", lambda e: self.process_query())
-
-        # Search Button
-        search_button = ttk.Button(
-            query_frame,
-            text="Search",
-            command=self.process_query,
-            style="Search.TButton"
-        )
-        search_button.grid(row=0, column=2)
-
-        # Results Frame
-        results_frame = ttk.LabelFrame(
-            self.main_frame,
-            text="Search Results",
-            padding="10"
-        )
-        results_frame.grid(row=2, column=0, sticky=(tk.W, tk.E, tk.N, tk.S), pady=(0, 20))
-        results_frame.columnconfigure(0, weight=1)
-        results_frame.rowconfigure(0, weight=1)
-
-        # Results Text
-        self.results_text = scrolledtext.ScrolledText(
-            results_frame,
+    def create_chat_widgets(self):
+        # Chat Frame
+        chat_frame = ttk.Frame(self.chat_tab, padding="10")
+        chat_frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
+        chat_frame.columnconfigure(0, weight=1)
+        chat_frame.rowconfigure(0, weight=1)
+        
+        # Chat Display
+        self.chat_display = scrolledtext.ScrolledText(
+            chat_frame,
             wrap=tk.WORD,
             width=80,
-            height=25,
+            height=30,
+            font=('Segoe UI', 11),
+            background=self.colors['chat_bg'],
+            foreground=self.colors['text']
+        )
+        self.chat_display.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S), pady=(0, 10))
+        self.chat_display.config(state=tk.DISABLED)
+        
+        # Input Frame
+        input_frame = ttk.Frame(chat_frame)
+        input_frame.grid(row=1, column=0, sticky=(tk.W, tk.E))
+        input_frame.columnconfigure(0, weight=1)
+        
+        # Message Entry
+        self.message_entry = ttk.Entry(
+            input_frame,
+            font=('Segoe UI', 11)
+        )
+        self.message_entry.grid(row=0, column=0, sticky=(tk.W, tk.E), padx=(0, 10))
+        self.message_entry.bind("<Return>", lambda e: self.send_message())
+        
+        # Send Button
+        send_button = ttk.Button(
+            input_frame,
+            text="Send",
+            command=self.send_message,
+            style="Chat.TButton"
+        )
+        send_button.grid(row=0, column=1)
+
+    def create_kb_widgets(self):
+        # KB Frame
+        kb_frame = ttk.Frame(self.kb_tab, padding="10")
+        kb_frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
+        kb_frame.columnconfigure(0, weight=1)
+        kb_frame.rowconfigure(1, weight=1)
+        
+        # Search Frame
+        search_frame = ttk.Frame(kb_frame)
+        search_frame.grid(row=0, column=0, sticky=(tk.W, tk.E), pady=(0, 10))
+        search_frame.columnconfigure(1, weight=1)
+        
+        # Search Label
+        search_label = ttk.Label(
+            search_frame,
+            text="Search Knowledge Base:",
+            font=('Segoe UI', 11)
+        )
+        search_label.grid(row=0, column=0, padx=(0, 10))
+        
+        # Search Entry
+        self.search_entry = ttk.Entry(
+            search_frame,
+            font=('Segoe UI', 11)
+        )
+        self.search_entry.grid(row=0, column=1, sticky=(tk.W, tk.E), padx=(0, 10))
+        self.search_entry.bind("<Return>", lambda e: self.search_kb())
+        
+        # Search Button
+        search_button = ttk.Button(
+            search_frame,
+            text="Search",
+            command=self.search_kb,
+            style="Chat.TButton"
+        )
+        search_button.grid(row=0, column=2)
+        
+        # Results Frame
+        results_frame = ttk.Frame(kb_frame)
+        results_frame.grid(row=1, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
+        results_frame.columnconfigure(0, weight=1)
+        results_frame.rowconfigure(0, weight=1)
+        
+        # Results List
+        self.results_list = tk.Listbox(
+            results_frame,
+            font=('Segoe UI', 11),
+            selectmode=tk.SINGLE
+        )
+        self.results_list.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S), padx=(0, 10))
+        self.results_list.bind('<<ListboxSelect>>', self.show_selected_solution)
+        
+        # Solution Display
+        self.solution_display = scrolledtext.ScrolledText(
+            results_frame,
+            wrap=tk.WORD,
+            width=50,
+            height=30,
             font=('Segoe UI', 11),
             background='white',
             foreground=self.colors['text']
         )
-        self.results_text.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
-        self.results_text.config(state=tk.DISABLED)
+        self.solution_display.grid(row=0, column=1, sticky=(tk.W, tk.E, tk.N, tk.S))
+        self.solution_display.config(state=tk.DISABLED)
 
-        # Status Bar
-        self.status_var = tk.StringVar()
-        self.status_var.set("Ready")
-        status_bar = ttk.Label(
-            self.main_frame,
-            textvariable=self.status_var,
-            relief=tk.SUNKEN,
-            anchor=tk.W,
-            padding=(10, 5)
-        )
-        status_bar.grid(row=3, column=0, sticky=(tk.W, tk.E), pady=(0, 10))
-
-        # Bottom Buttons Frame
-        bottom_frame = ttk.Frame(self.main_frame)
-        bottom_frame.grid(row=4, column=0, pady=(0, 10))
-        
-        # Database Info Button
-        db_info_button = ttk.Button(
-            bottom_frame,
-            text="Show Database Info",
-            command=self.show_database_info,
-            style="TButton"
-        )
-        db_info_button.grid(row=0, column=0, padx=5)
-        
-        # Refresh Knowledge Base Button
-        refresh_button = ttk.Button(
-            bottom_frame,
-            text="Refresh Knowledge Base",
-            command=self.refresh_knowledge_base,
-            style="TButton"
-        )
-        refresh_button.grid(row=0, column=1, padx=5)
-
-    def update_results(self, text):
-        self.results_text.config(state=tk.NORMAL)
-        self.results_text.delete(1.0, tk.END)
-        self.results_text.insert(tk.END, text)
-        self.results_text.config(state=tk.DISABLED)
-
-    def process_query(self):
-        query = self.query_entry.get().strip()
-        if not query:
+    def send_message(self):
+        message = self.message_entry.get().strip()
+        if not message:
             return
-
-        self.status_var.set("Processing query...")
-        self.update_results("Searching for solutions...\n")
-
-        # Process query in a separate thread to keep GUI responsive
+        
+        # Clear entry
+        self.message_entry.delete(0, tk.END)
+        
+        # Add user message to chat
+        self.add_chat_message("You", message, is_user=True)
+        
+        # Process message in a separate thread
         def process():
-            similar_solutions = self.agent.find_similar_solutions(query)
+            try:
+                # Get AI response
+                rag_response = self.agent.qa_chain({"query": message})
+                
+                # Get similar solutions
+                similar_solutions = self.agent.find_similar_solutions(message, threshold=0.30)
+                
+                # Prepare AI response
+                ai_response = rag_response["result"]
+                
+                if similar_solutions:
+                    ai_response += "\n\nRelevant knowledge base articles found. Check the Knowledge Base tab for details."
+                
+                # Add AI response to chat
+                self.root.after(0, lambda: self.add_chat_message("AI", ai_response, is_user=False))
+                
+                # Update KB tab if solutions found
+                if similar_solutions:
+                    self.root.after(0, lambda: self.update_kb_results(similar_solutions))
             
-            if not similar_solutions:
-                self.root.after(0, lambda: self.update_results(
-                    "No relevant solutions found. Please try rephrasing your query."
-                ))
-                self.root.after(0, lambda: self.status_var.set("No results found"))
-                return
-
-            # Create a selection window for multiple results
-            if len(similar_solutions) > 1:
-                self.create_selection_window(similar_solutions)
-            else:
-                solution = self.agent.get_solution(similar_solutions[0][0])
-                self.root.after(0, lambda: self.update_results(solution))
-                self.root.after(0, lambda: self.status_var.set("Solution found"))
-
+            except Exception as e:
+                error_message = f"Error: {str(e)}\nPlease try rephrasing your message or check if Ollama is running properly."
+                self.root.after(0, lambda: self.add_chat_message("System", error_message, is_user=False))
+        
         threading.Thread(target=process, daemon=True).start()
 
-    def create_selection_window(self, similar_solutions):
-        # Create a new top-level window
-        selection_window = tk.Toplevel(self.root)
-        selection_window.title("Select Topic")
-        selection_window.geometry("800x500")
+    def add_chat_message(self, sender, message, is_user=False):
+        self.chat_display.config(state=tk.NORMAL)
         
-        # Create a frame for the listbox
-        frame = ttk.Frame(selection_window, padding="20")
-        frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
+        # Add timestamp
+        timestamp = datetime.now().strftime("%H:%M")
         
-        # Configure grid weights
-        selection_window.columnconfigure(0, weight=1)
-        selection_window.rowconfigure(0, weight=1)
-        frame.columnconfigure(0, weight=1)
-        frame.rowconfigure(1, weight=1)
+        # Add message with formatting
+        self.chat_display.insert(tk.END, f"\n{timestamp} - {sender}:\n", "sender")
+        self.chat_display.insert(tk.END, f"{message}\n", "message")
         
-        # Create a label
-        label = ttk.Label(
-            frame,
-            text="Multiple solutions found. Please select the most relevant topic:",
-            font=('Segoe UI', 11),
-            wraplength=700
-        )
-        label.grid(row=0, column=0, pady=(0, 15))
+        # Configure tags
+        self.chat_display.tag_config("sender", font=('Segoe UI', 10, 'bold'))
+        self.chat_display.tag_config("message", 
+                                   background=self.colors['user_msg'] if is_user else self.colors['ai_msg'],
+                                   spacing1=5, spacing3=5)
         
-        # Create a listbox with scrollbar
-        listbox_frame = ttk.Frame(frame)
-        listbox_frame.grid(row=1, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
-        listbox_frame.columnconfigure(0, weight=1)
-        listbox_frame.rowconfigure(0, weight=1)
+        # Scroll to bottom
+        self.chat_display.see(tk.END)
+        self.chat_display.config(state=tk.DISABLED)
         
-        scrollbar = ttk.Scrollbar(listbox_frame)
-        scrollbar.grid(row=0, column=1, sticky=(tk.N, tk.S))
-        
-        listbox = tk.Listbox(
-            listbox_frame,
-            width=80,
-            height=15,
-            font=('Segoe UI', 11),
-            selectmode=tk.SINGLE,
-            yscrollcommand=scrollbar.set
-        )
-        listbox.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
-        scrollbar.config(command=listbox.yview)
-        
-        # Add items to the listbox
-        for filename, score in similar_solutions:
-            listbox.insert(tk.END, f"{filename} (Relevance: {score:.2f})")
-        
-        # Create a button frame
-        button_frame = ttk.Frame(frame)
-        button_frame.grid(row=2, column=0, pady=(20, 0))
-        
-        def on_select():
-            selection = listbox.curselection()
-            if selection:
-                index = selection[0]
-                filename = similar_solutions[index][0]
-                solution = self.agent.get_solution(filename)
-                self.update_results(solution)
-                self.status_var.set("Solution displayed")
-                selection_window.destroy()
-        
-        # Create Select button
-        select_button = ttk.Button(
-            button_frame,
-            text="Select",
-            command=on_select,
-            style="Search.TButton"
-        )
-        select_button.grid(row=0, column=0, padx=5)
-        
-        # Create Cancel button
-        cancel_button = ttk.Button(
-            button_frame,
-            text="Cancel",
-            command=selection_window.destroy,
-            style="TButton"
-        )
-        cancel_button.grid(row=0, column=1, padx=5)
+        # Store in history
+        self.chat_history.append((sender, message, is_user))
 
-    def show_database_info(self):
-        """Show information about the stored knowledge base."""
-        knowledge_count = self.agent.knowledge_store.get_knowledge_count()
-        if knowledge_count > 0:
-            message = f"Knowledge Base Status:\n\n"
-            message += f"Total entries: {knowledge_count}\n"
-            message += f"Database file: {self.agent.knowledge_store.db_path}\n\n"
-            message += "The system has learned from your knowledge base files and stored the information in the database. You can now safely delete the original text files if desired."
-        else:
-            message = "No knowledge base entries found in the database."
+    def search_kb(self):
+        query = self.search_entry.get().strip()
+        if not query:
+            return
         
-        messagebox.showinfo("Database Information", message)
-
-    def refresh_knowledge_base(self):
-        """Refresh the knowledge base with any new files."""
-        self.status_var.set("Refreshing knowledge base...")
-        self.update_results("Refreshing knowledge base...\n")
-        
-        def refresh():
+        def search():
             try:
-                self.agent.load_knowledge_base()
-                self.root.after(0, lambda: self.status_var.set("Knowledge base refreshed"))
-                self.root.after(0, lambda: self.update_results("Knowledge base has been refreshed with any new files."))
+                similar_solutions = self.agent.find_similar_solutions(query, threshold=0.30)
+                self.root.after(0, lambda: self.update_kb_results(similar_solutions))
             except Exception as e:
-                self.root.after(0, lambda: self.status_var.set("Error refreshing knowledge base"))
-                self.root.after(0, lambda: self.update_results(f"Error refreshing knowledge base: {str(e)}"))
+                self.root.after(0, lambda: messagebox.showerror("Error", str(e)))
         
-        threading.Thread(target=refresh, daemon=True).start()
+        threading.Thread(target=search, daemon=True).start()
+
+    def update_kb_results(self, similar_solutions):
+        self.results_list.delete(0, tk.END)
+        self.solution_display.config(state=tk.NORMAL)
+        self.solution_display.delete(1.0, tk.END)
+        self.solution_display.config(state=tk.DISABLED)
+        
+        for filename, score in similar_solutions:
+            self.results_list.insert(tk.END, f"{filename} (Relevance: {score:.2f})")
+
+    def show_selected_solution(self, event):
+        selection = self.results_list.curselection()
+        if not selection:
+            return
+        
+        # Get selected filename
+        selected_text = self.results_list.get(selection[0])
+        filename = selected_text.split(" (Relevance:")[0]
+        
+        # Get and display solution
+        solution = self.agent.get_solution(filename)
+        
+        self.solution_display.config(state=tk.NORMAL)
+        self.solution_display.delete(1.0, tk.END)
+        self.solution_display.insert(tk.END, solution)
+        self.solution_display.config(state=tk.DISABLED)
 
 def main():
     root = tk.Tk()
