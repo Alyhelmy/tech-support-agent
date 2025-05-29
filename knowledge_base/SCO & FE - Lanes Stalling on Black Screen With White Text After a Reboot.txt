@@ -1,0 +1,34 @@
+SCO & FE - Lanes Stalling on Black Screen With White Text After a Reboot  
+KB0041280 - Latest Version  
+75 views
+
+Description  
+-----------  
+Lanes stalling on black screen w/ white text during boot. Stores may refer to this as being "stuck on a screen with a bunch of code, (or filenames, etc)".
+
+Cause  
+-----  
+Software
+
+Resolution  
+----------  
+This was initially posted as Specific to SCO lanes, but it can impact both FE and SCO lanes. Stores may refer to this as being "stuck on a screen with a bunch of code, (or filenames, etc)".
+
+A fix was recently sent out for this issue, but we are still seeing new cases being called in.
+
+1. First try sending a 9 load to the lane. This will resolve in most cases.
+
+2. If a 9 load does not resolve, send an 8 load to dump the lane. If this still does not resolve the issue, collect the dump.  
+   See: How To Perform and Prepare Terminal or TCU or Controller Dump
+
+3. Dispatch on the register to rule out hardware.  
+   See: KSC Hardware Dispatching For All Pillars - to find the dispatching vendor.
+
+4. If the tech can't get it to load, have him try readdressing the lane to a different lane number and basic troubleshooting from there.  
+   See: How to Readdress a Register and Verify Load Definition.
+
+   - Power off an existing and working terminal from the same department/SCO hardware and renumber the problem terminal to that terminal number to rule out hardware. If it loads using a working terminal number, run Terminal Installer for staffed lanes or Checuser for SCOs to rebuild the terminal configuration for that lane, and copy options from the working terminal.
+
+   - If unable to readdress the problem terminal, readdress a working terminal as the problem terminal's number to rule out software as the problem. If the working terminal loads as the problem terminal's number, the tech will need to rule out each piece of hardware on the lane, and should contact their top guns for additional assistance.
+
+5. If all troubleshooting has been exhausted and there is a tech onsite, call Frontend Tier 2 to escalate the call "tech onsite" to APP-POS. Please make sure to include the tech's callback cell number in the incident.

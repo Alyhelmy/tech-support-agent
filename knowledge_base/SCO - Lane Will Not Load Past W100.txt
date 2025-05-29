@@ -1,0 +1,51 @@
+W100 PROGRAM CANNOT BE LOADED - Lane Stuck at W100
+==================================================
+
+KB0012064 - Latest Version  
+151 Views
+
+Description
+-----------
+Lane is stuck at or does not load past the W100 error screen:
+
+**W100: PROGRAM CANNOT BE LOADED**
+
+IMPORTANT:  
+If **all registers** are showing this and not functioning, this is a **store down**. Escalate immediately to **Frontend Tier 2**.
+
+Cause
+-----
+- Hard drives were **not properly formatted** when entering the lane number.
+- If "W065 Preload Failure" appears in system messages on the controller, refer to the documentation for **W065**.
+
+Resolution
+----------
+This typically happens **after a tech reformats** the lane.
+
+1. **Send a 9-load** to the terminal.
+   - If this resolves it, no further steps are needed.
+   - If not, continue to Step 2.
+
+2. **Run CHECUSER**.
+   - Refer to documentation: *CHECUSER 2.0*
+
+3. **Likely cause**: Tech pressed S2 twice at the Z001 screen during install, skipping the format step.
+
+4. **Proper STC Reformat Procedure**:
+   - Re-STC the lane.
+   - At **Z001** screen: Enter terminal ID (1xxx, where xxx = terminal #).
+   - Press **S2** ONCE, then wait.
+   - When prompted, press **S1**, then press **S2** again at the Z044 screen.
+   - ⚠️ Do **not** double tap S1 — this skips formatting and installation must be restarted.
+
+5. **Verify system log** shows "Preload Successful".
+
+6. If **W065 PRELOAD FAILURE - E015** appears:
+   - Run **CHECUSER Option 1** to address this.
+
+7. If the tech does **not get option to reformat** at Z001:
+   - Have the tech **reseat the hard drive** in the TCU (Terminal Control Unit).
+
+8. If the issue **still persists**:
+   - The hard drive is likely **faulty**.
+   - Tech should **replace the hard drive**.

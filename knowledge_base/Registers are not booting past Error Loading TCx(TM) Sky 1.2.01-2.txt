@@ -1,0 +1,27 @@
+Registers are not booting past "Error Loading TCx(TM) Sky 1.2.01-2"  
+KB0012708 - Latest Version  
+33 views  
+
+Description:  
+Register is not on the network so KSC is unable to perform a Terminal Dump.  
+You will not see the register in Terminal Status.  
+This could happen on a SCO lane or FE Lane.  
+
+Example Error Message:  
+“Error Loading TCx ™ Sky 1.2.01-02”  
+- Preload failed with RC 23, Unable to continue, rebooting in 1 minute...  
+- Terminal Boot Model 4900785 - Failed to get an IP address via DHCP. Unable to continue, rebooting in 1 minute...  
+
+Cause:  
+This is a new error introduced with the release of TCxSky.  
+APP-POS is currently researching the root cause.  
+
+Resolution:  
+Note the exact error listed under the "Error Loading TCx(TM) Sky 1.2.01-2" message as it may vary.  
+
+1. Verify the network switch the register is connected to is pinging.  
+2. Verify all cables plugged into the network switch are in the correct ports.  
+3. Restart the network switch (if store cannot do this, attempt restart via TUNA).  
+4. In Command Mode, run `ADXRTCCL` to rebuild terminal preload files and then reboot the register.  
+5. If the issue persists, escalate to Store Support to inspect the network.  
+6. If unresolved after network inspection, dispatch a technician to inspect the hardware.

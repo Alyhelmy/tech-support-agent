@@ -1,0 +1,97 @@
+SCO – Hardware – Bill Acceptor Basic Troubleshooting (Start Here)  
+KB ID: KB0011969 - Latest Version  
+Views: 147  
+
+Description:  
+Basic Fujitsu Bill Acceptor Troubleshooting.  
+Note: Toshiba Hardware (System 6) does not use a bill acceptor in stores currently – only a Recycler/Bill Handler – this KB is not applicable to System 6.
+
+Cause:  
+- Wrinkled, old, or damaged bills get jammed in the bill acceptor  
+- Bill acceptor stops accepting or rejects bills  
+- Physical damage  
+
+Resolution:  
+
+Start Here: Initial Assessment  
+Questions to ask / note in the ticket:  
+- Are coins being accepted, but bills are not?  
+- Does the lane accept bills but not deduct from the total due?  
+- What color is the indicator light on the bill acceptor when it should be accepting bills?  
+
+Determine the Error in Cash Maintenance:  
+1. Have user go to: Shopper Assist Mode > Cash Maintenance > Cash Maintenance  
+2. Touch the component in error to get the exact error message  
+3. Touch the error message – troubleshooting info will display  
+4. Begin troubleshooting as per the message  
+5. If bill acceptor still not working and light is off or not green, reseat the vault (see below)  
+
+---  
+Specific Issue Troubleshooting  
+
+**Not Accepting Cash (Blinking Red Light):**  
+- Check for errors in Cash Maintenance  
+- Remove vault, check for jams  
+- Open clam shell, look for jams  
+- Close clam shell securely  
+- Reseat vault  
+- Power cycle lane (see: SCO – Procedural – Power On/Off, Shut Down, 9-Load, or 8-Load)  
+- If unresolved, dispatch per NIMS  
+Note: Fujitsu techs may refer to their company as GLM (Tech Data Global Lifecycle Mgmt)
+
+**Not Accepting Cash (Solid Red Light):**  
+- Confirm customer pressed “Pay Now” then “Cash” (required with Toshiba software)  
+- Clear cash maintenance error message  
+- Power cycle the lane  
+- If unresolved, dispatch per KSC Hardware Dispatching For All Pillars  
+
+**No Power – No Lights:**  
+- Power cycle the SCO lane  
+- If unresolved, dispatch per KSC Hardware Dispatching For All Pillars  
+
+**Vault is Physically Damaged:**  
+- Order a new vault via Supply Point  
+- Vault part number: 11001369  
+- See: SCO - Dispatching IBM for Fujitsu Supply Point Consumable Supplies  
+
+**Bills Not Registering in Software:**  
+- Check for jammed bills in clam shell  
+- Ensure clam shell is closed properly  
+- Perform a 9-Load  
+- Power cycle the lane  
+- If unresolved, dispatch per NIMS  
+
+---  
+Physical Troubleshooting Procedures  
+
+**Clam Shell Is Jammed:**  
+1. Open lane casing (see: SCO – MISC – Casing Type Comparison)  
+2. Locate black box behind the bill acceptor (Genesis is mounted upside down – flip down by pulling tab)  
+3. Press the tabs to remove cassette  
+4. Press <Push> button to open clam shell  
+5. Remove jammed bills  
+6. Close clam shell, replace vault – align pegs  
+7. Listen for bill acceptor motor  
+8. Power cycle lane  
+9. If unresolved, dispatch per KSC Hardware Dispatching  
+
+**Bill Acceptor Vault (Cash Box) Is Jammed:**  
+
+Open Upper Cabinet and Remove Vault:  
+1. Pull up & hold release pin (Genesis only)  
+2. Remove vault by squeezing metal loops  
+3. Turn vault to face front  
+
+Inspect Vault for Jams:  
+1. Turn black locking knob to open position  
+2. Open vault cover  
+3. Slide push plate inside vault to free bills  
+4. Remove jammed bills and place in till  
+5. Close vault, lock with black knob  
+
+Return Vault and Close Cabinet:  
+1. Align vault pegs with bill acceptor slots  
+2. Tilt and push top of vault in until it clicks  
+3. Listen for bill acceptor motor  
+4. Power cycle lane  
+5. If unresolved, dispatch per KSC Hardware Dispatching  

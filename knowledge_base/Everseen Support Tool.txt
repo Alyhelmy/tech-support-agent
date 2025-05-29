@@ -1,0 +1,42 @@
+Everseen Support Tool  
+KB0012705 - Latest Version  
+62 views
+
+Synopsis  
+--------  
+The purpose of the Everseen Support Tool is to allow quick and easy troubleshooting of issues in Everseen.
+
+Solution  
+--------  
+Note: A new feature is being enabled in Everseen called Cart Based Loss (CBL). This new feature adds functionality at SCO to identify items left in carts that do not get added to the transaction. Cart Based Loss (CBL) monitors inside the cart using the cameras above the SCO lane. For any issues reported regarding Cart Based Loss (CBL), please escalate a ticket to APP-LPA as a Priority 3.
+
+The Everseen support tool can be accessed from ACE Main Menu - User Procedures - Support Tools - Everseen Support Tool. When you open the tool on the top it will show if Everseen is installed or not at the store.
+
+When opening the program, you will have 3 options. Below are the details on the 3:
+
+1. Everseen Dashboard – This will verify all the Everseen and POS Configurations needed to run Everseen.
+
+2. Pull LPA Data – This will run PULLLPA.BAT from C:\adx_upgm\. This pulls in any new IP Mappings from the KTV Edge Server. It will then update AUTOMON.PRO in C:\adx_ipgm. This auto runs every night and will pick up any potential changes that have been made on the KTV Edge Server.
+
+3. View LPA Log - This will allow you to view the PULLLPA.LOG. This is the log file for PULLLPA.BAT.
+
+The dashboard will show you valuable information into the status of how Everseen is set up.
+
+Below is a breakdown of the Everseen Dashboard:
+
+- Preload Bundles - Verifies if the preload bundles are available to be assigned to terminals. If issues are found, APP-POS will need to correct. Ticket can be sent to APP-POS as a P3.
+
+- Terminals Bundles - Verifies if the preload bundles are assigned to terminals expected to run Everseen. If issues are found, APP-POS will need to correct. Ticket can be sent to APP-POS as a P3.
+
+- Terminal Extensions - Verifies if the extensions required for Everseen to run properly are assigned to Everseen terminals. If issues are found, APP-POS will need to correct. Ticket can be sent to APP-POS as a P3.
+
+- Java Applications - Verifies if the Java Applications expected to be assigned to Everseen terminals are assigned properly. If issues are found, APP-POS will need to correct. Ticket can be sent to APP-POS as a P3.
+
+- Elevate Status - Verifies if the terminals expected to run Everseen are set up to run Elevate, which is a required Toshiba module. If issues are found, APP-POS will need to correct. Ticket can be sent to APP-POS as a P3.
+
+- SCCompCustSV.properties - Verifies the properties file for Everseen at SCO is in place. If not correct, you will see “Unable to extract ADXXTDCE.DAT”. APP-POS will need to correct. Ticket can be sent to APP-POS as a P3.
+
+- Everseen Properties - Verifies if the Everseen properties are set up correctly. If it shows “Incorrect Configuration,” this is typically because AUTOMON.PRO is not correct and the store needs a new IP mapping file.  
+  See doc: CVA1 or CVA2 is missing & Everseen Dashboard showing "Incorrect Configurations!!" for Everseen Properties.
+
+- Required Everseen Files - Verifies required files are in place that Everseen needs to use. If issues are found, APP-POS will need to correct. Ticket can be sent to APP-POS as a P3.

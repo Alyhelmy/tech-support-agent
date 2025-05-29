@@ -1,0 +1,45 @@
+SCO - "Remove All Items From The Bagging Area"  
+or "Are You Using Your Own Bags" Error
+===============================================
+
+KB0011214 - Latest Version  
+118 Views
+
+Description
+-----------
+Toshiba Self-Checkout (SCO) lanes display:
+- "Remove all items from the bagging area"  
+- "Are you using your own bags"  
+These messages persist and **cannot be cleared**.
+
+Cause
+-----
+The issue is typically caused by:
+- Hardware faults with the **bagging scale**
+- Calibration issues
+
+Resolution
+----------
+
+1. **Enter SA Mode**:
+   - Select the option to **Zero Bagging Area**.
+
+2. If not resolved:
+   - **Remove all bags and/or bag racks** from the scale.
+
+3. Ensure the **"Zero Bagging Area"** button is still visible on the screen.
+
+4. Replace all bags and **zero the scale again**.
+
+   ⚠️ Note:  
+   You may need to act **quickly** when clearing errors — it can be a **looping error**.  
+   Clear one error, scan barcode, and quickly zero the scale before the next prompt appears.
+
+5. If issue persists:
+   - **Power cycle the TCU** and UPS.
+     - Keep powered off for **2+ minutes**.
+     - ⚠️ For System 6 or 7, **UPS power cycle is not required**.
+
+6. If issue is **still not resolved**:
+   - **Dispatch per NIMS** Parts List and procedures.
+

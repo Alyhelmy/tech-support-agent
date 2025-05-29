@@ -1,0 +1,27 @@
+Pumps Are Over or Under Dispensing  
+KB0011458 - Latest Version  
+34 views  
+
+Description:  
+One or multiple pumps are over or under dispensing.  
+
+Resolution:  
+
+Single Pump is Over or Under Dispensing:  
+1. If the pump nozzle is releasing early or not releasing when the customer’s tank is full, see "KSC Hardware Dispatching For All Pillars" for pump hardware dispatch.  
+2. If the issue is not with the nozzle, power cycle the dispenser at the breaker. If the issue continues, dispatch pump hardware via "KSC Hardware Dispatching For All Pillars".  
+
+Multiple Pumps Are Over or Under Dispensing:  
+1. For issues involving:  
+   - Credit Authorization Limits  
+   - 35 Gallon Loyalty Limit  
+   - Additech pumps stopping short  
+   Note: Some sites have an unattended, overnight limit of 25 gallons. Contact the division lead if the unattended limit is incorrect.  
+
+2. For other issues, approve a **Full Update** in RCM and reboot the Fuel Controller.  
+   (See: Approving Full Update In RCM)  
+
+NOTE:  
+If the Division Lead has questions about the issue of a pump going over, provide them with the **2 Word docs attached** (containing APP-Fuel recommendations). APP-Fuel has requested that Division Fuel Leads contact them if assistance is needed.  
+
+Close the ticket.

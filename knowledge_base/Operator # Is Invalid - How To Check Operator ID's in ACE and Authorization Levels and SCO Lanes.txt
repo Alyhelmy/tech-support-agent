@@ -1,0 +1,53 @@
+Operator # Is Invalid - How To Check Operator ID's in ACE and Authorization Levels and SCO Lanes
+KB0012718 - Latest Version
+42 views
+
+Synopsis
+This document shows how to check an ID for ACE, Authorization Level, and if it’s set up after an existing model.  
+In most cases, an ID won’t work correctly unless it’s modeled (set up) after an existing ID.
+
+Stores may call in about this error:  
+
+Solution
+Important: The KSC is NOT allowed to change operator levels or remove/add IDs in ACE.  
+This must be handled by the person who sets up IDs in the store or Division.
+
+POS Initialization Failed - Operator # is Invalid
+
+1. If lane does not show up under Operator Authorization Model ID 9, escalate to Frontend Tier 2 to send to APP-POS:
+   - P3 for one lane
+   - P2 for two or more lanes.
+
+2. If lanes are showing under Model ID 6, escalate to Frontend Tier 2 to send to APP-POS, P4.
+
+How to Check Operator Authorization Records
+
+1. Log into the POS MC Controller using KSC Login and Daily Password.
+
+2. Go into 1 ACE Main Menu.
+
+3. Go into Reports.
+
+4. Arrow down to Data Maintenance Reports and press <Enter>.
+
+5. Arrow down to Operator Authorization and press <Enter>.
+
+6. Flag the following options and press <Enter>.
+
+7. As you page down, you will see the Model ID, Model Name, and Operator ID.
+
+   - For example, Dynamic Override IDs must be Model 6.
+
+8. If you page down and reach "NO MODEL USED!", these IDs may not work correctly because they were not modeled after an existing record.
+
+   - If the ID you are working with falls here, the store needs to set up the ID correctly by modeling it after an existing ID.
+   - This is procedural; they must contact their instore person who sets IDs or the Division (K6557).
+
+Examples:
+
+- Dynamic Overrides: If not set up correctly, they may not work or print Dynamic Overrices.
+- Fuel Operator IDs: If not set up correctly, will not be able to ring up Loyalty.
+- For SCO lanes, the lanes must be entered under level (Model ID) *9.
+
+Note:  
+If CHEC lanes are listed under Operator Level *6, escalate to Frontend Tier 2 to send ticket to APP-POS, P4.

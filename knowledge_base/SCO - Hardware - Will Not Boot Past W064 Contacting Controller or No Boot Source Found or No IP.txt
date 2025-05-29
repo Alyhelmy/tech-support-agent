@@ -1,0 +1,54 @@
+SCO - Hardware - Will Not Boot Past "W064 Contacting Controller" or "No Boot Source Found"/"No IP"
+KB0012128 - Latest Version
+56 views
+
+Description:
+Register will not boot past "W064 Contacting Controller".
+
+Cause:
+Hardware, Network, MAC Address, or TUNA problem.
+
+Resolution:
+Note: This issue is currently being investigated to determine the source cause of lanes getting stuck on W064.
+Before doing any troubleshooting, answer the following questions:
+- Was the lane rebooted from the UPS?
+- What type of casing is the SCO Lane?
+
+Follow the steps below. If assistance is needed, call Frontend Tier 2 prior to reaching out to Store Support.
+
+ALL TERMINALS STUCK ON "W064 CONTACTING CONTROLLER":
+1. Call Frontend Tier 2 to warm IPL all other controllers.
+2. The terminals should reconnect. If not, send a 9-load to reboot the terminal.
+
+ONE OR TWO TERMINALS STUCK ON "W064 CONTACTING CONTROLLER":
+1. Locate the switch and lane in TUNA and check if they are pinging.
+   - Use Netmapper to find the switch and lane MAC address.
+   - Reference: "How To Use Netmapper"
+   - Troubleshoot for network issues using:
+     -> SCO - Hardware - Basic Network / Switch Hardware Troubleshooting
+
+2. Enter the lane’s MAC addresses into the Whitelist:
+   - Connect to TUNA > 2 [Enter] (Network Administration) > 5 [Enter] (Network) > 2 [Enter] (Add/Delete MAC Address)
+   - Enter the MAC Address and press [Enter], then Q to quit and update the file.
+   - Reboot the lane.
+
+3. If the switch is pinging and issue remains after steps 1 and 2:
+   - Disable and re-enable the uplink port on the 5412 switch (refer to attachment: w064.docx).
+   - If unfamiliar with the procedure, call Frontend Tier 2 for assistance.
+
+4. Frontend Tier 2 should follow instructions in the w064.docx.
+
+5. If issue continues:
+   - Run CHECUSER (switch for terminal must be online before running).
+   - CHECUSER 2.0
+
+6. Power cycle the lane’s TCU only if the issue remains.
+
+7. If the issue continues, reach out to Store Support to investigate the network further.
+
+8. If Store Support finds no issue and the lane is still not pinging, dispatch a tech to check hardware.
+   - Reference: KSC Hardware Dispatching For All Pillars
+
+9. If the switch is not pinging:
+   - Power off the lane and UPS (the switch may be attached to the UPS).
+   - If the switch is still not pinging after being powered on for 5 minutes, dispatch per KSC Hardware Dispatching For All Pillars.

@@ -1,0 +1,94 @@
+SCO - Bill Recycler  
+Error: "Hardware Error System Loader Cash Type Status"
+======================================================
+
+KB0012357 - Latest Version  
+117 Views
+
+Description
+-----------
+This error typically appears **after full balancing** or after **loading bills via the loader cassette**.
+
+⚠️ Note:  
+Outside of the **monthly Full Balance**, bills should be loaded using the **bill acceptor**, NOT the loader cassette.
+
+If the error is:  
+**"Cash Type Status_CTS Wrong Setting"**,  
+refer to: *Toshiba SCO - Bill Recycler/Handler - Error "Cash Type Status_CTS Wrong Setting"*
+
+Resolution
+----------
+
+Standard Full Balance Recovery Steps
+------------------------------------
+1. Open the **casing door**.
+
+2. Insert the **key** into the top lock and turn to the **right**.
+
+3. Push the **yellow knob/lever** slightly back to release the loader cassette.
+
+4. Remove the **loader cassette**.
+
+5. **Open the loader box** (apply pressure on top and open with the key).
+
+   ⚠️ **Only $1 bills** should be present.
+   - If $5, $10, or $20 bills are inside, **remove them**.
+   - These should be fed via the **acceptor** or returned to the cash office.
+
+   ➤ Full Balancing: All denominations can be loaded (stacked $1s on bottom, $20s on top, face up).
+
+6. **Ensure bottom panel is pressed down** until it clicks — critical for proper loader engagement.
+
+7. Reload **$1 bills** if applicable.
+
+8. Feed $5, $10, $20 bills manually through the acceptor or return to the cash office.
+
+9. **Close and lock** the loader. Reseat it back into the Recycler.  
+   ✅ Light = Green  
+   ❌ Red light = repeat steps to re-engage properly.
+
+10. **Pull yellow knob** toward you to lock the unit.
+
+11. **Turn key left** to lock and remove it.
+
+12. **Error should now clear** from the screen.
+
+13. If issue persists:
+    - **Reboot the lane**.
+    - If still unresolved, **dispatch Toshiba**.
+
+Improper Use (Loader Used to Add $5/$10/$20 Outside Full Balance)
+------------------------------------------------------------------
+If bills besides $1s were added via loader cassette:
+
+1. **Open loader**, remove all bills, and **rearm** the loader.
+
+2. Replace **only $1s** in loader and lock it.
+
+3. Reseat loader into lane.
+
+4. Navigate to:
+   - Cash Maintenance > select problem device (e.g., Bill Handler)
+
+5. On the right, select **"Add Cash"**
+
+6. You’ll be taken to **Cash Tracking**:
+   - Go to **Bill Handler** tab.
+
+7. On the right, select **“Load Bills Through Acceptor”**.
+
+8. Feed $5, $10, $20 into the **bill acceptor**.
+
+Best Practices Reminder
+-----------------------
+- During full balance: Use **loader** for all denominations (stacked correctly).
+- All other times: Use **bill acceptor**.
+- Loader box must be **clicked closed and seated** properly to function.
+- If loader light stays **red**, reset and reseat again.
+
+Dispatch Conditions
+-------------------
+Dispatch Toshiba if:
+- Error persists after reboot
+- Loader light remains red
+- Solenoid/engagement mechanism fails

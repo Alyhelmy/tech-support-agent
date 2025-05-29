@@ -1,0 +1,140 @@
+
+Cue Application - Troubleshooting Guide
+=======================================
+
+KB0012657 - Latest Version
+862 Views
+
+Table of Contents
+-----------------
+- Resolution
+- Procedural
+- Informational
+- Printing from Cue on Ricoh Printers
+- Escalation Template
+- Common Issues and Fixes
+- Known Issues
+
+Description
+-----------
+Cue is a front-end order monitoring application used for Pickup as part of the Modernized Fulfillment Suite (MODFS).
+Used on Thin Clients in the store’s backroom or pickup area.
+
+Resolution
+----------
+- Multi Thread Pick: Pick items for multiple orders with one temperature type.
+- Single Thread Pick: Pick all items for one order with all temperature types.
+- Dynamic Batching: Not combined with OS or FR trollies.
+- Store must contact eCommerce Field Specialist to switch pick type.
+
+Procedural
+----------
+- Transaction issues not handled by APP-ESO should be referred to the store's eCom Manager.
+- Incorrectly tendered transactions handled by KCRC (800-917-6484).
+
+Informational
+-------------
+- Cue URL: https://ecsb.kroger.com/cue/DDD00SSS/orders
+- Orders auto-print 3 hours prior to pickup.
+- Modifications cause new labels to print.
+
+Printing from Cue on Ricoh Printers
+-----------------------------------
+- Thin Client must have Ricoh printer setup.
+- Some divisions use Rush Orders (2 hours).
+- Ralphs & QFC: 1-hour pickup for 15 UPC orders.
+- Carryover orders auto-process at 3 AM.
+
+Escalation Template
+--------------------
+--------------------START Copy/Paste--------------------
+- Detailed description of issue:
+- Time/Date of issue:
+- Order number:
+- Container/Tote number:
+- UPC of item with issue:
+- Error message (if any):
+- PC Info:
+--------------------STOP Copy/Paste---------------------
+
+Issue-Specific Sections
+------------------------
+
+Item Not Ready
+- Click “Not Ready” flag to check staging status.
+- If all items staged but status incorrect → escalate with template.
+
+Items Doubling / Labels Reprinting
+- Happens when customers modify orders.
+- Re-scan picked items and process modified ones.
+
+Manual Batching Feature
+- Not available to King Soopers & Louisville.
+- Select hour > Batch Selected Hours.
+- Do not batch before 2:06 AM or until 15 minutes after the hour.
+
+Resend EBT Order to POS
+- Use 3-dot menu > "Send to POS".
+- Modal guides confirmation & processing.
+- Escalate if unsuccessful.
+
+Manual Check-In via Cue
+- Use 3-dot menu > "Customer Check-In".
+- Enter parking spot or vehicle info.
+- Escalate if not working.
+
+Orders Running Late
+- Late SMS sent if not “Pick Complete” 15 mins prior.
+- Ready SMS sent once staged.
+
+Failed to Fetch Order Details
+- Sign out (bottom-left) and sign back into SecureWeb.
+- Escalate if not resolved.
+
+Login Issues
+1. Check EUID in IMT (lock, password).
+2. Check access to other apps.
+3. Check if password reset today.
+4. Confirm Cue roles:
+   - jcs000-oa-arrivalscue-user
+5. Use Reset & Repair in IMT.
+6. Re-apply Cue APTs.
+7. Escalate if all steps fail.
+
+Known Issues and Resolutions
+-----------------------------
+
+| Issue                            | Resolution                            |
+|----------------------------------|----------------------------------------|
+| No batched trolleys              | APP-ESO - Priority 2                   |
+| Order status not updating        | Check items/totes, escalate to APP-ESO |
+| Tote on wrong trolley            | Send to APP-CIM                        |
+| Trolley labels fail to print     | Try reprint, then escalate - Priority 2|
+| Nothing prints from Cue          | Refer to MODFS docs                    |
+| Print fails after several tries  | APP-ESO - Priority 2                   |
+| Orders won’t load                | APP-ESO - Priority 2                   |
+| Trolleys won’t load              | APP-ESO - Priority 2                   |
+| Order details don’t load         | APP-ESO - Priority 2                   |
+| Cue app shows “no data”          | APP-ESO - Priority 2                   |
+| Cue app crashes                  | Refresh/reboot, escalate if needed     |
+
+Website Error: “Keep an eye out!”
+---------------------------------
+- Test Cue on agent PC.
+- For TP6: Push CUE Hotfix via HPDM 4.7.
+- For TP7: Push fix via HPDM 5.
+- Escalate to INF-EnterpriseDesktop if needed.
+
+Missing Cue App on Thin Client
+------------------------------
+- Refer to: Thin Client: Missing Cue Application
+
+“This connection is not private” Error
+--------------------------------------
+- Push Chrome Cert Hotfix in HPDM.
+
+Order Time 1-3 Hours Off
+------------------------
+- Fix PC’s time zone.
+- If unresolved after reboot, escalate to APP-ESO.
+

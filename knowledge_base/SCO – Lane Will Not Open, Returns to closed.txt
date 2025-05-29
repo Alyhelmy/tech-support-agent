@@ -1,0 +1,30 @@
+SCO – Lane Will Not Open, Returns to "Closed" Screen  
+KB0012294 - Latest Version  
+45 views  
+
+Description:  
+When the associate attempts to open the lane from the “Closed” screen by scanning the SA barcode, the lane doesn’t open and instead returns to the “Closed” screen.  
+An audio message “This lane is closed” may play from the lane.  
+
+Cause:  
+Software  
+- Can occur after a lane has been STC'd (reimaged)  
+- NOTE: If issue occurs following an SSD (hard drive) replacement, go directly to Step 5 below.  
+
+Resolution:  
+Note: With the new changes disabling Security Mode, verify if the store is attempting to open the lane with the barcode **before** escalating to Frontend Tier 2.  
+
+1. Check if the issue occurs only with the SA barcode or also when signing in manually with password.  
+2. If barcode does not work, print a new barcode and try again.  
+3. If password does not work, verify associate is using the correct password.  
+4. Perform an 8-load (terminal dump) and process it.  
+5. If issue remains, call Frontend Tier 2 to cold boot the controller the lanes are assigned to.  
+6. After controller reboot, have user try to sign in. If unable to, send a 9-load to affected lane(s).  
+7. If issue persists, cold boot the MC and have the associate try signing in again.  
+8. If issue is still unresolved:  
+   - Frontend Tier 2 should escalate to APP-POS, P3 with extract or terminal dump.  
+   - Escalate as **P2** if all lanes are affected.  
+
+Required Information:  
+1. Extract or dump is needed for all cases.  
+2. Ask if lane has recently been STC'd (within the last week). Check location ticket history and include this in the notes.  

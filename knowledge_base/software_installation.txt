@@ -1,0 +1,8 @@
+
+    Software Installation Guide:
+    1. Download the correct version
+    2. Check system requirements
+    3. Run as administrator
+    4. Follow installation wizard
+    5. Restart if prompted
+    

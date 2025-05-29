@@ -1,0 +1,36 @@
+POS/SCO: Lanes Freeze During Gift Card Activation  
+KB0012688 - Latest Version  
+47 views  
+
+Description:  
+Register or SCO lane freezes at the end of a transaction where a gift card was purchased and is being activated by the system.  
+The transaction does not complete because the register is stuck trying to activate the gift card.  
+Typically, the transaction will have completed in the Payments System/ACE and does not need to be re-rung.  
+
+Resolution:  
+Note: In some cases, when this occurs it can result in SCO lanes with cash stuck in escrow.  
+See: SCO - Cash In Escrow Message Occurs After a Gift Card Transaction and Doesn't Clear  
+
+1. Confirm that the customer purchased a gift card and the register is currently frozen.  
+   - If the register is no longer frozen and the issue is being reported after the fact, link to this document and close the ticket.  
+
+2. Check the Electronic Payments site to verify if the customer’s card has been charged and if the gift card has been activated.  
+   - See: POS: How to Research Credit/Debit Transactions in Payment Systems (EPS)  
+
+   Search for **Blackhawk GCM** to check for gift card activation. It will look like the following:  
+
+   [screenshot example placeholder]  
+
+3. Based on findings from EPS:  
+   - If the customer has **not** been charged, they can re-ring the transaction on another register.  
+   - If the customer **has been charged but gift cards not activated**, follow store procedures for customer care — typically a refund.  
+   - If the customer **was charged and gift cards were activated**, a receipt can be printed from ACE.  
+     **Do not re-ring the transaction** to avoid a double charge.  
+
+4. Take a terminal dump or perform a push button (green or black power button) extract if this is a SCO lane.  
+
+5. Process and save the dump or note the time/lane # if it's an extract.  
+
+6. Escalate to **APP-Instore-Payments**.  
+   - If a dump or extract was not taken, **do not escalate** — close the ticket instead.  
+   - Only escalate if data (dump or extract) was collected.  

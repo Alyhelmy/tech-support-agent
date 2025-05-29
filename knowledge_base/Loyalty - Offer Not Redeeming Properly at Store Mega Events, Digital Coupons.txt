@@ -1,0 +1,134 @@
+Loyalty - Offer Not Redeeming Properly (Mega Events, Digital Coupons)
+=====================================================================
+
+KB0011997 - Latest Version  
+158 Views
+
+Table of Contents
+-----------------
+- Description
+- Cause
+- Resolution
+  - Loyalty Offline
+  - Important Questions to Ask
+  - Fuel Center Purchases
+  - Purchases from Previous Day
+  - Purchases from Today
+  - Locating Transaction Info
+  - Finding the Coupon Number in EHH
+  - Qualifying Items Not Correct
+- Required for Escalation
+- Additional Support
+- Linked Docs
+
+Description
+-----------
+A store or customer reports that a digital coupon or Loyalty offer did not redeem correctly.
+
+Cause
+-----
+- Offer not received by store or register.
+- Lane may not have been signed off to receive it.
+- Criteria for the offer may not have been met.
+
+Resolution
+----------
+
+Loyalty Offline
+---------------
+- If loyalty is offline (even on one register), customer receipts will note this.
+- Reboot the affected terminal(s) and test before escalating.
+- SCOs may be offline with Loyalty even if network is online.
+
+Important Questions to Ask
+--------------------------
+Q: Is it isolated to one register or multiple?  
+A: If one → Reboot it. If unresolved, proceed with troubleshooting.
+
+Fuel Center Purchases
+---------------------
+- **Digital coupons do NOT redeem at Fuel Centers or Mini-Marts**.
+- Close all tickets reporting this scenario.
+
+Purchases NOT From Today
+------------------------
+Use: **Digital - Using the Coupon Research Tool**  
+Info needed:
+- Customer Loyalty Card #
+- Date of purchase
+- Coupon number(s)
+
+Purchases From Today
+---------------------
+Gather the following:
+- Alt ID or Plus Card #
+- Register #, Date, Time, and Transaction #
+- Coupon number(s)
+
+Locating Transaction Info
+--------------------------
+On **paper receipts**:
+- Found at the bottom: Date, Time, Store, Lane, Transaction #, Operator ID
+
+On **digital receipts**:
+- First number: Lane #
+- Second number: Transaction # and time (24-hour format)
+
+Finding Coupon Number in EHH
+----------------------------
+URL: http://ehh.kroger.com/ehh/
+
+Steps:
+- Use Alt ID or Plus Card #
+- Go to Digital Coupons tab
+- Find Coupon Number column
+- Required for checking store controller data
+
+‼️ Do NOT escalate to APP-CENTRALEX without a transaction example.
+
+If example not available → close ticket and note it’s pending store callback.
+
+If pickup order on CIAO site: use Checkout ID (e.g., 1213431723065913501).
+
+Note: Central Execution queue is monitored:
+- Weekdays: 6 AM–8 PM ET
+- Weekends: 8 AM–8 PM ET
+
+CE is pageable ONLY by Frontend Tier 2 for **multi-store issues**.
+
+If no update for SEV2 ticket after several hours, email Corp GO Central Execution.
+
+Qualifying Items Not Correct
+----------------------------
+- If **banner site item list is incorrect**: escalate to `APP-DIG-OperationsReliabilityEngineering`.
+- If **in-store items are incorrect**: record:
+  - 11-digit UPC(s)
+  - Coupon number
+  - Transaction example
+  - Escalate to `APP-Central Execution`
+
+Required for Escalation
+-----------------------
+Copy & fill out the following:
+
+------------------ START ------------------
+- Description of the loyalty promotion:
+
+- Issue with the loyalty promotion:
+
+- Transaction info: Register #, Date/Time, Transaction #, Loyalty #:
+------------------ END ------------------
+
+Notes:
+- Describe the promotion (e.g., Buy 5 Save $5, Pepsi, General Mills).
+- Describe the failure (e.g., not working at some registers, incorrect price).
+- Include transaction info and secure Loyalty #/Alt ID.
+
+If no real transaction: store may perform a mock purchase — **do NOT void**, must cash out.
+
+Additional Support
+------------------
+- **KSC-Frontend** – General Loyalty register issues  
+- **APP-Central Execution** – Coupon redemption logic  
+- **APP-LoyaltyCXP** – POS controller/loyalty system integration
+

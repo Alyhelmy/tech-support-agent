@@ -1,0 +1,112 @@
+POS/FUEL/SCO Basic Touchscreen Troubleshooting
+==============================================
+
+KB0011113 - Latest Version
+344 Views
+
+Table of Contents
+-----------------
+- Description
+- Resolution
+- Common Touchscreen Issues:
+  - No Power
+  - Has Power but Not Responding
+  - Flickering Screen
+  - "Check Logs" or "Trace Logs" Message
+  - Not Responding to Touch
+  - Beeping on Touch
+  - Screen Not Aligned / Half Screen
+  - Stuck on "U007"
+  - Stuck on Store Integrator GUI
+  - Card Reader Issues
+  - Frontend Tier 2 Specific Steps
+  - Dispatching
+
+Description
+-----------
+Touchscreen monitor on POS, Fuel, or SCO registers is not responding, not booting, or has display issues such as U007, W064, or alignment problems.
+
+Resolution Notes
+----------------
+- Known issue: SCO touchscreen cursor follows touch but doesn’t respond. Check printer; if fine, have Tier 2 run CHECZAP.
+- SA login via hidden button has been disabled post 8/2/2023; barcode login only.
+- Document what the store was doing before the issue occurred.
+
+Touch Screen Has No Power
+--------------------------
+1. Verify power button on lower right of monitor.
+2. Ensure cables are correctly plugged:
+   - Black cable to blue display port.
+   - Grey cable to green USB port.
+3. If cables are secure and no power, dispatch per POS Parts List.
+
+Touch Screen Has Power
+-----------------------
+1. Document errors shown.
+2. Power down register for 1 minute, then restart.
+3. If unresolved, dispatch.
+
+Screen Flickers
+----------------
+- Dispatch to replace alarm board or power supply.
+- Reference: Toshiba SCO - Touchscreen Flickering Issue
+
+"Check Logs" or "Trace Logs" Messages
+--------------------------------------
+- Known issue post Instacart orders; can reboot when convenient.
+1. Double-tap associate name > OS Messages > OK > refresh/clear/save logs.
+2. "IBM Support" > Trace Logs > Include XML > Save.
+3. If recurring, check if Terminal Storage Retention is off.
+
+Touch Not Responding
+----------------------
+1. Remove any tape or objects near infrared border.
+2. Clean sensor with damp then dry cloth.
+3. Calibrate screen (see next section).
+4. Power off register, reseat grey USB to a different green port.
+5. Power back on. If unresolved, dispatch.
+
+Touchscreen Beeps on Touch
+---------------------------
+1. Run Terminal Installer and send 9-load.
+2. Contact Frontend Tier 2.
+
+Screen Not Aligned / Half Shown
+-------------------------------
+1. Send 9-load.
+2. Press "-" and "+" on monitor near power to access calibration.
+3. Highlight Auto Adjust and confirm.
+4. If unresolved, dispatch.
+
+Stuck on "U007"
+----------------
+1. Run Terminal Installer.
+2. If W303 errors appear in controller, dispatch on touchscreen/cable.
+3. SCO lanes: have Tier 2 run CHECZAP.
+
+Stuck on Store Integrator GUI
+-----------------------------
+1. Check printer type (Epson or IBM).
+2. Ensure paper is present; power cycle printer.
+3. Tier 2 may need to rename EAMTS files if unresolved.
+4. Run Terminal Installer or escalate to KSC-Frontend.
+
+Card Reader on Touchscreen
+---------------------------
+1. Clean card reader.
+2. Send 9-load to register.
+3. If unresolved, dispatch. Do not instruct store to reset the cable.
+
+Frontend Tier 2 Only
+---------------------
+1. If display appears on wrong screen or not working:
+   - Check load definitions (Installation & Updates > Terminal Config > Load Definitions).
+   - Mismatched definitions: run Terminal Installer.
+2. If confirmed correct, and issue persists:
+   - May be hardware: dispatch.
+   - Tech may renumber to another lane to verify.
+
+Dispatching Notes
+------------------
+- Use correct dispatch process per POS Parts List.
+- For Fuel lanes, use the Fuel section in the equipment list for IBM severity.

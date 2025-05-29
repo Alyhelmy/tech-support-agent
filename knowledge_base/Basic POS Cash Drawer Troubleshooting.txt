@@ -1,0 +1,77 @@
+Basic POS Cash Drawer Troubleshooting
+=====================================
+
+KB0011148 - Latest Version  
+129 Views
+
+Description
+-----------
+The cash drawer may fail to open, close, or trigger properly during use.
+
+Cause
+-----
+Cash drawers are connected to the POS register via an ethernet cable and triggered by a solenoid. Common issues:
+- Physical jam (e.g., coin rolled under tray)
+- Solenoid failure
+- Drawer accidentally locked
+- Damage to drawer rails
+- Controller error message regarding hardware
+
+Resolution
+----------
+
+Inspect the Drawer
+------------------
+- Check for any visible obstructions such as coins or debris.
+- Gently tapping the front may release a jammed drawer.
+- Manually use a **key** to open the drawer if available.
+⚠️ Do NOT attempt to pry open with tools — this may cause damage.
+
+Check Solenoid Function
+-----------------------
+1. Press hand against drawer while triggering open to feel for solenoid activation (a kick/click).
+2. If no response:
+   - Check cable connection on both the **drawer** and **base unit**.
+   - Power off the register and **reseat** the cable.
+3. Look behind the cash till insert for a **green power light**.
+4. If it kicks but won’t open:
+   - Check lock orientation — must be **vertical** (unlocked).
+   - Even slightly turned can engage lock.
+   - Some locks may be replaced with a plug.
+5. Still won’t open and no key available:
+   - **Dispatch** per NIMS Parts List.
+
+🚨 New Note:
+- If **cash is stuck inside**, ask the manager if they wish to increase **severity to 2** (8-hour response). 
+- A **severity 1** gets 4-hour service.
+- **Include this in dispatch notes.**
+
+Check Rails on the Drawer
+--------------------------
+1. Remove cash till, extend drawer, and **inspect rails**.
+2. Drawer should extend and retract freely.
+   - Check both rails are properly latched.
+   - Reseat drawer: lift slightly and slide onto tabs.
+3. If rails are damaged:
+   - **Dispatch** per NIMS Parts List.
+
+Hardware Error in Controller Messages
+-------------------------------------
+1. Power off the register.
+2. Reseat ethernet cable at drawer and register.
+3. Power back on.
+4. If error remains:
+   - **Dispatch** per NIMS Parts List.
+   - Refer to: *KSC Hardware Dispatching For All Pillars*
+
+Drawer Keys Request
+-------------------
+- Refer to **Loss Prevention Manager** or **Local Division Office**.
+- For **LO Division**, refer to **Service Hub**.
+
+Terminal Locked / Can't Sign Off
+--------------------------------
+If terminal is locked and can't sign off:
+- Use **Terminal Transfer** or **Force Log Off**.
+- See: *How to Transfer Operator from a Failed Terminal (Terminal Transfer)*
+

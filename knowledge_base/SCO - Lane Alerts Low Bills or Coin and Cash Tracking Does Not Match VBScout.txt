@@ -1,0 +1,51 @@
+SCO - Lane Alerts Low Bills/Coin and Cash Tracking Does Not Match VBScout  
+KB0012202 - Latest Version  
+54 views  
+
+Description:  
+Lane is stating that the Bill/Coin Dispensers are low.  
+The amounts displayed in "Cash Tracking" on the SCO Lane do not match the amounts listed in VBScout, even though the amounts in VBScout are updating/changing when money is accepted or dispensed on the lane.  
+
+Cause:  
+Procedural  
+
+Resolution:  
+Important Note:  
+The “Cash Tracking” amounts on Toshiba model lanes will not update from VBScout/VeriBalance if the amounts are negative in any of the denominations.  
+If this occurs, the store must zero them out and/or update them to the correct values (usually during the next full balance of the lanes) for communication with VBScout/VeriBalance to resume.  
+
+Steps:  
+
+1. Verify that the amounts displayed in "Cash Tracking" do not match the actual amounts in the lane or in VBScout:  
+   - Have SA log into Cash Maintenance.  
+   - Select Cash Tracking.  
+   - Select the device at the bottom of the screen giving the warning or low message.  
+
+2. Have the SA check for negative or low amounts.  
+   - See: Toshiba SCO - SCO Lane Currency Full and Low Level Amounts  
+
+3. Determine if the lane is physically low/out of money or if only Cash Tracking is incorrect.  
+   - Physically check the cash devices.  
+
+4. Identify the type of hardware: Toshiba System 6 or Fujitsu.  
+
+If Toshiba System 6:  
+5. The amount should update automatically when inserting bills through the bill acceptor.  
+   - Confirm that the associate presses the button to "Remove All Bills from Cash Box" when removing money.  
+
+6. Coin values will only update if inserted through the coin cup.  
+   - If hoppers are used, the amounts should update when coins are loaned via VBScout.  
+   - Refer associate to their division SCO trainer for proper steps.  
+
+If Fujitsu hardware:  
+7. Associate must manually adjust the amounts in Cash Tracking to match VBScout.  
+   - This is procedural. Refer the store to their bookkeeper or District/Division Front End Coordinator.  
+   - If alert remains after Cash Tracking is updated, reboot the lane.  
+   - If amounts match VBScout and the lane has been rebooted, dispatch on the failing part (i.e., bill or coin dispenser) per NIMS.  
+   - Fujitsu Techs may refer to their company as GLM (Global Lifecycle Management).  
+
+NOTE for Fujitsu Hardware:  
+The amounts in "Cash Tracking" are NOT updated automatically when loaning money via VBScout.  
+Operators without access to VBScout can still update values manually.  
+Whenever money is added/removed from the lane, the associate must also manually update “Cash Tracking” with these amounts.  
+This is procedural — stores should be referred to the District/Division Front End Coordinator for guidance.  

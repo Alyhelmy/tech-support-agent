@@ -1,0 +1,88 @@
+Register Network Troubleshooting - PXE, U001, U003, U005.4
+==========================================================
+
+KB0011838 - Latest Version  
+154 Views
+
+Description
+-----------
+Registers may not load past:
+- PXE
+- U001
+- U003
+- U005.4
+
+Symptoms:
+- “Media Test Failure, Check Cable”
+- “No Boot Source Found, Retrying…”
+- “B073 NOT AVAILABLE OFFLINE”
+
+Note:  
+If **multiple registers** are affected and lane switches are pinging → **considered store down**. Escalate to **Frontend Tier 2**.
+
+Cause
+-----
+- Register is not connected to the in-store network
+- Bad NIC port on register system board
+- Damaged Ethernet cable, drop, or switch port
+- Fuel sites: DHCP snooping misconfigured or lease issue
+
+Resolution
+----------
+
+1. **Check Register’s Lane Switch:**
+   - Use **PSY** or **TUNA** to determine switch association.
+   - In PSY: Highlight switch, check “Additional Comments” for lane number.
+
+   If switch is **not pinging**:
+   - Have associate check if the switch under the check stand is powered.
+   - Reboot it (disconnect and reconnect power).
+   - If switch does not power on, check power strip or switch.
+
+   If it still doesn’t ping → dispatch per **NIMS Parts List**.
+
+2. **Find the Register’s Switch via Netmapper:**
+   - In PSY: Web Apps > Netmapper > Blue Netmapper
+   - Login with: `EUID` | Password: `kr####` (last 4 of EUID)
+   - Use CTRL+F to search for: `pinpad-###` (e.g., pinpad-030)
+   - Note the switch ID (e.g., hp2530sw1)
+   - Open **TUNA** → Management → F9 → Find switch
+   - Highlight and F5 → Login → enter "menu"
+   - Go to: 
+     - 1. Status and Counters
+     - Port Counters
+     - Show Details
+
+   If **Drop Tx** or **Collisions Tx** are rising → indicates a network issue.
+
+3. **Reseat Ethernet Cable**:
+   - Power off the register.
+   - Reseat the cable from register to switch.
+   - Power on and observe if it loads properly.
+
+4. **Re-add MAC Address in Whitelist**:
+   - See doc: *How to Add a POS Register to TUNA*
+
+5. **Try Alternate Port on Switch**:
+   - Move Ethernet cable to another port.
+   - Reload register.
+   - If unresolved: Dispatch via *KSC Hardware Dispatching*.
+     - Tech should test/replace:
+       - Network cable
+       - Switch port
+       - Entire switch if needed
+
+Note:  
+Fuel site switches may be located in IDF cabinets. Some divisions (e.g., Cincinnati) lack access—dispatch needed.
+
+Additional Info
+---------------
+
+PXE States:
+-----------
+1 - Searching for network  
+2 - Connected to network  
+3$ - Connection failed  
+4 - Downloading image  
+5$ - Error downloading  
+6 - Transferring protocol  

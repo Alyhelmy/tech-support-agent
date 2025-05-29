@@ -1,0 +1,13 @@
+
+    Common Printer Problems and Solutions:
+    1. Printer not responding
+       - Check power connection
+       - Verify USB cable
+       - Restart printer
+    2. Paper jams
+       - Clear paper path
+       - Check paper alignment
+    3. Print quality issues
+       - Clean print heads
+       - Check ink levels
+    

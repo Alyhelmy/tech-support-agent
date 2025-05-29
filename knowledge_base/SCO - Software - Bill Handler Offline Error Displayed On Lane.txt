@@ -1,0 +1,34 @@
+SCO - Software - "Bill Handler Offline" Error Displayed On Lane  
+KB0012084 - Latest Version  
+102 Views
+
+Description
+-----------
+Lane came up with "Bill Handler Offline" and didn't give customer their change.
+
+Cause
+-----
+Hardware / Software.
+
+Resolution
+----------
+Required Information:
+- Provide the details of resolution steps in the ticket.
+- Provide cash maintenance details including troubleshooting steps and specific messages/errors/codes.
+- Link this document.
+- Take an extract if escalation is required.
+
+1. Advise associate to enter SA Mode when error is displayed.
+
+2. Advise associate to tap on the device displaying the error.
+
+3. A more detailed error should display.
+
+4. If the associate taps on the specific issue, then resolution steps should be displayed on screen.
+
+5. If the resolution steps have been performed and the issue remains, the associate should be able to tap, "Ok" and will advise them as to how to resolve a hardware issue.
+
+6. At this point if the issue remains further, advise associate to power off the lane TCU and the UPS for 2 minutes, then power back on.  
+   - If this is a system 6 or 7, you do not need to power cycle the UPS.
+
+7. Dispatch Toshiba if these steps do not resolve the issue.

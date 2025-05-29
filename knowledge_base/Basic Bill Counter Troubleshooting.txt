@@ -1,0 +1,86 @@
+Basic Bill Counter Troubleshooting  
+KB0011539 - Latest Version  
+79 Views
+
+Table of Contents  
+- Resolution  
+- Bill Counter is not communicating with VeriBalance  
+- Verify port is enabled for Bill Counter  
+- Verify Denoms Type is correct  
+- If The Bill Counter Gets Stuck on ADD  
+- Escalation Path  
+- User Guides and Model Information  
+- Single Pocket User Guides  
+- Dual Pocket User Guides  
+- Linked docs
+
+Description  
+-----------  
+Bill Counter/Jetscan Troubleshooting  
+
+Cause  
+-----  
+If there are bills in the Jetscan when they try to ** (finalize), they get an error message.  
+This message prevents transactions from finalizing without accounting for all cash.  
+If it locks them out from finalizing when no bills are present, check the sensor and clean the bill counter to ensure it's not causing the issue.
+
+Exact error displayed: [Not included here]
+
+Resolution  
+----------  
+Note: If Bill Counter is physically damaged (broken blade, cracked display, jammed bills, etc.), have store follow the document "Cummins Allison Contact Information."  
+Note exceptions for RA/FL stores in that document.
+
+Also see User Guides.
+
+Bill Counter is not communicating with VeriBalance:  
+- Dust and buildup commonly cause communication issues. Verify bill counter is cleaned.
+
+1. Try reseating the USB cable ("horseshoe cable") on the rear of the "Lenovo" PC.  
+2. Power off bill counter (power button on back above power cable).  
+3. Reseat Ethernet cable connected to back of bill counter and ensure connection to VeriBalance PC (DB9 Serial).  
+   - If Ethernet card is vertical, connect cable to top port.  
+   - If horizontal, use port closest to power switch.  
+4. Turn bill counter back on.  
+5. On VeriBalance PC, click Utilities > Setup > Hardware.  
+   - Status should display "H:0 S:0 M:0".  
+   - If blank or off, ensure bill counter is NOT in "Verify" mode. Switch off "Verify" mode to communicate again.  
+   - "Verify" is a small light with a push button under it (or touch screen button on new machines). Press button to toggle light.  
+   - For "add" mode, press "End BAT" then "Add" again.  
+6. Reboot VeriBalance PC (close programs, click Windows > Power > Restart).  
+7. After reboot, open VeriBalance and test again.  
+   - If still not resolved, see: Verify port is enabled below.
+
+Verify port is enabled for Bill Counter:  
+1. In VeriBalance, click Utilities > Setup > Hardware.  
+2. Click "View Ports" to see if bill counter communicates on other ports; click "Apply Changes" if corrections made.  
+3. Verify "Enabled" is checked for Bill Counter.  
+4. Click "Apply Changes" if needed.  
+5. Close and reopen VeriBalance; test again.  
+   - If still no communication, see JetScan Bill Counter Setup: Regular and Touch Screen Models.
+
+Verify Denoms Type is correct  
+-----------------------------  
+(Note: This addresses upgrade issues where bill counter communicates in Device Status but not transferring totals in Till Balance.)  
+
+1. Open VeriBalance application.  
+2. Select Utilities > Setup tab.  
+3. Select "Denoms" tab.  
+4. Change denominations to Type "Currency":  
+   - Ones, Fives, Tens, Twenties, Fifties, Hundred  
+5. Click "Apply Changes."  
+6. Test counting bills again.  
+   - If problem remains, see JetScan Bill Counter Setup: Regular and Touch Screen Models.
+
+If The Bill Counter Gets Stuck on ADD  
+-------------------------------------  
+1. Run money through and remove from tray.  
+2. Press CONT.  
+3. Press End BAT.  
+4. Then press Add and remove money; this should exit Add mode.
+
+Escalation Path  
+---------------  
+- Cabling between VeriBalance PC and Bill Counter supported by IBM/Toshiba.  
+- Hardware issues with Bill Counter referred to Cummins Allison.  
+- Software issues (communication/setup) handled by Balance Innovations.

@@ -1,0 +1,104 @@
+KPF CSP Bill Pay Services
+=========================
+KB0015285 - Latest Version  
+113 Views
+
+Description
+-----------
+Bill Pay is used when a customer pays a biller directly through the CSP money system. If a store receives an error when processing a payment, the necessary information must be collected before troubleshooting or escalating.
+
+Note: All “how-to” questions should be directed to store management or the Division Front End Coordinator.
+
+Solution
+--------
+- Person to Business = Bill Pay  
+- Person to Person = Money Transfer
+
+Before You Begin
+----------------
+- If the error is from a Money Transfer, see: *KPF CSP Money Transfer*  
+- If the error is from Bill Pay, continue with this document.  
+- Stores are NOT participating in Amazon Product Payment at this time.
+
+Information to Collect for Transaction Errors
+---------------------------------------------
+Collect the following before escalating:
+
+Required Information
+--------------------
+- Timestamp (MM/DD HH:MM:SS AM/PM Time Zone)  
+- Account Number (click account field to view number)  
+- Terminal ID (top right of CSP screen)  
+- Biller Name (e.g., Georgia Power)  
+- Customer Name  
+- Amount Attempted  
+- Exact Error Code (screenshot if possible)  
+- Computer IP Address (use BigFix)
+
+> If the transaction was staged, include the customer’s phone number in the secured field.
+
+CSP Bill Pay Error Template
+---------------------------
+Copy and paste this into the incident:
+
+Time Stamp:  
+Account Number:  
+Terminal ID:  
+Biller Name:  
+Customer Name:  
+Amount Sending:  
+Error Code:  
+Computer IP:  
+
+Bill Pay Errors
+---------------
+Includes services like CheckFreePay, Western Union, and FirsTech.
+
+CheckFreePay Errors
+-------------------
+- **CFP7001 / CFP7004**: Invalid amount  
+  → Customer must confirm amount with the biller  
+- **CFP9000**: Network lapse  
+  → Attempt again or refer to biller
+
+Western Union Errors
+--------------------
+- **T4751**: Payments system error  
+  → Try later; timeout with biller
+- **T4702**: Invalid DHS coupon number  
+  → Customer must contact DHS
+- **T4799**: Timeout from NVENERGY biller  
+  → Retry later
+- **T4840**: Timeout on biller end  
+  → Retry after 30 minutes
+- **T4996**: Unable to process / account not found  
+  → See: *WU Bill Pay Error T4996*
+- **T6785**: CodeCity changed unexpectedly  
+  → See: *WU Bill Pay Error T6785*
+
+FirsTech Errors
+---------------
+- **Error 2008**: Duplicate payment  
+  → Only one payment allowed per account per day  
+  → Cannot override. Inform customer.
+
+BanCPass
+--------
+Refer to BanCPass FE Job Aid for questions.
+
+Issues with Billers
+-------------------
+- To request a new biller: contact store manager or divisional KPF coordinator  
+- Biller showing "Unavailable", renamed, or fee issues: escalate to APP-KPF  
+- Reporting or balancing issues: refer to front-end manager or bookkeeper  
+- If payment not received: customer must contact the biller's support (e.g., CheckFreePay Care)
+
+Paging Guidelines
+-----------------
+See internal escalation policy for paging APP-KPF. Only page if necessary.
+
+Additional Information
+----------------------
+- Internal errors: send to APP-KPF with full info  
+- Use Secure Citrix for screenshots (if possible)
+

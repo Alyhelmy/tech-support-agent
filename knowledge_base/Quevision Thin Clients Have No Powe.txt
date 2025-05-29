@@ -1,0 +1,29 @@
+Quevision Thin Clients Have No Power  
+KB0011846 - Latest Version  
+51 views  
+
+Description:  
+The Quevision thin clients attached to the back of the monitors are not powered on.  
+
+Cause:  
+The thin client has lost power due to an electrical or store power issue.  
+
+Resolution:  
+
+A. Verify that the power supplied to the thin client is working:  
+1. Have the user check the outlet for power with another device, if possible.  
+   - Note: If the power outlet is not accessible for store users, dispatch the appropriate vendor.  
+
+2. If the power source does not have power, the store should contact local facilities for an electrician to investigate the power issue.  
+
+3. If the power source does have power, continue to step B.  
+
+B. Perform a power reset:  
+1. Remove the power connector from both the thin client and the wall outlet.  
+   - Wait **2 to 5 minutes** before reconnecting. (This wait is critical.)  
+
+2. Reconnect the power and turn on the thin client.  
+   - Verify that predictions appear on the screen.  
+   - If predictions are still missing, refer to: *QueVision Monitors do not match the Dashboard*.  
+
+3. If the thin client still does not power on, dispatch the appropriate vendor for hardware support.  

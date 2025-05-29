@@ -1,0 +1,8 @@
+
+    Network Troubleshooting Guide:
+    1. Check if your device is connected to the network
+    2. Verify your IP address is valid
+    3. Try pinging the router
+    4. Check DNS settings
+    5. Restart your network adapter
+    

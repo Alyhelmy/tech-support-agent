@@ -1,0 +1,26 @@
+SCO - Lane Unexpectedly Adding to Total Due on Cash Transactions  
+KB ID: KB0012362 - Latest Version  
+Views: 29  
+
+Description:  
+Lane is adding money to Cash Tender Due, sometimes up to $300–$500 extra on cash transactions, after customers press "Pay Now" and select "Cash".
+
+Cause:  
+Software "known risk" — business does not want to pursue a fix at this time.  
+NOTE: Best practice is to perform overrides at the lane instead of transferring to the pay station to avoid this issue.
+
+Resolution:  
+This is a **known issue** when the following steps are performed (considered procedural):
+
+Steps that cause the issue:  
+1. Customer receives the "help is on the way" prompt for a cash tender over $200.  
+2. SA transfers the transaction to the pay station instead of overriding at the lane.
+
+Resolution Process:  
+3. Issue requires Tier 2 to run **CHECZAP** to resolve.  
+   - **IMPORTANT:** eBOSS nightly maintenance runs from **12:05 AM to 5:10 AM EST**. CHECZAP (Remote STC) must be run **after** this window.  
+4. Inform the store of the best practice as noted above.  
+5. Escalate to T2 to run CHECZAP.  
+
+If CHECZAP fails:  
+- Dispatch a tech to **STC the lane**.

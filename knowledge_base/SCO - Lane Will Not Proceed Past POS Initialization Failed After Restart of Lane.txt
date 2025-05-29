@@ -1,0 +1,50 @@
+SCO - Lane Will Not Proceed Past POS Initialization Failed After Restart of Lane
+KB0011374 - Latest Version
+62 views
+
+Description
+Lane was rebooted and is stuck on:
+"POS Initialization Failed: Unable to post data due to persistent system busy condition"
+
+Cause
+- Software issue
+- Hardware issue: If stuck on "POS Initialization Failed: Printer Failed Hook", usually means the printer is out of paper.
+  See: SCO - Hardware - Lane will not load past "POS Initialization Failed: Printer Failed Hook" for printer-related resolution.
+
+Resolution
+
+Scenario:
+1. SCO lane was shutdown, power cycled, or restarted.
+2. Lane boots to the closed screen.
+3. "POS Initialization Failed" white window appears on the right half of the screen when attempting to open the lane.
+
+Steps:
+
+1. Note why the lane was restarted (e.g., lane freeze). One ticket covers this.
+
+2. Check exact error message in the POS Initialization Failed window:
+   - “Unable to post data due to persistent system busy condition”
+   - OR “Unable to access remote session server”
+
+3. If error is “Printer Failed Hook”, follow printer hardware doc for resolution.
+
+4. Send an 8-load to the lane while the error displays.
+   - See: SCO - MISC - How To Perform and Prepare Terminal or TCU Dump.
+   - Only one dump at a time; avoid multiple dumps to prevent performance issues. Use 9-loads for attempts to resolve afterwards.
+
+5. If still stuck, power off the lane and check for any EAMTS files on all controllers; rename these files.
+   - See: POS/SCO: How to Rename EAMTS File For A Register - Frontend Tier 2 ONLY
+
+6. Power lane back on and have the associate try to open the lane.
+   - If issue persists, verify the lane is listed in Operator Authorization under ACE Level *9.
+   - See: How To Check Operator ID's in ACE and Authorization Levels and SCO Lanes
+
+7. If lane is not listed in Operator Authorization, escalate to APP-POS as:
+   - P3 for one lane
+   - P2 for multiple lanes
+
+8. Check for any lane devices showing error conditions; troubleshoot and fix those.
+
+9. If issue remains for a single lane, dispatch technician per KSC Hardware Dispatching For All Pillars.
+
+10. For multiple lanes with no hardware issues, escalate to Frontend Tier 2 to escalate to APP-POS (P2) with a terminal dump.

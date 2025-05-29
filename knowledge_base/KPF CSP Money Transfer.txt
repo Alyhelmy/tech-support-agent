@@ -1,0 +1,98 @@
+KPF CSP Money Transfer  
+=======================  
+KB0022141 - Latest Version  
+42 Views
+
+Synopsis  
+--------
+CSP Money Transfer allows customers to send money without third-party hardware (e.g., no WU terminals). Transactions are performed entirely within the Customer Service Platform (CSP).  
+
+> Person-to-Person = Money Transfer  
+> Person-to-Business = Bill Pay  
+
+Vendors: Ria & Western Union  
+Refunds must be done in the platform they were initiated in.
+
+Refer all "how to" questions to store management or Division Front End Coordinator.  
+Customer info is only accessible via their phone number.
+
+--------------------------------------------------
+Money Transfer Process
+----------------------
+
+Users will be prompted to select a Delivery Option. Options vary by fee, speed, and availability. Ria is typically cheaper.
+
+Ria
+----
+Supports Kroger-to-Kroger transfers (Kroger Family Direct).  
+Other supported partners include:  
+- Xoom  
+- Nickel  
+- Belgian Post / Austrian Post  
+- Wafacash, Turbus, etc.  
+
+**Ria Contacts:**  
+- Customer Service: 844-297-1287 (5AM–9PM PST, closed Dec 25)  
+- Store Associates ONLY: 877-986-3937  
+
+Western Union
+--------------
+Now prompts for **Receiver Address** in some countries (e.g., Brazil, US).  
+If a country shouldn’t require address, escalate to APP-KPF.  
+
+**WU Contact:**  
+- Customer Service: 800-325-6000 (5AM–9PM PST, closed Dec 25)  
+
+"No Services Available for This Vendor" / "System Error Occurred"
+------------------------------------------------------------------
+If WU or Ria is down in **multiple** stores: escalate to APP-KPF as **P2**.  
+Do not page for single-store issues.  
+
+If the Money Transfer page is blank (no errors), see: *KPF CSP - Money Services Not Loading*
+
+--------------------------------------------------
+Required Information for Escalation
+-----------------------------------
+Use these templates:  
+- FE - CSP Money Transfer Ria Error  
+- FE - CSP Money Transfer WU Error  
+
+Include:  
+- Vendor: Ria / Western Union  
+- MTCN / Control Number  
+- Terminal ID  
+- Amount  
+- Date (MM/DD/YYYY HH:MM:SS and time zone)  
+- Transaction type (Send / Receive / Refund)  
+- Error Message  
+- Customer Name  
+- Screenshot (if possible)  
+- For staged transactions: include customer phone number (secured field)  
+
+To take a screenshot: See *KPF CSP - Remote Connecting via Secure Citrix*  
+
+--------------------------------------------------
+Common Issues & Special Cases
+-----------------------------
+
+❌ Unable to Transfer to Iran  
+- Due to sanctions, Iran is **not selectable** as a destination. This is by design.
+
+❌ Reporting Issues  
+- APP-KPF does not support financial reconciliation or report fixes. Refer to bookkeeper or divisional KPF coordinator.
+
+--------------------------------------------------
+Paging Guidelines
+-----------------
+✅ OK to Page APP-KPF if:
+- CSP Money Transfer is **DOWN/UNUSABLE**
+- Many users cannot sign in for **unknown reasons**
+- Repeated errors across **multiple stores**
+
+❌ Do NOT Page if:
+- Issue affects a single user or terminal
+- Error has already been addressed in documentation
+
+Monday–Friday 9AM–4PM ET:  
+Less urgent but widespread issues may be paged during this time when Crystal Hammer or Troy Adams are online.
+

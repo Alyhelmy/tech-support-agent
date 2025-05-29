@@ -1,0 +1,119 @@
+FUEL - Transaction Stuck on Pump / Will Not Clear from POS
+==========================================================
+
+KB0011911 - Latest Version  
+118 Views
+
+Description
+-----------
+- Transactions are not clearing from the POS or the pump.
+- Pump may display "Pump Busy".
+- POS may show: “B118 No More Items” or prompt to “Refund change of $0.00” after fueling.
+- Could occur alongside: *Exclamation Point On Fuel Dispenser Icon*.
+- Related issue: *FUEL - Panther Troubleshooting and Rebooting*
+
+Cause
+-----
+- Stuck or incomplete sales transaction.
+- Completed credit card transaction stuck on the pump.
+- Paper out on receipt printer may also contribute.
+- Pumps may hit 2-transaction limit and go to "PUMP BUSY".
+
+Note: Do NOT manually clear transactions over $10 in RadViewer.
+
+Resolution
+----------
+
+🚫 DO NOT reboot Fuel registers during failover setup.  
+✅ Safe to reboot AFTER site is fully in Failover Mode.  
+🚫 Do NOT restart CSS during failover to CC. Let it return to Primary automatically.
+
+---
+
+B118 Error: Use steps below to verify/clear stuck transactions.  
+If not resolved → Reset Fuel Connection → If unresolved, failover and return → Reboot POS if error persists.
+
+---
+
+Steps
+-----
+
+1. **Identify the Pumps** with stuck transactions and note the dollar amounts.
+
+2. **Validate Pump and ICR Status**
+   - Use **RadViewer > Fuel Console View**
+   - Confirm both Pump and ICR are **Online**.
+   - If Offline + 0.00 progress:
+     - Run **RCM update**
+     - Reboot **Panther**
+     - If still Offline → Refer site to **Pump Tech**
+
+3. **Power Cycle the Pump**
+   - Instruct site to reboot affected pump(s).
+   - If Pump or ICR still Offline → Escalate to Pump Tech.
+
+4. **Check Transaction Details**
+   - In RadViewer: `Fuel Console View > Pump X > Sale Information`
+   - Match with reported stuck transactions.
+
+5. **Determine System Mode**
+   - Ask clerk or check **Global NVP Status**:
+     - Green checkmark = Primary
+     - Orange B = Backup
+
+   🔹 If in **Backup**:
+     - Troubleshoot Backup state first.
+     - Then re-check transaction status.
+
+   🔹 If in **Primary**:
+     - Proceed (unless transaction is over 24 hrs old — skip to step 9)
+
+6. **Initiate Failover**
+   - Stop **Fuel Background Service**
+   - Restart **CSS Sessions** on FC controller
+   - Verify site is in **Backup Mode** (Orange B)
+
+7. **Check if Transaction Cleared**
+   - If yes:
+     - Start **Fuel Background Service**
+     - Site returns to **Primary Mode**
+     - Document and close ticket
+
+8. **If Transaction Still Stuck**
+   - Fail back to **Primary**:
+     - Start Fuel Background Service + CSS Sessions
+   - Verify return to Green Checkmark
+   - Re-check transaction
+
+9. **Still Not Cleared?**
+   - In RadViewer: Collect transaction details:
+     - Dollar Amount
+     - Pump Number
+     - POS Trans #
+     - EPS Trans #
+     - Date/Time
+     - ACE messages (if any)
+   - Run **Fuelzip** on FC controller
+
+10. **Based on Transaction Amount:**
+   - **If under $10**:
+     - Manually clear in RadViewer
+     - Document JIRA: `fctr-1738`
+     - Close ticket
+
+   - **If $10 or over**:
+     - Ask site to **cone off the pump**
+     - DO NOT manually clear
+     - Escalate to **APP-Fuel**
+       - Priority 3 for isolated pumps
+
+---
+
+Troubleshooting Notes
+---------------------
+- If Fuel Services won't show green checkmark after failback:
+  - **Reset Fuel Connection** on POS
+  - Wait for status to sync
+
+
+Do NOT clear transactions ≥ $10 without escalation.

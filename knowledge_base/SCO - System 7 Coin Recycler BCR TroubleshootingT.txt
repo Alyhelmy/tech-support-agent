@@ -1,0 +1,98 @@
+SCO - System 7 Coin Recycler / BCR Troubleshooting  
+KB0012631 - Latest Version  
+95 Views
+
+Table of Contents  
+- Resolution  
+- When a Cash Machine Error Occurs, Clear the Error First  
+- Accessing the Coin Recycler (BCR)  
+- Coins Not Dispensing or Accepting or BCR Not Operational  
+- Coin Will Not Dispense  
+- Coins Not Accepted  
+- Recycler Stopped Due to an Error  
+- Hopper Errors  
+- New - Cleaning Requests  
+- Escalation and Dispatch  
+- Additional Support
+
+Description  
+-----------
+The BCR206 is located inside the Toshiba System 7 lane. This is the latest model by Toshiba; previous models are no longer manufactured.  
+The BCR is a Bulk Coin Recycler consisting of a coin acceptor/validator, coin dispenser, and hoppers.  
+This document outlines troubleshooting steps for problems accepting or dispensing change.  
+The coin acceptor is the Eagle model with a grey and blue casing and the "Eagle" logo on the front.
+
+Take an extract for any problem reported before troubleshooting.
+
+Resolution  
+----------
+When a Cash Machine Error Occurs, Clear the Error First:
+
+1. Enter SA mode:  
+   - Scan barcode or touch top right corner of screen.
+
+2. If error appears, scanning SA barcode will take you to Cash Maintenance Menu; otherwise touch Cash Maintenance.
+
+3. Touch Cash Maintenance again if a "cash maintenance" button appears.
+
+4. The screen will show warnings/problems with coin and/or bill handler devices.  
+   - Touch a device to see specific issues.
+
+5. Follow instructions to clear errors or resolve issues.  
+   - See Toshiba SCO - Cash Maintenance Errors for details.
+
+Accessing the Coin Recycler (BCR)  
+---------------------------------  
+To Restart the Coin Recycler:  
+1. Unlock the scanner scale drawer and pull it forward.  
+2. This exposes the Restart button and LED light panel indicating BCR status.
+
+Coins Not Dispensing or Accepting or BCR Not Operational  
+---------------------------------------------------------  
+- Pull forward the scanner scale drawer.  
+- Use LED indicators to identify hopper or recycler parts with issues.
+
+Coin Will Not Dispense  
+----------------------  
+1. Unlock Cashbox/Hopper Tray door by turning key left 90°. Hopper drawer bottom will pop out.  
+2. Slide out hopper tray by pulling handle toward you to access hoppers.  
+3. Remove problem hopper by pulling upwards firmly; hoppers are interchangeable.  
+4. Remove all coins and check for jams, debris, or damage.  
+5. Rotate coin disk at hopper bottom counterclockwise, then clockwise to free stuck coins.  
+   - Coins may be pushed back using another coin.  
+   - If jam/debris/damage cannot be cleared, dispatch Toshiba.  
+6. Check Singulator and Escalator doors (left side of BCR) for jams; clear if possible.  
+   - Do not swing doors fully open to avoid breaking hinges.  
+7. Close and reopen lane.  
+8. If issue remains, use green button to reboot lane.  
+9. Dispatch Toshiba if unresolved.
+
+Coins Not Accepted  
+------------------  
+1. Check coin input area for debris or jams and clean.  
+   - Input chute disables if full; coins fall straight to output until cleared.  
+2. Check Singulator and Escalator doors for jams; clear if possible.  
+3. Remove coin acceptor on right side (push red latch, tilt forward on pins, lift out).  
+   - Do not unplug cables; if unplugged, reconnect securely.  
+4. Flip unit and open flight deck door (blue side).  
+   - Flight deck held by spring clip; will click when released.  
+5. Clean inside flight deck with damp lint-free/microfiber cloth; remove jams.  
+6. Close flight deck and press spring button until click.  
+7. Replace coin acceptor on locating pins and latch with minimal force.  
+8. Check manifold (chutes) for jams or debris; clean or use compressed air if lights are on.  
+9. Check coin box at bottom of BCR. Unlock and remove coin box; recycler won't operate if full or missing.  
+10. Restart Coin Recycler by pressing restart button on LED panel once.  
+11. Close and reopen lane.  
+12. If issue persists, reboot lane with green button.  
+13. Dispatch Toshiba if unresolved.
+
+Recycler Stopped Due to an Error  
+--------------------------------  
+1. Check LED status lights:  
+   - LED 1 (heartbeat) should be on; if not, check power.  
+   - LED 3 and 4 flash red error codes for faults.  
+2. Press and release restart button once.  
+3. Check cash box; if full or missing, recycler won't work.  
+4. Reboot lane using green button behind screen.  
+5. If error persists, follow previous steps for dispensing/accepting coins.  
+6. Dispatch Toshiba if unresolved.

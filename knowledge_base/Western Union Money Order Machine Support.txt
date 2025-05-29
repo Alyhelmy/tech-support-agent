@@ -1,0 +1,76 @@
+Western Union Money Order Machine Support  
+KB0015324 - Latest Version  
+107 Views
+
+Synopsis
+--------
+Western Union Money Order machines are Ethernet-connected and located in Customer Service.
+
+Solution
+--------
+- The Western Union Money Order machine is a standalone device that prints Money Orders at the Customer Service Desk.
+- It is separate from the Money Transfer or CSP (Customer Service Portal) PC.
+- Note: Western Union money transfers (person-to-person) are mostly done via CSP; some stores still have separate WU money transfer PCs.
+
+- Money Orders function like printed checks given to customers and can be used for vendor payments onsite.
+- The WUTAIO touchscreen and printer are used for this purpose.
+- Note: For Money Orders over $3,000, additional compliance options are required, such as ID verification and entering a valid country code.
+
+Device Support
+--------------
+- Stores should contact Western Union directly for device issues or damage: 1-877-986-3937.
+- Note: For non-connectivity issues, if WU sends the problem back to Kroger repeatedly, contact your Division money services representative or escalate with a WU supervisor.
+- APP-KPF does not support login issues.
+
+Network Troubleshooting
+-----------------------
+- KSC supports network connectivity for the machine.
+- If device shows “No line available” or can’t print/sell Money Orders:
+  - Confirm if the device was recently replaced.
+  - Verify MAC address visibility on VLAN 2900 switch port (especially if touchscreen was updated recently).
+  - Check cabling behind the device (no phone lines should be connected).
+- For new touchscreen installs with "No Line connected" errors, confirm MAC is updated in TUNA (Vendor segment).
+
+Verify the Money Order Machine is in TUNA
+-----------------------------------------
+1. Find the MAC address on the device label or via system LAN setup.
+2. Log in to TUNA:
+   - Locate the old machine in the Vendor segment.
+   - Update the MAC address to the new device.
+   - See Adding or Removing Devices in TUNA for more info.
+3. Have store swap the hardware.
+4. Advise store to perform a parameter download on the machine:
+   - Select Setup > Load Parameters > IP
+   - If parameters load, test the machine.
+   - If not, proceed to next troubleshooting steps.
+
+Verify the Ethernet Connection
+------------------------------
+- WU devices will NOT ping by design.
+1. Find switch and port in Netmap or core switch using MAC address.
+   - If device is on VLAN 2900, network side is good — have store contact WU.
+   - If MAC is not found, continue troubleshooting.
+2. Check if device is blocked by Radius:
+   - Run switch commands to check for rejection or failure.
+   - Update MAC address as needed.
+3. Swap cables with a working device:
+   - If swapped device shows up, issue is with cable.
+   - If not, suspect long run cable.
+   - Email DTL and Backup DTL to dispatch internal cabling support (do NOT dispatch external vendor).
+   - Close incident after dispatch email.
+
+Escalation
+----------
+- If WUTAIO device is online but WU cannot contact it:
+  - Attempt to load parameters again.
+  - If unable, direct store to contact Western Union.
+- When escalating to APP-KPF:
+  - Verify device is on the network.
+  - If no troubleshooting done by WU, conference store with WU and document agent info and call outcome.
+  - Retry parameter load and record results.
+  - Record Terminal ID from machine (Setup > View Terminal).
+
+Additional Information
+----------------------
+- Western Union supports the money order machine hardware.
+- KSC only supports network connectivity.

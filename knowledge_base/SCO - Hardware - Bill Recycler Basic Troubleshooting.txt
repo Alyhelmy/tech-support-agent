@@ -1,0 +1,103 @@
+SCO - Hardware - Bill Recycler Basic Troubleshooting
+=====================================================
+
+KB0011966 - Latest Version
+653 Views
+
+Table of Contents
+-----------------
+- Cause
+- Resolution
+- Common Errors:
+  - Cash Error Occurrence
+  - BNR Jammed / Non-Operational
+  - Recognition Sensor Jam / Spine Jammed
+  - Communication Error
+  - Loader Cassette Jam
+  - Key Turned / Door Open
+  - Out of Bills
+  - Cash Tracking Not Updated
+  - No Power
+
+Description
+-----------
+Basic Bill Recycler Troubleshooting for System 6 and System 7 Toshiba SCO lanes.
+
+Cause
+-----
+- Jammed bills due to damage, wrinkles, or age.
+- If using Fujitsu dispensers, refer to their specific troubleshooting guide.
+
+Resolution
+----------
+
+When a Cash Error Occurs:
+1. Enter SA Mode.
+2. Touch <Cash Maintenance> twice.
+3. Tap the problem area to see resolution steps.
+
+BNR Jammed / Non-Operational / Hardware Error
+---------------------------------------------
+1. Unlock the BNR using the key.
+2. Push the small lever back.
+3. Remove and inspect the Cash Box for jammed bills.
+4. Open the Cash Box, remove bills, rearm it, and check for green light.
+5. Reinsert the Cash Box.
+6. Remove the loader and check for jammed bills inside.
+7. Open the loader and remove all bills, especially any $5s, $10s, $20s.
+8. Press down the black panel until it clicks.
+9. Reinsert the loader.
+10. Pull the yellow lever to tilt BNR forward.
+11. Open the top front, top back, and spine sections; inspect all for jams.
+12. In SA mode > Cash Maintenance > Cash Tracking > Bill Handler > Transfer All Bills.
+13. If errors remain, reboot the lane.
+14. If still unresolved, dispatch Toshiba.
+
+Recognition Sensor Jam / Spine Jammed
+-------------------------------------
+- Caused by torn or damaged bills.
+1. Tap the yellow error message.
+2. Tilt BNR forward.
+3. Open the Recognition Sensor or Spine section.
+4. Remove jammed bills.
+5. Reboot lane if necessary.
+
+Communication Error
+-------------------
+1. Power cycle the lane.
+2. If unresolved, send a 9-load.
+3. Use Cash Diagnostics to test.
+4. Dispatch Toshiba if issue remains.
+
+Loader Cassette Jam
+-------------------
+- Often caused by dirty rollers or overfilled loader.
+1. Remove loader and check for damaged bills.
+2. Do not exceed 3 inches or 250 bills.
+3. Ensure $1s are on the bottom.
+4. Clean rollers with alcohol and let dry.
+5. Reinsert loader and enable cash.
+6. Test using Cash Diagnostics.
+7. Dispatch Toshiba if unresolved.
+
+Key Turned / Door Open
+----------------------
+1. Tap the yellow error.
+2. Open and reclose all BNR doors securely.
+
+Out of Bills
+------------
+1. Check bill levels via Cash Maintenance > Cash Tracking > Bill Handler.
+2. If any denomination is low or zero, follow store procedures to add/loan cash.
+
+Cash Tracking Not Updating
+--------------------------
+1. Ensure all bills are loaded face up.
+2. Send a 9-load to the lane.
+3. Reload the loader cassette and try again.
+4. Dispatch if issue persists.
+
+No Power to Recycler
+--------------------
+1. Power cycle the SCO lane.
+2. Refer to Toshiba SCO power procedures if needed.

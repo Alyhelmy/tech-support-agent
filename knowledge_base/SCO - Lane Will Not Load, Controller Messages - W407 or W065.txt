@@ -1,0 +1,45 @@
+SCO - Lane Will Not Load, Controller Messages - W407 or W065  
+KB0012247 - Latest Version  
+77 Views
+
+Description  
+-----------  
+Toshiba SCO - Lane Will Not Load, Displays Grey Screen with Scroll Bar; Controller Messages Display W407 or W065  
+
+SCO Lane displays a white/grey/gray screen with scroll bars at the bottom.
+
+Controller System Messages display either or both of the following:  
+- W065 PRELOAD FAILURE  
+- W407 APP. LOADER EVENT HAS OCCURRED
+
+Cause  
+-----  
+ACE Software
+
+Resolution  
+----------  
+1. Note in ticket what is displayed on the SCO Lane display itself.  
+
+2. Check System Messages in the MC for messages:  
+   - W407 APP. Loader Event Has Occurred  
+   - W065 Preload Failure  
+
+3. If message is present, DO NOT POWER CYCLE LANE or ANY OTHER LANES IN STORE until the following document has been completed:  
+   - POS, Fuel, SCO : Register(s) Won't Load Past W008 and/or Displays W065 Error  
+
+4. If messages are not present, try power cycling the lane.  
+
+5. Run CHECUSER Option 1.  
+
+6. Power lane off and back on.  
+
+7. If issue remains, collect and process a dump and contact Frontend Tier 2 to escalate to APP-POS.
+
+
+W065 PRELOAD FAILURE - E015  
+If you are getting the error in system messages:  
+
+02/20 06:36 CC 520 2 W065 PRELOAD FAILURE  
+               B5/S250/E015  
+
+1. If you are getting this error and the SCO lane is still not loading, dispatch to have the hard drive on the lane re-formatted or replaced if needed.

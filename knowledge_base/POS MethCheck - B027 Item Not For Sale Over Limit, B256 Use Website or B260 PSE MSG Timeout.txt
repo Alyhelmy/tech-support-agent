@@ -1,0 +1,118 @@
+POS MethCheck - Error Codes B027, B256, B260 Troubleshooting
+============================================================
+
+KB0011765 - Latest Version  
+275 Views
+
+Table of Contents
+-----------------
+- Description
+- Important Notes
+- Cause
+- Resolution
+  - Scenarios Requiring Escalation to Health & Wellness
+  - B256 Use Website
+  - One Register Affected
+  - Multiple Registers Affected
+  - B260 PSE MSG TIMEOUT
+  - Undocumented Errors
+- Customer MethCheck Website Access
+- Using NPLEX Transaction Number at Register
+- Login Troubleshooting
+- Linked Documentation
+
+Description
+-----------
+Errors when using POS MethCheck to sell Pseudoephedrine (PSE):
+- B256 Use Website
+- B027 Item Not for Sale or Over Limit
+- B260 PSE MSG Timeout
+
+Important Notes
+---------------
+- Must access MethCheck website from EPRN workstation.
+- Do NOT swipe driver's licenses on MSR or pinpad; scan via 3D hand scanner or enter manually.
+- If both website and POS are down, PSE products cannot be sold.
+- New stores receiving B256 may not be setup in Appriss/NPLEx.
+- Include: Register #, Date/Time, Transaction #, UPC in escalations.
+- Harris Teeter stores: Contact System Support Desk (704-844-3156).
+
+Cause of B027 and Related Errors
+--------------------------------
+- Customer is over PSE purchase limit.
+- Drug not found in database.
+- Communication issue from POS.
+- POS controller issues.
+- Keyboard mapping conflicts (e.g., "P" key set to cash).
+
+Resolution
+----------
+
+Escalation to Health & Wellness (H&W)
+- If issue affects one item only → may be missing in Appriss DB.
+  Info needed: Date/Time, UPC, Product Description.
+- If new store → may not be fully setup.
+- Cashier may see "B257 Product Not For Sale."
+- Escalate to H&W with a warm transfer.
+
+B256 Use Website Error
+----------------------
+If error on one item and message is “Item Sale Restricted”:
+1. Ask if item is listed on NPLEX.
+   - If yes: Customer is over limit.
+   - If no: Admin can request to add it to database.
+
+If error is “B027 Not For Sale”:
+1. Stop/Start DIFSRVCE (~B on MC Controller).
+   - Locate NAME=ADX_SPGM:COMMAND.286 PARM=f:\dif\difsrvce.bat.
+   - F8 > Y > Enter to stop. F7 to start.
+2. Wait 10 minutes and test with a voided PSE transaction.
+3. If persists, gather info and escalate.
+
+One Register Affected
+---------------------
+1. Escalate to Frontend Tier 2 to copy options from working register.
+2. Reload options, sign off/on.
+3. Test.
+
+Multiple Registers Affected
+---------------------------
+1. Stop/Start DIFSRVCE.
+2. Wait 10 mins, test PSE transaction.
+3. If unresolved, have DIF rebuilt.
+
+B260 PSE MSG TIMEOUT
+--------------------
+1. Stop/Start DIFSRVCE (~B on controller).
+2. Wait 10 mins and test.
+3. If needed, send a 9-load.
+4. Rebuild DIF if unresolved.
+5. If still failing, escalate to APP-POS (P3) with:
+   - Register numbers, Date/Time, Transaction #, UPC & description.
+
+Undocumented Errors
+-------------------
+1. Confirm not isolated to one item or register.
+2. Stop/Start DIFSRVCE.
+3. Test transaction.
+4. Send 9-load if needed.
+5. Escalate with all info if unresolved.
+
+Customer MethCheck Website Access
+---------------------------------
+1. Go to: https://www.nplexanswers.com/NPLExAnswers/startForm.go
+2. Enter: Transaction ID, Customer Last Name, Verification Code.
+3. Click Submit.
+
+Using NPLEX Transaction # at Register
+-------------------------------------
+1. Enter EUID.
+2. When asked for DL, press Clear > Override > Enter.
+3. Enter Transaction ID and proceed.
+
+Login Troubleshooting
+---------------------
+Verify login at:
+https://retail-portal-sso.auth.us-east-1.amazoncognito.com/oauth2/authorize?response_type=code&client_id=42djjco2e6c4d0civc9p4ua3sa&redirect_uri=https://nplex.appriss.com/retail/oauth2/kroger&idp_identifier=kroger-produ
+
+Transfer to EPRN Functional Team for login issues.
