@@ -168,16 +168,24 @@ class TechSupportGUI:
         results_frame.columnconfigure(0, weight=1)
         results_frame.rowconfigure(0, weight=1)
         
-        # Results List
-        self.results_list = tk.Listbox(
+        # Replace Listbox with Text widget for better formatting
+        self.results_display = scrolledtext.ScrolledText(
             results_frame,
-            font=('Segoe UI', 11),
-            selectmode=tk.SINGLE,
-            width=70,
-            height=25
+            wrap=tk.WORD,
+            font=('Segoe UI', 10),
+            height=25,
+            background='white',
+            foreground=self.colors['text'],
+            cursor="hand2"
         )
-        self.results_list.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S), padx=(0, 10))
-        self.results_list.bind('<<ListboxSelect>>', self.show_selected_solution)
+        self.results_display.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S), padx=(0, 10))
+        self.results_display.config(state=tk.DISABLED)
+        
+        # Bind click events
+        self.results_display.bind("<Button-1>", self.on_result_click)
+        
+        # Store results data for click handling
+        self.results_data = []
         
         # Solution Display
         self.solution_display = scrolledtext.ScrolledText(
@@ -209,8 +217,8 @@ class TechSupportGUI:
                 # Get AI response
                 rag_response = self.agent.qa_chain({"query": message})
                 
-                # Get similar solutions
-                similar_solutions = self.agent.find_similar_solutions(message, threshold=0.30)
+                # Get similar solutions with preview
+                similar_solutions = self.agent.find_similar_solutions_with_preview(message, threshold=0.30)
                 
                 # Prepare AI response
                 ai_response = rag_response["result"]
@@ -223,7 +231,7 @@ class TechSupportGUI:
                 
                 # Update KB tab if solutions found
                 if similar_solutions:
-                    self.root.after(0, lambda: self.update_kb_results(similar_solutions))
+                    self.root.after(0, lambda: self.update_kb_results_with_preview(similar_solutions))
             
             except Exception as e:
                 error_message = f"Error: {str(e)}\nPlease try rephrasing your message or check if Ollama is running properly."
@@ -261,38 +269,117 @@ class TechSupportGUI:
         
         def search():
             try:
-                similar_solutions = self.agent.find_similar_solutions(query, threshold=0.30)
-                self.root.after(0, lambda: self.update_kb_results(similar_solutions))
+                similar_solutions = self.agent.find_similar_solutions_with_preview(query, threshold=0.30)
+                self.root.after(0, lambda: self.update_kb_results_with_preview(similar_solutions))
             except Exception as e:
                 self.root.after(0, lambda: messagebox.showerror("Error", str(e)))
         
         threading.Thread(target=search, daemon=True).start()
 
-    def update_kb_results(self, similar_solutions):
-        self.results_list.delete(0, tk.END)
+    def update_kb_results_with_preview(self, similar_solutions):
+        """Update KB results display with previews."""
+        self.results_display.config(state=tk.NORMAL)
+        self.results_display.delete(1.0, tk.END)
+        
+        # Clear solution display
         self.solution_display.config(state=tk.NORMAL)
         self.solution_display.delete(1.0, tk.END)
         self.solution_display.config(state=tk.DISABLED)
         
-        for filename, score in similar_solutions:
-            self.results_list.insert(tk.END, f"{filename} (Relevance: {score:.2f})")
+        # Clear stored results data
+        self.results_data = []
+        
+        for i, result in enumerate(similar_solutions):
+            filename = result['filename']
+            score = result['score']
+            preview = result['preview']
+            
+            # Store result data for click handling
+            start_line = float(self.results_display.index(tk.INSERT))
+            
+            # Add filename and score as clickable header
+            self.results_display.insert(tk.END, f"📄 {filename}\n", f"title_{i}")
+            self.results_display.insert(tk.END, f"   Relevance: {score:.2f}\n", f"score_{i}")
+            
+            # Process and add preview with better formatting
+            if "**Cause:**" in preview or "**Resolution:**" in preview:
+                # Handle structured preview with Cause and Resolution
+                self.results_display.insert(tk.END, "   ", "indent")
+                
+                # Split preview into parts and format each
+                parts = preview.split('\n\n')
+                for j, part in enumerate(parts):
+                    if part.startswith("**Cause:**"):
+                        cause_text = part.replace("**Cause:**", "").strip()
+                        self.results_display.insert(tk.END, "Cause: ", f"label_{i}")
+                        self.results_display.insert(tk.END, f"{cause_text}\n", f"content_{i}")
+                    elif part.startswith("**Resolution:**"):
+                        resolution_text = part.replace("**Resolution:**", "").strip()
+                        self.results_display.insert(tk.END, "   Resolution: ", f"label_{i}")
+                        self.results_display.insert(tk.END, f"{resolution_text}\n", f"content_{i}")
+                    
+                    if j < len(parts) - 1:  # Add spacing between parts
+                        self.results_display.insert(tk.END, "   \n", "spacing")
+            else:
+                # Handle regular preview
+                self.results_display.insert(tk.END, f"   Preview: {preview}\n", f"preview_{i}")
+            
+            self.results_display.insert(tk.END, "\n" + "─"*80 + "\n\n", "separator")
+            
+            end_line = float(self.results_display.index(tk.INSERT))
+            
+            # Store result data with line ranges
+            self.results_data.append({
+                'filename': filename,
+                'start_line': start_line,
+                'end_line': end_line
+            })
+            
+            # Configure tags for styling
+            self.results_display.tag_config(f"title_{i}", 
+                                          font=('Segoe UI', 11, 'bold'),
+                                          foreground=self.colors['primary'])
+            self.results_display.tag_config(f"score_{i}",
+                                          font=('Segoe UI', 9),
+                                          foreground=self.colors['secondary'])
+            self.results_display.tag_config(f"label_{i}",
+                                          font=('Segoe UI', 9, 'bold'),
+                                          foreground=self.colors['success'])
+            self.results_display.tag_config(f"content_{i}",
+                                          font=('Segoe UI', 9),
+                                          foreground=self.colors['text'],
+                                          lmargin1=30, lmargin2=30)
+            self.results_display.tag_config(f"preview_{i}",
+                                          font=('Segoe UI', 9),
+                                          foreground=self.colors['text'],
+                                          lmargin1=20, lmargin2=20)
+            self.results_display.tag_config("separator",
+                                          foreground='#CCCCCC')
+            self.results_display.tag_config("indent",
+                                          lmargin1=20)
+        
+        if not similar_solutions:
+            self.results_display.insert(tk.END, "No results found. Try different search terms.")
+        
+        self.results_display.config(state=tk.DISABLED)
 
-    def show_selected_solution(self, event):
-        selection = self.results_list.curselection()
-        if not selection:
-            return
+    def on_result_click(self, event):
+        """Handle clicks on search results."""
+        # Get the line number where the click occurred
+        click_line = float(self.results_display.index(f"@{event.x},{event.y}"))
         
-        # Get selected filename
-        selected_text = self.results_list.get(selection[0])
-        filename = selected_text.split(" (Relevance:")[0]
-        
-        # Get and display solution
-        solution = self.agent.get_solution(filename)
-        
-        self.solution_display.config(state=tk.NORMAL)
-        self.solution_display.delete(1.0, tk.END)
-        self.solution_display.insert(tk.END, solution)
-        self.solution_display.config(state=tk.DISABLED)
+        # Find which result was clicked
+        for result in self.results_data:
+            if result['start_line'] <= click_line <= result['end_line']:
+                # Show the full solution for this result
+                filename = result['filename']
+                solution = self.agent.get_solution(filename)
+                
+                self.solution_display.config(state=tk.NORMAL)
+                self.solution_display.delete(1.0, tk.END)
+                self.solution_display.insert(tk.END, solution)
+                self.solution_display.config(state=tk.DISABLED)
+                break
 
 def main():
     root = tk.Tk()

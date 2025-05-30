@@ -304,6 +304,109 @@ class TechSupportAgent:
                 return content
         return "Solution not found."
 
+    def get_content_preview(self, filename: str, lines: int = 3) -> str:
+        """Get a preview of the content focusing on Cause and Resolution sections."""
+        content = self.get_solution(filename)
+        if content == "Solution not found.":
+            return "Preview not available."
+        
+        # Convert content to lowercase for case-insensitive searching
+        content_lower = content.lower()
+        
+        # Look for common section headers
+        cause_keywords = ['cause:', 'causes:', 'problem:', 'issue:', 'why:', 'reason:']
+        resolution_keywords = ['resolution:', 'solution:', 'fix:', 'steps:', 'how to:', 'procedure:']
+        
+        preview_parts = []
+        
+        # Extract Cause section
+        cause_content = self._extract_section_content(content, content_lower, cause_keywords)
+        if cause_content:
+            preview_parts.append(f"**Cause:** {cause_content}")
+        
+        # Extract Resolution section
+        resolution_content = self._extract_section_content(content, content_lower, resolution_keywords)
+        if resolution_content:
+            preview_parts.append(f"**Resolution:** {resolution_content}")
+        
+        # If no specific sections found, fall back to first few lines
+        if not preview_parts:
+            lines_list = [line.strip() for line in content.split('\n') if line.strip()]
+            preview_lines = lines_list[:lines]
+            return '\n'.join(preview_lines)[:200] + ("..." if len('\n'.join(preview_lines)) > 200 else "")
+        
+        # Join the sections
+        preview = '\n\n'.join(preview_parts)
+        
+        # Truncate if too long
+        if len(preview) > 300:
+            preview = preview[:300] + "..."
+        
+        return preview
+
+    def _extract_section_content(self, content: str, content_lower: str, keywords: List[str]) -> str:
+        """Extract content from a specific section based on keywords."""
+        lines = content.split('\n')
+        lines_lower = content_lower.split('\n')
+        
+        for i, line_lower in enumerate(lines_lower):
+            # Check if this line contains any of the keywords
+            for keyword in keywords:
+                if keyword in line_lower:
+                    # Found a section header, extract content
+                    section_content = []
+                    
+                    # Start from the line after the header (or current line if content is on same line)
+                    start_idx = i
+                    if ':' in line_lower and line_lower.strip().endswith(':'):
+                        start_idx = i + 1
+                    else:
+                        # Content might be on the same line after the colon
+                        colon_idx = line_lower.find(':')
+                        if colon_idx != -1:
+                            same_line_content = lines[i][colon_idx + 1:].strip()
+                            if same_line_content:
+                                section_content.append(same_line_content)
+                            start_idx = i + 1
+                    
+                    # Collect lines until we hit another section or empty lines
+                    for j in range(start_idx, min(start_idx + 4, len(lines))):
+                        if j < len(lines):
+                            line = lines[j].strip()
+                            if line:
+                                # Stop if we hit another section header
+                                line_lower_check = line.lower()
+                                if any(kw in line_lower_check for kw in keywords + 
+                                      ['resolution:', 'solution:', 'fix:', 'steps:', 'procedure:', 'cause:', 'causes:', 'problem:', 'issue:']):
+                                    break
+                                section_content.append(line)
+                            elif section_content:  # Stop at empty line if we already have content
+                                break
+                    
+                    if section_content:
+                        result = ' '.join(section_content)
+                        # Clean up and truncate
+                        if len(result) > 150:
+                            result = result[:150] + "..."
+                        return result
+        
+        return ""
+
+    def find_similar_solutions_with_preview(self, query: str, threshold: float = 0.2) -> List[Dict]:
+        """Find similar solutions with preview content included."""
+        similar_solutions = self.find_similar_solutions(query, threshold)
+        
+        results_with_preview = []
+        for filename, score in similar_solutions:
+            preview = self.get_content_preview(filename)
+            results_with_preview.append({
+                'filename': filename,
+                'score': score,
+                'preview': preview
+            })
+        
+        return results_with_preview
+
 def main():
     agent = TechSupportAgent()
     

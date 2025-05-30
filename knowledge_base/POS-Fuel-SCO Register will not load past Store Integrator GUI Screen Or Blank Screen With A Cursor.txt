@@ -1,0 +1,76 @@
+POS/Fuel/SCO: Register will not load past Store Integrator GUI Screen Or Blank Screen With A Cursor 
+ 
+**Document ID:** KB0011254  
+**Views:** 217  
+
+---
+
+**Description:**  
+Register is stuck on the Store Integrator GUI screen or shows a blank screen with only a cursor in the top-left corner.  
+Symptoms may include:  
+- GUI stuck on “Creating Session”  
+- “Could not connect to AEF Session Server”  
+- W008 error  
+
+---
+
+**Cause:**  
+A required device is not communicating with the lane.  
+Example: Thermal printer failure or other hardware not responding.
+
+---
+
+**Resolution:**  
+
+📌 **Sky 1.4 Note:**  
+Touchscreen issues are known after Sky 1.4 update. Try paperclip reset before escalation. If unresolved, collect a terminal dump and escalate to APP-POS (P3).
+
+📌 **If this is a SCO terminal with a blank screen and cursor:**  
+1. Frontend Tier 2 must run `checzap`.  
+   - Reference: *SCO - How to Run CHECZAP (Remote STC)*  
+2. If unresolved, dispatch a tech to STC the lane.
+
+📌 **If not recently updated to Sky 1.4:**  
+- Try a paperclip reset  
+- Run Loadshrink: `adxpldrb -force -loadshrink`  
+- Reference: *POS - How to Run Loadshrink*  
+- Also see: *POS - Software - How To Determine ACE Software Version*
+
+---
+
+**Printer Checks ("Store Integrator GUI B007 Check Printer"):**  
+1. Determine if the printer is Epson or IBM/Toshiba.  
+2. Verify printer has paper; power cycle the printer.  
+3. Ensure ink ribbons are loaded and tight.  
+4. If there’s an error:
+   - Power off for 20+ seconds
+   - Reseat cables while off, power back on
+   - If still erroring, dispatch for printer
+
+5. Log in to TUNA  
+6. Go to:  
+   - 2. Network Administration  
+   - 3. Sync hosts with ISP/POS → Press Enter  
+7. If unresolved, proceed below.
+
+---
+
+**Terminal Installer Option:**  
+1. Run Terminal Installer  
+   - Reference: *POS Terminal Installer For Registers*  
+2. Send 9-load to the register  
+
+---
+
+**TCxSky 1.4 PIN Pad Interference Fix:**  
+1. Check TUNA Syslog for repeated DHCPDISCOVER / DHCPOFFER messages  
+2. Identify offending PIN Pad IP in TUNA  
+3. Use Netmapper to find its lane switch port  
+4. Disable the affected port (TUNA Zoom Screen)  
+5. Reboot the register  
+6. If successful:
+   - Dispatch to replace the PIN pad’s dongle/cable  
+7. If unresolved:
+
+   - **Single Register**: Dispatch per *KSC Hardware Dispatching For All Pillars*  
+   - **Multiple Registers**: Call Frontend Tier 2 for escalation  
