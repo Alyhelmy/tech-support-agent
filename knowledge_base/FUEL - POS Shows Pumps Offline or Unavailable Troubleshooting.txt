@@ -1,0 +1,107 @@
+FUEL - POS Shows Pumps Offline or Unavailable Troubleshooting
+ KB ID: KB0011912 - Latest Version
+ Views: 328 views
+ Description
+ Fuel site is showing pumps are offline at the POS but Pay At The Pump (PAP) could still be working.
+ If they show offline at the POS and the Pumps, then the site will be down.
+ Pumps are showing an error such as Please Pay Inside, or Pump Busy.
+ Possibly, only the POS is showing the pumps offline and the pumps are working fine for Pay At Pump.
+ Cause
+ Fuel Controller is offline
+ Communication from the POS to the Fuel controller needs to be reset
+ Site may have lost power
+ Pump may need service
+ Resolution
+ Important - Complete Site Down
+ If the Fuel Center is completely down, meaning they cannot pump gas or service (sell gas) customers, find
+ out if the site is just coming back up from a power outage and verify they have power. Frontend Tier 1
+ can have the site try to hit the "Green" reset button to see if the pumps start to come back online. If
+ nothing happens and the site is still down, warm transfer to Frontend Tier 2!
+ Also Important - Single Pump Issues
+ Per APP-FUEL on single pumps offline, when RadViewer shows a pump offline and ICRs are online, ask
+ the Fuel Clerk if the light on the port is flashing amber or red on the port for the pump (on the Panther); if
+ so, the port is the issue. If the Fuel Clerk feels comfortable with you walking them through trying a
+ different open port on the Panther for the pump that is the issue, you can try and then send a ticket to
+ APP-FUEL or engage the APP-FUEL chat to update RCM with the new port location and then download
+ and reboot.
+ This is located in the back of the Panther
+If the site is unable to move the port, dispatch IBM to move pump on the panther to a NEW port to try
+ and resolve the issue. The IBM tech should be able to determine if it's a Panther port issue or and actual
+ hardware issue with the pump. If moving the pump to another port on the Panther does not resolve, the
+ site will need to dispatch a Pump Tech to wipe and reload the IGEM or validate low voltage disconnect.
+ NGPOS FCBs
+ These devices are located inside of the pumps and should be taken into consideration for any E01 errors
+ and if the pumps show offline in radviewer.
+ 1. Check IX Gateway VLAN in TUNA to see if the FCBs ping.
+ 2. If they do not ping, have the clerk reboot the affected pump(s) at the breaker for one minute.
+ 3. If the FCBs still do not ping, advise the store to submit as service hub ticket for a pump technician.
+ Cincinnati Store personnel places a work order on Maximo.
+ One or a Few Pumps Offline
+ Important Note - Fire Marshal Requirements
+ This is set up in Central and Mariano's Divisions. For example, in Chicago, IL and a few other outlining
+ sites, the fire marshal mandates if the button is pressed it is set to trigger an alert to the Fire Dept. The fire
+ dept is automatically sent when the button is pressed. If they have no fire or fuel spill, a fine is sited to the
+ store.
+ They can press the green button only to see if it clicks. If it doesn't DO NOT press the Red button to start
+ the EStop.
+ Troubleshooting Steps:
+ 1. Verify and note what the pump shows on the POS and at the pump. If the site is coming back up
+ from a power outage you can have the site press the green button reset to try and get them back
+ online.
+ 2. If the pump is online but cannot process cards begin troubleshooting pay at pump credit issues.
+ See Linked Knowledge Document: FUEL – Pay at Pump and Credit Troubleshooting
+ 3. Launch RadViewer from your securecitrix.kroger.com access.
+ 4. Select the correct division from the drop-down list and press OK.
+ 5. At the top select the Window tab then select Fuel Console View
+ 6. In the left panel press + next to your store number
+ 7. Select the Pumps folder and then press the refresh icon at the top.
+8. Check to see if any of the pumps show offline in this view. If you find pumps showing offline in
+ RadViewer, and at the POS and/or the pump continue.
+ 9. Power cycle the pump at the breaker, leaving it off for at least a minute.
+ If pump(s) still show Offline in Radviewer:
+ If the pump proves to be a hardware issue, have site contact/dispatch on their pump
+ tech/facilities even if stuck transactions are on the pump or not.
+ If the pump(s) are Online:
+ check for stuck transactions.
+ See linked Knowledge Document: FUEL– Transaction Stuck on Pump/ Will not Clear from POS
+ 10. If only the POS is showing the pump(s) is offline:
+ Reset the fuel connection. If that doesn't work:
+ Dump the POS.
+ See Knowledge Document: How To Perform and Prepare Terminal/TCU or Controller Dump
+ ALL Pumps Offline
+ Frontend Tier 2 Only Troubleshooting
+ Note: In many cases like the site is coming up from a power outage, the fuel green reset button should
+ be tried first to see if the pumps will come back up.
+ Troubleshooting Steps:
+ 1. Verify and note what the pump shows on the POS and at the pump. Also note if they have a Red X on
+ their Fuel Services Icon.
+ 2. If the POS displays pumps offline and a Red X, and the Pumps show an error such as "Please Pay
+ Inside (E01)", troubleshoot the Fuel Controller.
+ See Linked Knowledge Document: FUEL – Panther Troubleshooting and Rebooting.
+ 3. If POS and pumps look normal, and fuel is not coming out, check the Tank Monitor.
+ Note: There are about 10 documents under the FUEL – Tank Monitor CI. Search for the document
+ that best matches your site's equipment type and issue.
+ 4. If only the POS displays pumps offline and people can pay at the pump, Reset Fuel Connection.
+ 5. Have the clerk press their name at the bottom left of the touchscreen.
+ 6. Press Reset Fuel Connection then OK.
+ 7. The Pump Icon should show a brief Red X and then a Green √.
+ If site is still unable to fuel, continue.
+8. Ask if they just had a power outage. Pump ICR Screens will be blank.
+ Verify if the power is back on or not. If it is not, refer them to their facilities or an electrician.
+ Notify the KMA.
+ See Knowledge Document: POS/FUEL DIVISION CONTACTS
+ 9. If they have power such as lights, check the breaker panel to make sure everything is flipped on.
+ 10. If they have power back, but nothing pings, check TUNA for VLAN Jail issues.
+ See Linked Knowledge Document: VLAN Overview
+ 11. If everything is showing online in PSY, have them hit the green Fuel Reset button located above their
+ breaker panel - ONLY IF IT DOES NOT CALL EMERGENCY SERVICES, such as the Fire Department. If it
+ does, a fuel tech will need to be dispatched. See Important Note Here
+ ICR Offline
+ Pump Icons that are gray and showing OFFLINE indicate a loss of communication to the pumps outside.
+ ICR Offline on the POS is caused by the POS losing connection to the pump ICR's due to the PANTHER
+ rebooting.
+ Resolution Steps:
+ Instruct user to press each pump icon that is alerting ICR OFFLINE. This will trigger the POS to
+ reconnect the pump's ICR.
+ If the pump is still showing ICR Offline, try having the Fuel Attendant Reset Fuel Connection from the
+ Name Menu. See related entry on Touchscreen Icon details.

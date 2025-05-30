@@ -1,0 +1,66 @@
+SCO - CHEC Lane is Running Slowly  
+KB ID: KB0012254 — Latest Version  
+Views: 17
+
+------------------------------------------------------------
+Description:
+Individual or multiple SCO (Self Checkout) lanes are running slowly or having performance issues.
+
+Examples:
+- Lanes run slow while scanning items
+- Lanes run slow after hitting “Pay Now”
+
+------------------------------------------------------------
+Cause:
+- Software-related issues
+- Hardware malfunctions
+
+------------------------------------------------------------
+Resolution Steps:
+
+1. Identify the scope:
+   - Verify which specific SCO lanes are having issues (include non-SCO lanes if affected).
+
+2. Check for network issues:
+   - Confirm whether the store is facing any network issues.
+   - Look for open network-related tickets.
+
+3. Review background controller messages:
+   - Check if any SCO controllers were recently rebooted.
+
+4. Document details:
+   - Note exactly what function is slow (e.g., Opening, Closing, Scanning Items, Alt ID entry, Pay Now, Payment).
+
+   - If slowness is related to specific hardware (e.g., scanner, printer), troubleshoot that device per its KB/documentation.
+
+5. Network Troubleshooting:
+   - Use PSY > Lookup > “Self Checkout” to list SCO lanes.
+   - Ping affected lanes and compare latency with unaffected lanes.
+   - If higher latency is detected, escalate to **KSC-Store Support** for switch troubleshooting (include MAC & IP addresses).
+
+6. Perform a 9-load:
+   - Ensure the SCO lane is closed.
+   - Send a **9-load** from the SCO controller.
+
+7. Document:
+   - Note the steps taken and the outcome (resolved/unresolved).
+
+8. Resolution:
+   - If resolved, close the ticket.
+   - If unresolved, gather escalation details.
+
+------------------------------------------------------------
+Required Information for Escalation:
+
+1. What exactly is running slowly? At what transaction point (e.g., scan, pay)?
+2. Capture extract and terminal dump for affected lanes:
+   - Reference: “Toshiba SCO - MISC - How To Perform and Prepare Terminal or TCU”
+3. Document all troubleshooting/resolution steps taken.
+4. Escalation Path:
+   - Contact **Frontend Tier 2** to escalate to **APP-POS**
+   - Severity:
+     - **Sev 3** for isolated terminal issues
+     - **Sev 2** if all terminals in a cluster are affected
+
+------------------------------------------------------------
+End of Document

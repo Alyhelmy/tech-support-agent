@@ -1,0 +1,29 @@
+Kroger Credit Cards: Unable to redeem extra $0.05, $0.20 or $0.25 discount in Fuel
+KB0012273  -  Latest Version
+
+11 views
+Description
+The site or customer may refer the card as KPF or 1 2 3 Rewards.
+
+It will be reported that the extra discount isn't working or redeeming.
+
+The extra discount can range from $0.05, $0.20 or $0.25.
+
+ 
+Resolution
+Please obtain the following:
+
+ 
+
+Date: Time:
+Pump Number:
+Transaction: Last 4 of card:
+First 6 of card: (Not Required)
+Was the issue at the window or at the pump?
+ 
+
+ 
+
+Obtain the needed details that's listed above, then advise them that the
+
+ticket will be escalated to APP-Loyalty for review. DO NOT escalate without any transaction details.

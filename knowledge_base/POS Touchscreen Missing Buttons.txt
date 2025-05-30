@@ -1,0 +1,83 @@
+POS Touchscreen Missing Buttons  
+KB ID: KB0012647 — Latest Version  
+Views: 14
+
+------------------------------------------------------------
+Description:
+⚠️ **IMPORTANT**: This document is *NOT* to be used for **SCO Lanes**.  
+It applies only to **POS terminals** where touchscreen buttons are missing and there is no specific KB article for the missing button(s).
+
+------------------------------------------------------------
+Cause:
+In some cases, buttons were removed intentionally during a touchscreen layout update.  
+For example, CI had Quick Look tabs (soda, salad bar, bakery) removed to:
+- Align with Enterprise Layout standards
+- Encourage scanning items to reduce shrink
+
+These changes are part of the new **Enterprise Standard**, and quick lookup screens will be updated to match SCO. Bakery PLUs will return in the updated lookup layout.
+
+------------------------------------------------------------
+Resolution:
+
+🛠 If a button is:
+- **Not functioning**
+- **Grayed out**
+- **Label is off-center**
+
+➡️ Run the **Terminal Installer** (Refer to: *POS/Fuel/SCO/Pickup/EPRN: POS Terminal Installer For Registers*)
+
+---
+
+### Step-by-Step Troubleshooting:
+
+1. **Identify the issue**:
+   - Which button(s) are missing?
+   - Was the button ever there or is it newly missing?
+
+2. **Scope**:
+   - Is the issue on **one**, **some**, or **all** registers?
+
+3. **Single/Few Registers**:
+   - Send a **9-load** to affected registers.
+   - If issue persists, continue below.
+
+4. **Multiple/All Registers** or issue persists:
+   - Run **Loadshrink** and **Terminal Config**:
+
+#### 🔧 How to Run Loadshrink:
+
+   1. From Main Menu → Select **7. Command Mode**
+   2. At the command line, type:
+      ```
+      adxpldrb -force -loadshrink
+      ```
+      (This may take time to run.)
+   3. When complete, type:
+      ```
+      adxrtccl
+      ```
+      (This applies terminal config.)
+   4. After script completes, send a **9-load** to affected register(s).
+      - Do **NOT** 7-load.
+      - 9-load only **two registers at a time**.
+
+📝 **Important**:  
+If store uses **IP with offsite fuel center**, check with **Frontend Tier 2** first.
+
+5. **If Loadshrink fails or does not complete**:
+   - Transfer the call to **Frontend Tier 2**.
+
+6. If issue still exists after 9-load + successful Loadshrink:
+   - Escalate to **Frontend Tier 2** for escalation to **APP-POS**.
+
+------------------------------------------------------------
+Summary of Escalation Path:
+- If buttons remain missing after:
+  - Terminal Installer
+  - 9-load
+  - Loadshrink + Config
+- Then escalate to:
+  - **Frontend Tier 2** → **APP-POS**
+
+------------------------------------------------------------
+End of Document

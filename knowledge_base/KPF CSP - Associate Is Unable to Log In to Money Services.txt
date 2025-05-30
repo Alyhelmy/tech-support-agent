@@ -1,0 +1,76 @@
+KPF CSP - Associate Is Unable to Log In to Money Services
+KB ID: KB0014611 — Latest Version
+Views: 183
+
+------------------------------------------------------------
+Description:
+Store associate is unable to log in to CSP Money Services.
+
+------------------------------------------------------------
+Cause:
+Access permissions and completion of the Annual AML Training course are required before the associate can log in.
+
+------------------------------------------------------------
+Resolution:
+Record the exact login error and follow the appropriate troubleshooting steps:
+
+Error Message:                           | Action:
+----------------------------------------|-------------------------------------------------------------
+Login spins, never logs in              | Check access permissions
+"EUID and Password combination..."      | Check access & confirm AML course completed 48+ hours ago
+"...Annual AML Training Course"        | Confirm AML course was taken & get completion date
+"Invalid User Name or Password"         | Check for Workforce lockout or expired password
+No login on multiple computers          | Check for CSP outage (see Money Services Not Loading KB)
+
+------------------------------------------------------------
+Troubleshooting Access to CSP:
+To log in successfully, users must meet ALL THREE criteria:
+1. Password must be current and not locked
+2. CSP access must be granted in IMT
+3. Annual AML Course must be completed within the last 365 days
+
+------------------------------------------------------------
+1. Verify Current IAM Password:
+- Ensure the associate can log in to another system (e.g., IAM).
+- If not, suggest updating the password in IAM.
+
+------------------------------------------------------------
+2. Verify APT Access in IMT:
+- Look up the associate’s job profile in IMT.
+- Confirm the CSP role/permission (search for “2270” if needed).
+- If permissions are missing, refer associate to management or Division HR.
+- If permissions are correct, continue to the next step.
+
+------------------------------------------------------------
+3. Verify Annual AML Course Completion:
+- Course Name: 2025-Annual Anti-Money Laundering and Anti-Fraud Training
+- Only this exact course allows access (NOT the CASHIER version).
+
+Steps:
+a. Log into MyInfo > Select “Learning”
+b. If AML course appears in “Current Learning” > associate must complete it
+c. If not listed, go to “All Completed Learning” and look for a Completed status
+d. If not completed, go to “Learning Catalog” > search “Money” > Enroll & complete course
+
+Important Notes:
+- Only the course with “Annual” in the name counts
+- Completion grants access 24–48 hours later (after system sync)
+- Anti-Money and Anti-Fraud sections must both be completed
+- Issues with course status go to: APP-OracleHCMLearning
+
+------------------------------------------------------------
+Escalation:
+If the associate:
+- Has correct APT access
+- Completed the correct Annual AML course
+- Has current password and is not locked out
+But still cannot log in, escalate the issue to APP-KPF. 
+Include a screenshot of completed course with timestamp, if available.
+
+------------------------------------------------------------
+MyInfo Course Issues (Missing or Stuck):
+- If the correct Annual AML course is missing or stuck,
+  escalate to: APP-OracleHCMLearning team via ServiceNow.
+
+------------------------------------------------------------
+End of Document

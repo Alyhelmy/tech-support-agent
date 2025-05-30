@@ -1,0 +1,49 @@
+SCO - Open Button Missing from Start Menu  
+Document ID KB0012367  
+Views 21  
+---
+
+Description  
+The Open button is not visible on the startup menu of a Self-Checkout (SCO) lane.
+
+---
+
+Cause  
+The lane is missing required devices necessary to proceed with initialization.
+
+---
+
+Resolution  
+
+If called in by store  
+1. If multiple lanes are affected, it may be due to improper shutdown or a controller issue.  
+   - Attempt to activate terminal configurations.  
+   - Reboot and check if resolved.  
+   - If unresolved, escalate to Frontend Tier 2.  
+   - Reference How to Activate Terminal, Controller, and System Configurations  
+
+2. Frontend Tier 2  
+   - Check for terminal loading issues.  
+   - Activate controller configs.  
+   - Cold boot the controller assigned to the SCO lanes.  
+   - Reference Toshiba SCO - Terminal Transfer How to Verify ControllerLane Setup  
+
+3. If it’s a single lane issue, continue to the next steps.
+
+4. Troubleshoot ScaleScanner or Handscanner (on Sushi Lanes).  
+   - These are required devices. Missing communication may prevent the lane from opening.  
+   - Reference appropriate scannerscale documentation.
+
+5. If unresolved, dispatch for scannerscale or handscanner hardware.
+
+---
+
+If called in by technician  
+Important Note eBOSS maintenance runs from 1205AM to 510AM EST. STC replication will not complete during this time.
+
+1. If tech is calling post-troubleshooting, STC the lane. The database on the drive may be corrupted.
+
+2. If the lane has already been STC’d  
+   - Tech should further troubleshoot scannerscale.  
+   - If unresolved, contact NTSTop Gun first.  
+   - Then escalate to KSC for escalation to APP-POS.

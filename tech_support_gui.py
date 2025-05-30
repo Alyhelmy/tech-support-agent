@@ -8,7 +8,7 @@ class TechSupportGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("Tech Support Assistant")
-        self.root.geometry("1200x800")
+        self.root.geometry("1400x900")
         
         # Set theme colors
         self.colors = {
@@ -172,7 +172,9 @@ class TechSupportGUI:
         self.results_list = tk.Listbox(
             results_frame,
             font=('Segoe UI', 11),
-            selectmode=tk.SINGLE
+            selectmode=tk.SINGLE,
+            width=70,
+            height=25
         )
         self.results_list.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S), padx=(0, 10))
         self.results_list.bind('<<ListboxSelect>>', self.show_selected_solution)
@@ -181,8 +183,8 @@ class TechSupportGUI:
         self.solution_display = scrolledtext.ScrolledText(
             results_frame,
             wrap=tk.WORD,
-            width=50,
-            height=30,
+            width=80,
+            height=35,
             font=('Segoe UI', 11),
             background='white',
             foreground=self.colors['text']

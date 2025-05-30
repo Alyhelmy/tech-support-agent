@@ -1,0 +1,132 @@
+SCO - Hardware - Genesis / NextGen Bill Dispenser (F53) Troubleshooting  
+KB ID: KB0012075 — Latest Version  
+Views: 104
+
+------------------------------------------------------------
+Description:
+This document provides basic troubleshooting steps for the **Fujitsu F53 Bill Dispenser** used in **Genesis and NextGen SCO lanes**.
+
+------------------------------------------------------------
+Cause:
+- Wrinkled, damaged, or old bills cause jams, resulting in **"Cash Machine Error"**.
+- Even **new bills** can jam — always **fan** them before loading.
+- Possible **software issues**.
+- Error Codes F8A2 or F8A3 may appear — use this doc for those cases.
+  - Additional codes: see **SCO Cash Maintenance Errors**.
+
+------------------------------------------------------------
+Resolution:
+
+### 🔍 Initial Checks
+
+- **Ask associate** to go into:
+  > `Shopper Assist Mode > Cash Maintenance > Cash Maintenance`
+- Tap the error component to view specific message.
+- If it's a **low/out of bills** situation:
+  > `Cash Maintenance > Cash Tracking > Bill Dispenser Tab`
+  (Handled by **Bookkeeper**)
+
+---
+
+### 🧰 Bill Jam / Hardware Troubleshooting
+
+#### 🧾 Bill Cassettes
+
+- **Test for cassette vs dispenser issue**:
+  - Swap cassette locations.
+- Ensure bills are **conditioned** (no wrinkles, properly stacked like printer paper).
+- **Do not overfill cassettes**.
+- See: *SCO - Bill Dispenser Loading Best Practices*
+- If rollers are **worn or damaged**, dispatch via **eBond IBM (CAP Order)**.
+
+#### 🛑 If Jammed:
+
+1. **Power off lane**:
+   - Press black TCU button → “Shutdown System”
+   - See: *SCO - Power Procedures*
+
+2. **Open Scanner Cabinet** → Locate **Bill Dispenser**.
+
+3. **Release Tray**:
+   - Use **yellow/green lever** under dispenser (if present) or just pull.
+
+4. **Remove Tray Fully**.
+
+5. **Release Cassette(s)**:
+   - Push **green button** on bottom-right.
+
+6. **Inspect Behind Cassettes** for jammed bills.
+
+7. **Open Cassette**:
+   - Use cassette key → Unlock back → Push green button.
+
+8. **Check Inside** for:
+   - Jammed bills
+   - Damaged rollers (dispatch if worn)
+
+9. **Remove Bills Gently**:
+   - **Do not reuse** jammed bills
+   - **Inspect rollers** — dispatch CAP if damaged
+
+10. **Inspect Top/Back Belts** for:
+   - Tears
+   - Misalignment
+   - See: *KSC Hardware Dispatching*
+
+11. **Check Reject Bin** (tray above cassettes):
+   - Remove if full of bills
+
+12. **Check Transport Unit**:
+   - **Use green feed wheel** to assist in removing jammed bills
+   - **DO NOT yank bills** (may damage belts)
+
+13. **Reseat Cassettes** — labels facing forward
+
+14. **Push Tray Back In**
+
+15. **Lock Cabinet**
+
+16. **Power On Lane**
+
+17. **Recheck Cash Maintenance**.  
+   - If error remains, dispatch accordingly.
+
+---
+
+### 🧪 Lane Not Dispensing But No Errors in Cash Maintenance
+
+1. Recheck for jams (cassettes, belts, reject bin).
+
+2. Power off:
+   - Use TCU button → Shutdown
+   - Then power off **UPS**
+   - Leave off for **2+ minutes**
+
+3. Power on and test via **Cash Diagnostics**  
+   - See: *SCO - Cash Maintenance Errors*
+
+4. If still not dispensing, dispatch via **KSC Hardware Dispatching**.
+
+---
+
+### 💵 Lane Not Dispensing Specific Denomination
+
+1. Check that **specific cassette** for:
+   - Jams
+   - Damaged bills
+   - Worn rollers
+
+2. If damaged → **eBond IBM CAP Order**
+
+3. **Swap** with known working cassette:
+   - If the new one works → original needs replacement.
+   - If neither works → dispatch for hardware issue.
+
+---
+
+### ✅ Summary of Dispatch Triggers
+
+- Worn or damaged rollers → **CAP via eBond IBM**
+- Transport jams, belts misaligned → **KSC Hardware Dispatching**
+- Persistent cash errors after steps above → **Dispatch**
+- Loadshrink not required for this process — hardware only.

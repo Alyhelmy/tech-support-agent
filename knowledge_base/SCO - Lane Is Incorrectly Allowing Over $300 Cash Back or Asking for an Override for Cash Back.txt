@@ -1,0 +1,73 @@
+SCO - Lane Is Incorrectly Allowing Over $300 Cash Back or Asking for an Override for Cash Back
+KB0012289  -  Latest Version
+
+15 views
+Description
+SCO Lanes are allowing over $300 cash back on debit and EBT transactions and should be limited to $300 per order.
+
+The lane dispenses this amount and/or prompts to collect it at the pay station via printing a cash voucher.
+
+Note: Previous cash back limits were $100. There was a change approved for the enterprise to change limits to $300 at all stores.
+
+ 
+
+Cause
+AT/DA/HO/Select NA Stores
+Cash back on debit cards is flagged to ask for a Manager's Override for cash back transactions between $100.01 and $299.99.
+
+This flag is enabled only on SCO lanes. Stores will not be able to override over $299.99.
+
+NA506, NA525, NA530, NA558, NA698, NA848
+
+ 
+
+Note: Typically what can happen is that the lane will have $300 cash back, and the store will transfer the transaction to the paystation without performing an override causing the problem described in Toshiba SCO - Lane Unexpectedly Adding to Total Due on Cash Transactions
+
+ 
+
+Resolution
+1. Customer completed an order and asked for over $300 cash back.
+
+2. The lane processed the order and dispensed the amount or printed a cash voucher for pick up.
+
+3. Document the transaction information and the card type (Visa, MasterCard, AmEx, Discover, Etc...)
+
+4. How did the customer enter card? (MSR or Chip)
+
+5. An extract is needed immediately following the transaction.
+
+6. Verify personalization setup for lane:
+
+  - Login to acting master.
+
+    Navigate to Personalization
+
+  - ACE MAIN MENU
+
+  - Personalization
+
+  - Arrow to "File" and "Open Terminal/group"
+
+  - Type in Register number, press Enter
+
+  - Arrow over to "Options"
+
+  - Arrow down to "Tender"
+
+  - Page down to "Tenders"
+
+  - Change ID field to 54 - Debit
+
+  - Page Down to "Tdr Limits"
+
+7. Document in ticket what the value for "Change Limit" is under the "Override Not Allowed" Column.
+
+8. Incorrect Entry is: "+++"; Correct Entry is: "300.00"
+
+9. Do not modify entry.
+
+10. Press 'Esc' or 'F3' all the way back to main menu, do not save any changes.
+
+  - Escalate to APP-Instore Payments, P3 with extract if the entry is "+++" ; otherwise close.
+
+  - If store wishes to have cash back limits changed, they must put the request on the Bi-Way or contact their POS Division coordinator

@@ -1,0 +1,42 @@
+FUEL - B076 Authorization Required Error On The Touchscreen
+KB0011922  -  Latest Version
+
+17 views
+Description
+The fuel clerk will be unable to clear this ACE message or proceed with the transaction.
+
+Sometimes proceeded by B076 - Authorization Required - Fuel Points Not Available
+
+ 
+ 
+Resolution
+B076 - Authorization Required Or B076 - Authorization Required - Fuel Points Not Available
+The person signed into the Fuel POS is either using an ID created to use with the in-store registers, or they are a new hire and their ID was not set up correctly. ID's for Fuel Clerks must be created with a level 3. You can look their operator ID up on the MC.
+
+See How To Check Operator ID's in ACE and Authorization Levels and SCO Lanes
+
+1. Refer the clerk to the store's File Maintenance person or Manager.
+
+  a. If a store clerk filling in at the fuel center, they need to have a new ID created.
+
+  b. If a new hire, their ID MUST be deleted, then a new one created with a level 3.
+
+ 
+
+Creating a new ID is procedural and must be done at the store
+
+ 
+
+Note: If there are no IDs available for the site to use that give proper loyalty discounts and there is no one at the store who can create a level 3 profile for the site to use, then contact the Fuel Division lead per K3498 Division Contacts / Miscellaneous Contacts
+
+ 
+
+If the fuel clerk is unable to clear this ACE message or proceed with the transaction:
+
+1. Send a 9 load to the register (see register reboot entry).
+
+  - Note: POS1 is terminal 100, POS2 is terminal 101, etc.
+
+2. After the register recovers from the reboot, the clerk will be able to clear the transaction and proceed.
+
+ 

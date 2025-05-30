@@ -1,0 +1,74 @@
+SCO - Keys Accidentally Taken by Tech
+KB0011246  -  Latest Version
+
+15 views
+Description
+This document would be used/followed if a tech took store keys.
+
+
+Cause
+Tech took keys.
+
+
+Resolution
+The best course of action is to communicate directly with the division teams if a store suspects a vendor team was involved in their SCO keys going missing. The division teams will have their store rollout dates +  KSC ticket dispatch visibility, to help the store figure out which vendors were onsite and coordinate with the appropriate team leads to follow up on the issue.  By going this route, it enables the division team to help provide the store SCO keys faster, should they be unable to recover the lost keys in a timely manner.  
+
+
+ 
+
+ 
+
+1.  Open ticket noting reporting store associate, approximate date & time the issue with the keys was noticed missing or reported.  (To prevent any duplicate emails).
+
+2.  Create an email with those notes, and send to the appropriate Division email below.  
+
+3.  Mark ticket resolved (division team will follow up with store).
+
+ 
+
+Division Email List:
+Atlanta (011)               ATTechnology@kroger.com
+
+Central (021)              CETechnology@kroger.com
+
+Cincinnati (014)          CITechnologyRemodels@kroger.com
+
+Columbus (016)          COTechnologyRemodels@kroger.com
+
+Dallas (035)                DATechnologySupervisors@kroger.com
+
+Delta (025)                  DeltaKrogerTechnology2@kroger.com
+
+Dillons (615)               Technology@Dillonstores.com
+
+Food4Less CA (704)  ralphsfood4lessstoresystems@ralphs.com
+
+F4L MW (708)            RMTechnologyRemodels@Roundys.com
+
+Fred Meyer (701)       FMKTMStoreTeam@Kroger.com
+
+Fry's (660)                  FRYSPCSupport@frysfood.com
+
+Harris Teeter (097)     IS_Managers@harristeeter.com
+
+Houston (034)            SWTechnologySupervisors@kroger.com
+
+King Soopers (620)    KingsTechnology@kingsoopers.com
+
+Louisville (024)           LOTechnologyDept@stores.kroger.com
+
+Michigan (018)           MITechnologyRemodels@kroger.com
+
+Mid-Atlantic (029)       MATECH@kroger.com
+
+Nashville (026)           nakrogertechnology@kroger.com
+
+QFC (705)                  QFCTechnology@kroger.com
+
+Ralphs CA (703)         ralphsfood4lessstoresystems@ralphs.com
+
+Roundy's(531/534)     RMTechnologyRemodels@Roundys.com
+
+Ruler (090)                 RUTechnologyTeam@rulerfoods.com
+
+Smiths (706)               SFDCTechnologyTeam@kroger.com
