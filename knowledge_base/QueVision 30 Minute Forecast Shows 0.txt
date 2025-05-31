@@ -1,0 +1,34 @@
+QueVision 30 Minute Forecast Shows 0  
+**Document ID:** KB0011603  
+**Views:** 5  
+
+---
+
+**Description:**  
+The QueVision monitor is displaying correctly for open registers and action now, but shows **0** for the 30-minute forecast.
+
+---
+
+**Cause:**  
+The store has not completed its initial data collection phase.  
+- After QueVision installation, the system requires several **weeks of data collection** before generating accurate predictions.  
+- During this phase, the monitors should remain powered off.  
+- Any forecast data presented during this period is unreliable and should not be used for action planning.
+
+---
+
+**Resolution:**
+
+1. **Determine Go Live Date:**
+   - Ask the store when their **go live date** is (or was).
+
+2. **If Go Live Date Has NOT Passed:**
+   - Inform store this behavior is expected.  
+   - Predictions will not be reliable until the go live date.  
+   - **Close the ticket** after providing clarification.
+
+3. **If Store is in Test Week:**
+   - Escalate to **APP-ISA** as **Priority 3 (P3)** to ensure the system is properly functioning by Go Live.
+
+4. **If Go Live Date HAS Passed (or store doesn’t know):**
+   - Escalate the issue to **APP-ISA** as **Priority 3 (P3)**.

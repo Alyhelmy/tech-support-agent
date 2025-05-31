@@ -1,0 +1,35 @@
+FUEL - Red X When Pressing POS Buttons  
+**Document ID:** KB0011963  
+**Views:** 47  
+
+---
+
+**Description:**  
+Touchscreen buttons display a **Red X** when attempting to perform transactions (e.g., prepay, refund, set pump).  
+The associate is unable to complete fuel-related tasks.
+
+📌 **Note:** This is NOT related to the Red X on Fuel or Tank Monitor icons at the bottom of the screen.  
+This issue appears when interacting directly with fuel pump action buttons.
+
+---
+
+**Resolution:**
+
+1. **Reset Fuel Connection:**
+   - From the POS terminal, use the **Name Menu** → **Reset Fuel Connection**.
+   - Reference: *FUEL Touchscreen Entry – POS Name Menu*
+
+2. **Check Peripherals:**
+   - Ensure all connected peripherals (e.g., Handscanner, printer) have power and are error-free.
+
+3. **Send 9-Load:**
+   - From the ACE Controller, send a **9 load** to the affected terminal.
+   - Fuel registers typically start at **terminal 100**.
+
+4. **Copy Terminal Options:**
+   - If the issue persists, contact **Frontend Tier 2**.
+   - Have them **copy terminal options** from a functioning fuel lane to the one experiencing issues.
+   - After update, have the associate sign out and back in.
+
+5. **Escalate to APP-Fuel:**
+   - If none of the above resolves the issue, escalate to **APP-Fuel** as **Priority 2 (P2)**.

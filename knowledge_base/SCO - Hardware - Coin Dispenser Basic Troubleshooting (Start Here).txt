@@ -1,0 +1,100 @@
+SCO - Hardware - Coin Dispenser Basic Troubleshooting (Start Here)  
+**Document ID:** KB0011968  
+**Views:** 75  
+
+---
+
+**Description:**  
+Basic Coin Dispenser troubleshooting for SCO lanes using Telequip models.
+
+---
+
+**Cause:**  
+- Coin Dispenser not dispensing coins.  
+- Coin Dispenser not dispensing correct change.  
+- Coin Dispenser throwing "Cash Machine Error".  
+  - For error codes **0x42** or **0x60**, refer to:  
+    *Toshiba SCO - Coin Dispenser - Dispense Failed 0x60 or 0x42*
+
+---
+
+**Resolution:**
+
+### Model Type Info
+- Six models of **Telequip Coin Dispensers** used in Fujitsu lanes.  
+- All operate similarly.  
+- Genesis models may have inaccessible power switches, but this is usually not needed.
+
+---
+
+### Coin Dispenser Not Dispensing
+
+1. **Check Cash Maintenance for Errors:**
+   - Navigate to **Cash Maintenance > Cash Maintenance > Touch "Problem" > Touch the error > OK > Go Back**.
+   - Refer to: *K14262 Toshiba SCO - Cash Maintenance Errors*
+
+2. **Close and Reopen the Lane.**
+
+3. **Verify Cash Tracking Values:**
+   - Ensure amounts > 0 and match physical coin inventory.
+   - Bookkeeper access may be required to view Cash Tracking under SA Menu.
+
+4. **Inspect Coin Canister:**
+   - Look for jams, damage, or loose coins.
+   - See section **"How to Clear Jammed Coin"** below if jam found.
+
+5. **Check Coin Levels:**
+   - A single empty row can cause an "offline" error.
+
+6. **Reseat or Swap Coin Canister:**
+   - Listen for buzzing sound upon reseating.
+   - If not, power cycle using the switch on the back and recheck cable.
+
+⚠️ **Loose coins in the chute** may falsely report successful dispense but actually block exit path.
+
+7. **Avoid Overfilling:**
+   - Excess weight may trigger errors.
+
+8. **Power Cycle Lane:**
+   - Refer to: *Toshiba SCO - Procedural - How to Perform Lane Power On/Off, Shut Down, 9-Load, or 8-Load*
+
+9. **Still Not Working?**
+   - Dispatch per **KSC Hardware Dispatching For All Pillars**.
+
+---
+
+### How to Clear Jammed Coin
+
+1. **Turn Off Power:**
+   - Use power switch on back near cables.
+
+2. **Lift Canister:**
+   - No buzzing/alarm should be heard if powered off correctly.
+
+3. **Release Cover:**
+   - Press two clips on the clear plastic bottom cover.
+
+4. **Open Cover:**
+   - Slide up while pressing clips.
+
+5. **Remove Bent/Stuck Coins.**
+
+6. **Close Cover:**
+   - Slide cover back down until it clicks.
+
+7. **Inspect Dispenser Mechanism:**
+   - Remove any jammed coins.
+
+8. **Check Coin Ramp (Dispenser → Cup):**
+   - Remove jammed coins.
+
+9. **Use Compressed Air:**
+   - Clean mechanism and ramp.
+
+10. **Reinstall Canister.**
+
+11. **Test with Cash Diagnostics:**
+   - Reference: *How to Use Cash Diagnostics to Test Acceptor/Dispensers*
+
+12. **Still Jammed or No Dispense?**
+   - Dispatch for replacement.

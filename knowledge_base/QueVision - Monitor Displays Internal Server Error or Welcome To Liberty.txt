@@ -1,0 +1,38 @@
+QueVision - Monitor Displays Internal Server Error or Welcome To Liberty  
+**Document ID:** KB0012645  
+**Views:** 13  
+
+---
+
+**Description:**  
+QueVision monitors show one of the following errors instead of the normal display (yellow circles):  
+- **Internal Server Error**  
+- **Ice Weasel - Connection Error**  
+- **Welcome to Liberty**
+
+📌 Applies to stores running **WTA**.
+
+👉 For error: “Failure to connect: Firefox cannot establish a connection to the server at SDI,”  
+see: *QueVision Reports: Firefox Cannot Connect to SDI*
+
+---
+
+**Cause:**  
+The **WebSphere server** on the WTA system requires a restart.
+
+---
+
+**Resolution:**
+
+1. **Connect to the Affected Thin Client(s):**  
+   - Reference: *QueVision - How to Use VNC to Connect to a QueVision Thin Client*
+
+2. **Refresh the Browser:**  
+   - Try refreshing the page to see if the display resolves.
+
+3. **If All Monitors Show Errors & Refresh Fails:**  
+   - Copy the **IP addresses** of the affected Thin Clients into the ticket.
+
+4. **Escalate to INF-WTA (P2):**  
+   - Assign the ticket to **INF-WTA**  
+   - Request a **WTA service restart** on the store's WTA server.

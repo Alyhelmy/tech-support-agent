@@ -1,0 +1,52 @@
+QueVision Error POS.NOCONNECTION  
+**Document ID:** KB0011628  
+**Views:** 21  
+
+---
+
+**Description:**  
+This document explains the cause and resolution of the EPOS error: **"NOCONNECTION"**.  
+This error is auto-sent via SNMP and generates an **Infra ticket**.
+
+📌 **Note:** This is normal for **new installations** if the POS feed has not been activated. **No action required** in such cases.
+
+---
+
+**Cause:**
+The SDI (System Data Interface) is not detecting an active inbound connection from the Integration Server's broker.
+
+**All 3 symptoms may occur simultaneously:**
+1. Auto-generated ticket (POS No Connection)
+2. SDI Help Center tab shows "EPOS No Connection"
+3. Store reports monitor is red with no lanes being shown or predicted
+
+---
+
+**Resolution:**
+
+1. Open a web browser and go to:  
+   `http://sdi.xx###` *(xx = division, ### = store number)*  
+   OR use the **SDI IP address** from TUNA
+
+2. Click on **Support Center**  
+   - Log in using credentials from the **Confidential Password List**  
+   - Navigate to **Help Center**
+
+3. **Document details** from the Help Center in the ticket.
+
+   - ✅ **If error-free** → Link this doc and close the ticket  
+   - ❌ **If error present** → Proceed to next steps
+
+---
+
+**Telnet Check – Port 51296**
+
+1. Copy the SDI IP address  
+2. Open **Putty** in PSY  
+   - Go to: **Tools > Putty**
+   - Enter: `IP_ADDRESS:51296` (e.g., `10.209.64.57:51296`)
+   - Select **Telnet**, then connect
+
+**Based on Result:**
+- **Login prompt appears** → Escalate to `INF-IntegrationServices`, Severity 3  
+- **Connection refused** → Escalate to `APP-ISA`, Severity 3

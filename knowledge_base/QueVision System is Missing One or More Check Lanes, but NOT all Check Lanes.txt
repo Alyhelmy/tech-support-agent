@@ -1,0 +1,61 @@
+QueVision System is Missing One or More Check Lanes, but NOT all Check Lanes  
+**Document ID:** KB0011721  
+**Views:** 24  
+
+---
+
+**Description:**  
+Some (but NOT all) registers do not appear in the QueVision system or drop off the dashboard intermittently.
+
+---
+
+**Cause:**  
+DO NOT REBOOT the SDI unless it is completely unresponsive or not pinging.  
+- Rebooting the SDI clears log files and may lead to incorrect reporting or SDI failure.  
+- The most common cause of this issue is inactivity. After 5 minutes without a transaction, a signed-on register may drop off the dashboard.
+
+---
+
+**Resolution:**
+
+1. **Check for Timeout Events:**  
+   - Access SDI → Support Center Tab → Log in with Confidential Password.  
+   - Check the error log for timeout warnings.  
+   - When a transaction resumes, the warning clears and the register reappears on the dashboard.
+
+2. **New or Moved Lanes:**  
+   - New lanes require new overhead sensors.  
+   - This is handled via a QueVision work request initiated by the Division Technology Lead (DTL).  
+   - Refer store to their DTL if sensors are not yet installed.
+
+3. **Manual Register Check:**  
+   - At affected lanes: unsecure terminal → sign off → sign back on.  
+   - If still not visible, proceed with next steps.
+
+4. **EPOS Viewer (SDI Web Interface):**  
+   - Go to Support Center > Log into Basic Support.  
+   - Check for “LaneEvent” or “TransactionEvent” logs.  
+   - If dashboard shows lanes 1–5, but logs show activity on lanes 6–10, this suggests lanes were renumbered.  
+     → Escalate to **APP-ISA (P3)** with note that lanes were renumbered.
+
+5. **No Logs for Affected Lane:**  
+   - If no event messages for the specific lane, but other lanes show logs, proceed with troubleshooting.  
+   - If **no lanes** have event messages, see: *QueVision Showing Zeros on the Dashboard (Circles)* or *Missing ALL Checklanes*.
+
+6. **Send a 9-load to the Register(s):**  
+   - See: *How to Reboot Register or Load Terminal Configuration (9 Load)*.  
+   - If errors appear, troubleshoot using appropriate documentation.  
+   - After reboot, sign in and scan items.  
+   - Wait a few minutes and check for new event logs in EPOS Viewer.
+
+---
+
+**Escalation Guidelines:**
+
+- If **Difsrvc** is not working properly on the POS controller, escalate to **APP-POS**.  
+  - If affecting **≥50%** of registers: escalate as **P2**.  
+  - Follow: *Unable to write to Disk Queue: DIFSRVCE is not processing properly*.  
+
+- If issue is SDI/QueVision-related:  
+  - Escalate to **APP-ISA**.  
+  - If affecting **≥50%** of registers: escalate as **P3**.

@@ -1,0 +1,64 @@
+QueVision Error: STORECONFIG.LIVE.MISSINGLANE  
+**Document ID:** KB0011551  
+**Views:** 19  
+
+---
+
+**Description:**  
+Explains the cause and resolution of the **"MISSINGLANE"** Store Configuration error in QueVision.  
+🔧 This error is auto-reported to MOM via SNMP and generates an **Infra ticket**.
+
+📌 Note: Use this only for **auto-generated MOM tickets**.  
+For store-reported missing lanes, use **K7087**.  
+For detector issues, check the appropriate **KSC queue**.
+
+---
+
+**Cause:**  
+A lane listed in the store config is not detected or recognized on the Controller Area Network (CAN).  
+- Possible sensor misconfiguration or malfunction  
+- The sensor may be turned off or unresponsive  
+- Error typically caught at SDI boot or at failure
+
+---
+
+**Resolution:**
+
+1. Open a browser and access the SDI:  
+   `http://sdi.xx###` (replace with division + store number)  
+   Or use the **SDI IP address** listed in TUNA
+
+2. **Check SDI time is advancing** (refresh if needed)  
+   - ✅ If advancing, go to Step 4  
+   - ❌ If NOT advancing:
+     - Instruct store to **physically reboot SDI** (remove power for 30 sec)  
+     - Log result in ticket  
+     - Wait 5–10 min post reboot and recheck  
+     - If still frozen → escalate to **APP-ISA P3**  
+     - If recovered → close ticket
+
+3. Skip if reboot not needed
+
+4. Click **Support Center tab** → log into Basic Support → go to **Help Center**
+
+5. Record any **Help Center info** into ticket  
+   - If error-free → **link this doc and close**  
+   - If errors present → proceed
+
+6. **Attempt a hard reboot of the SDI**, if not already done  
+   - If store can do this, wait 10 minutes after power up  
+   - Monitor for a full minute—if errors toggle or clear, **close ticket**  
+   - If still erroring, continue
+
+7. Open **Unit Status page** from Support Center  
+   - Observe if multiple errors are present  
+   - Wait 1 minute to check for toggling  
+   - If **all lanes/doors show constant errors**, escalate to **APP-ISA P3**
+
+8. Have the store **physically inspect the front/master detector sensor** on the affected lane:  
+   - ✅ **Normal behavior**: Red and green LEDs pulse every ~5 seconds  
+   - 🚫 **Error state**:
+     - Case A: Red LED = Solid  
+     - Case B: Both LEDs OFF; rear node sensor = Red solid, Green blinks x3
+
+9. **Document LED behavior** for both front and rear sensors and escalate to **APP-ISA P3**

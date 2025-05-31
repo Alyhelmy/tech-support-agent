@@ -1,0 +1,50 @@
+QueVision Error: UNITDIED  
+**Document ID:** KB0011768  
+**Views:** 19  
+
+---
+
+**Description:**  
+Explains the cause and resolution of the **UNITDIED** error related to a faulty lane sensor.  
+🔧 This error is auto-reported to MOM via SNMP, generating an **Infra ticket**.  
+If the store reports a detector issue, check the **KSC job queue** for an auto-generated ticket.
+
+---
+
+**Cause:**  
+A node sensor connected to a master sensor (via Controller Area Network - CAN) is not functioning properly.  
+This is detected by the SDI at boot or upon malfunction.
+
+---
+
+**Resolution:**
+
+1. Open a browser and enter:  
+   `http://sdi.xx###` or the **SDI IP Address** listed in **TUNA**  
+   *(Replace `xx` with division and `###` with store number)*
+
+2. Verify if **SDI time is correct and advancing**  
+   - Refresh if needed  
+   - ❌ If NOT advancing → escalate to **APP-ISA**, Severity 3  
+   - ✅ If advancing → continue
+
+3. Click the **system error** message in the upper-left of the SDI screen
+
+4. Record relevant **Help Center** info in the ticket
+
+5. Go to:  
+   **Support Center > Basic Support > Unit Status**  
+   - Username: `support`  
+   - Password: `suPPoR7`
+
+6. Monitor **Unit Status page**:
+   - If all sensors show ✅ green checks, **wait 1 minute**  
+   - If still error-free, **link this document and close the ticket**  
+   - If error reappears, proceed
+
+7. Identify and note the **register number** linked to the malfunctioning node sensor  
+   - Example: CAN ID 2 in error under master sensor CAN ID 1 = Register 7
+
+8. Record the **LED status** for the sensor
+
+9. Escalate to **APP-ISA**, Severity 3
