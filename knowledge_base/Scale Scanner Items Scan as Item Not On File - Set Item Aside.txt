@@ -1,0 +1,66 @@
+Scale/Scanner Items Scan as Item Not On File / Set Item Aside
+KB0011213 
+=====================================================
+
+DESCRIPTION:
+------------
+Customer sees:
+- “Item Not Found on File”
+- “Set Item Aside”
+- OR
+- “Purchase Exception: Starting a new transaction or signing on or off are prohibited during the close of a reporting period.”
+
+-----------------------------------------------------
+CAUSES:
+--------
+🔹 Software working as designed
+🔹 Item is missing from the Item Record File (IRF)
+🔹 Automatic till transfer during close did not occur
+🔹 Scanner calibration issue (hardware-related)
+
+→ See: *Toshiba SCO - Hardware - Scale/Scanner Basic Troubleshooting*
+
+-----------------------------------------------------
+RESOLUTION:
+-----------
+
+🔸 Step 1: Check for Invalid PLU Entry
+- Confirm customer didn’t enter a wrong PLU (e.g., 4501 instead of 2501)
+
+🔸 Step 2: Confirm Item in Item Record File (IRF)
+- Scan item at a Front End Register.
+  - If error occurs there too → Item not in IRF
+    → Follow: *RDIC Pricing and Contact Info for Escalation*
+
+🔸 Step 3: All Items Failing to Scan?
+- Run **FIXIT** on lane(s)
+  → See: *How to Run FIXIT*
+- Send a **9-load** to the affected lane(s)
+
+🔸 Step 4: Weighable/Produce Items Not Weighing?
+- Follow: *Toshiba SCO - Scale/Scanner Basic Troubleshooting*
+
+🔸 Step 5: “Set Item Aside” / “Not on File” Error on SCO
+- Try scanning same item at another SCO or Front End Register
+  - If it scans: 
+    - Collect an **extract** (include terminal #, time, date)
+    - Perform **hardboot** from UPS (off for 2 minutes)
+      ⚠️ For System 6 or 7 – DO NOT power cycle the UPS
+    - Reload lane and test again
+    - If issue persists: escalate to **Frontend Tier 2** for **APP-POS** escalation
+
+🔸 Step 6: Accidental Barcode Scan?
+- Check if the scanned item was not a product (e.g., competitor loyalty card)
+- If a valid item still does not scan, follow **Not On File (NOF)** procedures as at the front end
+  → See: *RDIC Pricing and Contact Information*
+
+🔸 Step 7: Quick Lookup Option Issues?
+- If issue is related to Quick Lookup or lane-only item setup
+  → See: *Toshiba SCO - Pricing - Data/Maintenance Setup Issues*
+
+-----------------------------------------------------
+NOTES:
+------
+- Document extract data before escalation
+- Hardware issues may require scanner calibration check
+- Emphasize correct NOF process at store level for missing items

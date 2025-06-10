@@ -1,0 +1,34 @@
+SCO - Cash Devices Not Working Properly; No Message on MD or Cash Maintenance  
+
+ID: KB0012248  
+--------------------------------------------------------------------------------
+Description:
+This document should be used when a cash device is not working properly and no message is displayed on the MD or in Cash Maintenance.
+
+This can include Bill Acceptors, Bill Dispensers, Coin Acceptors, or Coin Dispensers, as well as Bill and Coin Recyclers.
+
+--------------------------------------------------------------------------------
+Cause:
+CHEC Software
+
+--------------------------------------------------------------------------------
+Resolution:
+
+1. Take an extract through the SA Menu, Current + Previous.  
+   - Collect Date, Time, & Lane # for each extract.
+
+2. Document the color of the indicator light of the affected device during troubleshooting and whether it is flashing or solid. (Red or Green).
+
+3. For bill acceptors:  
+   - Is the bill inserted then returned/rejected or cannot be inserted at all?  
+   - If bill is being returned, have store attempt another "good" bill.
+
+4. Attempt closing/opening lane using the black/green (Sys6) TCU power button and retesting first via Cash Diagnostics.  
+   See Toshiba SCO - How to Use Cash Diagnostics to Test Acceptors / Dispensers / Recyclers.
+
+5. 9-load affected lane.
+
+6. Troubleshoot device in question.
+
+7. If the device is not working properly after troubleshooting, collect extracts from the store and then get with Frontend Tier 2 to escalate ticket to APP-POS P3.  
+   If the device is working, then Tier 2 can escalate as a P4.

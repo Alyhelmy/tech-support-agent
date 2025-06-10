@@ -1,0 +1,55 @@
+Multiple Registers Are Reloading, Displaying a W410 PROGRAM REQUESTED TERM. IPL
+KB0012293 
+===============================================================================
+
+Description
+-----------
+Multiple registers/lanes are restarting themselves when signed off.
+
+This usually happens after a controller reboot for various reasons such as
+power failure, manual reboot, or other unexpected restarts.
+
+- If a register “crashes” or reboots on its own, check if a terminal dump was
+  created on the POS Controller.
+- If a dump exists, format it and escalate to Frontend Tier 2 to escalate to
+  APP-POS for Toshiba review.
+- If no dump was created, check if the dump flag is enabled. If not, enable it
+  for future occurrences.
+
+Important:
+There is a known pattern of registers rebooting due to power failure. Software
+logs showing "Terminals scheduled for reload" mean a trigger was created, not
+that terminals are rebooting immediately.
+
+Cause
+-----
+Software updates that include register reloads are triggered after a controller
+unexpectedly reboots or is manually rebooted by the store, KSC, or third party.
+
+Reloads are usually scheduled for non-business hours to avoid disruption.
+
+If the controller restarts during the day, the update and reload process may
+start early, causing registers to reboot unexpectedly.
+
+Resolution
+----------
+1. Check the controller system messages to determine if the controller restarted
+   unexpectedly or if there was a power outage.
+   - Confirm with the store if there was a power failure, technician activity,
+     or manual reboot.
+   - Contact Frontend Tier 2 for assistance if needed.
+
+2. Check the Software.log for POS software downloads or updates.
+   - Look for dates, updates, and indications that a 9-load was sent to lanes.
+   - Frontend Tier 2 can assist interpreting the log.
+
+3. Understand that software updates may trigger reloads even if a 9-load is not
+   explicitly mentioned.
+
+4. Registers IPL/reload/restart after signing off is likely caused by these
+   updates.
+
+5. Advise the store to sign off only a few registers at a time to reduce lag.
+
+6. Note that once the reload process starts, it cannot be stopped or undone.
+   This is a side effect of the software update process.

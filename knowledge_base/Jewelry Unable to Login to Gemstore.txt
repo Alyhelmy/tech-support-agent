@@ -1,0 +1,99 @@
+Jewelry: Unable to Login to Gemstore
+KB0011617 - Latest Version
+===============================================================================
+
+Description
+-----------
+User is unable to log in to Gemstore or Vision Store Management (VSM).
+
+To login to GemStore, the login screen must show "Operator ID".
+If "Operator ID" is missing, the register may be applying background updates. This process can take up to 10 minutes.
+
+===============================================================================
+Single User Issue
+-----------------
+If only one associate is affected:
+
+1. Verify their Workforce account is NOT locked.
+2. Check if their password is expired.
+3. Confirm their password is exactly 8 characters long.
+4. Ask when they last successfully logged into Gemstore.
+
+If the user has *never* logged in before:
+- Have them attempt to sign into **Vision Store** first.
+  - Gemstore profiles are created after the **first successful** Vision Store login.
+
+If they cannot log in to Vision Store:
+
+A. If the error states the profile is not set up:
+   - User may not exist in LDAP or is using the wrong password.
+     - Have them reset their password.
+     - If issue persists, escalate to App-Merch-ORE2.0-Jewelry.
+
+B. Invalid Password or Missing Home Location:
+   - Log in to Vision Store Maintenance > Operations > System User Details > User Maintenance.
+   - Search using the EUID.
+   - If no results or only lowercase EUID appears, escalate to App-Merch-ORE2.0-Jewelry.
+
+C. Invalid User Role:
+   - Check APT profile; it must list the user as a Jewelry Associate.
+
+===============================================================================
+Checking User’s Profile
+-----------------------
+1. Open IMT (Identity Management Tool).
+2. Go to Tools > Review Access > Profile and Accounts.
+3. Enter EUID and click Search.
+4. Confirm:
+   - Associate is listed as a Jewelry Associate.
+   - "Jewelry" appears under Current Access.
+
+===============================================================================
+New Jewelry Associate
+---------------------
+- Confirm Jewelry Associate role and Jewelry account under Current Access.
+- Try sending new cache to the register.
+
+If account shows:
+   - Division: 000
+   - Location: 00000
+   - No Job Description
+
+=> Profile is incomplete. Wait 48 hours before escalating to DIV-FM-LocalSecurityAdmin.
+
+===============================================================================
+Transferred Jewelry Associate
+-----------------------------
+- Confirm APT profile shows Jewelry Associate and Jewelry account.
+- If associate is still listed as a Main Store employee, their transfer is incomplete.
+- Refer the manager to HR to verify transfer status.
+
+===============================================================================
+Current Jewelry Associate
+-------------------------
+Common causes for access loss:
+- Jewelry account removed by mistake.
+- Role change (e.g., promotion to Manager or Assistant Manager).
+
+Escalation:
+- During business hours: P3 ticket to DIV-FM-LocalSecurityAdmin.
+- After hours: P2 ticket to INF-UnifiedIdentityAccessManagement.
+
+===============================================================================
+Multiple Users Affected
+-----------------------
+1. Is the issue on one or both registers?
+2. Does Gemstore show “Operator ID” or “Store Closed”?
+   - If “Store Closed”: Start of Day must be completed in Vision Store.
+
+3. Does the Enter ID box respond to input?
+   - If not, troubleshoot the keyboard.
+
+4. Check Server and Cache lights on Gemstore:
+   - Left Light (Server): Red = Server Offline. Restart register.
+   - Right Light (Cache): Red = Cache issue. See: "Jewelry: Cachegen, Sending, Verifying or Corrupt Cache (DB2)"
+
+If troubleshooting fails:
+
+- One Register: P3 ticket to App-Merch-ORE2.0-Jewelry.
+- Both Registers: P2 ticket to App-Merch-ORE2.0-Jewelry.

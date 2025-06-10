@@ -1,0 +1,74 @@
+Jewelry: No Key to Open Cash Drawer or Till Accidentally Closed Before End of Day
+KB0011816 - Latest Version
+===============================================================================
+
+Description
+-----------
+The store is no longer able to run transactions on one or both tills—receiving a "closed" message when logging in. The store accidentally closed the drawer before removing the money and does not have a key.
+
+If they see "Store Closed" in the middle of the screen and cannot perform any functions,
+see: Jewelry: Register Shows STORE CLOSED Message When EOD Has Not Been Completed
+
+Cause
+-----
+Note: This is NOT to be used to correct accounting mistakes or drawer totals.
+
+- Associate tries to log out of Gemstore or open the drawer by pressing “no sale” but hits “close till” instead.
+- Associate working at a different store accidentally closes the home store’s till.
+- Drawer closed before removing money and store doesn’t have the cash drawer key.
+
+Resolution
+----------
+If the store closes the drawer before removing money, they should have a cash drawer key to open it manually.
+
+If the key is lost or not working, proceed to the **Starting a New Session** section.
+
+IMPORTANT: A session can be reopened **only** for business needs—not to fix mistakes or variances.
+
+Examples of appropriate reasons to open a new session:
+- A till was closed in the morning, leaving only one till available all day.
+- Both tills are closed in the middle of the day.
+- A till was accidentally closed during a Diamond Show or busy holiday period.
+- The store requests a session to be reopened for ongoing business operations.
+
+**Do NOT reopen sessions** to:
+- Correct accounting errors
+- Fix till variances
+- Perform end-of-day corrections
+
+Steps:
+------
+1. Store must reconcile the closed session now or at end of day, including entering float.
+2. In Vision Store Management (VSM):
+   Navigate to: CASH FUNCTIONS -> TILLS -> RECONCILE SESSION
+
+Starting a New Session
+----------------------
+- Must be done using a **KSC Agent ID**—store associate IDs will not have access.
+- Ensure the store is in your VSM profile. If not, see: Jewelry: How to Add/Delete/Change Home Store in VSM
+
+Steps:
+1. From VSM, go to: CASH FUNCTIONS -> TILLS -> OPEN SESSION
+   (Only closed tills will appear here)
+
+2. Select the desired session by checking the dot next to NEW SESSION
+
+3. Enter float details:
+   - Enter opening denominations/amount and float amount
+   - If float is $0, enter zero
+
+4. When prompted, confirm the session is opened
+   - The store can now log into Gemstore again
+
+Cash Drawer Key Replacement
+---------------------------
+If the store needs a new cash drawer key:
+- Assign the ticket to: **DIV-FM-Parts**
+
+Additional Support
+------------------
+- KSC-Frontend  
+- Front End Tier 2: #1048088  
+- App-Merch-ORE2.0-Jewelry  
+
+All escalations must go through **Frontend Tier 2** before being forwarded further.

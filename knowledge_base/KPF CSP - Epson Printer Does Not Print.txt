@@ -1,0 +1,71 @@
+KPF CSP - Epson Printer Does Not Print  
+**Document ID:** KB0015270  
+**Views:** 67  
+
+---
+
+**Description:**  
+When printing to an Epson printer nothing prints, or an error light starts flashing on the printer.  
+For error lights, see: *KPF CSP - Epson Printer Error Lights Are Flashing*.
+
+---
+
+**Cause:**  
+- Loose or disconnected cable between printer and PC  
+- Printer not successfully installed  
+- Reimage process installed the default (unsupported) printer model (e.g., U375)  
+
+---
+
+**Resolution:**
+
+### Step 1: Check Cable Connections
+1. Power off CSP PC.  
+2. Reseat both cables on back of printer.  
+3. Power on CSP PC.  
+   - If issue remains, continue.  
+4. Power off printer for 10 seconds, then power on.  
+5. Open cover, verify correct paper load.  
+6. Run a test print (see *KPF CSP - Epson Thermal Printer Basic Hardware Troubleshooting*).  
+
+---
+
+### Step 2: Verify Printer in Devices and Printers
+1. Connect to CSP PC via Secure Citrix VNC.  
+   - See: *KPF CSP - Remote Connecting to a CSP PC via Secure Citrix*.  
+2. Go to **Start > Settings** > search "Control Panel".  
+3. In Control Panel, set view to "Small Icons" > open **Devices and Printers**.  
+4. Verify if “billpay1” and “billpayslip1” are listed:  
+   - If missing or grayed out, proceed to cable reseating:  
+     a. Power off printer  
+     b. Reseat USB cable at both ends  
+     c. Power on printer  
+5. Check Devices and Printers again.  
+   - If still missing: continue to reinstall printer.  
+   - If present: run test print, close ticket if successful.  
+
+---
+
+### Step 3: Reinstall Printer via BigFix
+1. Open **BigFix Support Utility** from system tray.  
+2. Go to **Offers** tab.  
+3. Accept **Money Service CSP Printer Install 1.0R1** task.  
+   - May need to run twice (toggles between uninstall/install).  
+   - Check task suffix: `_U` = uninstall, `_I` = install.  
+4. Reboot PC after install.  
+5. Confirm printer is listed in Devices and Printers, test print.  
+
+**Note:**  
+- Use "Clear Print Spooler" task if needed.  
+- If CSP PC is on Windows 11, additional issues may occur.
+
+---
+
+**Escalation:**
+If printer still does not work, escalate to **INF-EnterpriseDesktopSupport** with:  
+- IP address of CSP PC  
+- Printer serial number  
+- Valid callback contact info  
+- Store number  
+- Troubleshooting steps summary  
+- Reference this article as valid escalation path.

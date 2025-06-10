@@ -1,0 +1,22 @@
+SCO - Lane will not load past U005 LDB
+KB0012414  -  Latest Version
+
+4 views
+Description
+SCO Lane will not load past, "U005 LDB".
+
+ 
+
+Cause
+UPS USB is connected to TCU.
+
+ 
+
+Resolution
+1. Verify model of lane; this document only applies to Fujitsu Genesis Casing Models.
+
+2. Verify is tech is onsite and/or calling.
+
+3. If tech is not onsite, dispatch tech to, "Verify UPS USB Cable is not plugged into Toshiba TCU".
+
+4. If tech is onsite, have them verify USB Cable from UPS is not plugged into lane. This configuration only works for Toshiba System 6 Lanes, not Fujitsu Genesis lanes.

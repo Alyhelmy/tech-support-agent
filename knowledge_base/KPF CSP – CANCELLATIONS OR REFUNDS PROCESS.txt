@@ -1,0 +1,64 @@
+KPF CSP – CANCELLATIONS OR REFUNDS PROCESS
+KB0015277
+====================================================================
+
+📌 PURPOSE:
+--------------
+This process explains **how to cancel or refund a bill payment** in the **Customer Service Platform (CSP)**.
+
+====================================================================
+📍 COMMON REASONS FOR CANCELLATION:
+-----------------------------------------
+- Customer changes their mind
+- System error
+- Associate entry mistake
+
+====================================================================
+❗ KEY REMINDERS:
+---------------------
+- Refunds must be processed **in the same app** used to complete the transaction.
+- **NOT all billers allow cancellations.**
+- Cancellation eligibility is decided by the **biller**, NOT Kroger or its vendors.
+- **Same-day cancellations only.** Customer must present their **original CSP receipt**.
+
+====================================================================
+✅ HOW TO CANCEL A BILL PAYMENT TRANSACTION IN CSP:
+--------------------------------------------------------
+1. Go to the **History** tab in CSP.
+2. Locate the transaction you want to cancel.
+3. Review cancellation option:
+   - If **Cancel** button is bright red → Proceed with cancellation.
+   - If **Cancel** is greyed out → A message will appear: “Cancellation is not allowed.”
+
+📞 If Cancellation Not Allowed:
+------------------------------------
+4. **Contact the biller directly.**
+   - Vendor phone numbers are listed on **page 31 of the Money Services Training Guide** (CSP Store Training Guide.pptx).
+   - If cancellation is approved:
+     - Complete a **Payment Adjustment Form** and send it to the vendor.
+     - If unsure where to get the form, contact the **store manager**.
+
+====================================================================
+📦 REFUND HANDLING:
+------------------------
+- Refunds are sent to the **store via RASC**, **not** directly from the vendor.
+- Refund timeline:
+   - **Contracted (Same-Day) billers:** ~3 business days.
+   - **Non-Contracted billers:** Up to **30 days**, no guarantee.
+
+⛔ "Making it Right" or refunding directly to the customer is up to **store policy**.
+   - KSC does **not** provide advice on store-level refunds.
+
+====================================================================
+☎️ CONTACTING RASC (FOR REFUND CONFIRMATION):
+--------------------------------------------------------
+📞 **RASC: 1-855-574-2228**
+
+✅ Who Can Call:
+   - **Store Bookkeepers**
+   - **Store Managers**
+   - **Division Personnel**
+
+🚫 KSC agents: **Only give this number to eligible store staff**.
+
+📅 Store must wait the **full 30 days** after following the refund process before contacting RASC.

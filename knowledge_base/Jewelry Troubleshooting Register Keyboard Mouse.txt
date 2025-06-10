@@ -1,0 +1,44 @@
+Jewelry: Troubleshooting Register Keyboard/Mouse
+KB0011405
+
+
+
+
+Description
+
+Keyboard and/or Mouse peripheral device is not functioning on a Jewelry Dell POS register.
+
+ 
+
+Immediate Dispatch Qualifier
+
+  - Frayed cabling
+
+  - Damaged equipment
+
+ 
+
+Resolution
+
+The Mouse and Keyboard are connected via USB ports on the back of the PC.
+
+ 
+1. Reseat the USB connections located on the back of the PC.
+
+   - The cable connects in a specific way. i.e. symbol on the connector represents the top of plug.
+
+  - The mouse cursor should disappear when you disconnect the mouse USB plug and reappear when reconnected.
+
+  - The lights on the keyboard will go out when disconnected, and turn on when reconnected.
+
+2. Make sure there are no jammed keys on the keyboard.
+
+  - Verify the Num Lock key is on and/or the Caps Lock key is off
+
+  - Turn the keyboard over and tap it lightly on the counter to dislodge debris and stuck keys.
+
+3. If there are still issues with the mouse or keyboard; perform a "Shutdown/Restart" on PC /Register.
+
+4. If there are still issues with the mouse or keyboard; connect to a USB port on front of PC / register. Also try testing the mouse on the other register.
+
+5. If this still does not resolve, for the mouse or keyboard, Dispatch.

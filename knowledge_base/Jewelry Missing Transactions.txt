@@ -1,0 +1,80 @@
+Jewelry: Missing Transactions  
+KB0011730
+===============================================================================
+
+Description
+-----------
+Store associate reports they cannot locate a POS transaction in GemStore.  
+Assistance is needed to investigate the details and status of the transaction.
+
+===============================================================================
+Known Causes
+------------
+1. Incorrect or insufficient search details provided by associate.
+2. Associate searched in Transaction History instead of Layaway/Special Order Maintenance.
+3. Suspended transactions not recalled before end of day are auto-cancelled by POS.
+4. FMJ.com/LTJ.com refunds (qty 2+) via Customer History will fail — use manual refund.
+5. Store21 transactions failed to port into Gemstore if missing:
+   - Last Name (1+ characters)
+   - Street (1+ characters)
+
+===============================================================================
+Resolution Steps
+----------------
+
+▶ Preliminary Research
+
+1. **Open one ticket per missing transaction.**
+
+2. **Gather detailed transaction info**, and record in ticket or screenshots:
+   - Transaction Date
+   - Transaction Number
+   - Transaction Amount
+   - Transaction Type (Sale, Layaway, Refund, etc.)
+   - Last 4 digits of payment card
+   - Customer Info (name, phone, address)
+   - Register number
+   - Whether the store has a receipt
+
+> Note: If no receipt was printed, the transaction likely did **not go through**.  
+> Store should **re-ring** the sale.
+
+3. **Search support tools**, based on gathered data:
+   - **Transaction Log tool** – Search Customer History
+   - **VSM**:
+     - Sale: Cash Functions → Till Audit Reports → Receipt Enquiry
+     - Layaway: Reports → Layaway Report
+     - Special Order: Reports → Special Order Report
+   - **Payment Systems (EPS)** – for credit/debit transactions
+
+> If issue involves **store inventory**, refer associate to **Inventory Control specialist**.
+
+▶ Escalation
+- Send P3 ticket to: `App-Merch-ORE2.0-Jewelry`  
+- Title: **Missing Transaction**
+- All escalations **must go through Frontend Tier 2** before forwarding.
+
+===============================================================================
+Missing Layaway Payment (Known Defect)
+---------------------------------------
+
+Problem: Customer makes payment on layaway, but payment appears missing during next payment.
+
+Steps:
+1. Confirm payment exists in **Transaction Log tool (Customer History)**.
+2. If tender = credit, debit, or gift card, verify approval in **Payment Systems**.
+   - If verified:
+     - Major CC / Gift Card → Re-tender as **cash**
+     - Platinum → Register must be taken offline to re-tender to card
+3. Email `fmjsalesaudit@fredmeyerjewelers.com` with:
+   - Store Number
+   - Date
+   - Customer Name
+   - Layaway Number
+   - Payment Amount
+   - Original Tender Type
+   - Ticket Number
+   - Instructions provided to store
+   - What the store wants done
+   - Attach payment systems screenshots
+4. Store must fill out **Cash Drawer Error Form** if re-rang as cash.

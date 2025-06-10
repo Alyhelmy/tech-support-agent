@@ -1,0 +1,68 @@
+SCO - MISC - Pricing/Data Maintenance Setup Issues:
+Removing, Adding, and Updating
+KB0011356
+=====================================================
+
+SYNOPSIS:
+---------
+Covers common SCO-related pricing/data issues:
+✔ Item setup (Pass Around, Optional Pass Around)
+✔ Not On File (NOF) errors
+✔ Incorrect pricing
+✔ Quick Lookup issues (e.g., description/image/PLU mismatch)
+✔ Alcohol-related changes (e.g., “Over 21” button)
+✔ Adding, removing, updating items on SCO
+
+-----------------------------------------------------
+QUICKLINKS TO RELATED KBs:
+--------------------------
+🔹 4 default items only? See:
+→ *SCO - Software - Quick Lookup Troubleshooting*
+
+🔹 “Item Not On File”? See:
+→ *SCO - Scale/Scanner Items Scan as Item Not On File / Set Item Aside*
+
+🔹 Alcohol setup incorrect? See:
+→ *SCO - Procedural - Alcohol Setup Is Incorrect On Lanes*
+
+-----------------------------------------------------
+REFER TO COMMUNICATIONS BI-WAY FOR:
+-----------------------------------
+➡️ Item setup (Pass Around / Optional Pass Around)
+➡️ SCO NOF issues (item not on file)
+➡️ Incorrect price
+➡️ Quick Lookup mismatches (wrong image/PLU)
+➡️ Alcohol setup or labeling issues
+
+-----------------------------------------------------
+STEPS TO SUBMIT AN ISSUE TO COMMUNICATIONS BI-WAY:
+--------------------------------------------------
+
+1️⃣ Go to the **Bi-Way** link on your Division’s Intranet site.
+
+2️⃣ Click **Issues** at the top.
+
+3️⃣ Click **Create Issue**.
+
+4️⃣ Complete top section with **associate’s contact info**.
+
+5️⃣ Under **Description**, include:
+   - What should happen
+   - What is currently happening
+   - Relevant **UPC(s)** or **PLU(s)** involved
+
+6️⃣ Choose the correct **Division, District, and Store**.
+
+7️⃣ IMPORTANT: Select correct options to route to Corp Front End:
+    - **CATEGORY:** FRONT END  
+    - **DEPARTMENT:** FRONT END  
+    - **TOPIC:** TOSHIBA SELF CHECKOUT
+
+-----------------------------------------------------
+NOTES:
+------
+✔ This ensures the issue is routed directly to the **Corp Front End team** — avoiding delays from normal ticket routing.
+
+✔ Most Division Point People (usually store management) already have access to submit through Bi-Way.
+
+✔ Always confirm details (PLU/UPC, screenshots if needed) before submitting.

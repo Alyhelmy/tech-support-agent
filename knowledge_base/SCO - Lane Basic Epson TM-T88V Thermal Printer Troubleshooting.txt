@@ -1,0 +1,74 @@
+SCO - Lane Basic Epson TM-T88V Thermal Printer Troubleshooting  
+**Document ID:** KB0011216  
+**Views:** 119  
+
+---
+
+**Description:**  
+Basic troubleshooting steps for the Epson TM-T88V thermal receipt printer used at SCO lanes.
+
+---
+
+**Cause:**  
+Firmware-related issues or hardware malfunction.
+
+---
+
+**Required Information:**  
+- Document the **printer brand/model** and **firmware version**.  
+- Document any **errors/symptoms** observed (e.g., no print, jams, LED behavior).
+
+---
+
+**Resolution:**  
+🚫 **Important:** Never reseat the printer cable.
+
+---
+
+**No Power**  
+1. Ensure the printer power cable is securely connected at both ends.  
+2. If still unpowered, **dispatch** per **KSC Hardware Dispatching For All Pillars**.
+
+---
+
+**Paper Jammed in Printer**  
+1. Power off the printer.  
+2. Slide the **cutter cover** forward to open.  
+3. Turn the manual knob until a **triangle** appears in the opening.  
+4. Close the cutter cover.  
+5. Open roll paper cover and remove any jammed paper.  
+6. If jam remains unresolved, **dispatch** per KSC.
+
+---
+
+**Receipts Will Not Cut Automatically**  
+1. Remove leftover jammed paper, close the cover.  
+2. Power cycle the printer.  
+3. If still not functioning, **dispatch** per KSC.
+
+---
+
+**Error LED is Flashing**  
+1. Ensure the **paper cover is closed**.  
+2. If **paper LED** is also on, verify correct paper installation.  
+3. Check for paper jams.  
+4. Power off for a few minutes, then power back on.  
+5. If unresolved, **dispatch** per KSC.
+
+---
+
+**How to Replace the Paper**  
+1. Press **cover open lever**.  
+2. Remove the old paper roll/core.  
+3. Insert new roll in the **correct direction**.  
+4. Pull out excess paper and close cover.  
+5. Tear off excess paper with manual cutter.
+
+---
+
+**How to Clean the Thermal Print Head**  
+1. Power off the printer.  
+2. Open the paper cover.  
+3. Use a **cotton swab + ethanol or IPA** to clean thermal head elements.  
+4. Clean dust from the **roller** and **roll paper end sensor** using a swab moistened with water.  
+5. Only power on the printer after the cleaned areas have **fully dried**.

@@ -1,0 +1,126 @@
+Tidel (G4S) Smart Safe Cash Recycler Safe Troubleshooting
+
+Document ID: KB0012684  
+
+
+---
+
+**Description:**  
+Tidel Cash Recycler Safe (Smart Safe) troubleshooting reference.  
+
+Associates must first call Deposita for basic troubleshooting (cabling, power).  
+If Deposita identifies a **network issue**, they escalate to KSC.  
+KSC will then validate MAC address, VLAN tagging, and port configuration.
+
+Deposita Customer Support: 866-523-6116  
+If dispatched, close the ticket as **Dispatched Follow-Up Required and Unresolved**.
+
+---
+
+**Common Causes:**  
+- Incorrect MAC address  
+- MAC entered in wrong segment  
+- VLAN not tagged properly  
+- Issue with network port
+
+---
+
+**Resolution Overview:**
+
+> 🔹 If safe is offline and dispatched, call **Balance Innovations** to enable Carry Forward until fixed.  
+> 🔹 Refer to specific documents as outlined for each issue.
+
+---
+
+### Troubleshooting Topics:
+
+**Pickups not syncing (Deposita ↔ VeriBalance):**  
+Refer to: *Deposita / Smart Safe Lane Pickups not Registering*
+
+**Accounting issues in Veribalance:**  
+Escalate a **P3** ticket to: `DIV-RASC-Bookkeeping`
+
+---
+
+### Scenario-Specific Instructions:
+
+**Armored Car Issues:**  
+- Store must call **Deposita** directly.
+
+**Error on Safe Screen:**  
+- Site must call Deposita and relay the on-screen error.
+
+**VB PC Reimaged:**  
+- Re-register using *VBUtility* per: *How To Register The Veribalance PC On The VB Platform*
+
+**Change in Cash On Hand Settings:**  
+- Small changes: Call Deposita  
+- Large increases: Go through front-end manager → corporate accounting
+
+**Time Sync Warning in Veribalance:**  
+- Can be ignored unless time is significantly off.
+
+**Red Cloud Icon on Safe:**  
+- Refer to: *Deposita Recycler Safe Displaying Red Cloud Outage Notification*
+
+**Multiple Sites with Pickup Sync Issues:**  
+- Call **Frontend Tier 2**  
+- Create a **Sev 2 ticket**  
+- Escalate to **APP-POS** following: *Deposita Recycler Safe Multiple Site Outage Call Handling*
+
+---
+
+### Network Troubleshooting:
+
+**If converting from wireless to wired setup:**  
+- Tech must contact **Deposita** or division lead for MAC  
+- KSC can add MAC to TUNA (Vendor Segment) if provided
+
+**Steps:**
+
+1. Confirm the safe is installed in **TUNA** under: `Vendor > Recycler`
+2. Ping the device in TUNA: `Ctrl + D` while device is highlighted  
+   - *DO NOT* use external ping tools (e.g., PSY)
+
+3. If no ping response:  
+   - Verify MAC with Deposita tech  
+   - Ensure correct NIC MAC is in TUNA (only the network NIC)
+
+4. If MAC differs:  
+   - Note old/new MAC in the ticket  
+   - Update TUNA  
+   - Wait a few minutes for connection
+
+5. Still offline?  
+   - Use **NetMap** to locate switch  
+   - Typical switch: `HP5412sw1` (may vary)
+
+6. In TUNA:  
+   - Go to **Management Segment**  
+   - Highlight the switch → press **F5**  
+   - Confirm connection (type: `Yes`)  
+   - Login with switch password
+
+7. In switch CLI:  
+   - Use: `sh mac-a [MAC]`  
+   - For Aruba switches: refer to *ArubaOS-CX Switch Commands*
+
+8. If MAC not found:  
+   - Reseat network cable at both ends  
+   - Reboot device (call Deposita for assistance)
+
+9. If still offline:  
+   - Follow: *Troubleshooting Network Cabling Issues and Dispatching Information*
+
+10. **Verify VLAN is 2900**  
+    - If not, MAC might be incorrectly entered  
+    - Validate MAC in TUNA  
+    - If all appears correct, escalate to **NOC** to verify port setup
+
+---
+
+**Key Contacts:**  
+- Deposita: 866-523-6116  
+- Balance Innovations: (refer to internal contact instructions)  
+- Frontend Tier 2: For escalation/severity issues  
+- NOC: For VLAN and port verification  

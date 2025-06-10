@@ -1,0 +1,54 @@
+SCO - Software - Quick Lookup Troubleshooting
+KB0011084  
+
+
+Description
+
+Item Quick Lookup Troubleshooting
+
+ 
+
+Cause
+The SSIE file containing a list of products authorized for sale at the store is missing items, or the Quick Lookup software files on the controller that controls the SCO lane are incorrect.
+
+ 
+
+Resolution
+ 
+
+The stores are getting an communication on informing them who to contact if they need an item removed from the QLU Package. See attachment at the bottom.
+
+If the store is reporting some or a small number of items missing from the Quick Lookup list, incorrect items are included, or items need to be updated/changed, please refer the store to log a Bi-Way request. The items will need to be updated/added/removed by the pricing team via the BIWAY ticket. See linked document  SCO - MISC - Pricing / Data Maintenance Setup Issues
+
+If the store is reporting that lanes prompt “Set Item Aside”, see linked document
+
+ SCO - Scale/Scanner Items Scan as Item Not On File / Set Item Aside
+
+ 
+
+One common call we might get is "I am only seeing 4 items" (These are usually the default items apples, bananas, Potatoes etc.)
+
+
+Note: If it's just one single lane not working and all the other lanes are working, still follow all the trouble shooting steps in this document.
+
+
+
+For all other issues, continue with the steps below.
+
+ 
+
+1. Frontend Tier 1, please warm transfer the call to Frontend Tier 2. 
+
+2. Frontend Tier 1:  Log on to the MC and go into 7. Command Mode.At the C: Prompt copy and paste the following command: dir c:\adx_idt1\ssie.txt then press Enter
+
+3. Verify the file is somewhere between 1 million (1,000,000) to 5 million (5,000,000) bytes.
+
+Note: At Harris Teeter stores the file size is typically 7155 bytes.
+
+ 
+
+
+
+ 
+
+If SSIE.TXT is below 1,000,000 bytes or outside the expected range (1,000,000 5,000,000)in enterprise stores (except HT), call Frontend Tier 2 to escalate to APP-CAOMotusSPA. Severity 2 to regenerate and resend the SSIE.TXT file to the store. After the ticket is returned from APP-CAOMotusSPA Frontend Tier 2, continue with the next steps.

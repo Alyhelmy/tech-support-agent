@@ -1,0 +1,25 @@
+SCO - Paystation Will Not Load Past Blank Grey Screen  
+
+ID: KB0012296  
+--------------------------------------------------------------------------------
+Description:
+Paystation does not load past a blank grey screen with a scroll bar at the bottom.
+
+--------------------------------------------------------------------------------
+Cause:
+CHEC extensions are not enabled.
+
+--------------------------------------------------------------------------------
+Resolution:
+
+1. Run Terminal Installer  
+   - See: POS/Fuel/SCO/Pickup/Jewelry/EPRN: POS Terminal Installer For Registers  
+   - Before running Terminal Installer, confirm with the store whether their paystation has a full-screen customer display.  
+   - If there is a full-screen customer display, type "yes" when prompted in the Terminal Installer program.  
+   - After Terminal Installer completes, ensure the paystation is 9-loaded or power cycled.
+
+2. If the paystation again gets stuck at the grey screen with a scroll bar, engage Frontend Tier 2 to escalate to APP-POS as a P2.
+
+3. If the paystation gets stuck on a different screen, troubleshoot according to the relevant documentation.
+
+--------------------------------------------------------------------------------

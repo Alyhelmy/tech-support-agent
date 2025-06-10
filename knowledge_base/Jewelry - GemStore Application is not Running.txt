@@ -1,0 +1,31 @@
+Jewelry: GemStore Application is not Running
+KB0011732
+
+
+
+Description
+
+GemStore Application is not Running
+
+ 
+
+Cause
+Store calls to say that GemStore is not displayed/launched on register. It may have been closed inadvertently by another associate or an error.
+
+ 
+
+Resolution
+ 
+
+Gemstore Stays Minimized or Will Not Load
+
+1.  Ask the store what is on the screen when they say it won't load.  Document in your
+     ticket what is on the screen or error.
+
+2.  Have the store check whether the light on the receipt printer is solid or flashing.  If it's flashing, they will need to troubleshoot the receipt printer.  See:  Jewelry: Thermal Printer Troubleshooting 
+
+3.  If the receipt printer is not the issue, try a restart from the Window's start menu (ctrl + alt + del, then restart).
+
+Note:  Sometimes Windows Updates can cause the psexec command that launches GemStore to not work if they are awaiting a reboot to finish installing.  If they cannot restart from the menu, you can have the store do a full power off and back on.
+
+Important:  The store needs to wait at least 20-30 seconds after clicking "Restart GemStore" before clicking on it again.

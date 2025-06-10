@@ -1,0 +1,73 @@
+SCO - Bill Recycler - Error: "Hardware Error System Loader Cash Type Status"  
+**Document ID:** KB0012357  
+**Views:** 109  
+
+---
+
+**Description:**  
+Error occurs after full balancing the lane or loading bills using the loader Bill Recycler - Error: "Hardware Error System Loader Cash Type Statuscassette.  
+Note: Reloading bills outside of the monthly Full Balance should be done using the bill acceptor, not the loader box.
+
+---
+
+**Resolution:**
+
+📌 If the actual error is: "Cash Type Status_CTS Wrong Setting"  
+➡️ Refer to: Toshiba SCO - Bill Recycler/Handler - Error, "Cash Type Status_CTS Wrong Setting"
+
+---
+
+### 🔧 Initial Steps:
+1. Open the casing door.
+2. Insert key into the top lock and turn to the right.
+3. Push the yellow knob/lever slightly back (required to remove the loader cassette).
+4. Remove the loader cassette.
+
+---
+
+### 📦 Open the Loader Cassette:
+5. Apply pressure on top of the loader and open with the key.
+   - There should ONLY be **$1 bills** inside.  
+   - Remove **$5s, $10s, $20s** and feed them manually through the acceptor or return to cash office.
+   - For full balance: stack bills **$1s on bottom, $20s on top, face up.**
+
+6. Make sure the bottom panel is **pressed all the way down** until it clicks. If not, the loader will give an error.
+
+7. $1s may be returned after clicking the panel down, or loaded via the acceptor.
+
+8. $5, $10, $20 must be inserted manually via the acceptor.
+
+---
+
+### ✅ Reseating the Loader:
+9. Close and lock the loader and reseat it into the Bill Recycler.  
+   - Loader **status light should be green**.  
+   - If red, reopen loader and repeat engagement steps.
+
+10. Pull yellow knob/lever forward to lock the unit back in place.
+
+11. Turn the key left to lock and remove it.  
+    - Recycler should engage and clear the error.
+
+12. Reboot the lane if issue remains.
+
+13. **Dispatch Toshiba** if loader light remains red or error does not clear.
+
+---
+
+### 🧾 If Error Occurs When Adding Bills (NOT Full Balance):
+Only $1 bills should be loaded using the loader box for normal operations.
+
+**Steps:**
+1. Open loader and remove all bills.
+2. Rearm the loader and place ONLY $1s back.
+3. Lock and reseat the loader into the lane.
+4. Go to **Cash Maintenance > Device in Problem > Error Message**.
+5. Tap **Add Cash**.
+
+---
+
+### ➕ Add Bills via Acceptor:
+6. In Cash Tracking, select **Bill Handler** tab.
+7. Tap **Load Bills Through Acceptor**.
+8. Insert $5s, $10s, or $20s into the acceptor to add to lane.

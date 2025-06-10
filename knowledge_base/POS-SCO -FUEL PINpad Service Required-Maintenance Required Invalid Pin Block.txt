@@ -1,0 +1,70 @@
+POS/SCO/FUEL PINpad "Service Required/Maintenance Required" "Invalid Pin Block"  
+**Document ID:** KB0011140  
+**Views:** 103  
+
+---
+
+**Description:**  
+MX915 EFT PIN pad displays one of the following error messages:  
+- "Service Required / Maintenance Required"  
+- "All Debit Keys Missing"  
+- "No Master Key Found"  
+- "Invalid Pin Block"  
+- "Connect to KLD"  
+- "APP Not Present" or “app.kroger sh” not present  
+
+---
+
+**Cause:**  
+This document addresses several known PIN pad error messages. Follow the respective resolution steps below for each message.
+
+---
+
+**Resolution:**  
+📝 Always **document register number, model, and PIN pad location** when troubleshooting.
+
+---
+
+### ⚠ Service Required / Maintenance Required  
+- **Action:** Dispatch per parts list.  
+- **See:** KSC Hardware Dispatching For All Pillars  
+
+---
+
+### ⚠ All Debit Keys Missing  
+- **Action:** Dispatch per parts list.  
+- **See:** KSC Hardware Dispatching For All Pillars  
+
+---
+
+### ⚠ No Master Key Found  
+- Indicates the PIN pad has lost its encryption settings and must be replaced.  
+- **Action:** Dispatch per parts list.  
+- **See:** KSC Hardware Dispatching For All Pillars  
+
+---
+
+### ⚠ Invalid PIN Block  
+- May occur if a customer enters their PIN too many times or if the PIN pad is disabled.  
+- Sometimes resolves when the next customer uses the PIN pad.  
+- **If error persists:**  
+  - If on one or two PIN pads: Dispatch per POS Parts List  
+  - If on all PIN pads: **Warm transfer to Tier 2**  
+  - **See:** Transferring Calls to the Frontend Tier 2  
+
+---
+
+### ⚠ Connect to KLD  
+1. Sign off the register  
+2. On PIN pad, press `<Login>` (bottom left)  
+3. When prompted for password, press `<X / Cancel>`  
+4. Press `<1>` to Run Application  
+5. Wait 2–3 minutes for the PIN pad to reload  
+6. Sign on the register again  
+7. If issue persists: **Dispatch per KSC Hardware Dispatching For All Pillars**
+
+---
+
+### ⚠ APP Not Present or “app.kroger sh” not present  
+- May be due to incorrect personalization options  
+- **See:** K7893 for correct personalization settings  

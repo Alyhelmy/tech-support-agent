@@ -1,0 +1,48 @@
+Jewelry: Freezes or Server Offline Message During a Transaction or Customer Search
+KB0011753
+
+
+Synopsis
+
+Register Freezes or Receives Server Offline Message, during a Transaction or Customer Search
+
+ 
+
+Cause
+In the process of searching for a customer or transaction, the POS register "freezes" and GemStore is no longer usable.
+
+ 
+
+Resolution
+
+1.  First see if the server is offline.  If the orb at the bottom of the GemStore screen is red, then you are offline and that is why you are getting the offline error.  This can be caused by many things.  Start with checking the network first, and proceed with troubleshooting from there.
+
+2. Check to see if the register is pinging (online). If not, perform basic network troubleshooting on the register (ie ethernet cable etc).  See:  Jewelry: Network Equipment.  It is normal for Server Offline Messages to come up when waiting for Operator ID box.  GemStore will always say "server offline" if the register is not on the network. App-Merch-ORE2.0-Jewelry does not support network issues. Store Support and or NOC can help with these issues.
+
+It could look like this:
+
+
+
+ 
+
+3. Before closing Gemstore capture a screen shot and attach it in your ticket.
+
+4. Close and re-launch GemStore.
+
+   - Make sure the Operator ID screen comes up before letting the caller off the line.
+
+If the problem re-occurs and you have to escalate the ticket
+
+ALWAYS REMEMBER TO PUT AS MUCH DETAIL AS POSSIBLE!
+Questions to ask and include in your incident:
+    - Verify: Is offline and freezing happening on all customers and transactions?
+    - Verify: Is offline and freezing happening on all ways to lookup customers and transactions?
+    - Are red server orb happening at GemStore start up or just lookups?
+    - What is on the screen when it froze?
+    - What is the exact error message?
+    - What was the caller doing when it froze?
+    - What steps did they take?
+    - If the lockup occurred while doing a search, what exactly did they search -
+    - Customer history for a specific customer?
+    - What was the customer’s name and zip code?
+    - What was the transaction number?

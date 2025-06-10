@@ -1,0 +1,31 @@
+SCO - Scanned Items Are Missing in E-Receipt (Lane Item Listing)
+
+Document ID: KB0011211
+Views: 4
+
+---
+
+Synopsis:
+Scanned items are not showing up on the screen as a scanned item on the "e-receipt".
+
+---
+
+Cause:
+Software
+
+---
+
+Scenario:
+1. Customer Scanned Item(s)
+2. Scanner makes a beep but items will not appear on lane.
+
+---
+
+Resolution:
+
+1. Verify issue is not the same as presented in: Toshiba SCO - Scale/Scanner Scans; Error/Message Displayed on Screen, Items Don't Show as Scanned
+2. Attempt Closing/Opening Lane
+3. Close lane, send 8-load to lane.
+4. Zero the scanner.
+5. Attempt powering off TCU, then powering off UPS for 2 minutes and power back on. If this is a system 6 or 7, you do not need to power cycle the UPS.
+6. Dispatch on Scale/Scanner if issue remains.

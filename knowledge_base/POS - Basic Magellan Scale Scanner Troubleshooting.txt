@@ -1,0 +1,92 @@
+POS - Basic Magellan Scale/Scanner Troubleshooting  
+KB0011109
+===============================================================================
+
+Description
+-----------
+The scale or scanner is not weighing or scanning correctly.
+
+===============================================================================
+Causes
+-------
+- Display shows **dots** → communication issue  
+- Register shows **dashes** → weight table issue
+
+===============================================================================
+Resolution Steps
+----------------
+
+⚠️ IMPORTANT NOTES:
+- If **flagged by Weights and Measures**, refer to:  
+  "POS - Scale/Scanner: Flagged by Weights and Measures"
+- DO NOT MOVE or SWAP scale/scanner hardware — only certified field techs may perform this. Violating this can result in fines.
+
+▶ Step-by-Step Troubleshooting
+
+1. **Check internal display of Scale/Scanner for error codes.**  
+   - If **“9” error code**, refer to:  
+     “Flashing or Solid 9 EAS Error Display Inside Scale/Scanner”
+
+   - If **display has dots**, proceed to Step 2 (Communication Troubleshooting)
+
+2. **Reset the Scale/Scanner**
+   - Have cashier sign on to the register
+   - For models: **8xxx, 95xx, 9800i**, hold down **VOLUME/TONE button** for **10 seconds**
+
+   - If issue persists or shows **"A" error**, continue to Step 3
+
+3. **Tap Reset Sequence**
+   - Press **VOLUME/TONE button** three times quickly
+   - If the unit starts beeping repeatedly, press it **one more time**
+
+4. **Power Cycle the Register**
+   - Shut down the register  
+   - Ensure **Scale/Scanner loses power**  
+     → If not, it may be powered independently (via power switch or battery backup) — power it off directly  
+   - Leave powered off for **at least 30 seconds**
+
+5. **Clean Under Scale Platter**
+   - Ensure no obstructions or debris are present
+   - Check that nothing is on or touching the scale
+
+6. **Check Connections**
+   - Reseat the USB cable between the Scale/Scanner and register (if possible)
+
+7. **Power On and Test**
+   - If issue persists → **Dispatch via KSC Hardware Dispatching for All Pillars**
+
+8. **Check for Sensormatic Devices**
+   - Some models (e.g., 9800i) may include external Sensormatic hardware — ensure it is **not too close** to the scanner
+
+===============================================================================
+Model-Specific Notes
+---------------------
+
+▶ Magellan 9800i Indicators:
+
+- **Dashes** = Weigh Table Error  
+  → Clean under platter, check for obstructions, zero the scale using top button
+
+- **Dots** = No Communication  
+  → Follow Steps 2–4 above, reseat USB, power cycle (minimum 30 seconds)
+
+▶ Internal Error Code Chart:
+--------------------------------
+| Code | Description                          |
+|------|--------------------------------------|
+| 0    | Scanner Interface Configuration Error|
+| 1    | Configuration Error                  |
+| 2    | Host Interface Error                 |
+| 3    | Main Board Error                     |
+| 4    | Reserved                             |
+| 5    | Scale Sensory Error                  |
+| 6    | Interface Board Error                |
+| 7    | Scale Error                          |
+| 8    | Remote Display Error                 |
+| 9    | EAS (Sensormatic) Error              |
+| A    | Control Panel Error                  |
+| B    | USB Device Error                     |
+| C    | Scale Calibration Error              |
+| D    | Check Top Down Reader Connections    |
+| E    | USB Host Error                       |
+| F    | Scale Configuration Error            |

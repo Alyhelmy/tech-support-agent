@@ -1,0 +1,44 @@
+Jewelry: Till Is Over or Short, Researching a Variance
+KB0011338
+
+Synopsis
+
+Store calls when reconciling because their till is over or short.
+
+Store calls when reconciling because they are getting a message that there is a variance of 5 dollars or more.
+
+ 
+
+Solution
+
+If the store has already ended the session in Gemstore for the day, it is too late to correct any mistakes in that business day. The store should accept the variance and if they know the cause, fill out an Over Short Log from First Place > Sales Audit reporting.
+
+ 
+
+Some basic tools that may be helpful to the store when researching:
+
+1. Receipt Inquiry report
+
+    A list of all the days transactions and voids with details for each when selected.
+
+    See: Jewelry: How to View Receipt Inquiry Report In Vision Store Management
+
+2. Session Summary report
+
+      A summary of the totals declared by the closer, the total deposit, and the ending float.
+
+  3. Session Detail report
+
+      The state of any sessions and summary showing the totals expected for each tender as well as any float amounts, pickups or petty cash in/out.
+
+     See: Jewelry: Session Summary Report in VSM
+
+  4. Transaction Summary report
+
+      A summary of any specific transaction and the tender used.
+
+      VSM > Cash Functions > Cash Office Reports > Transaction Summary
+
+ 
+
+NOTE: It is not the KSCs responsibility to research cash drawer over or shortages / variances though should assist if time allows. If more in-depth assistance is needed or they have questions the store should contact Sales Audit during business hours.

@@ -1,0 +1,70 @@
+Pickup - Unattended Locker Pickup
+
+**Document ID:** KB0019531  
+**Views:** 65  
+
+---
+
+**Synopsis:**  
+Locker Pickup is an online grocery ordering service offered at select locations. Customers shop online or via the mobile app and retrieve their order from a temperature-controlled locker.
+
+---
+
+**How It Works**
+
+**Customer / Shopper:**
+1. Customer accesses the banner site or mobile app.
+2. Chooses a fulfillment method: Pickup, Delivery, or In-Store.
+3. Enters zip code and selects a Locker Pickup location.
+4. Selects pickup date/time and pays online with a credit/debit card.
+5. After fulfillment, receives a **6-digit PIN** via email to retrieve the order.
+   - PIN is the last 6 digits of the order number.
+   - *Do NOT inform the customer that it is the last 6 digits.*
+
+---
+
+**Store / Pickup Associate Process:**
+1. Monitors locker orders using the **Cue order dashboard** on the Thin Client.
+2. Picks order via **Harvester**.
+3. Stages the order in appropriate **temperature-controlled locker**.
+4. Tenders the order in **Ciao** once the customer retrieves it.
+5. Customer receives notification the order is ready.
+
+**Important Notes:**
+- No need to go car side.
+- If needed, call the customer or leave a note inside the locker referring them to the Customer Service Desk.
+
+---
+
+**Troubleshooting:**
+
+**1. Cue Issues:**  
+See relevant document: **CUE Application**
+
+**2. Store Order Handling:**  
+Use **MODFS Pickup documentation** for:
+- Picking
+- Staging
+- Destaging
+- Ciao issues
+
+**3. App/Device/Network Issues:**  
+Refer to documentation for:
+- Cue  
+- Harvester  
+- Ciao  
+- TC52
+
+**4. Locker Hardware Issues (Power/Physical):**
+- Have store associate call **StrongPoint** at the number posted on the locker.
+- **StrongPoint/Peak Technologies Help Desk:**  
+  `1-800-737-2358` > Option 1
+
+**5. Fast Alerts / Temp Tags / Cameras:**  
+Handled by **KSC Store Support team** (follow standard KSC approach).
+
+**6. StrongPoint Interface Login:**  
+Store associate must contact their **Division eComm Manager** or **Field Specialist**.
+
+**7. Manual Unlock:**  
+If order expired or customer can't access groceries, store manager can unlock locker **manually using a key**.

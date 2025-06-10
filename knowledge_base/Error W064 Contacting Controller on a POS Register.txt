@@ -1,0 +1,55 @@
+Error "W064 Contacting Controller" on a POS Register
+
+KB0011524 
+===============================================================================
+
+Description
+-----------
+Register(s) display or hang on "W064 Contacting Controller".
+
+If SCO, see document:
+Toshiba SCO - Hardware - Will Not Boot Past "W064 Contacting Controller".
+
+Cause
+-----
+Hardware, Network, MAC Address, or TUNA problem.
+
+Resolution
+----------
+
+Please verify if all lanes, or single lanes are having this issue and follow the
+sections below appropriately.
+
+NOTE: If it is All Evens, or All Odds, call Frontend Tier 2 to check for a bigger
+issue.
+
+All Terminals Stuck On W064 Contacting Controller
+-------------------------------------------------
+1. Call Frontend Tier 2 to IPL all the other controllers.
+
+2. The terminals should reconnect. If not, send a 9-load to reboot the terminals.
+
+One or Two Terminals Stuck on W064 Contacting Controller
+--------------------------------------------------------
+*Do not run the above script since it is for ALL lanes being affected.*
+
+1. For 1 or 2 registers affected, advise user to hard load those registers.
+   See: How To Reboot a Register or Load Terminal Configuration (9-Load).
+
+2. While lane is rebooting, verify the lane switch is pinging:
+   Go to PSY > Lookup > Switches.
+
+   Note: W064 is a network issue. Check the switch before running Terminal Installer
+   or rebooting controllers.
+
+3. If switch is not pinging, have attendant reboot it. If switch is pinging, continue.
+
+4. Run Terminal Installer.
+   See: POS/Fuel/SCO/Pickup/EPRN: POS Terminal Installer For Registers.
+
+   *Do not run Terminal Installer on any SCO Lanes.*
+
+5. If this does not resolve the issue, escalate to Tier 2 if you can display terminal
+   status. Dispatch if you cannot display terminal status and have checked network.
+
+===============================================================================

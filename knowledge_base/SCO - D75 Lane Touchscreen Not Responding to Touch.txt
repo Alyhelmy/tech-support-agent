@@ -1,0 +1,79 @@
+SCO - D75 Lane Touchscreen Not Responding to Touch
+
+Document ID: KB0011212
+
+---
+
+Synopsis:
+Casing: Genesis only.  
+Touch screen fails to register touch points on screen.
+
+---
+
+Cause:
+Hardware
+
+---
+
+Resolution:
+
+Note: Recently there has been an issue where SCO touchscreens are not responding and they have a cursor/pointer on the screen that will follow the finger but will not select the buttons to open the lane.  
+- Check/troubleshoot the receipt printer to make sure it's functioning and try reloading.  
+- If the issue persists, have Tier 2 run CHECZAP on the lanes.  
+- If the lane still will not open after CHECZAP, dispatch a tech to STC the lane and ensure the tech reformats the drive.
+
+This document is only to be used for Genesis D75 monitors on the SCO lanes.
+
+---
+
+**Monitor Type Guidance:**
+- D25 Monitor → DO NOT use this document (Use KB K15420 - D25 Lane Touchscreen Not Responding to Touch)
+- D75 Monitor → USE this document
+
+---
+
+Steps:
+
+1. Document monitor type (D25 or D75) in ticket notes.
+
+2. Verify Scale/Scanner is still functioning (scan item and see if it shows on the screen) to ensure this isn't a lane freeze.  
+   - Note scanner status in the ticket.  
+   - If lane screen displays "Open", have associate scan SA barcode and check if screen responds to ID/password entry.
+
+3. If screen fails while in open state:
+   - Press the TCU power button.
+   - When prompted, select "Close Lane".
+
+4. Did the "Close Lane" button respond to touch?
+   - YES → Lane freeze; touchscreen is functional.
+   - NO → Note this in the ticket.
+
+5. Verify the associate has keys to access the lane (needed for physical access).
+
+6. Open the top casing door (the part with the touchscreen).
+
+7. Unplug and reseat the USB cable (circled).
+
+8. Test touch functionality on the screen.
+
+9. If screen still does not respond to touch:
+   - Run the calibration script:
+
+     a. Connect to MC.  
+     b. Go to Command Mode (#7).  
+     c. Type: `adxtcxxl` followed by the lane number (Example: `adxtcxxl 500`)  
+     d. After running the command, send a 9-load to the lane.  
+     e. Wait for calibration touch points to appear and have associate tap them.
+
+10. Test touch response after the lane reboots.
+
+11. If issue remains:
+    - Power off the lane and UPS for at least two minutes.
+    - Power back on and retest.
+
+12. Reminder: If this matches the known touchscreen/cursor issue, have Tier 2 run remote CHECZAP before dispatching.  
+    - Otherwise, dispatch per "KSC Hardware Dispatching For All Pillars."
+
+13. If a tech calls in and cannot resolve:
+    - Escalate to APP-POS (Priority 3) with extract.
+    - Allow tech to leave.

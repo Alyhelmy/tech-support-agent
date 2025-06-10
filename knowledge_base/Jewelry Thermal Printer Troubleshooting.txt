@@ -1,0 +1,167 @@
+Jewelry: Thermal Printer Troubleshooting
+KB0011872
+===============================================================================
+
+Description
+-----------
+Basic troubleshooting for Jewelry register thermal receipt printers.
+
+When troubleshooting Receipt Printers, Analyst should log into the Register through Jewelry PSY -
+Jewelry: How to Remotely Connect to Jewelry Registers.
+
+Steps in this document will require use of a PPM username/password.
+See: Checking Out a Privileged Password
+
+Cause
+-----
+- Receipt printer is not printing receipts or franking checks.
+- Receipt print quality is poor or skipping lines.
+- Printer or cash drawer is not working.
+
+Resolution
+----------
+
+Printer or Cash Drawer Not Working - Basic Troubleshooting:
+-----------------------------------------------------------
+No Printer Hardware Found:
+1. Verify the Printer has power.
+   - No lights = No Power (See Printer Power Troubleshooting Section Below)
+
+2. Does the Printer have a Solid Green Light or Flashing?
+   - Flashing = Printer has an error (See Flashing Green Light Section Below)
+   - Solid Green = Printer is in Correct Operating Mode.
+
+3. Manually power off the register, wait 30 seconds, then power it back on.
+   If problem remains continue to step 4.
+
+4. Open Device Manager in GSI to verify the register detects the Receipt Printer.
+
+Correct Ports:
+--------------
+Note: If it shows any other port than COM9, correct the port following these steps:
+  - Right click USB Serial Port A776 and select PROPERTIES
+  - Choose the PORT SETTINGS Tab.
+  - Click the ADVANCED button.
+  - From the COM Port Number drop down menu, select COM9
+  - Click OK on both boxes and close Device Manager.
+  - Click the Reboot button in GSI.
+
+If only Intel(R) Active Management Technology - SOL (COM6) is showing,
+the store will need to reseat the USB patch cable on the back of the register.
+
+Lenovo M93P
+Dell 7090 Series
+
+5. Once the Receipt Printer USB Serial Port A776 is showing in Device Manager,
+verify it shows COM9.
+
+6. Restart Gemstore from the Launcher Menu.
+
+Printer Power Troubleshooting:
+------------------------------
+If the printer has no power:
+1. Trace cable connections to ensure they are securely connected to printer, power brick, and power outlet.
+
+2. If connections are secure, try reseating cables or try a different power outlet.
+   After reseating cables, perform a shutdown restart on the register.
+
+3. If unresolved, swap printers with another register to isolate issue.
+
+4. If swapping printers did not fix issue, try a different port on register and reboot.
+   - If this resolves the issue, dispatch the register.
+   - If unresolved, dispatch printer for replacement.
+
+Power Cable:
+
+Green Flashing Light:
+---------------------
+- Is the printer out of paper?
+- Is the paper loaded correctly?
+- Is the paper door closed securely?
+- Is there an extra black spindle left from last paper replacement?
+- Verify paper is standard thermal paper and inserted correctly (not backwards).
+
+Clean out the printer:
+1. Remove paper, turn printer over, pat lightly to remove debris.
+2. Check receipt roller by spinning it, ensure no stuck paper pieces.
+3. Blow out printer with canned air if possible.
+4. Re-install paper, close lid, check light status.
+5. Restart register if no change.
+
+Cables:
+-------
+Three cables:
+ 1. Power supply connector
+ 2. USB connector
+ 3. Cash drawer connector
+
+To access cables, put printer on front end and unlatch hinged door blocking cables.
+
+Verify cash drawer cable is plugged correctly: ends labeled EPSON (to printer) and C/D (to cash drawer).
+
+Steps:
+1. Remove power cable from printer.
+2. While unplugged, reseat USB and cash drawer cables.
+3. Plug power cable back in.
+4. Restart register.
+
+Check Reader Troubleshooting:
+-----------------------------
+Not allowing check insertion:
+- See Jewelry: How To Process Checks for check procedural instructions.
+
+1. Verify caller follows procedure correctly and printer is ready to accept check.
+   - Premature removal or skipping prompts can cause print head to stick.
+
+2. Inspect check insertion area for debris or jams.
+
+3. Have caller insert check; sometimes Gemstore appears frozen but is waiting for check.
+
+4. Confirm bottom green indicator light turns green when check inserted.
+   - If green but check not pulled, Gemstore is frozen; restart required.
+
+5. If check can't fully insert due to blockage, reset print head:
+   - Open check reader door (folds toward caller).
+   - Gently push printer cartridge in track to the right.
+   - Close door until clicks heard.
+   - Retry inserting check; green light should turn on and check pull through.
+
+6. If print head won't return to neutral position, dispatch replacement.
+
+Check Reader Cleaning:
+----------------------
+Clean track with canned air and/or thick paper (e.g., envelope).
+
+Not Franking Back of Checks:
+----------------------------
+1. Verify register has a printer ribbon installed correctly and plastic shipping cover removed.
+2. Comparing with another printer’s ribbon may help verify installation.
+
+New Ribbons:
+------------
+Can be ordered from FEED - Operations - Supply Order Form - Item# TPG-A152-0043.
+
+Jamming While Reading Checks:
+-----------------------------
+Check check read track for debris.
+
+Receipt Printer Troubleshooting:
+--------------------------------
+Note: First receipt printer after any shutdown/restart has a delay before printing.
+
+Register Freezes While Printing Receipt:
+1. Verify printer light not blinking and paper not low.
+2. If okay, close and reopen Gemstore.
+3. If issue persists, reset printer cables and perform Shutdown/Restart.
+
+Verify transaction completed via TRANSACTIONS SEARCH.
+
+IMPORTANT:
+- If credit/debit was used and transaction not in TRANSACTION SEARCH, check Payment Systems for card charge (See K9085).
+- If credit tender used and approval code shows in Payment Systems:
+  See: Jewelry: How to Take a Register Offline for Manual Authorization.
+- If transaction completed, re-print receipt.
+- If not showing in Gemstore or Payment Systems, re-ring transaction with appropriate tender.
+
+If suspected double charge, see Jewelry: How to Get Assistance with Duplicate Charges or Refunds on Transactions,
+and send info to Bus-JewelrySalesAudit.

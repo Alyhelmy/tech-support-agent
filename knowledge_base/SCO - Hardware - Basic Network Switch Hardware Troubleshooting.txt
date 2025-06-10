@@ -1,0 +1,54 @@
+SCO - Hardware - Basic Network  Switch Hardware Troubleshooting
+
+**Document ID:** KB0012068  
+**Views:** 62  
+
+---
+
+**Description:**  
+This document reviews steps to follow when a network is not working or a switch is not pinging.  
+Common error: **W064 Contacting Controller**
+
+---
+
+**Cause:**  
+- Hardware / Network communication error
+
+---
+
+**Resolution:**
+
+**Step 1: Identify Switch Model**
+- Check TUNA for model number (e.g., HP2610, HP2530, Aruba)
+- May not be accessible; label may say "Aruba" or "HP"
+
+**Step 2: Verify Switch Connectivity**
+1. Open **PSY Device Connect**
+2. Input store info > Select Lookup > Scroll to Switches
+3. Login using EUID/password
+4. Switches usually named: Pay Station 540, SCO 500, etc.
+5. If missing, try finding MAC in **TUNA**:
+   - Press `1` > Enter > Management > Enter > F9
+   - Locate and ping switch with `Ctrl + D`
+   - Use `Ctrl + C` to stop ping
+6. If switch is pinging:
+   - Power cycle UPS + TCU for 2 mins (skip UPS for System 6 or 7)
+7. If switch does NOT ping:
+   - Verify switch has power/activity lights
+   - Try a different outlet if needed
+
+**Step 3: Verify Lane Pinging**
+1. Login to **TUNA**
+2. Press `1` > Enter > POS and Fuel Segment > Enter > F9
+3. Identify lane from list (e.g., SCS MT = 500+)
+4. Ping target lane with `Ctrl + D`
+5. If ping fails:
+   - Check switch power & cable connections
+   - Try alternate outlet to test power
+6. Stop pinging with `Ctrl + C`
+7. Locate MAC address in TUNA
+8. Check if MAC is in **Radius Exception List**:
+   - If not, add it > Press `Q` to quit and save
+   - Power cycle TCU again
+9. If lane still doesn’t load:
+   - Refer to: *Error "W064 Contacting Controller" on a POS Register*

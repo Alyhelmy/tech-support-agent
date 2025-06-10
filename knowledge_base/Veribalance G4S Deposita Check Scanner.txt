@@ -1,0 +1,104 @@
+Veribalance G4S/Deposita Check Scanner
+KB0040977
+=====================================================
+
+DESCRIPTION:
+------------
+Deposita Digital Check Scanners are distributed to all VeriBalance PCs.  
+Any time a scanner or VBPC is installed or replaced, the scanner must be configured.
+
+⚠️ If configuration is skipped, the Deposita website will show an alert stating it cannot connect to the scanner.
+
+⚠️ Scanner alters PC network setup – VeriBalance License will also need to be re-entered.
+→ See: *VeriBalance PC Displays Red Software License Renewal*
+
+Support Contact:
+→ Deposita Support: 1-866-523-6116 (Option #3)
+
+If Deposita link is missing from Start Menu:
+→ Tier 1 should escalate as **P3 to INF-EnterpriseDesktop**
+
+-----------------------------------------------------
+CAUSE:
+------
+Every VeriBalance PC with a scanner must be configured after replacement/install.  
+Failure to do so causes communication issues with the Deposita site.
+
+-----------------------------------------------------
+RESOLUTION:
+-----------
+
+🔹 **Important Note:**  
+It is expected that within 24 hours of install, the red license screen appears.  
+→ See: *VeriBalance PC Displays Red Software License Renewal Screen*
+
+🔹 **Physical Issues:**  
+If scanner has no power, is broken, or unresponsive:  
+→ Contact Deposita directly: 866-523-6116
+
+🔹 **Procedural Questions or if referred back by Deposita:**  
+→ Call **KCRC Support:** 866-544-8062
+
+SETUP STEPS:
+------------
+1. Connect and power on the DIGITAL CHECK SSX1-ELITE scanner
+
+2. On VBPC, run BigFix Offer:  
+   **"Deposita Check Scanner Setup"**
+
+3. Confirm the Deposita website allows scanning.
+
+4. If not working, restart scanner (hold power button until red light, wait, turn back on), re-run offer.
+
+5. Run the BigFix Offer again if necessary — scripts sometimes need to run twice.
+
+6. Access BigFix Offers:
+   → System tray (bottom right) > BigFix icon  
+   → Go to *Catalog* tab > Click "Get" on the offer
+
+   This configures the scanner and resolves the  
+   **“Unable to Connect to Scanner”** error.
+
+7. Ensure the scanner is visible in Device Manager:
+   → Must show as:  
+     **Remote NDIS Compatible Device** (under Network Adapters)  
+   → NOT visible under Printers & Scanners
+
+🔒 Admin access is required to view Device Manager.
+→ See: *Balance Innovations Unable to Login as Admin to a VeriBalance PC*
+
+-----------------------------------------------------
+CERTIFICATE INSTALLATION:
+-------------------------
+There is a support task:  
+**"Install G4S Check Scanner Certificates 1.0R1__T"**  
+→ Can be pushed via BigFix to the device using its IP address from the Information tab.
+
+-----------------------------------------------------
+ESCALATION:
+-----------
+🧾 If checks cannot be scanned:
+- Store should **carry forward**
+- Wrap checks with **Batch Summary Report**
+- Place in the safe until scanner is back online
+
+→ Contact Deposita: 866-523-6116 to notify
+
+📄 If scanner still fails to connect:
+1. Retrieve log file from:
+   `C:\ProgramData\DSE\Logs\ST_VB_Check_Scanner_Fix.txt`
+
+2. Use Ultra VNC or admin share to access the file.
+
+3. Review for failure details, attach to ticket, and escalate:
+   → INF-EnterpriseDesktopSupport as **P3**
+   → Include:
+     - Log file
+     - VBPC IP address
+     - Troubleshooting steps performed
+
+-----------------------------------------------------
+NOTE:
+-----
+If the scanner does not scan, frank, or is physically damaged:
+→ Refer the store to **KCRC Support: 866-544-8062**

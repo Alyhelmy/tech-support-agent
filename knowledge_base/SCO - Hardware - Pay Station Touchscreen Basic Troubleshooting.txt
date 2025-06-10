@@ -1,0 +1,113 @@
+SCO - Hardware - Pay Station Touchscreen Basic Troubleshooting
+
+ID: KB0011178
+-------------------------------------------------------------------------------
+Description:
+Touchscreen on SCO Pay Station has no display or is not detecting touch.
+
+--------------------------------------------------------------------------------
+Cause:
+Touchscreen may have no power or may not be detecting touch. Possible causes include:
+- No power
+- No display
+- Display not centered
+- Touch not working correctly
+- Power light is amber
+- Missing buttons
+- MSR not working properly
+- Procedural assistance
+- Dirty touchscreen
+
+--------------------------------------------------------------------------------
+Resolution:
+
+General Note:
+New as of 10/09/2024: After the Sky 1.4 update, touchscreens may load to a blank screen with a cursor.
+- Before escalating to APP-POS, have Frontend Tier 2 try a paperclip reset on the terminal.
+- If unresolved, collect a terminal dump and escalate to APP-POS as P3.
+
+Note for Mariano's Deli SCO Cluster:
+- Paystation #549 has a Customer Display in addition to a touchscreen cashier display.
+- See POS Monitor Troubleshooting for related steps.
+
+--------------------------------------------------------------------------------
+Calibration Steps (Confirm with Tech Before Escalation):
+1. Manually calibrate through touchpoints.
+2. Contact KSC to force calibration from controller.
+3. Attempt calibration using USB diagnostic key by clearing NVRAM.
+4. If unresolved, plug monitor into a laptop to calibrate.
+   - If calibration fails, plug back into lane, collect terminal dump, and escalate to APP-POS via KSC.
+5. If calibration works but issue recurs after reboot, collect terminal dump while issue is happening and escalate.
+
+--------------------------------------------------------------------------------
+Missing Buttons:
+1. Attempt 9-loading the lane.
+2. Power off Pay Station for 1 minute and power back on.
+3. If issue remains, escalate to APP-POS.
+
+--------------------------------------------------------------------------------
+No Power:
+1. Reseat touchscreen cables at both register and screen.
+2. Reboot the register.
+3. Dispatch per KSC Hardware Dispatching For All Pillars.
+
+--------------------------------------------------------------------------------
+No Display:
+1. Verify power indicator on the display is ON.
+   - If not, follow "No Power" steps.
+2. Check brightness controls.
+3. If LED is amber, refer to "Power light is amber."
+4. Power down register and leave off.
+5. Trace and reseat the grey USB cable from monitor to register.
+6. If needed, move to another green USB port.
+7. Power back on the register.
+8. Dispatch per KSC Hardware Dispatching For All Pillars.
+
+--------------------------------------------------------------------------------
+Display Not Centered:
+1. Hold both brightness up and down buttons until menu appears.
+   - Press brightness up twice.
+2. Reseat cables at the back of the register.
+3. Reboot the register.
+4. Dispatch per KSC Hardware Dispatching For All Pillars.
+
+--------------------------------------------------------------------------------
+Touch Not Working Correctly:
+1. Check if screen is dirty or has obstructions (e.g. post-it notes).
+2. Auto-adjust / Calibrate:
+   - Hold both brightness up (+) and down (-) buttons until menu appears.
+   - Press brightness up twice.
+   - Press both buttons to select.
+3. Power down register and leave off.
+4. Reseat touchscreen USB cable.
+5. Trace and reseat grey USB cable to back of register.
+6. Power back on the register.
+7. Dispatch per KSC Hardware Dispatching For All Pillars.
+
+--------------------------------------------------------------------------------
+Power Light is Amber:
+Note: Amber = Low Power Mode
+1. Reseat VGA video cable.
+2. Confirm register is powered on.
+3. Dispatch per KSC Hardware Dispatching For All Pillars.
+
+--------------------------------------------------------------------------------
+MSR Not Working Properly:
+Note: MSR = Mag-Stripe Reader (used to activate gift cards)
+1. Reseat MSR cable on back of touchscreen.
+2. Ensure MSR is securely attached.
+3. Check for nearby Sensormatic or tag-deactivating devices.
+4. Dispatch per KSC Hardware Dispatching For All Pillars.
+
+--------------------------------------------------------------------------------
+Procedural Assistance: Cleaning the Touchscreen
+1. Turn off the touchscreen.
+2. Use a soft, dry cloth with a non-abrasive cleaner (no ammonia or chlorine).
+   - Spray cleaner on cloth, not directly on screen.
+3. Wipe gently.
+4. Allow surface to dry before powering back on.
+
+--------------------------------------------------------------------------------
+Final Step:
+Confirm pay station fully boots. If not, follow:
+"POS Register - Hardware - Basic POS Register Troubleshooting".

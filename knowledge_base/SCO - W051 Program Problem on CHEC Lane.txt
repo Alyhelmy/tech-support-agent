@@ -1,0 +1,38 @@
+SCO - "W051 Program Problem" on CHEC Lane 
+ 
+ID: KB0012088  
+--------------------------------------------------------------------------------
+Description:
+Lane restarts for no reason.
+
+Lane spontaneously dumps with "W051 PROGRAM PROBLEM B5/S084/E052" error message on controller or lane.
+
+--------------------------------------------------------------------------------
+Cause:
+Software
+
+--------------------------------------------------------------------------------
+Resolution:
+
+1. If W051 message is found, the lane should dump itself. Process that dump.  
+   See Toshiba SCO - MISC - How To Perform and Prepare Terminal or TCU Dump.
+
+2. Copy/paste error message and dump message from controller into ticket.
+
+3. Gather & format Terminal Dump from a lane currently having the issue.  
+   See Toshiba SCO - MISC - How To Perform and Prepare Terminal or TCU Dump.
+
+4. Attempt lane restart and power off/on of Powervar.  
+   If this is a system 6 or 7, you do not need to power cycle the UPS.  
+   See:  
+   - Toshiba SCO - Hardware - UPS Troubleshooting  
+   - SCO - Procedural - How to Perform Lane Power On / Off, Shut Down, 9-Load, or 8-Load.
+
+5. If unable to resolve, dispatch vendor to STC lane.
+
+IMPORTANT NOTE:  
+The nightly eBOSS maintenance runs from 12:05AM EST to 5:10AM EST.  
+If a technician is onsite and trying to STC the lane during this time, they must wait until after the maintenance window for the lane to continue replication and finish the STC process.
+
+6. If the technician is unable to resolve with STC, ensure all hardware issues have been ruled out and tech has worked with their support.  
+Once confirmed, escalate to Frontend Tier 2 to page ticket with "Tech Onsite" and include the tech's cell number for callback.

@@ -1,0 +1,236 @@
+Jewelry – Dell Laptops With Touch Screens
+KB0023984
+=======================================
+
+DESCRIPTION:
+-----------
+Note: Ensure this is NOT the Back Office PC. This is the Associate Assisted Laptop (AAD) that replaced the tablets.
+
+Jewelry stores now use Dell touchscreen laptops instead of iPads.
+- Top 25 stores receive 2 laptops
+- All other stores receive 1 laptop
+
+These laptops support all applications EXCEPT ringing up transactions.
+
+CAUSE:
+------
+These laptops are replacing the tablets.
+
+OVERVIEW:
+---------
+Important:
+- Always obtain the IP Address of the laptop.
+- Confirm it pings.
+- Add this info to your incident.
+
+See: "Windows 10 - How to Locate a PC Name and IP Address"
+
+USE CASE:
+---------
+The Associate Assisted Device (AAD) allows associates to:
+- Assist with online sales, repairs, and credit apps.
+- Keep the register free for sales.
+
+Authorized Use:
+---------------
+- Associates may use laptops for job-related tasks.
+- Customers may use laptops under supervision only.
+- Non-business use is prohibited.
+
+Laptop Security:
+----------------
+- Keep laptops secured behind the counter when not in use.
+- After hours: Place in back room, plugged in for charging.
+
+Case Count Logging:
+-------------------
+Include laptops in daily case counts:
+- Case Description: Laptop
+- SKU Column: Use asset number (from sticker)
+- Brief Description: Laptop
+
+Log Sheet Situations:
+---------------------
+- Repair/Replace: Mark “Repair” under “Disposition,” enter “Date Sent,” and initial.
+- New Laptop: Log as new item.
+- Missing Laptop: 
+  * Verify it’s not out for repair.
+  * Search store and ask associates.
+  * If not found:
+    - Complete Asset Protection Incident Report on FEED
+    - Email incident # to: fmjoperations@fredmeyerjewelers.com
+    - CC: Store Manager, DSM, and Regional AP Manager
+
+Laptop Updates:
+---------------
+- Updates happen automatically if plugged in and on the network overnight.
+- For update errors, contact Support Center at 1-800-952-8889.
+
+LAPTOP APPLICATIONS:
+--------------------
+- Accessible via Start Menu / Windows Button
+- Missing apps: 
+  * Get IP and/or computer name
+  * Confirm ping
+  * Escalate to INF-EnterpriseDesktop
+
+BOOT ISSUES:
+------------
+1. Power down fully for a few minutes and reboot.
+2. If OS doesn’t load or NIC doesn’t work:
+   * Dispatch incident to DIV-FM-DESKTOP for repair/reimage.
+
+FEED ACCESS:
+------------
+- Associates log in using EUID and password
+- Used for:
+  * Training videos
+  * Public Announcements (PAs)
+  * Repair Portal
+  * Payment Options
+  * Mainframe JMS (Session B)
+  * Associate Assisted Online Sales (AAOS)
+  * Pick Up In Store (PUIS)
+  * Citrix (Outlook, Kronos, VSM backup)
+
+PA PLAYBACK INSTRUCTIONS:
+-------------------------
+1. Connect 3.5mm audio cable to headphone jack and speaker.
+2. Power on speaker until it glows.
+3. Adjust laptop volume.
+4. Navigate to FEED > HR > Learning & Development > “Recorded PAs”
+5. Hold phone receiver to speaker and click “Play”
+
+APPLICATION ACCESS:
+-------------------
+- Outlook (Citrix)
+- Kronos (Citrix)
+- Vision Store Management (FEED or Citrix)
+- KTV / Learning Library
+- Credit Waterfall
+- Calculator
+- FEED
+- Mainframe (Session B)
+- Approved Websites
+- Pick Up In Store
+- MyTime (Coming Soon)
+- FMJ.com
+- Repair Portal
+- IAM (Password Management)
+- Policy & Procedure Guide
+- Secure Print
+- Log an Incident (ServiceNow)
+- Accessibility Tools
+- BigFix (IT only)
+- QueVision (Not for FMJ)
+
+LAPTOP NETWORK & POWER:
+-----------------------
+- Must be plugged into power and Ethernet while in use.
+- Ethernet jacks are near Diamond Run register or back room.
+
+Physical Ports:
+---------------
+- Power: Right side
+- USB/Ethernet: Left side
+
+Auto Login:
+-----------
+- Auto login: S9221FMJASCASTDVCP
+- Issues: Escalate to INF-EnterpriseDesktop (Priority 2)
+
+MAC ADDRESS TROUBLESHOOTING:
+----------------------------
+1. If not pinging: Power cycle + reseat Ethernet cable.
+2. Verify MAC is in TUNA.
+
+TUNA STEPS:
+-----------
+- Login to TUNA > Store Segment > F9 (sort by device)
+- Look for comment field: “JLY AAD”
+
+Change MAC:
+-----------
+- Select PC, Enter > Arrow to MAC Address
+- Copy old MAC to ticket, replace with new MAC, F5 to submit
+
+Add Missing Laptop:
+-------------------
+- Go to unassigned IP > Enter > Store > Enter > PCs and Thin Clients
+- Enter > Down to Computers > PC > Enter
+- Add comment: JLY AAD 2
+- Set DHCP/Bootp: Y
+- Enter MAC address, F5 to submit
+
+If still not pinging:
+---------------------
+- Check if other Jewelry devices ping
+- Only laptop offline: Send to INF-EnterpriseDesktop
+- All offline: Contact Frontend Tier 2 or Store Support
+
+TOUCHSCREEN & INPUT:
+--------------------
+- Touchpad:
+  * One finger: move cursor
+  * Two fingers: scroll (up/down/left/right)
+- Buttons = Standard mouse clicks
+
+WIRELESS MOUSE:
+---------------
+- Takes 1 AA battery
+- USB dongle must be plugged into laptop
+
+FILE SAVING:
+------------
+- Cannot save to device
+- Save only to Citrix profile
+
+SECURE PRINTING (STREAMLINE):
+-----------------------------
+PIN Setup:
+1. At printer, select “Login”
+2. Enter EUID/password
+3. Tap person icon > write down PIN (bottom right)
+4. Log out
+
+Printing:
+1. Enter PIN > OK
+2. Tap “Secure Print”
+3. Select job > Print
+4. Logout or Home
+
+Scan to Me:
+1. Tap “Scan to Me”
+2. Name document
+3. Start scan
+4. Wait for green light
+5. Next > Logout or Home
+
+Scan to Email:
+1. Tap “Scan to Email”
+2. Enter email & name document
+3. Start scan > wait > Next > Logout or Home
+
+SUPPORT & ESCALATION:
+---------------------
+Functional questions:
+- Email: fmjoperations@fredmeyerjewelers.com
+
+Technical support:
+- Stores can log electronic tickets via ServiceNow (on FEED)
+
+Missing/Stolen Laptops:
+- Follow logging and AP Incident Reporting procedure above
+
+Escalation to INF-EnterpriseDesktop (Priority 2) for:
+- Auto login issues
+- Laptop slow
+- Secure Print issues
+- Touchscreen issues
+- Windows OS issues
+
+Note: KSC CANNOT remote into Jewelry Laptops. Only EDS can.
+
+APP-JewelryWindowsDevelopment supports:
+- Website application issues
+- Technical support for JIS, TagSpace, EPROD, Corp.Check, vendor apps

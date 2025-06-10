@@ -1,0 +1,63 @@
+Jewelry: Missed Store Close and Missing Close Report
+KB0011988
+
+
+
+Synopsis
+
+Store close was not completed the night before.
+
+Store called to find out if the store close was done or reporting no sales are showing for their store for the previous days. Store calls in the morning to close before opening.
+
+ 
+
+This doc is for missed store closes only.
+
+  - For instruction on the store close, see Jewelry: Procedure for End of Day (EOD) Process
+
+  - For assistance researching a variance / till over or short, see Jewelry: Till Is Over or Short, Researching a Variance
+
+ 
+
+Solution
+
+1. Check the Missing Store Close Report and verify the close was missed. http://n701jly99.fm.kroger.com/Reports/Pages/Folder.aspx?ItemPath=%2fMissing+Store+Close+Report (Instructions below)
+
+2. If the close was missed and Start of Day has not been run yet today, the store should run a Store Close first, then do Start of Day.
+
+If Start of Day was done again and the float entered, it is too late to run
+
+the store close for that day. It will have to be postponed until closing that night.
+
+Sales for the two days will be combined.
+
+ 
+
+Note: When a store close is missed (or multiple closes), the store likely will not see their sales until the 3rd business day after a close is successfully completed. Example: Close was missed on Thursday, the store may not see those sales until Sunday.
+
+ 
+
+Viewing the Missing Store Close Report
+
+
+ 
+
+Missing Store Close Report Real Time
+Used to see the closing for the current day.
+
+ 
+
+Missing Store Close Report
+To check what stores missed their close for any previous day.
+
+1. After clicking on the Missing Store Close Report link, select your transaction date.
+
+2. Click the View Report button.
+
+3. This shows all the stores that missed their close for that day.
+
+Note: If a store is missing an entire day of sales reporting and has not been on the missing close report for the past two days send the ticket to App-JMS to verify they received a store close message from that location.
+
+
+Missing Store Close Report Page Is Down
+1. Open a ticket with Impact: 3 sending it App-JewelryWindowsDevelopment.

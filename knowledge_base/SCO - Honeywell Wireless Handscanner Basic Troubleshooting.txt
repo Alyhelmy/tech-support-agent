@@ -1,0 +1,94 @@
+SCO - Honeywell Wireless Handscanner Basic Troubleshooting  
+KB0011277
+===============================================================================
+
+Description
+-----------
+This article covers the use and troubleshooting of the Honeywell Xenon Wireless Handscanner solution for Self-Checkout (SCO) Lanes and PayStations.
+
+- Replaces old SCO mobile devices (no longer supported by IBM)
+- Each terminal includes a base for syncing the scanner
+- Syncing is done via a virtual barcode displayed in SA (Store Associate) mode
+
+NOTE: If a store is still using SCO Mobile Attendants, refer them to their Division for support.
+
+===============================================================================
+Causes
+-------
+- Scanner not charging
+- Sync issues between scanner and base/lane
+- Missing virtual barcode
+- Out-of-box failure (OOBF)
+- Communication/power issues with base
+
+===============================================================================
+Resolution
+-----------
+
+▶ General Facts
+- Scanner connects via Bluetooth to the lane through a base
+- Scanner can be synced by placing it in the base or scanning the lane-specific barcode
+- Virtual barcode is visible only in SA mode (via hidden top-right button)
+
+▶ Notes:
+- Missing/lost/stolen scanners can now be dispatched to IBM as of 09/04/2024
+- “Item not found” on new scanners may indicate an OOBF → tech must reprogram
+  (work with Top Gun before escalating to APP-POS via Frontend Tier 2)
+
+===============================================================================
+Basic Troubleshooting Steps
+----------------------------
+
+🟢 Scanner not Charging or Battery Drains Quickly:
+
+1. Check **LED lights** on both **scanner** and **base** for status
+2. Ensure scanner is securely seated in the base
+3. Clean battery/contact points (both scanner and base)
+4. Replug base power cable
+5. Reboot the SCO lane
+6. If base fails to power on → Dispatch per IBM/Toshiba Dispatching Procedures
+
+🛠 LED Light Reference:
+
+- **Base:**
+  - Green (slow flash): Charging
+  - Green (solid): Fully charged
+  - Green (fast flash): Charging error
+  - Red (off): Power failure
+  - Green (off): Battery not detected
+
+- **Scanner:**
+  - Red flashing: Low battery
+  - "Razz" tone: Communication error
+
+===============================================================================
+🟠 Scanner Not Communicating with a Lane / Barcode Not Scanning:
+
+1. Ensure screen is clean
+2. Place scanner into the specific lane base to sync
+3. Try scanning barcode again after resync
+4. Reconfigure DataMatrix barcode (scan and wait for 3 tones)
+5. If unresolved → send a 9-load to the lane
+6. If still unresolved → document lane model and dispatch per procedures
+7. If tech calls needing barcode → email the linked DataMatrix barcode
+
+===============================================================================
+🔴 Virtual Barcode is Missing:
+
+1. Ask if barcode missing on **all lanes** or only **some lanes**
+2. Determine if it ever worked before
+3. Confirm base is present and powered inside each lane
+
+- If base is missing or unpowered:
+  → Reboot one lane to check if barcode returns
+  → If still missing, dispatch tech to verify and troubleshoot base connection
+
+- If base is powered:
+  → Place scanner into the lane’s base and wait for sync beep
+
+- If barcode missing on **some** lanes:
+  → Dispatch tech to check connections, reseat cables
+
+- Escalate to APP-POS **only if**:
+  - Tech has verified base presence & functionality
+  - Barcode missing on **all lanes**

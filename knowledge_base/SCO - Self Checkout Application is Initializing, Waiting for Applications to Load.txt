@@ -1,0 +1,73 @@
+SCO - Self Checkout Application is Initializing, Waiting for Applications to Load
+KB0011228 
+=====================================================
+
+DESCRIPTION:
+------------
+Lane is stuck on:
+**"Self Checkout Application is Initializing, Waiting for Applications to Load"**
+
+Alternate screen messages:
+- “POS Application is Initializing”
+- “POS Initializing”
+- May display in white or red text.
+
+-----------------------------------------------------
+CAUSE:
+------
+- Peripheral device not communicating
+- Corrupted database
+- DB2 in a bad state
+- HWSEL file corruption  
+  → See: *SCO - Software - How To Delete and/or Copy HWSEL Files*
+
+Improper shutdown is the most common root cause (99%).
+
+-----------------------------------------------------
+RESOLUTION:
+-----------
+
+🔹 Step 1 – Gather Context:
+Ask the store:
+- Why was the lane rebooted or powered off?
+- Was it having issues with:
+  - Accepting/dispensing cash?
+  - Printing receipts?
+  - Weighing items?
+
+→ Record answers in incident.
+
+🔹 Step 2 – Previous Troubleshooting:
+Ask:
+- What has the store tried to fix it?
+- Were there any similar incidents in the past 2 weeks?
+
+→ Check prior incidents and document findings.
+
+🔹 Step 3 – Educate on Shutdown Procedure:
+Improper shutdown (holding the power button) can:
+- Corrupt the database
+- Damage the hard drive
+- Require hard drive replacement or STC
+
+⚠️ NEVER press and hold the black power button unless absolutely necessary.
+
+✅ Correct Shutdown Process:
+1. Press the **TCU Black Power Button Once**
+2. On-screen menu: Select **Shutdown** or **Restart System**
+3. Wait for the lane to fully power off or restart
+4. Turn off the UPS **only if the lane is fully powered off**
+   - For System 6 or 7: **UPS does not need to be power cycled**
+
+⚠️ Nightly Maintenance Alert:
+- **eBOSS Maintenance Window:** 12:05 AM – 5:10 AM EST
+- STC actions will not work during this time.
+- Wait until after this window to continue replication/STC.
+
+📘 Reference:
+→ *Toshiba SCO - Procedural - How to Perform Lane Power On / Off, Shut Down, 9-Load, or 8-Load*
+
+-----------------------------------------------------
+ESCALATION:
+------------
+📞 Warm transfer the issue to **Frontend Tier 2** for further support.

@@ -1,0 +1,91 @@
+KPF CSP – Money Services Not Loading  
+KB0014626 
+===============================================================
+
+📌 DESCRIPTION:
+-----------------
+Money Services app or CSP screens are not loading correctly. Common symptoms include:
+
+- ❌ Blank Receipt Print Preview
+- 🔁 Terminal ID keeps changing
+- ⚠️ “500 Internal Server Error” or generic “Internal Server Error”
+- 🛑 Terminal Setup screen loads with missing store number
+- 🛡️ Security Alert: "Revocation info for the security certificate is not available"
+
+===============================================================
+🔍 CAUSE:
+-----------
+- Application is unresponsive
+- Browser fails to refresh
+- Store setup missing in eConnect (terminal setup issue)
+- Multiple Money Services windows open simultaneously (terminal ID changes)
+
+===============================================================
+🧰 RESOLUTION OVERVIEW:
+--------------------------
+🎯 Always begin by collecting:
+
+✅ Required Info:
+- Terminal ID (if possible)
+- IP address of affected PC
+- Description of what occurred before the issue
+- Note if issue is affecting other CSP PCs
+
+Note: Remote instructions via Citrix – see KB *KPF CSP - Remote Connecting to a CSP PC*
+
+===============================================================
+🧾 ISSUE-SPECIFIC FIXES:
+----------------------------
+
+📄 **Receipt Print Preview is Blank:**
+1. Press **F5** to reload the screen.
+2. Close and reopen Money Services.
+3. If still blank, reboot CSP PC.
+4. If issue persists → escalate to **APP-KPF**
+
+---
+
+🔧 **Loads to Terminal Setup & Store Number Missing:**
+- Close **all browser windows** and reboot the computer.
+- If issue persists → escalate to **APP-KPF**  
+  (Store may not be active in **eConnect** or needs refresh by **ePay**)
+
+---
+
+🛡️ **Security Certificate Revocation Warning (Terminal Setup screen follows):**
+1. Reboot the PC
+2. Test the app again  
+   → If error persists:
+   - Include **IP address from TUNA**
+   - **Post error in group chat as FYI**
+   - Escalate to **APP-KPF**
+     - Use **P3** priority  
+     - If multiple stores affected → escalate as **P2**
+
+---
+
+🧩 **All Other Errors & General Issues:**
+Before troubleshooting:
+- Record full description
+- Include IP addresses of CSP PCs affected
+- Identify how many PCs are affected
+- Check if other applications are functional
+- Confirm remote connectivity
+
+📌 Attempt:
+- Restarting Money Services
+- Rebooting the CSP PC
+
+➡️ If issue is **isolated to one PC** → escalate to **INF-EnterpriseDesktopSupport**  
+➡️ Always include a **screenshot** if possible
+
+---
+
+🌐 **Application Down at Multiple Stores:**
+- Escalate as **P2 to APP-KPF**
+- Required info:
+   - Terminal ID
+   - Timestamp
+   - Exact error (500 / Internal Server Error)
+
+📎 Note: If during a Billpay transaction, reference **KPF CSP - Transaction and Biller Issues**

@@ -1,0 +1,60 @@
+FUEL - Fuel Services Does Not Start, Or Does Not Appear On The FC
+  
+ID: KB0012307  
+--------------------------------------------------------------------------------
+Description:
+Fuel Center will call in and they have a Green B or a Red X on their Fuel Services Icon.
+
+In troubleshooting, you find that Fuel Services is either not there, or not active on the FC.
+
+IMPORTANT: Do not reboot any Fuel registers when you are in the process/procedure of putting the site into Failover Mode.  
+Once the site is fully in Failover and the CC has taken over completely, it is safe to reboot a register AFTER the failover process is complete.  
+There have been issues with missing sales when this was not followed.
+
+--------------------------------------------------------------------------------
+Cause:
+If the FC was recently rebooted, and the start application flag is not set to yes on the controller, it will not start the program.  
+If the FC is not set to show the application, it will not appear in the background at all.
+
+--------------------------------------------------------------------------------
+Resolution:
+Important: CSS restarts should NOT be performed when doing a failover of fuel to the CC.  
+You can fail over the site by stopping CSS sessions on FC, stopping fuel services, restarting CSS sessions on FC, then restarting fuel services to put them back and let it automatically go back into Primary on its own.
+
+If the FC does not HAVE a Fuel Services application at all:
+
+1. Call the Frontend Tier 2 Queue, or put a note in the POS chat outside of those hours to have the FC rebooted.
+
+2. If Fuel Services is showing and active, close your ticket.
+
+3. If Fuel Services is still not appearing on the FC, verify the site is running fine in Failover, and escalate a Sev3 ticket to APP-FUEL.
+
+If you see a Fuel Services Application on the FC, and the Status is blank like this:
+
+  NAME=ADX_SPGM:COMMAND.286 PARM=f:\fuel\bin\runfuel.bat  
+  STATUS= MESSAGE=Fuel Services
+
+Press F7 to start it and it should go active and stay that way.
+
+Verify the site has their green checkmark and are able to fuel with no issues.
+
+Once you let the site go, get with Frontend Tier 2 and let them know that you have a site where Fuel Services will not start on the FC when rebooted.  
+Save the ticket and give them the ticket number.
+
+--------------------------------------------------------------------------------
+Frontend Tier 2 ONLY
+
+Note: If CSS sessions are not running on the FC, refer to How to View/Fix or Restart CSS Sessions on a POS Controller.
+
+1. Log into the MC  
+2. Press 4 and Enter for Installation and Update Aids  
+3. Press 1 and Enter for Change Configuration Data  
+4. Press 2 and Enter for Controller Configuration  
+5. Press Enter 3 times for Yes, 2 for Ethernet, and MC for Master.  
+6. Tab down to FC and hit Enter  
+7. Tab down to Background Application, type an X and hit Enter  
+8. Select 2 for Change/Display A Background Application and hit Enter  
+9. Tab down to 13 Fuel Services, type an X and hit Enter  
+10. Page DN once and for IPL START, type a Y and hit Enter  
+11. Press F3 five times to get to the Configuration page to select 4 for Activate Configuration.  
+12. Select 2 for Controller Configuration and hit Enter  

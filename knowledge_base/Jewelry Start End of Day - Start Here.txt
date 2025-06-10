@@ -1,0 +1,161 @@
+Jewelry: Start/End of Day - Start Here
+KB0012588
+
+Synopsis
+
+Start here doc for common Jewelry calls about Starting and Ending the business day.
+
+ 
+
+Solution
+ 
+
+Note:  If stores are having issues with VSM, please have them try using the app on the store's laptops.  Some users are reporting menu options not being available.
+
+ 
+
+Start of Day:
+
+I am trying to run start of day, but it says my store is already open.
+Is the store on the missing close report for yesterday? -Jewelry: Missed Store Close and Missing Close Report
+
+  - Yes
+
+   - Have you entered your opening float into either register this morning?
+
+- No - Complete end of day process. - Jewelry: Procedure for End of Day (EOD) Process
+
+ 
+
+- Yes - Continue the day, end of day must be completed at the end of the night.
+
+  - No
+
+   - Did someone else in the store run start of day?
+
+- Yes - Continue opening store.
+
+- No - Is anyone working at a different store, or recently transfered locations?
+
+I ran start of day, but it still shows Store Closed on my register.
+
+Does the store number on the bottom of Vision Store match the store you are at?
+
+  - No - Jewelry: How to Add/Delete/Change Home Store In Vision Store Management (VSM)
+
+ 
+
+  - Yes - Jewelry: STORE CLOSED or Re-enter Float Messages After SOD Completed
+
+ 
+
+I am trying to open my register, but it is not letting me type.
+
+Does Gemstore show Store Closed or Operator ID?
+
+  - Store Closed - Jewelry: How to Perform the Start of Day (SOD) Process
+
+ 
+
+  - Operator ID - Can you type in other applications?
+
+- No -Jewelry: Troubleshooting Register Keyboard/Mouse
+
+- Yes - Jewelry: Freezes or Server Offline Message During a Transaction or Customer Search
+
+ 
+
+I can't see my sales from yesterday.
+
+Is the store on the missing close report for yesterday or the day before? - Jewelry: Missed Store Close and Missing Close Report
+
+ 
+
+  - Yes - Sales reporting delayed for missed close.
+
+  - No - Escalate ticket per instructions in doc.
+
+I entered my float this morning, but the amount was wrong.
+
+Was the amount entered for the float too high, or too low? - Jewelry: Incorrect Float Amount Entered At Start Of Day
+
+ 
+
+I entered my float and Gemstore is frozen, receipt did not print.
+
+Does the receipt printer have a solid green light? - Jewelry: Register - Locks Up After Processing Float
+
+ 
+
+I already entered my float, but the register keeps asking me to put it in again.
+
+Is this happening on only one store or multiple locations?
+
+  - Single Store - Jewelry: STORE CLOSED or Re-enter Float Messages After SOD Completed
+
+ 
+
+  - Multiple Stores - Jewelry: Totaller Application Unavailable
+
+ 
+
+End of Day:
+I went into Vision Store, but I do not see any sessions to reconcile.
+
+Did you hit till close in Gemstore?
+
+  - No - Jewelry: Procedure for End of Day (EOD) Process
+
+ 
+
+  - Yes - Does the store number at the bottom of Vision Store show the correct store number?
+
+- No - Jewelry: How to Add/Delete/Change Home Store In Vision Store Management (VSM)
+
+ 
+
+- Yes - Jewelry: Procedure for End of Day (EOD) Process
+
+ 
+
+Trying to reconcile in Vision Store, and it is showing multiple registers.
+
+- K11337
+
+I accidently closed my cashdrawer before I counted the money in Vision Store.
+
+Do you have the key for the cashdrawer?
+
+  - Yes - Use the key to open the drawer to count.
+
+  - No - Jewelry: No Key to Open Cash Drawer or Till Accidently Closed Before End of Day
+
+ 
+
+Trying to reconile my till, but it's showing I am off, and I don't know why.
+
+Are you and another associate reconciling both registers at the same time?
+
+  - Yes - Jewelry: Session Totals Appear Swapped When Reconciling
+
+ 
+
+  - No -Jewelry: Till Is Over or Short, Researching a Variance
+
+I am trying to close and I cannot access Vision Store Management.
+
+Is the Vision Store Webpage loading?
+
+  - No -Jewelry: VSM Is Down Or Multiple Stores Unable to Reconcile
+
+ 
+
+  - Yes
+
+Is the users workforce account locked?
+
+  - Yes - Unlock with CIS Tool.
+
+  - No
+
+Are multiple users experiencing the same login issue?

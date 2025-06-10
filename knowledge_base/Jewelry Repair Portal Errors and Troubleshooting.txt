@@ -1,0 +1,29 @@
+Jewelry: Repair Portal Errors and Troubleshooting
+KB0012627
+
+
+
+Description
+
+Repair Portal Errors
+
+ 
+
+Resolution
+Note: The Repair Portal should be accessed from Chrome or Edge (not IE). The Repair Portal is also no longer available from an icon on the Citrix Desktop. The stores should be accessing it from a quick link in FEED.
+
+ 
+
+1. Steps taken before the error occurred
+
+2. List the Repair # this occurred on
+
+3. Is this the only application having the issue or are there more? Include any other applications in the ticket notes.
+
+4. Is this a single user or other users? Include names of other users having the same issue.
+
+5. When did the issue begin?
+
+6. Screenshot any errors or problem messages and upload to the ticket.
+
+7. Escalate to APP-Merch-ORE2.0-Jewelry , P3.

@@ -1,0 +1,96 @@
+Jewelry: Printers - Start Here  
+KB0012595
+===============================================================================
+
+Synopsis
+--------
+Start Here documentation for Jewelry Printers. Jewelry stores use four main print queues for daily operations.
+
+===============================================================================
+Printer Queues
+--------------
+- **Windows**: Prints Special Order Page from Gemstore.
+- **Citrix**: Primary queue for printing all forms and Internet/email content.
+- **VPS**: Mainframe queue used for Jewelry Management System (JMS) printing.
+- **Kronos**: Used specifically for payroll printing.
+
+===============================================================================
+Printer Models
+--------------
+- **Ricoh MP301 / SP3510**: Used in Box/Marketplace stores.
+  - Multifunction (Print/Scan/Copy/Fax).
+  - Requires associate login for scanning/fax.
+  - Serviced by Ricoh.
+
+- **Brother Intellifax 2840 / 2910**
+  - Fax machines used in stores.
+  - Toner and drum are store-replaceable via Staples.
+
+===============================================================================
+Solution
+--------
+
+== Printer Errors ==
+
+**My printer shows an error on screen**
+- Refer to Ricoh Printer Error Code or Error Message documentation.
+- Error codes must be collected before dispatch.
+
+**Brother Fax says Replace Toner or Drum**
+- Order replacements from Staples.
+- See: TELEPHONY: FM Jewelry Fax Machines Hardware issue.
+
+**Printer asks for login or card on screen**
+- Ricoh Streamline software requires login for scan/fax.
+- See: Ricoh Streamline Registration and Login.
+
+**Cannot use scanning feature**
+- Confirm Streamline is installed.
+- See: Ricoh Streamline Troubleshooting.
+
+== Toner Replacement ==
+
+- **Ricoh**: Auto-replenishment program.
+  - If toner not received, Ricoh must investigate.
+  - See: Ricoh Printer Is Out of Toner or Receiving Too Much Toner.
+
+- **Brother**: Toner/drum ordered through Staples.
+  - See: TELEPHONY: FM Jewelry Fax Machines Hardware issue.
+
+== Citrix Print Queue ==
+
+**Trying to print but saving to file/OneNote/XPS**
+- Printers not connecting during Citrix login.
+
+**Printer defaulting to wrong printer**
+- Change default printer in Citrix.
+- See: Citrix - Printer Management/Default Printers/Missing Icons.
+
+== VPS Print Queue ==
+
+**Receiving/Transfer prints not working**
+- Printer may be in “edrain” status if offline for hours.
+- Clear “edrain” to resume printing.
+
+== Kronos Print Queue ==
+
+**Unable to print payroll**
+- No output and no error typically indicates a default printer issue.
+
+**Payroll report goes to email, not printer**
+- User must set correct default printer for Kronos.
+
+===============================================================================
+Additional Info
+---------------
+
+== Software Support ==
+- **Windows printing issues**: DIV-FM-Desktop  
+- **Citrix printing issues**: INF-EnterpriseDesktopSupport  
+- **VPS printing**: INF-VPS Printers  
+- **Kronos**: App-KronosEastUserSupport  
+
+== Hardware Dispatch ==
+- See: Flexprint Printer Dispatch Process  
+- **Ricoh (software issues)**: DIS-Ricoh  
+- **Brother**: Place DSR by emailing Tim.Tynan@pomeroy.com  

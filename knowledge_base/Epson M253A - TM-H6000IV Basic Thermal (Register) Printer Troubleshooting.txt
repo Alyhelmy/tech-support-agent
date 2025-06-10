@@ -1,0 +1,93 @@
+============================================================
+Epson M253A - TM-H6000IV Basic Thermal (Register) Printer Troubleshooting
+KB0011170 
+============================================================
+
+⚠️ DO NOT "HOT SWAP" THE PRINTER
+• Never unplug/plug the printer while the register is powered on.
+• Risk of damaging the logic card!
+
+============================================================
+📋 TICKET NOTES
+• Always include: Printer Model (M/T) & Serial Number (S/N).
+• If this is the ONLY register (e.g., Fuel Center), mark it as 
+  "Only Register in Department Down" – for same-day resolution.
+
+============================================================
+🧾 BASIC TROUBLESHOOTING STEPS
+
+🛠️ Common Fix for Print/Feeder Issues:
+1. Open printer covers.
+2. Remove both ink ribbons (front & back).
+3. Tighten each ribbon 4–10 times.
+4. Reseat the ribbons.
+5. Tighten again.
+6. Close the covers.
+
+🧻 Loading Paper:
+• Open top cover, insert roll, pull paper past cutter, close.
+
+🖋️ Installing Ribbons (Order via COUPA):
+- Front Ribbon: ERC-32B (ACC10-ERC-32B)
+- Back Ribbon: ERC-43B (ACC10-ERC-43B)
+
+📥 Inserting a Check:
+• Insert face up, MICR line at bottom. Use the designated slot.
+
+🧼 Cleaning MICR Reader:
+• Follow MICR cleaning guide. Use proper tools.
+
+🧼 Cleaning Thermal Head:
+• Use thermal head cleaning pen or alcohol swab.
+
+============================================================
+🚨 KNOWN ISSUES
+
+🔒 Register Frozen at “Loading Options Data” / U006:
+1. Verify printer has paper.
+2. Power cycle the printer (leave off 30 sec).
+3. Tighten both ribbons.
+4. Power off register, reseat printer power cable.
+5. If unresolved, DISPATCH ON PRINTER.
+
+📄 Form 11 Freezing Issue:
+• If reported, collect the **firmware version** (see below) and
+  escalate to **APP-POS – Priority 3**.
+
+============================================================
+🧪 PRINTER TEST MODES
+
+🧾 Receipt Printer Test:
+1. Close all covers.
+2. Power OFF the printer.
+3. Hold down the **Feed** button.
+4. Power ON while holding.
+5. Release Feed when printing starts.
+6. Press Feed again to return to normal mode.
+
+📑 Slip/Document Printer Test:
+1. Close all covers.
+2. Power OFF the printer.
+3. Hold down the **Release** button.
+4. Power ON while holding.
+5. Release when SLIP LED flashes.
+6. Insert a test check/document. It will print on both sides.
+
+🔍 Get Firmware Version:
+1. Open top cover.
+2. Hold down the **Feed** button.
+3. Close the top cover.
+4. Release the button.
+
+============================================================
+📦 SERIAL NUMBER LOCATION:
+• Found on sticker label at back or bottom of printer.
+
+============================================================
+📞 DISPATCHING
+• If issue persists after basic troubleshooting,
+  dispatch with printer M/T and S/N.
+• If it's the only register in the dept (e.g., Fuel Center),
+  mark it accordingly to escalate priority.
+
+============================================================

@@ -1,0 +1,40 @@
+Error "IOPROC B000 Required File" on POS Registers  
+
+ID: KB0011448  
+
+--------------------------------------------------------------------------------
+Description:
+The registers display "IOPROC B000 Required File" and will not load.
+
+--------------------------------------------------------------------------------
+Resolution:
+
+1. If half or more of the registers are affected, warm transfer the call to Frontend Tier 2.  
+   - If less than half the registers are affected, verify the connection to both controllers.  
+   - If you cannot connect to one or both controllers, warm transfer the call to Frontend Tier 2.
+
+2. If only a few registers display "B000 Required File Error", hard load the affected registers.
+
+3. If the error does not clear after the reboot, troubleshoot possible network issues.
+
+--------------------------------------------------------------------------------
+Frontend Tier 2:
+
+1. If all registers are down with B000 Required File, verify that there are no network issues.  
+   - If there are network issues, contact KSC - Store Support for assistance as needed.
+
+2. Instruct the user to power off the registers showing "offline" lights and leave them off.  
+   - If the other registers begin to load, power on the powered-off registers one at a time.
+
+3. If the registers still do not load:  
+   - Refer to: POS Controller - Not Able To Access D Drive On MC  
+   - Check for controller hardware/software issues.  
+   - If that is not the issue, try powering off the CC Controller and leave it off temporarily to see if the registers recover.  
+   - Power the CC back on and monitor behavior.  
+     - You may need to power cycle the registers again for them to recover.  
+     - When troubleshooting, check the messages on all controllers. If they show different messages, this may indicate a communication problem.  
+       - Try IPLing the MC to resolve the issue.
+
+4. If the registers still do not recover:  
+   - During business hours: engage APP-POS via chat for assistance.  
+   - After hours: transfer the incident to APP-POS, Priority 2.

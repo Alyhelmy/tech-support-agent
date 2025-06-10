@@ -1,0 +1,72 @@
+SCO - Honeywell Wired Handscanner Basic Troubleshooting
+
+**Document ID:** KB0011251  
+**Views:** 65  
+
+---
+
+**Description:**  
+This document should be used to troubleshoot the Honeywell **wired** handscanner on the SCO Pay Station.  
+(For wireless handscanner issues, refer to: SCO - Paystation - Honeywell Wireless Handscanner Basic Troubleshooting)
+
+---
+
+**Known Issue:**
+- A Honeywell 1900 or 1950 handscanner connected to a Dell 7080+ may not work.
+- Cause: New chipsets do not provide sufficient USB power for 15’ cables.
+- **Fix**: Replace with a 10’ cable. Only 3-meter cables work consistently.
+- Applies especially during workstation refreshes (e.g., Pharmacy).
+- Techs should contact their internal team for cable orders.
+
+---
+
+**General Notes:**
+- As of 09/04/2024, missing/stolen POS handscanners can be dispatched to IBM.
+- Located only at Pay Stations.
+- If newly replaced handscanner gives "item not found" → may require reprogramming.
+  - Fujitsu techs: Contact NTS
+  - Toshiba techs: Contact Top Gun
+
+---
+
+**Troubleshooting Scenarios**
+
+**1. Top LED Light Flashing, Does Not Scan**
+- No communication between scanner and Pay Station
+
+**Steps:**
+1. Sign off/on the Pay Station.
+2. If LED still flashing, reseat cable at scanner base:
+   - Locate paperclip hole, press + pull cable
+3. Reseat cable from scanner at TCU (back of register)
+4. Reboot Pay Station
+5. If unresolved, dispatch per KSC Hardware Dispatching For All Pillars
+
+---
+
+**2. No Power**
+**Steps:**
+1. Verify cable is connected and not damaged.
+2. Reseat cable at Pay Station and at scanner base.
+3. Reboot Pay Station.
+4. If unresolved, dispatch.
+
+---
+
+**3. Beeps but Does Not Register Item**
+- Scanner needs configuration
+
+**Steps:**
+1. Email store tech the **Kroger_Field_InstallerConfiguration01** doc
+2. Have them scan barcode in that doc
+3. Wait for beeping to stop
+4. Reboot Pay Station
+
+---
+
+**4. Has Power, But Does Not Beep**
+**Steps:**
+1. Hold trigger for 5 seconds (to awaken scanner)
+2. Reseat cable
+3. Reboot Pay Station
+4. If unresolved, dispatch

@@ -1,0 +1,103 @@
+How to Readdress a Register and Verify Load Definition
+
+Document ID: KB0011410  
+
+
+---
+
+Synopsis:  
+- Register displays "Welcome to IBM Point of Sale", "Z001", or "W662 Duplicate Terminal # Detected" (i.e. incorrect lane address)  
+- Lane only shows Fuel/POS interface  
+- The register # may not be set up in ACE  
+- The register address may be "zeroed out" and needs to be re-entered  
+- Check for available register addresses (Terminal IDs) on MC Controller  
+
+---
+
+Solution:
+
+**Important Notes:**  
+- If multiple registers need to be readdressed, contact the division office to confirm that register addresses exist in controller load definitions.  
+- The dump switch cannot be used on a 777 terminal—follow the steps below.  
+- Make sure any active operators are signed off the affected terminals before proceeding.
+
+---
+
+**Readdress 4800 Register (if terminal is active on LAN):**
+
+1. Tap 3x in the lower-left corner, then 1x in the lower-right corner to access the 10-key, S1, and S2.  
+2. Tap S1 → enter `71` → tap S2.  
+3. Address register to terminal 0: enter `1000` → tap S2.  
+4. Register will reboot and display `Z001`.  
+5. Enter the correct terminal number: `10##` → tap S2.
+
+---
+
+**Readdress 4800 Register (Double Dump Procedure - if terminal was never addressed):**
+
+1. Press the dump switch (pen or paperclip).  
+   - **4800/741**: Located under the “R” symbol.
+
+2. When `U008` displays, turn terminal OFF (ensure no printer lights).  
+3. Turn terminal ON.  
+4. When `U005` displays, press the dump switch again.  
+   - Display will still show `U005`.  
+
+5. Tap 3x lower-left, 1x lower-right to access 10-key, S1, and S2.  
+6. When `0000` displays:  
+   - Enter terminal ID: `1XXX` → tap S2  
+   - Example:  
+     - `1030` = Terminal 30  
+     - `1001` = Terminal 1  
+     - `1280` = Terminal 280  
+
+   - To correct mistakes: Use S1 to clear.
+
+**Note:** No error will show if the wrong terminal number is entered. If wrong, "Z012 Configuration Complete" will still display and lane will continue to load.
+
+7. Sign on to the terminal.  
+8. Verify new terminal ID:  
+   - Tap 3x lower-left, 1x lower-right  
+   - Enter: S1 → `7` → S2
+
+---
+
+**Readdressing a 777 Terminal:**
+
+1. During boot, watch for `U050 Clear Terminal Number` (briefly appears).  
+2. Press **Clear** to begin renumbering.  
+3. Enter the new terminal number when prompted.
+
+**Tech Note:**  
+To display `U050` earlier, connect USB keyboard and hold **F12** while booting.
+
+---
+
+**Frontend Tier 2 Notes:**  
+Refer to the document “Kroger Terminal Addresses” for Enterprise standards if needed.
+
+---
+
+**Verify Terminal Address Availability:**
+
+1. Connect to the Master Controller.  
+2. Go to: `4. Installation and Upgrade Aids`  
+3. Select: `1. Change Configuration Data`  
+4. Choose: `5. Generic Terminal Configuration` (may take time to load)  
+5. Highlight **Load Definitions** → press Enter  
+6. Press Tab twice → select `[ ] Group Identical Load Definitions` → press Enter  
+7. Page down through register ranges.  
+8. Compare terminal in question to nearby working terminals:
+
+   - **Example 1:**  
+     - Register 16 has issues; 15 and 14 are fine  
+     - Range 1–29 exists → 16 should share same config
+
+   - **Example 2:**  
+     - Register 66 has issues; 65 and 67 are fine  
+     - Group: 65, 67, 300 → 66 is in a separate config
+
+   - SCO lanes with static IPs are always listed individually.
+
+9. Press F3 repeatedly to return to the ACE Main Menu.  
+10. If terminal has different load definition, rebuild using **Terminal Installer** or **Checuser**.

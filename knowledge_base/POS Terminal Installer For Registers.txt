@@ -1,0 +1,112 @@
+POS Terminal Installer For Registers
+
+ID: KB0011409
+
+--------------------------------------------------------------------------------
+Summary:
+This article explains how and when to use the Terminal Installer (TI) utility on POS registers, including fuel and SCO pay stations. It provides detailed procedures, errors, requirements, and escalation paths for resolving issues related to register application load failures.
+
+--------------------------------------------------------------------------------
+Common Error Messages:
+- W100 Program Cannot Be Loaded
+- W008 Program is Loading
+- W368 OS LOAD TYPE MISMATCH
+- Power Management
+- W407 App Loader event error
+- No Free IP found. Please add some IP addresses in TUNA.
+- Other loading/application/file-related messages
+
+Related Docs:
+- W368 OS LOAD TYPE MISMATCH
+- SCO - Lane Will Not Load, Controller Messages - W407 or W065
+- Basic Network Troubleshooting for POS Registers
+- Register Won’t Load Past W008/W065/W100
+
+--------------------------------------------------------------------------------
+Important Notes:
+- Never force stop Terminal Installer. If a mistake is made, let TI finish and then rerun properly.
+- Terminal Installer does NOT fix personalization options, only load definitions.
+- Terminal Installer is NOT a general-purpose fix. Use it ONLY for load configuration issues.
+- DO NOT run on SCO Lanes or Harris Teeter Fuel Center registers.
+- Terminal Installer may take 10–20 minutes (up to 30 minutes if "Supsleep" runs in background).
+
+--------------------------------------------------------------------------------
+Abbreviations:
+- SCO = Self Checkout
+- TCU = Terminal Control Unit (Register Computer)
+- TUNA = Utilities for Network Administration
+- MC = Master Controller
+- ADXCSCOL = Background app used by SCO
+
+--------------------------------------------------------------------------------
+Causes:
+- Hardware/software changes
+- Missing or incorrect network configurations
+- Inadequate or outdated device entries in TUNA
+- Incomplete host files on the controller
+
+--------------------------------------------------------------------------------
+Resolution Steps:
+
+Before Running Terminal Installer:
+1. DO NOT run on SCO lanes or HT Fuel Center registers.
+2. Verify that ADXCSCOL is NOT running (` + B).
+3. Confirm register model with store associate (needed for Enhanced status).
+4. Ensure enough “Cash Register” entries exist in TUNA (use F9 to sort).
+
+Run Terminal Installer:
+1. Go to ACE Main Menu > User Procedures > Misc Reports & Utils > Terminal Installer.
+2. Answer the prompts:
+   - Register number
+   - Confirmation for type (Frontend, Fuel, SCO Pay Station)
+   - Full-screen customer display (Y/N)
+
+Ticket Template (copy/paste into ticket):
+REG #: ___
+Terminal Type: [Frontend / Fuel / SCO Paystation]
+Full-Screen Display: [Yes / No]
+
+Manual Activation (if TI fails):
+1. Go to System Main Menu > 4. Installation and Update Aids
+2. Select: 1. Change Configuration Data > 4. Activate Configuration > 1. Terminal Configuration
+3. Wait for success/failure. Look for “F10” prompt for system messages.
+
+Send Load Command:
+1. Press ` + C
+2. Select 1. Terminal Functions > 9 > Enter
+3. Confirm register reloads or goes black.
+4. If no response, power cycle via the TCU power button.
+
+--------------------------------------------------------------------------------
+Special Cases:
+
+Offsite Fuel Center:
+- Prompt will warn that TI may take longer.
+- Continue normally after confirmation.
+
+Terminal Installer Disabled:
+- Message: “Program error occurred” is expected.
+- TI exits without changes. No action needed.
+
+Supsleep is Running in Command Mode:
+- Background fix is in progress. TI may take up to 30 minutes.
+- DO NOT stop the process. Offer to call the store back.
+
+--------------------------------------------------------------------------------
+IP Address Errors:
+
+Messages:
+- "No Free IP found. Please add some IP addresses in TUNA."
+- "No IPs found in host file."
+
+Fix:
+- Add more cash register reservations in TUNA (POS/Fuel segment).
+- If error persists, sync IPs from TUNA or modify comment to force host file rewrite.
+
+--------------------------------------------------------------------------------
+Escalation Path:
+
+E1. Complete all above steps before escalating.
+E2. Treat as P2 high-severity issue.
+E3. Escalate to KSC Frontend Tier 2 first.
+E4. Escalate to APP-POS only if Tier 2 cannot resolve.

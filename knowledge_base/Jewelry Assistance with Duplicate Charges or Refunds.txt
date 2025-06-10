@@ -1,0 +1,67 @@
+Jewelry: Assistance with Duplicate Charges or Refunds  
+KB0011802 – Latest Version
+===============================================================
+
+📌 SYNOPSIS:
+-------------
+A store contacts support due to a **suspected duplicate charge** to a customer for a **jewelry transaction**.
+
+⚠️ NOTE:
+- **KCRC cannot assist** with **jewelry** transactions directly.
+
+===============================================================
+💡 SOLUTION:
+------------
+
+🟪 FOR PLATINUM CARDS:
+-----------------------
+📤 Send incident AND email with all required details to:
+
+   → Email: **Jewelry.Credit@FredMeyer.com**  
+   → Ticket Assignment: **BUS-JewelrySalesAudit**
+
+Include the following details:
+
+✅ Required Information:
+-------------------------
+- Full **description of the problem**  
+   → Example: “Customer’s bank shows two charges, but only one receipt printed”
+- **Screenshot** from **Payment Systems**
+- **Transaction Date**
+- **Store / Location Number**
+- **Last 4 digits of the card**
+- **Card Type**
+- **Transaction Amount**
+- **Customer Name**
+- **Store Contact Name**
+
+---
+
+💳 FOR ALL MAJOR CREDIT CARDS & PROGRESSIVE:
+--------------------------------------------
+🎫 Enter the same info as above into the incident
+
+📥 Assign as:
+   → **Low Severity Ticket**  
+   → Team: **BUS-JewelrySalesAudit**
+
+💳 If the duplicate charges are on **two different cards**, specify:
+   → Which card the **reversal/refund** should go to
+
+📸 Be sure to include:
+   → Screenshots from **Payment Systems** showing duplicate charge
+
+===============================================================
+📌 NOTES:
+----------
+- **Sales Audit** is responsible for researching all duplicate charges
+- **Refund requests** will be sent to KCRC **by Sales Audit**
+- **Fees** related to duplicate charges may be refunded once "proof of fees" is received
+- Stores should NOT expect an **immediate resolution** — research takes time
+
+===============================================================
+🚨 ESCALATION:
+---------------
+- Include **ALL information** listed above
+- Assign a **Low Severity Ticket** to:  
+   → **BUS-JewelrySalesAudit**

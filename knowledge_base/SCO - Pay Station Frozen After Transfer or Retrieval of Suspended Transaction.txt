@@ -1,0 +1,31 @@
+SCO - Pay Station Frozen: After Transfer or Retrieval of Suspended Transaction
+KB0012251  
+
+Description
+
+When attempting to perform a transfer and the lane button on the pay station is pressed, the pay station immediately becomes unresponsive and may have a red “X” over the screen. This is reproducible every time.
+
+If the transaction is suspended and then retrieved from the pay station, when the Total button is pressed, the pay station immediately becomes unresponsive and may have a red “X” over the screen. This is reproducible every time.
+
+No dump message present on controller.
+
+Pay Station displays terminal status when attempted.
+
+ 
+
+Cause
+Pay station’s printer is having an issue communicating with its thermal print head. Could be a lose cable or intermittent cable going to the thermal print head, or the interface card does not have a good connection or printer firmware has problem.
+
+ 
+
+Resolution
+1. Verify if a transaction originated from paystation can be completed (or voided) with a printed receipt. If not, follow basic printer troubleshooting steps.
+
+2. Reboot the affected paystation.
+
+3. If issue remains, dispatch on thermal printer.
+
+Required Information for Escalation
+ 
+
+- Dump from Pay Station, processed and renamed.

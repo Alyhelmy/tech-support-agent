@@ -1,0 +1,77 @@
+EVERSEN ISSUE REPORTED ON A SCO LANE  
+KB0012602
+====================================================================
+
+📌 DESCRIPTION:
+------------------
+Everseen is a camera-based mis-scan detection system used at SCO lanes. It provides a short GIF (image/video) when a scan discrepancy occurs to prompt the customer to correct the issue.
+
+🛑 DO NOT use this KB if the issue is NOT directly related to Everseen. Search for another relevant KB.
+
+💡 PRODUCT SWITCHING NOTE:
+- If Product Switching is not working, DO NOT ESCALATE.
+- Store should contact their **Asset Protection Specialist (AP Specialist)**.
+- See: *SCO - Everseen - New Mis Scan/Product Switch Screen*
+
+🆕 CART BASED LOSS (CBL):
+- Monitors items left in cart and not scanned.
+- If there's a **CBL issue**, escalate to **APP-LPA as Priority 3 (P3)**.
+
+====================================================================
+🧾 GENERAL TROUBLESHOOTING REQUIREMENT:
+---------------------------------------
+✅ Always take an **EXTRACT** using the **green/black power button**  
+(Select “Shutdown System” → then “Power Lane On”)  
+Include:
+- Date/Time of Extract  
+- Last item scanned (Name + UPC or PLU)  
+- Add details to incident notes  
+
+====================================================================
+📋 COMMON ISSUES & ESCALATION PATHS:
+---------------------------------------
+
+📎 **GIF Not Showing**
+- Discrepancy occurs, but no POS interruption
+- ⬆️ Escalate to **APP-LPA (P3)** with extract and last item scanned
+
+📎 **Camera Positioned Incorrectly**
+- Refer to: *KVMS / Orchid – Axis IP Camera and Kroger Camera Troubleshooting*
+
+📎 **False Positives**
+- Image shows but no discrepancy occurred  
+- ⬆️ Escalate to **APP-LPA (P3)** with extract and last item scanned
+
+📎 **Delayed GIFs**
+- GIF appears **after** customer scans next item  
+- ⬆️ Escalate to **APP-LPA (P3)** with extract and last item scanned
+
+📎 **SCO Freezing on GIF**
+- Checkout freezes **after** GIF appears
+- Take extract & note last item scanned
+- Reboot the SCO lane (See: *SCO - How to Perform Lane On/Off, Shutdown...*)
+- ⬆️ Escalate to **Frontend Tier 2**, who will escalate to **APP-POS (P3)**
+
+📎 **"Help Is on the Way" / Transaction History Review**
+Steps for associate:
+1. Scan Shopper Assistant (SA) barcode
+2. Review Transaction History (top-right Video button)
+3. Tap Video → review footage
+4. Scan or key in missed items
+5. Use Feedback Buttons:
+   - ✅ Checkmark: Mis-scan confirmed
+   - ❌ Red X: False positive
+   - Many false positives → follow "False Positives" section above
+
+====================================================================
+🚚 DISPATCHING GUIDANCE:
+-------------------------
+If camera issues persist despite troubleshooting:
+- Assign to: **DIV-XX-Everseen**  
+(Use correct division code: e.g., Smith's → Smith's Electronics Dispatch)
+
+====================================================================
+⚠️ PRODUCT SWITCHING & MIS SCANS (DO NOT ESCALATE):
+-----------------------------------------------------
+- For **Product Switching issues**, the store **must contact their AP Specialist**
+- The updated SCO interface is designed to reduce friction and improve accuracy

@@ -1,0 +1,64 @@
+Harvester Application - Staging Function
+KB0012660
+
+
+Description
+
+Staging is the current solution (Modernized Fulfillment Suite or MODFS) for Pickup. Currently Staging is an option inside of the Harvester App. As Staging is part of Harvester it is used by Kroger Associates who use TC52 Zebra Devices. Assume all issues with Harvester staging function at MODFS locations are application issues, and continue with this doc.
+
+ 
+
+It is important to note that the Fulfillment Centers supply some Pickup stores with items for orders. The items are picked at the Fulfillment center, and delivered by temperature controlled van to the Pickup store - for the associates there to de-stage from the van - and then stage inside of the store. The Front End Team supports this feature.
+
+ 
+Resolution
+ 
+
+Note:  If a store is calling because they cannot stage "hot items", they may not have "Hot Staging Zone" enabled for the store.  Have the store work with their eComm manager.  See:  Division Contacts List / Miscellaneous Contacts
+
+Support for Staging is currently passthrough; each call requires its own ticket; and a template must be filled out before escalation. 
+
+ 
+
+**Please review the order in CUE prior to escalation to ensure all items have been properly picked, otherwise the order will not be able to be stages. Ex. "Item Not Ready" will prevent staging.
+
+ 
+
+CUE order already picked up but shows staging on the system - fst-harvester - cannot stage a trolley
+
+1.  Extract the order number (eg:1231445296352066901) from the reported incident and confirm with store that associate is using the latest version
+     of Harvester 2.0 application.
+2.  Confirm if the store tried order adjustment for the order from Harvester 2.0 (TC52 device).
+3.  If the store is facing any issue in performing order adjustment, please attach the screenshot of the error message in incident and escalate to     
+     APP-ESO.
+
+ 
+
+Escalation Template
+Copy/Paste the template section below into your incident.
+
+If information is not available, please indicate with N/A
+
+--------------------START Copy/Paste--------------------
+
+   - Detailed description of issue:
+
+  - Time/Date of issue:
+
+  - Order number:
+
+  - Container/Tote number:
+
+  -  UPC of item with issue:
+
+  - Was there an error message? If so please list error: 
+
+**Any additional information outside this template is to be obtained by the third level support teams, if needed from Pickers at the store. Do not send incident back to KSC.**
+
+--------------------STOP Copy/Paste--------------------
+
+ 
+
+Please escalate all tickets related to Staging portion of the Harvester Application to
+
+APP-ESO

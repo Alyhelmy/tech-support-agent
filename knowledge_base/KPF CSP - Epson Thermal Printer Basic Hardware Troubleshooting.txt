@@ -1,0 +1,136 @@
+KPF CSP - Epson Thermal Printer Basic Hardware Troubleshooting
+KB0014657
+===============================================================
+
+DESCRIPTION:
+------------
+Epson TM-H6000V USB Thermal Printer issues include:
+- Not powering on
+- Not printing properly
+- Poor print quality
+- Print size issues
+- Constant printing
+
+NOTES:
+------
+- CSP ONLY uses the **white Epson printer**, NOT the dark grey model
+- CSP printers do NOT use franking
+- Any escalation to INF-EnterpriseDesktopSupport requires:
+  → Printer serial number
+  → PC IP address
+- Light print on WU receipts? Refer to KB: *KPF CSP Money Transfer*
+
+===============================================================
+TROUBLESHOOTING SECTIONS:
+-------------------------
+
+1. PRINTER WILL NOT POWER ON:
+------------------------------
+✅ Check all power cable connections:
+   - Back of printer
+   - Power supply box (both sides)
+   - Wall outlet
+
+✅ Verify correct power supply: **Epson PS-180**
+
+🚨 Still won’t power on?
+   → Collect **serial number**
+   → Dispatch via **KPF CSP Hardware Dispatch**
+
+---
+
+2. PRINTER WILL NOT PRINT:
+---------------------------
+🛠 If powered on but not printing:
+   → Refer to: **Epson Printer Does Not Print or Error Lights Flashing**
+
+---
+
+3. PRINTER PRINTS HALF A RECEIPT THEN FAILS:
+--------------------------------------------
+📌 Usually caused by incorrect power supply (e.g., RDM Scanner’s supply)
+
+✅ Ensure Epson printer uses Epson **PS-180** power supply
+
+🚨 If issue persists → Escalate to **INF-EnterpriseDesktopSupport**
+
+---
+
+4. PRINT QUALITY IS POOR:
+--------------------------
+🧽 Clean the **thermal print head**
+
+🧪 Perform a **test print** (see below)
+
+🚨 Still poor? → Dispatch printer
+
+---
+
+5. PRINT APPEARS TOO SMALL OR UNCLEAR:
+---------------------------------------
+📌 Common cause: Missing **Money Services update via BigFix**
+
+✅ Steps:
+1. Log in to CSP PC via Secure Citrix  
+2. Open BigFix Support Center → Offers tab  
+3. Look for **Money Services CSP Migration 1.2R1** task and accept  
+4. In UltraVNC, check version of **epay Desktop Service**
+   - Should be v2.0.41 (NOT v2.0.21)
+
+🚨 Wrong version or issue persists → Escalate to **INF-EnterpriseDesktopSupport**
+
+---
+
+6. PRINTER WILL NOT STOP PRINTING:
+-----------------------------------
+✅ Step 1: Run **PrinterFix 1.0R1** in BigFix
+
+🖨 Step 2: Clear local print queue:
+   a. Start → Settings → Devices → Printers & scanners  
+   b. Select **Bill pay 1** → Open queue → Cancel All Documents
+
+✅ Step 3: If above fails, use **SAGE** to reset Print Spooler:
+   - Support Tasks → Search printer IP → Select  
+     → **Reset Windows Print Spooler 1.0R1__T**
+
+===============================================================
+BASIC INSTRUCTIONS:
+-------------------
+
+🔁 LOADING PAPER:
+   - Open paper cover → Drop in thermal roll → Close cover
+
+🖋 INSTALLING A NEW RIBBON:
+   - Only applicable if print job uses impact printing
+
+🔌 POWERING ON/OFF:
+   - Power switch is covered but can be removed for access
+
+🧪 PERFORMING A TEST PRINT:
+   1. Close all printer covers
+   2. Power OFF the printer
+   3. Press and HOLD the **Feed** button
+   4. While holding Feed, power ON the printer
+   5. Release Feed when printing begins
+   6. Press Feed again after printout to resume normal use
+
+===============================================================
+ESCALATION GUIDELINES:
+-----------------------
+Before escalating to **INF-EnterpriseDesktopSupport (EDS)**:
+
+1. Confirm valid **callback contact info**
+2. Verify **store number**
+3. Document **summary of troubleshooting steps taken**
+4. Include:
+   - **IP address** of affected device (or computer name for office PCs)
+   - **Serial number** of printer
+   - Reference to this KB as escalation basis
+
+===============================================================
+CONTACTS:
+---------
+BigFix Tasks: Check Offers tab (e.g., PrinterFix 1.0R1, CSP Migration 1.2R1)  
+Technical Issues: INF-EnterpriseDesktopSupport  
+Hardware Dispatch: See **KPF CSP Hardware Dispatch** KB  
+SAGE Tool Help: See **SAGE Workstation Utility Tool: Sending Tasks** KB  

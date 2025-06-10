@@ -1,0 +1,77 @@
+Jewelry: How to Perform the Start of Day (SOD) Process
+KB0011619
+
+
+Synopsis
+
+The store opening process (Start of Day) for the POS system is closely tied to the closing (End of Day) process for the previous night. If that process was successfully completed, the “normal” process listed in the CAUSE section below should be used to open the POS system for sales. If not, the situations described in the RESOLUTION section below should be followed.
+
+ 
+
+ 
+
+Solution
+
+Note:  If stores are having issues with VSM, please have them try using the app on the store's laptops.  Some users are reporting menu options not being available.
+
+Normal Process
+1. Launch Vision Store Management (VSM) from Citrix.
+
+2. Login using EUID and password.
+
+3. Select System from the top menu.
+
+4. Select Start / End of Day.
+
+5. Select Start of Day. A message will display: “Start of Day Completed Successfully”.6. Click Cancel.
+
+7. Click Logoff at the main VSM screen.
+
+8. If GemStore is not already open, click restart Gemstore from the menu at the top of the page.
+
+9. Associate logs into Gemstore using their EUID and password.
+
+10. The Opening Float screen will display.
+
+11. At the Declare Float screen, key in the quantity of each denomination in the till drawer.
+
+12. Place the till tray with the opening float cash in the register and close the drawer.
+
+13. A dialog box appears indicating that the session has been started and verifying the float amount. Click OK.
+
+14. Click Continue.
+
+15. Click Cancel at the bottom of the Customer Search screen.
+
+16. Click Admin.
+
+17. Click Logoff.
+
+If the incorrect amount was entered for the float see doc Jewelry: Incorrect Float Amount Entered At Start Of Day
+
+ 
+
+Register Already Showing Open When They Have Not Done Start of Day Yet
+1. If they are showing Start of day has already been completed in VSM, have them check the bottom middle of the screen and verify they are logged in to their correct store.
+
+  - Some employees may have more than one store listed to choose from. Note: this can work both ways - does the store have an employee filling in at another store that may have may have selected and opened this store by accident?
+
+ 
+
+
+
+ 
+
+2. If the store close was not completed and
+
+  - They HAVE NOT done sales on the register yet they should complete the store close now, then do a normal Start of Day.
+
+See below or  Jewelry: Missed Store Close and Missing Close Report
+
+  - They HAVE done sales on the register, continue the day as is.
+
+Let them know anytime there is a missed close their sales are still accumulating normally, however they may not be able to fully view them until the third business day after a successful close has completed.
+
+3. If the store close DID complete and they are in the correct store perform a logoff on the register.
+
+For procedural assistance closing see doc: 6940 Procedure for End of Day (EOD) Process (EOD) Process.

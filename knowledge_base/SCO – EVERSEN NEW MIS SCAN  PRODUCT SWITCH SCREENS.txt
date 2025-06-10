@@ -1,0 +1,60 @@
+SCO – EVERSEN: NEW MIS SCAN / PRODUCT SWITCH SCREENS
+KB0035563
+====================================================================
+
+📌 OVERVIEW:
+--------------
+Kroger is rolling out updated **Everseen Mis Scan and Product Switch screens** across self-checkout (SCO) lanes. These new screens are more intuitive and are designed to help reduce shrink by enabling quicker and more accurate responses from SCO associates.
+
+📍 Stores must validate that ALL SCO lanes received the updated screens.
+📍 Use validation process below.
+
+📣 NOTE:
+---------
+- For escalations: Take an **EXTRACT** at the time of the issue.
+- Include in the incident:  
+  ✅ Date & Time  
+  ✅ Terminal/Lane Number  
+
+====================================================================
+✅ VALIDATING NEW MIS SCAN SCREENS:
+----------------------------------------
+1. **Scan two items** (they must be added to the transaction).
+2. **Slide a third item over the scanner WITHOUT scanning** it.
+3. **Place item into bagging area.**
+4. Confirm that the **new Mis Scan screen appears**.
+5. **Repeat steps on every SCO lane.**
+
+====================================================================
+✅ VALIDATING NEW PRODUCT SWITCH SCREENS:
+--------------------------------------------------
+**You will need:**  
+🟢 *Extra 15 Stick Spearmint Gum (UPC: 0220000899)*
+
+Steps:
+1. **Scan two items** (ensure they are added to the transaction).
+2. **Cover the barcode of another product** with the Spearmint gum.
+3. **Scan the gum (UPC: 0220000899)** so it gets read instead of the original product.
+4. **Place item into bagging area.**
+5. Confirm the **Product Switch screen appears**.
+6. **Repeat on each SCO lane.**
+
+====================================================================
+🛠️ IF THE NEW SCREENS DO NOT DISPLAY:
+----------------------------------------------------
+1. **Reboot the SCO lane.**
+2. **Re-check** to see if the new screens now appear.
+3. If issue persists:
+   - Have store **take an extract**.
+   - Escalate to **APP-POS**:
+     - **Sev. 3** – if issue is on **one lane**
+     - **Sev. 2** – if issue is on **ALL lanes**
+
+====================================================================
+📞 QUICK ESCALATION CHECKLIST:
+----------------------------------------
+- ✅ Extract taken
+- ✅ Time & date of issue
+- ✅ Lane number
+- ✅ Screenshot if possible
+- ✅ Note if affecting one lane or all

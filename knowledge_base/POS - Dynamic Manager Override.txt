@@ -1,0 +1,153 @@
+POS - Dynamic Manager Override
+KB0012656
+=======================================
+
+DESCRIPTION:
+------------
+Dynamic override is a printable barcode linked to cashier number, date, and time. It is used to complete all overrides.
+
+- The barcode can be printed from any register (EXCEPT SCO lanes and Fuel Registers. Paystations are OK).
+
+CAUSE:
+------
+- Barcodes expire after 2 hours.
+- Barcodes are purged at the end of the sales day.
+
+PROCESS FOR PRINTING:
+---------------------
+Touchscreen:
+→ Press **Print Manager Barcode** at the bottom  
+→ Enter **Cashier number**  
+→ Enter **Password**
+
+TO PERFORM AN OVERRIDE:
+------------------------
+Touchscreen:
+→ Scan override barcode when prompted.
+
+RESOLUTION:
+-----------
+Note: For **single user issues**, Dynamic Override options are base level.
+
+- If all troubleshooting has been done, advise store manager (or whoever manages ACE) to delete and recreate the user profile.
+
+- Always test on **odd and even numbered registers** to rule out controller-specific issues.
+  - MC/SD = Odd registers
+  - CC = Even registers
+
+**IMPORTANT:** Dynamic Overrides require the **Acting Master Controller** to be online and synced with other controllers.
+
+→ To check:
+  - Login to Acting Master Controller  
+  - Press `~` (tilde), then:
+    - C > 2 (Controller Functions)
+    - 1 (Display Controller Status)
+    - Page Down through results
+
+- If any controllers are “Inactive,” it's a sync/communication issue.
+- Coldboot the controller if it’s not offline.
+- If offline, FE Tier 2 will troubleshoot.
+
+**File Access Errors (B040):**
+- Instruct Frontend Tier 2 to **coldboot the acting master controller**.
+- If only some registers affected, coldboot the related controller and terminals.
+- This is due to file lock or controller sync issue.
+
+---------------------------------------------------
+ISSUE: BARCODE WILL NOT PRINT
+---------------------------------------------------
+1. User must have **Level 6 or higher** in ACE Operator Authorization.
+   → Have store manager verify authorization level.
+
+2. If confirmed Level 6:
+   → Recreate the issue (steps taken vs expected result)
+   → Call **Frontend Tier 2** to escalate to **APP-POS**
+     - Escalate as **P3** for single barcode/operator
+     - Escalate as **P2** if entire store is affected
+
+---------------------------------------------------
+BARCODE WON'T PRINT IN PHARMACY / CUSTOMER SERVICE
+BUT PRINTS ON FRONT END REGISTERS
+---------------------------------------------------
+1. Confirm barcode prints at Front End but not at Pharmacy/CS.
+
+2. **Warm Transfer** to Frontend Tier 2.
+
+→ Frontend Tier 2: See **"POS - Dynamic Barcodes Will Not Print At Pharmacy Registers But Will Print At FE Registers"**
+
+---------------------------------------------------
+B6 KEYED DATA OUT OF RANGE
+---------------------------------------------------
+- The Override key must be pressed **before** scanning barcode.
+→ Have user press **Override**, then scan.
+
+---------------------------------------------------
+B287 MO BARCODE EXPIRED
+---------------------------------------------------
+- When a new barcode is created, the previous one is deleted.
+- Using the old one causes B287 error.
+
+1. Instruct user to discard old barcode and reprint.
+2. If new barcode also fails:
+   → Recreate issue steps
+   → Call **Frontend Tier 2**
+3. Warm transfer to Frontend Tier 2:
+   → Coldboot each controller to resync communication
+4. If not resolved, escalate to **APP-POS**
+   - Escalate as **P3** for single operator
+   - Escalate as **P2** if all are affected
+   - INCLUDE affected user's **ID number** in the incident’s Security field
+
+---------------------------------------------------
+B149 INVALID ENTRY
+---------------------------------------------------
+Occurs when override barcode creation fails.
+Message gives reason code 1–4:
+
+1. Invalid or unreadable Operator Authorization file / invalid Operator ID
+   - Check for valid **7-digit EUID**
+   - Verify it is added to **Operator Authorization Records > Password**
+
+2. Password mismatch
+   - Have associate confirm or change password.
+
+3. Operator Level invalid
+   - Must be **Level 6 or higher**
+
+4. EUID not valid
+   - Must be added to **Operator Authorization Records > Password**
+
+→ Validate ACE setup for associate:
+   - Correct EUID
+   - Level 6+
+   - Operator ID (3-4 digit number, **not** EUID)
+
+→ If valid, escalate via Tier 2 to **APP-POS P3** (or **P2** for storewide issue)
+   - Always include Operator ID (APP-POS cannot search by EUID)
+
+---------------------------------------------------
+NOTE ON GENERIC IDS
+---------------------------------------------------
+If store uses Generic IDs or is trying to set one up:
+→ **KSC does not support these**
+→ Refer store to **Division POS DTL (Division Technology Lead)**
+
+---------------------------------------------------
+ADD EUID TO ACE OPERATOR ID (STORE RESPONSIBILITY)
+---------------------------------------------------
+KSC can verify but does NOT add. Steps for store:
+
+1. Login to MC controller
+2. Press 1 - ACE Main Menu
+3. Go to Data Maintenance
+4. Select Operator Authorization Records
+5. Enter Operator ID
+6. Enter Associate's EUID
+7. Set Level to 6 or higher
+8. Save changes
+
+→ If adding new IDs, they must be modeled after existing IDs AND include valid EUID
+
+→ See: *How to Check Operator ID’s in ACE and Authorization Levels*
+
+→ See: *POS/FUEL Division Contacts – KSC USE ONLY*

@@ -1,0 +1,82 @@
+Jewelry: How to Add Delete Change Home Store in Vision Store Management (VSM)
+KB0011676
+===============================================================================
+
+Description
+-----------
+In Vision Store Management (VSM), store users can log in using their EUID/password and manage multiple store assignments. This is also used to update stores for Support Center associates (without selecting a Home Store).
+
+Cause
+-----
+- New associate
+- Associate changing stores
+- Associate filling in at another store
+
+Note: This does NOT update automatically with associate transfers. Manual update required.
+
+IMPORTANT:
+- Always ADD the new store BEFORE deleting the old store to avoid accidental account deletion.
+- If an error occurs while adding/removing, capture the full error message.
+
+Resolution
+----------
+NOTE:
+- If VSM issues occur, try using a store laptop (menu options may be missing on other devices).
+- Associates are NOT deleted from VSM, only store assignments are removed.
+- Desktop login is possible. If login fails, adjust browser settings or remote into register.
+
+If over 10 stores must be removed, send a P3 ticket to: App-Merch-ORE2.0-Jewelry.
+
+VSM URL: https://fmjpos.kroger.com/maintenance/viewLogon.do
+
+ADD STORE
+---------
+DO NOT add "FMJ" to location list.
+
+1. Log in to Vision Store Management.
+2. Select: Operations > System User Details > User Maintenance.
+3. Search by entering EUID in "User Last/First Name", click Search.
+4. Highlight and click the correct name (use UPPERCASE profile only).
+   - If only lowercase exists or uppercase profile is missing, escalate to App-Merch-ORE2.0-Jewelry.
+
+5. Verify Person Details.
+   - Ensure Date of Birth is entered.
+   - Click Next.
+
+6. Click "Add".
+7. Enter the 5-digit store number and click "Search" (DO NOT hit Enter).
+   - Only add VALID STORE locations (no office/support IDs).
+   - DO NOT set a closed store as the Home Store.
+
+8. In the new window, double-click on the store number.
+9. Click "Next", then "Save".
+10. Log out of VSM and log in to the new store.
+    - Press F5 to refresh if needed.
+
+Changing Home Store:
+- Click current Home Store, uncheck it.
+- Check the new Home Store.
+- Click "Save".
+
+REMOVE STORE
+------------
+NOTE: Only store assignments are removed, NOT users.
+
+ALWAYS add new store before removing old.
+
+1. Follow Steps 1–8 above.
+2. Select store to delete and click "Delete".
+3. Confirm deletion when prompted.
+4. Click "Save".
+
+NEW ASSOCIATES or NO PROFILE FOUND
+----------------------------------
+- Must have an active EUID and IAM account.
+- Store associates must show a Jewelry role in IMT.
+
+First-time login to Gemstore builds their VSM profile. After login, store changes can be made in VSM.
+
+ESCALATION
+----------
+- If unresolved, send low urgency ticket to: App-Merch-ORE2.0-Jewelry.
+- ALL escalations must go through Frontend Tier 2 first.

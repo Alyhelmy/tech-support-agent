@@ -1,0 +1,33 @@
+Jewelry: Register Shows STORE CLOSED Message When EOD Has Not Been Completed
+
+KB0011725
+
+
+Description
+One or all registers are showing STORE CLOSED in the middle of the screen when no End of Day store closing processes have been done. This is referring to the whole day being closed and will not allow the associates to do anything else on the register. The register will essentially just be frozen on this screen.
+
+ 
+
+If the store accidentally clicked on the "close till" button, this closes their accounting session only, not the "store". There will be a message to use another register. For this, see
+Jewelry: No Key or Till Accidently Closed Before End of Day
+
+ 
+
+Cause
+Store calls with one or more registers showing STORE CLOSED when no End of Day has been processed in Vision Store Management. Usually occurs due to a system error.
+
+ 
+Resolution
+Note: If the registers are on Store Closed a start of day must be done before you can use them. Go to VSM>System>Start\End of Day>Start of day.
+
+
+
+1. Make sure that the register is showing "Store Closed" in the middle of their screen and the store did not accidentally click on "Close Till". If they clicked on "Close Till", DO NOT USE THIS DOCUMENT. Use Jewelry: No Key or Till Accidently Closed Before End of Day
+
+2. Verify they do not have an associate that is filling in at another store that may have closed this store by mistake.
+
+3. Logoff the register that is on STORE CLOSED and it should load back up to screen that says Operator ID. See Jewelry: How to Perform A Log Off/Shutdown Restart Remotely
+
+ 
+
+4. If the register still shows STORE CLOSED after logging off and back on, contact Tier 2 to send a P2 ticket to App-Merch-ORE2.0-Jewelry .

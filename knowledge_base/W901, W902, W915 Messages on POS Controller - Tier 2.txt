@@ -1,0 +1,24 @@
+W901, W902, W915 Messages on POS Controller - Tier 2  
+
+ID: KB0011460  
+-------------------------------------------------------------------------------
+Description:
+- W901: No Acting Master Controller Found  
+- W902: No Acting File Server Controller Found  
+- W915: Indicates no network connections  
+
+These messages appear on the Controller as it is booting up from a dump or a load.  
+You cannot dial into the controller displaying W901, W902, or W915 until the master controller is found.
+
+(* Check status of switches in store *)
+
+DO NOT press F1 or F2 to bypass W messages.  
+Frontend Tier 2 must contact APP-POS before bypassing any message.
+
+--------------------------------------------------------------------------------
+Frontend Tier 1 Actions:
+1. Copy exact error message or background message into your ticket notes.
+
+2. Verify there are no open, existing incidents for a similar issue.
+
+3. Warm transfer the call to KSC FE Tier 2.

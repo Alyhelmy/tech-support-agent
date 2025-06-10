@@ -1,0 +1,112 @@
+Jewelry: Troubleshooting POS Register
+KB0011585
+===============================================================================
+
+Description
+-----------
+Basic Dell or Lenovo Register PC troubleshooting for Jewelry Store.
+
+Resolution
+----------
+
+Graphics / Artwork
+------------------
+1. If the Graphics/Artwork is incorrect on the register screen, try restarting the register.
+2. Walk the store user through Ctrl+Alt+Delete and select Restart.
+3. If this does not work, send your incident to App-Merch-ORE2.0-Jewelry Sev 3.
+
+Register Troubleshooting
+------------------------
+Note: Include in the title of your incident the Register Number found in the lower right-hand corner of the GemStore Screen.
+
+Note: When any device has been hot swapped, a full shutdown/restart must be performed.
+
+Anytime a register needs to be rebooted, please stay on with the store until the register comes back up or call them back to verify it is back up and working. 
+Do not just close the ticket.
+
+If both Reg 1 and 2 are down, this is considered a store down and must be treated as such. 
+If you can't get them up and running, you must go through Frontend Tier 2 to page App-Merch-ORE2.0-Jewelry Sev. 2.
+
+1. Verify that the register has power.
+   - Have store try powering register on from power button.
+
+If register does not have power, check the following and document in ticket:
+   - What is the register plugged into? e.g., Power Strip or Wall Outlet?  
+     - If power strip, verify other devices plugged into it have power.
+     - If power strip has open port, plug register into that.
+   - If wall outlet, verify it is clean power (e.g., orange outlet).
+     - Plug something else in to verify outlet is good.
+     - Try another outlet if nearby.
+   - Verify power cable is plugged in fully at both ends.
+   - Have user hold power button for 10 seconds, pushing all the way in.
+   - Did the store have a power surge?
+   - Verify no one is flipping a breaker that powers the register off.
+
+2. Does the register monitor display message "No OS Found"?
+   - If yes, reboot register and try again.
+   - If unresolved, register will need replacement. See Dispatching Section.
+
+3. For peripheral device issues: Reseat cable and perform shutdown/restart on register.
+   For additional info, see device-specific docs.
+
+4. If register freezes during transaction, see these docs:
+   - Jewelry: Verifone pinpad locks up in transaction
+   - Jewelry: Freezes or server offline message during transaction or customer search
+
+Verify receipt printer and pinpad are working properly.
+
+5. After restarting, if issues persist, capture this info in your ticket:
+   - Register model # (e.g., Lenovo M93p)
+   - Asset # on register (e.g., KR#103996)
+   - Check for system restarts using GSI "Show Reboots" button.
+   - How long has problem existed?
+   - Is machine dirty?
+   - Is the fan on?
+   - Is register warm to touch?
+   - Has store had power issues?
+   - Is store remodeling?
+   - Is this register an island register?
+   - Any error messages on register?
+
+Check Peripheral Port Settings
+------------------------------
+Navigate to:
+  Support - GSI, on the Menu Launcher. Log in with a PPM User ID and Password.
+
+  - Select DEVICE MANAGER > PORTS (COM & LPT)
+  - Right-click device > PROPERTIES
+  - Choose PORT SETTINGS tab
+  - Click ADVANCED button
+  - Use drop-down menu at COM Port Number to select correct port for each device
+  - Click OK twice and close Device Manager
+  - Close GemStore and other windows, then reboot register
+
+Device Port Settings Examples
+-----------------------------
+  - Prolific USB-to-Serial COMM Port (COM2) — Pinpad
+  - USB Serial Port A776 (COM9) — Printer
+  - Intel Active Technology Management (COM6)
+  - Honeywell Control Device - Handscanner (under USB Controllers)
+
+If store has no operational register, page App-Merch-ORE2.0-Jewelry with Moderate/Limited Impact, High Urgency ticket.
+
+If store has another functioning register, send low urgency ticket to App-Merch-ORE2.0-Jewelry.
+
+Lenovo M93p Specifics
+---------------------
+This is an ultra-small form-factor PC (slightly larger than a paperback novel).
+
+Differences from Dell model:
+  - No serial port for pinpad; uses serial module with bracket and USB patch cable.
+    See doc 12870.
+  - Different power cable due to lack of internal power supply.
+  - Power cable and patch cable are not interchangeable with previous register cables.
+
+The patch cable is sensitive; movement may cause peripherals to lose communication.
+
+To check communication:
+1. Support - GSI on Menu Launcher
+2. Login with PPM User ID and Password
+3. Device Manager > Ports (COM & LPT)
+4. If devices don’t show, reseat patch cable
+5. Restart if needed

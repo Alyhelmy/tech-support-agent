@@ -1,0 +1,42 @@
+Instacart - 3rd Party Shoppers / Label Printer ZD421  
+**Document ID:** KB0042114  
+**Views:** 127  
+
+---
+
+**Description:**  
+Temporary staging is located outside of the pickup room and contains:
+- Printer with labels  
+- Scanner  
+- Drop-off area for Instacart Shoppers after scanning and labeling orders  
+
+Instacart shoppers drop off the order in this temporary staging location for Kroger associates to move to permanent staging.
+
+---
+
+**Resolution:**  
+If unable to stage an Instacart order:
+1. Collect the **order number**.  
+2. **Escalate to APP-ESO** as a **Priority 3 (P3)**.
+
+---
+
+**Troubleshooting Steps for Stores:**
+
+📌 **Note:** Printer and scanner are shipped together. Do **not** dispatch separately.
+
+---
+
+### If the Handscanner has power but does not beep:
+1. Instruct user to **hold the trigger for 5 seconds** to wake the scanner.  
+2. Reseat the cable on the bottom of the scanner (per provided diagram if available).
+
+---
+
+### If the Handscanner does **not** have power:
+1. Verify the **handscanner cable is connected and undamaged**.
+   - If the cable/handset is damaged, **dispatch to IBM**.
+2. **Reseat the cable** to clean the connection.
+3. **Power cycle the printer**.
+4. If still unresolved, **dispatch to IBM** with the following EID:  
+   ➤ `INSTACART - LABEL PRINTER ZEBRA ZD-421`

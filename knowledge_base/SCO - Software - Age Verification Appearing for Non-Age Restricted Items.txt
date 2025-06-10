@@ -1,0 +1,30 @@
+SCO - Software - Age Verification Appearing for Non-Age Restricted Items
+KB0012101
+
+
+Description
+
+Items are displaying an age verification requirement which are not normally associated with age-verification.
+
+This is occurring intermittently on different lanes with different items.
+
+ 
+
+Cause
+Software
+
+ 
+
+Resolution
+Non-Age Restricted Items Are Displaying Age Verification Required
+1. Verify version is 4826 or later as per attached document,
+
+SCO - MISC - How to Determine SCO Model Type / Check Software Version
+
+Gather Transaction # / Details
+
+2. Gather item UPCs
+
+3. Gather Extract from lane (required) within 2 transactions (Current + Prior).
+
+4. Get with Frontend Tier 2 to escalate to APP-POS, P3 if version is 4826 or later, if not close as, "Moved to JIRA" and "Unresolved".

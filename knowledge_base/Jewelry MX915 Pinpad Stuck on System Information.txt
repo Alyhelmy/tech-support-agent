@@ -1,0 +1,108 @@
+Jewelry: MX915 Pinpad Stuck on System Information
+KB0011328
+===============================================================================
+
+Description
+-----------
+Jewelry PINPad will not load past the System Information screen.
+
+Cause
+-----
+Incorrect form deck was forced down because the PINPad was misidentified as a Main Store PINPad.
+
+Resolution
+----------
+Note: Include the PINPad Version Number (found in lower-right of the PINPad display) in the incident title.
+
+Dispatch: Jewelry store PINPads requiring replacement can now be dispatched. See Dispatch section.
+
+IDENTIFYING ISSUE
+-----------------
+- Check CommType on System Information screen:
+  * Correct: RS232
+  * Incorrect: ECR
+
+TROUBLESHOOTING STEPS
+---------------------
+1. Restart Gemstore, have associate sign in.
+2. Reseat the patch cable on the back of the register.
+   - See: Jewelry: Lenovo Register Patch Cable.
+3. Locate the dongle and unplug the Ethernet cable.
+4. On the PINPad, hold keys 1, 5, and 9 for 2 seconds.
+5. When prompted, enter password:
+   - Try 166832
+   - If rejected, try 72963687
+   - May ask for both Old and New passwords — use both values.
+
+6. Navigate to:
+   - Transfer tab → Serial/USB
+   - Set Com 2, Baud 115200, click “Go”.
+
+7. Open GSI tool using your PPM credentials.
+
+PRIVILEGED PASSWORD CHECKOUT
+----------------------------
+8. Close Gemstore.
+9. Open MXDownloader.exe at:
+   C:\Program Files (x86)\Verifone\MxDownloader
+
+10. Go to Serial tab and set the following:
+    - Browse to: C:\Users\Public\Data\Verifone\Release.1.32.0.4870
+    - Select: dl-FMJ-FA445-XPI5200p11-PWIC-20180816-25623.tgz
+    - Click “Send”
+
+11. Once complete and PINPad reboots, restart Gemstore via Menu Launcher.
+12. In GSI, press "Initialize PINPad". This restarts Gemstore.
+
+INITIALIZE PINPAD IN GEMSTORE
+-----------------------------
+13. Sign into Gemstore → Cancel on customer search
+14. Go to Admin tab → Shutdown/Init Pin Pad → Init Pinpad → “Please Wait” appears
+15. Sign out, then sign back in
+
+Note: This does NOT work in Windows 11. Use "Reinitialize" from "Extra" button on toolbar instead.
+
+VERIFY TUNA CONFIGURATION
+-------------------------
+- Check TUNA to confirm PINPad is listed under: FMJ Verifone PINPad on Jewelry Segment.
+- If listed under POS/Fuel, move it to Jewelry segment.
+
+DEVICE MANAGER & DRIVER CHECKS
+------------------------------
+1. Launch GSI from Launcher Menu (PPM credentials).
+2. Open Device Manager → Ports (COM & LPT).
+3. Confirm PINPad shows as: Prolific USB-to-Serial COMM Port (COM2)
+   - If showing as COM1, cable is in wrong dongle port — store must move it to COM2.
+   - If not listed, reseat USB patch cable on register.
+
+4. Once listed as COM2, restart Gemstore from Menu Launcher.
+
+VERIFY VerifoneXPI CONFIGURATION
+--------------------------------
+If problem persists, VerifoneXPI file may have incorrect settings.
+
+1. Open Jewelry Functions:
+   - Tools → Jewelry Functions (requires TPAM/privileged password)
+
+2. Select register number in "Select Register" dropdown (bottom-left).
+3. In "Select Function" area:
+   - Function: File Explorer
+   - Click “Run”
+
+4. In opened File Explorer:
+   - Navigate to: C:\Beanstore\1_36_0_555\Beanstore\pos
+   - Open correct banner folder (e.g., "config" for Fred Meyer Jewelers)
+   - Delete file: VerifoneXPI.xml.error (if exists)
+
+5. Open VerifoneXPI.xml in Notepad:
+   - If incorrect settings (e.g., baud rate = 9600), rename to: VerifoneXPI.xml.old
+
+6. From a working register, copy the correct VerifoneXPI.xml file to this folder.
+7. Restart Gemstore.
+8. Confirm Welcome Screen is visible on PINPad.
+9. Sign in and initialize the PINPad again.
+
+SEVERE ISSUES
+-------------
+- If both PINPads are down and unresolved, page: App-Merch-ORE2.0-Jewelry sev. 2 via Frontend Tier 2.
+- If cable replacement and above steps fail, escalate to App-Merch-ORE2.0-Jewelry via Frontend Tier 2.

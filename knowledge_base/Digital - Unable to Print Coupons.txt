@@ -1,0 +1,32 @@
+Digital - Unable to Print Coupons
+
+KB0011381 
+
+
+Synopsis
+A customer reports they are unable to print their clipped coupons list
+
+ 
+
+Solution
+Possible problems may include: printing a blank page, mixing the categories, or error messages. Gather all information including:
+
+  - Customer name
+
+  - Customer contact information
+
+  - Email address associated with digital account
+
+  - Web Browser details should also be included when available.
+
+  - Banner site the customer is logged into.
+
+If the customer is using the mobile app, please include:
+
+  - Phone type (i.e. iPhone 5 or Android)
+
+  - OS version
+
+  - App version
+
+Assign the ticket to App-Dig-Web-Offers.

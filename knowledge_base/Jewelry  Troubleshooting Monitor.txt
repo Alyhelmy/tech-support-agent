@@ -1,0 +1,80 @@
+Jewelry: Troubleshooting Monitor
+KB0011584
+===============================================================================
+
+Description
+-----------
+Basic troubleshooting steps for Jewelry store monitors.
+
+Cause
+-----
+Note: A known issue is developing with M93p registers flickering with multiple colors. 
+This is a problem with the register, not the monitor. 
+Rebooting the register typically stops the flickering. 
+If it happens frequently, the register needs to be replaced.
+
+Resolution
+----------
+
+SLEEP MODE / POWER SAVE MODE
+----------------------------
+1. Move the mouse or press any key on the keyboard.
+2. If this does not work, press the power button to wake the computer.
+
+Note: Monitors will wake from sleep as soon as they detect a video signal from the register.
+
+MONITOR HAS A SOLID GREEN LIGHT BUT BLACK SCREEN
+-------------------------------------------------
+1. Press the Adjustment Control button repeatedly.
+2. Unplug the power adapter from the back of the monitor 
+   (right-hand side when facing screen).
+3. Press and hold the monitor’s power button for 30 seconds.
+4. Plug the power adapter back in and turn the monitor on.
+
+- If this does not resolve the issue, document:
+  * Brand
+  * Model number
+  * Serial number  
+  * Proceed to dispatch. (See Dispatching section)
+
+DIM SCREEN OR COMPLETELY BLACK
+------------------------------
+1. Verify brightness/contrast settings haven’t been adjusted too dark.
+   - Likely will require monitor replacement. See Dispatching section.
+
+2. Power down and reseat the cable connections:
+   - 3 cables: 
+     * 1 Power 
+     * 1 VGA (video) 
+     * 1 Audio (optional)
+
+3. If all cables are secure, monitor receives power, but image is not improved, proceed to dispatch.
+
+   - Document all troubleshooting steps taken and visible issues (e.g., dim display, frayed cable, damaged power adapter).
+
+CHECK VGA ADAPTER
+-----------------
+- Ensure the VGA adapter is securely plugged into the port.
+
+SCREEN RESOLUTION
+-----------------
+1. Use the GSI (Gemstore Support Interface) tool to auto-adjust screen resolution.
+   - See: Jewelry: Gemstore Support Tool (GSI)
+
+2. “Set Screen Resolution” sets resolution to 1028x764 for Gemstore to display correctly.
+   - Especially useful after receiving a new monitor or register.
+
+Dell 7050 NOTE:
+- Comes with a VGA adapter cable.
+  * Ensure adapter is securely connected.
+  * Press release button (arrowed) when disconnecting.
+
+BROKEN MONITOR STAND
+--------------------
+- If the monitor stand is broken, dispatch for replacement.
+  * Include store number, ticket number, and description.
+
+ATTACHING MONITOR TO ARM INSTEAD OF STAND
+-----------------------------------------
+1. Detach monitor base (remove screws securing the stand).
+2. Use same screws to attach the monitor to the arm using the mounting holes on the back.

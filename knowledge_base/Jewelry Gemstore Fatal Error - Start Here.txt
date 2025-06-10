@@ -1,0 +1,73 @@
+Jewelry: Gemstore Fatal Error - Start Here  
+KB0012592
+===============================================================================
+
+Description
+-----------
+Start Here documentation for handling **Gemstore Fatal Errors**.  
+This doc serves as a central index for resolving various **DB2 and Gemstore system errors**.
+
+===============================================================================
+Primary Solution
+----------------
+▶ For **ALL DB2 Fatal Errors**, perform a **cachegen**.  
+See: *Jewelry: Cachegen, Sending, Verifying or Corrupt Cache (DB2)*
+
+===============================================================================
+Common Errors and Linked Troubleshooting Docs
+---------------------------------------------
+
+• **No Printer Hardware Found**  
+   → Occurs when register can’t detect the printer.  
+   → See: *Jewelry: Thermal Printer Troubleshooting*
+
+• **java.lang.NullPointerException**  
+   → Triggered by unsupported actions in Gemstore (e.g., reprinting a receipt).
+
+• **COM.ibm.db2.jdbc.DB2Exception - SQL1031N**
+
+• **COM.ibm.db2.jdbc.2Exception:[IBM] - Unexpected System Error**
+
+• **SQL1585N**
+
+• **SQL0206N**  
+   → SALESPERSON.SALP_SECONDARY_ID is not valid in the context.
+
+• **java.lang.ClassCastException**  
+   → Caused by returns involving deleted LJCP from original transaction.
+
+• **[CLI Driver] SQL1032N**  
+   → No start database manager command.
+
+• **[CLI Driver] [DB2/NT] SQL0290N**  
+   → Table space access is not allowed.
+
+• **[CLI Driver] SQL1013N**  
+   → The database alias name is invalid.
+
+• **[JDBC Driver] CLI0601E**  
+   → Invalid statement handle.
+
+• **Cannot Recall Transaction**  
+   → Cannot find parent of transaction line: `ParentDetailNumber = 0`.
+
+• **[CLI Driver] [DB2/NT] SQL0204N**  
+   → DB2ADMIN.VERSION_CONTROL issue.
+
+• **Checksum Verification Failed**  
+   → Happens when the wrong Gemstore version is loaded.  
+   → Possible causes: failed upgrade or register revert to previous restore point.
+
+• **java.net.ConnectException**  
+   → Error opening socket to server (localhost)
+
+===============================================================================
+Additional Support
+------------------
+- See: *Jewelry: Cachegen, Sending, Verifying or Corrupt Cache (DB2)*
+- Issues related to corrupted cache and sending new cache to registers.
+
+===============================================================================
+Escalation Path
+----------------
+If basic cachegen and fatal error steps fail, escalate to proper application or backend team based on the specific DB2 error code.

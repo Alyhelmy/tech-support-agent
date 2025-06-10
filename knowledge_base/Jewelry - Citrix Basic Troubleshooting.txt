@@ -1,0 +1,86 @@
+Jewelry: Citrix Basic Troubleshooting
+
+KB0011983
+===============================================================================
+
+Description
+-----------
+Basic troubleshooting for Citrix use in a Jewelry store. Please link this doc to your ticket if dealing with a Jewelry store.
+
+Cause
+-----
+Stores are now using Citrix StoreFront which is slower than previous versions, and occasionally they may get an error on the first attempt. 
+Refreshing the page by pressing F5 on the keyboard should resolve that, allowing normal continuation.
+
+Common Citrix Problems Including:
+  - Incorrect Homepage
+  - Missing Applications / No Resources
+  - Freezing / Unresponsive Applications (Applications won't launch)
+  - Error messages
+  - Missing Printers
+
+Resolution
+----------
+
+Jewelry Citrix Procedural:
+--------------------------
+See Jewelry: Citrix Procedural
+
+Missing Printers / Printing to OneNote:
+---------------------------------------
+See Missing or Incorrect Printers in Citrix
+
+Citrix Storefront Slowness:
+---------------------------
+1. Remote into the Register.
+   See: Jewelry: How to Remotely Connect to Jewelry Registers
+
+2. Close Citrix, or have the associate close Citrix.
+
+3. From the Launcher Menu, open GSI with PPM Username/Password.
+   See: Checking Out a Privileged Password
+   See: Jewelry: Launcher Menu
+
+4. Open Citrix StoreFront and have the associate log in.
+
+Citrix Frozen or Not Responding:
+-------------------------------
+1. Log off the Citrix session and log in again.
+   - See Citrix Log Off a Citrix Session
+   - If session will not close, it should close overnight.
+
+2. Reset the Citrix profile (only if logoff does not resolve the issue).
+   - See Citrix Corrupt Applications (Reset Profile)
+   Note: Resetting profile removes customizations like signatures, saved searches, recent items in Office 2010 apps.
+
+3. Reboot register and relaunch Citrix.
+
+4. If issue persists, escalate ticket to DIV-FM-DESKTOP.
+
+Citrix HDX Engine is Not Responding:
+-----------------------------------
+1. Verify store phones or other devices are NOT plugged into register USB ports.
+
+2. Unplug devices, close all Citrix windows, and relaunch.
+
+3. If issue persists, reboot register.
+
+Note: If unable to resolve, include register IP address in ticket and escalate to DIV-FM-DESKTOP.
+
+Able to Log Into Citrix But No Icons Showing:
+---------------------------------------------
+1. See Cannot Login to Account Even With Correct Access - Repair Account (AD, ISP, Workforce).
+
+2. Follow Repair Missing Groups instructions.
+
+Wizard Launching or Cannot Open Default Mail Folder Errors:
+----------------------------------------------------------
+Common issue with associates newly given email access.
+
+See Wizard Launching or Cannot Open Default Mail Folders Error.
+
+No Resources Available or Any Missing Applications:
+---------------------------------------------------
+See Missing Citrix Application or Message "There Are No Resources Currently Available for This User".
+
+===============================================================================

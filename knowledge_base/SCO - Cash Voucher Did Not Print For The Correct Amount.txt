@@ -1,0 +1,49 @@
+SCO - Cash Voucher Did Not Print For The Correct Amount  
+ID: KB0012152  
+Views: 14  
+Version: Latest Version
+
+--------------------------------------------------------------------------------
+Description:
+Change is not given back to customer upon completing transaction, instead a voucher prints, but for an amount different than what is displayed on the lane.
+
+--------------------------------------------------------------------------------
+Cause:
+Software
+
+--------------------------------------------------------------------------------
+Resolution:
+
+Scenario:  
+A customer completes a transaction; they are due change. A voucher prints instead but for an amount different from what is being displayed on the lane.  
+Example: Change due back is $13.06, voucher prints for $11.
+
+Required Information:  
+1. Take an extract through SA Menu SCO - How To Take An Extract or a Terminal Dump if unable to take an extract.  
+   See SCO - MISC - How to Perform and Prepare a Terminal or TCU Dump.
+
+2. What was the last thing that happened prior to the issue occurring? Were there any other errors?
+
+3. Have SA reprint a receipt to check if it matches the voucher.
+
+4. Do not reprint a voucher. The SA should save the voucher for accounting purposes and give the customer the correct change due back.
+
+--------------------------------------------------------------------------------
+Steps to Resolve:
+
+1. Check Cash Maintenance and document any hardware errors found.
+
+2. Run checuser.bat, option 1. See CHECUSER 2.0.
+
+3. Activate terminal configuration:  
+   - Log into the MC, option 4. Installation and Update Aids.  
+   - Select 1. Change Configuration Data  
+   - Select 4. Activate Configuration Data  
+   - Select 1. Terminal Configuration. Press F10 to view messages, then F3 to escape.
+
+4. Power cycle the affected lanes via the Powervar or UPS, left off for 2+ minutes.  
+   If this is a system 6 or 7, you do not need to power cycle the UPS.
+
+5. If issue is resolved, process and rename dump and get with Frontend Tier 2 to escalate to APP-POS, P4.
+
+6. If issue remains, escalate ticket with dump/extract as a P4 for one lane, P3 for multiple lanes.

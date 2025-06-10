@@ -1,0 +1,29 @@
+SCO - Lane Will Not Load Past "POS Initialization Failed: Printer Has Failed Hook"
+
+ID: KB0011237
+--------------------------------------------------------------------------------
+Description:
+This document outlines the steps to follow when an SCO lane will not load past the error message:
+"POS Initialization Failed: Printer Has Failed Hook".
+
+--------------------------------------------------------------------------------
+Cause:
+Printer hardware problems.
+
+--------------------------------------------------------------------------------
+Resolution:
+
+1. Troubleshoot Receipt Printer:
+   - Verify that paper is loaded correctly and there is no empty roll underneath the current one.
+   - Check for any blinking lights on the printer.
+
+2. Power Cycle the Lane:
+   - Power off the lane for at least 2 minutes, then power it back on.
+   - If the system is System 6 or 7, you do not need to power off the UPS.
+   - For Toshiba System 7, use the green button to power cycle; note that some stores may not have access to a UPS.
+
+3. Test the Lane:
+   - If the issue is not resolved, send an "8 load" to the lane.
+
+4. Dispatch:
+   - If the problem persists, dispatch a technician for the thermal printer as per KSC Hardware Dispatching For All Pillars.

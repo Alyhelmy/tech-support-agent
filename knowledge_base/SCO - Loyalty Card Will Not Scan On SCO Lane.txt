@@ -1,0 +1,32 @@
+SCO - Loyalty Card Will Not Scan On SCO Lane
+KB0012206
+
+Description
+The SCO lane will display an error when attempting to scan a loyalty card that has a non-standard number or barcode.
+
+Cause
+Loyalty card is not setup correctly in EBoss.
+
+Resolution
+
+1. Ask if it is a single loyalty card or all loyalty cards that will not scan on the lane?
+
+2. If all loyalty cards do not scan, send a 9-load to the lane and test.
+
+3. Does the card scan on another lane? If not and it is a single card, gather the following information:
+
+  Extract from the lane.
+
+  Lane #:
+
+  Time:
+
+  Date:
+
+  Transaction #:
+
+1. Collect the loyalty card UPC.
+
+2. Does the issue occur on one lane or all lanes?
+
+3. Get with Frontend Tier 2 to escalate to APP-POS, P3 if issue is not resolved.

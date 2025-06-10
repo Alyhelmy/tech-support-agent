@@ -1,0 +1,74 @@
+Fuel Site Down Due To Unexpected Power Outage or Network Down
+KB0012790 – Latest Version
+=======================================
+
+DESCRIPTION:
+------------
+Unexpected power outage occurred in the Fuel Center.
+
+- Power may be completely out or only partial power (e.g., canopy lights may still be on).
+- The main store may have full power or be running on a generator.
+- Fuel Center typically does NOT have generator backup.
+
+RESOLUTION:
+-----------
+**IMPORTANT:** If the Fuel Center is completely down (unable to pump gas or serve customers), WARM TRANSFER to **Frontend Tier 2**.
+
+- If the site has been hard down for over 30 minutes, contact **KMA Fuel Lead**.
+  (See: "POS/FUEL Division Contacts – KSC USE ONLY")
+
+1. Ask the site:
+----------------
+- Are they able to service customers?
+  - Do pumps have power? Can they dispense fuel?
+
+    Note: If power just returned, have them press the **green reset button** to bring pumps back online.
+    (See: *Basic Pump Troubleshooting*)  
+    → If pumps don’t come back up, transfer to **Frontend Tier 2**.
+
+- Do any kiosk devices have power?
+  (e.g., Site server, POS, Panther, EPC, Veeder Root)
+
+- Can you ping any devices in the Fuel Center?
+  - Which devices respond?
+  - Which devices do **not**?
+
+- Is the **Oneac or APC** (battery backup) powered on?
+  - Lights/beeping? (This may mean it's on battery power or there's a hardware issue.)
+  - See: *UPS/Oneac Alarming in Fuel Center* for additional help.
+
+→ Always check breakers if site has no or partial power.
+
+2. If CASH transactions are working:
+------------------------------------
+→ Issue may be network related.
+
+- Locate the **Fuel Switch**:
+  - Use **TUNA** to confirm model/type.
+  - Check switch status:
+    - Are **green lights flashing**?
+    - Is the **Fault light** on?
+    - Is the device completely off?
+
+→ Try power cycling or pressing the **RESET** button (small hole in front; use a paperclip or pen tip).
+
+**NOTE:** If the switch cannot be located and power is NOT the issue, call **KMA Fuel Lead** for further help.
+
+3. If power is out or partial:
+------------------------------
+- Instruct site to call their **power company** for an estimated restoration time.
+- Call main store:
+  - Are they on full power or generator?
+- Ask about surrounding area (other outages).
+
+4. After all troubleshooting:
+-----------------------------
+- If power outage is confirmed and Division Fuel Lead notified (or ETM chat used):
+  - Instruct site to **call back** once full power is restored.
+    → We must verify device recovery and check for further issues.
+
+→ **Send incident to Frontend Tier 2** for:
+   - Monitoring
+   - Possible callback
+
+**Reminder:** If unsure whether issue is network or power, consult **Frontend Tier 2**.

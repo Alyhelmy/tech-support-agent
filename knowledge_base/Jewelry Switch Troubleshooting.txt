@@ -1,0 +1,67 @@
+Jewelry: Switch Troubleshooting  
+KB0015500
+===============================================================================
+
+Description
+-----------
+Jewelry store reports connectivity issues with one or more devices.
+
+===============================================================================
+Cause
+-----
+- Switch hardware issues  
+- TUNA server issues
+
+===============================================================================
+Resolution
+----------
+
+**IMPORTANT:**  
+Always check under the **main store number** when troubleshooting a switch in **TUNA**.  
+Main store number can be found on the **PSY Jewelry Connect** page.
+
+-------------------------------------------------------------------------------
+Equipment Location
+-------------------------------------------------------------------------------
+Switches are typically located in:
+- **Stock room**  
+- **Nearest IDF cabinet**
+
+→ Register switches are uplinked to the IDF cabinet on the main store network.  
+→ Some stores may uplink both register switches to a main switch in a **FMJ IDF cabinet**.
+
+Support responsibilities:
+- **KSC-Store Support:** Supports IDF cabinet switches.
+- **KSC-Frontend:** Provides basic troubleshooting for register switches.
+- **NOC:** For WAN/router/CSU-DSU issues.
+
+-------------------------------------------------------------------------------
+Jewelry Register Switches
+-------------------------------------------------------------------------------
+- Typically **1 switch per register**
+- Models: **HP 2530** or **Aruba 6000**
+- In small stores, both registers may share a single switch.
+- Some HP 2530 models in FMJ stores may have external power adapters (rare).
+
+**Puck Device:**
+- Some stores have a puck that connects long-run cables to patch cables.
+- Only troubleshooting step: **reseat the cable**
+- Normally attached to fixture, but may come loose.
+
+-------------------------------------------------------------------------------
+Troubleshooting Steps
+-------------------------------------------------------------------------------
+
+**1. Check Power & Cabling:**
+- Inspect all three connections on the back of the switch.
+- Ensure outlet or power strip is working.
+- If the switch is not powering on, it may need a new power supply or adapter.
+
+**2. Power-Cycle the Switch:**
+- If the switch has power but is unreachable, try rebooting it.
+
+**3. Bypass the Switch (Isolate the issue):**
+- Connect the register’s Ethernet cable directly into the wall port.
+
+**4. For a Single Register Down:**
+- Refer to: *Jewelry: Troubleshooting POS Register*

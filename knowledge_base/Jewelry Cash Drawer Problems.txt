@@ -1,0 +1,80 @@
+Jewelry: Cash Drawer Problems  
+KB0011586
+===============================================================================
+
+Description
+-----------
+Issue: Cash drawer will not open, close, or is physically broken.
+
+Error Message:
+"The cash drawer cannot be opened, click yes to be opened again."
+
+===============================================================================
+Cause
+-----
+- Receipt printer issues
+- Lock is not in the correct position after using the key
+- Loose cable connection
+
+===============================================================================
+Resolution
+----------
+
+**IMPORTANT:** Include the Register Build Number (bottom-right of GemStore screen) in the incident title.
+
+Since the cash drawer is connected to the receipt printer, printer issues can impact drawer functionality.  
+**First**, verify the receipt printer’s power light is solid green.  
+If not, see: *Jewelry: Thermal Printer Troubleshooting*
+
+---------------------------------
+1. Determine if this is a hardware issue:
+---------------------------------
+
+**A. Test the Cash Drawer via Admin tab:**
+- Go to `Admin > No Sale`, select an option to attempt opening the drawer.
+
+**Do they hear the solenoid *click* when trying to open it?**
+
+→ **Yes, click heard:**
+- Cash drawer may be jammed.
+- Use the *till key* to manually open and check for obstructions.
+
+→ **No click heard:**
+- Continue with cable checks below.
+
+---------------------------------
+2. Check cables between cash drawer and receipt printer:
+---------------------------------
+
+**A. Cable should be firmly plugged in.**
+- One end into the **back of the printer**, one into the **back of the cash drawer**.
+
+**B. Proper cable orientation:**
+- Ends are labeled: `EPSON` and `C/D`.
+  - `EPSON` goes into the printer.
+  - `C/D` goes into the cash drawer.
+
+**C. Accessing cable ports:**
+- Tilt the printer onto its front.
+- Unlatch the hinged door to access cable connections.
+
+---------------------------------
+3. Still not working?
+---------------------------------
+
+- Reseat the cable at both ends (printer and drawer).
+- Restart the register.
+
+> ⚠️ Always stay on the line with the store while the register reboots.  
+> If **both Reg 1 and Reg 2 are down**, this is a **store down** situation.
+  - Escalate via **Frontend Tier 2** to **App-Merch-ORE2.0-Jewelry Sev. 2** if unresolved.
+
+---------------------------------
+4. Hardware Dispatch
+---------------------------------
+- If drawer is not repaired and issue persists:
+  - Dispatch for part replacement.  
+  - See: Dispatch Section.
+
+**Cash Drawer Keys:**  
+If store needs new keys, assign ticket to: `DIV-FM-Parts`.

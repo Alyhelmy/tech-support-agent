@@ -1,0 +1,311 @@
+Jewelry: VeriFone PIN pad - Locks Up In Transaction
+KB0011700
+
+
+Description
+
+Jewelry PIN pad locks up in the middle of a transaction.
+
+ 
+
+Cause
+Resolution Steps for the following categories:
+
+ 
+
+Visa, MC, American Express, Discover or Progressive Card PIN pad Lockups:
+Platinum Card PIN pad Lockups:
+Gift Card PIN pad Lockups
+ 
+Note: This document is for card processing in LOCKUP SITUATIONS ONLY not for offline procedures or card referrals.
+
+ 
+
+Resolution
+ 
+
+******Required Information****** 
+
+In the title of your incident the PIN pad Version Number
+PIN pad version number location: Lower right-hand corner of PIN pad Banner Screen
+
+ Example incident description:
+
+Jewelry REG 01: PIN pad Lockup – Version Number 1.34.0.####.####
+
+ 
+Visa, MC, American Express, Discover or Progressive Card PIN pad Lockups:
+ 
+Visa, MC, American Express, Discover or Progressive
+
+ 
+
+Is offline manual authorization allowed? No
+
+ 
+
+We do not take them offline in lock up situations for any cards except Platinum Cards.
+
+ 
+
+Can these cards be tendered as cash? Yes, if there is an approval in payment systems and no reversal…follow the steps below.
+
+ 
+
+Reversal Example:
+
+
+Both the Credit Purchase and Credit Rev Purchase say Approved, Kroger has released the funds back to the Customer's Card and the card should be attempted again, questions should be refered to Customer's Bank.
+
+Credit Purchase says Approved, but Credit Rev Purchase says Declined, Reversal did not go through and transaction should be rung as cash.
+
+If only a Purchase is showing, and there is no matching Reversal showing transaction should be rang as cash.
+
+ 
+
+Additional Knowledge:
+
+  - Jewelry: How to Research Electronic Transactions in Payment Systems (EPS)
+
+  - Jewelry Launcher Menu
+
+  - Jewelry: Troubleshooting POS Register
+
+  - Jewelry: MX915 PIN pad Troubleshooting
+
+ 
+
+  - Note: Verify the last 4 numbers of the card when checking payment systems for approvals.
+
+ 
+
+ 
+
+ 
+
+Required Incident actions and solution information.
+
+Important:  make sure to put the following information into the secure field of the incident and note in your incident that you put the info in there.
+
+  - A screen shot of payment systems showing the transaction information in question.
+
+  - Customer name:
+
+  - Original transaction date:
+
+  - Store number:
+
+  - Transaction number:
+
+  - Transaction amount:
+
+  - Last 4 digits of the card:
+
+  - How you advised the store to complete the transaction:
+
+ 
+
+1. Check payment systems for an approval for the tender in question.
+
+  - See: Jewelry: How to Research Electronic Transactions in Payment Systems (EPS)
+
+- Note: Verify the last 4 numbers of the card when checking payment systems for approvals.
+
+ 
+
+2. If the card was approved, and there is no reversal for the card have the store enter the amount that was approved as cash to complete the transaction.
+
+  - If GemStore was completely frozen resulting in the associate restarting GemStore have the store check the customers history or the days transactions to see if the transaction completed or not.
+
+  - No receipt usually means no transaction was saved in GemStore, but you must verify. If no transaction was saved, re-ring that transaction entering the approval amount as cash.
+
+ 
+
+3. Advise the Associate to fill out an Over Short Log.
+
+ 
+
+4. Verify that you’ve updated your ticket with the required information mentioned above step 1. Once all the required information is gathered escalate the incident to BUS JewelrySalesAudit:
+
+ 
+
+5. If GemStore is not responding restart GemStore or reboot the register.
+
+  - See Jewelry Launcher Menu
+
+  - See Jewelry: Troubleshooting POS Register
+
+ 
+
+6. If you find a problem with the PIN pad itself, further PIN pad troubleshooting will be required.
+
+  - See Jewelry: MX915 PIN pad Troubleshooting
+
+  - If the transaction does not show in payment systems, the card was not charged, and they will need to re-ring the transaction as normal.
+
+ 
+
+Platinum Card PIN pad Lockups:
+Platinum Preferred – Synchrony Bank
+
+Is offline manual authorization allowed? Yes
+
+Platinum preferred cards are the Only cards we will take offline in a lockup situation.
+
+Can a Platinum card transaction be tendered as cash? No
+
+ 
+
+Additional Knowledge:
+
+  - Jewelry: Platinum and Gold Card Basics
+
+  - Jewelry: How to Take a Register Offline for Manual Authorization.
+
+  - Jewelry: How to Research Electronic Transactions in Payment Systems (EPS)
+
+  - Jewelry Launcher Menu
+
+  - Jewelry: Troubleshooting POS Register
+
+  - Jewelry: MX915 PIN pad Troubleshooting
+
+ 
+
+  - Note : Verify the last 4 numbers of the card when checking payment systems for approvals. )
+
+ 
+
+ 
+
+Required Incident actions and solution information.
+
+ 
+
+  - A screen shot of payment systems showing the transaction information in question.
+
+  - Customer name:
+
+  - Original transaction date:
+
+  - Store number:
+
+  - Transaction number:
+
+  - Transaction amount:
+
+  - Last 4 digits of the card:
+
+  - How you advised the store to complete the transaction:
+
+ 
+
+1. Check payment systems for an approval for the transaction in question.
+
+ 
+
+2. If there is an approval and no reversal showing for this transaction
+
+  - Take the register offline to complete the transaction to the Platinum card do not tender as cash.
+
+  - See: Jewelry: How to Take a Register Offline for Manual Authorization.
+
+Note: If a Platinum Card transaction is re-tendered as cash in a lockup situation there will be no matching transaction in GemStore for the charge, and the original approval will fall off the card.
+
+ 
+
+3. They will be prompted for an Approval Code. When prompted give the store the approval code showing in payment systems for that approval.
+
+ 
+
+4. When the transaction is complete put the register back on-line.
+
+ 
+
+5. Verify that you’ve updated your ticket with the required information mentioned above step 1. Once all the required information is gathered escalate the incident to
+    BUS -JewelrySalesAudit:
+
+ 
+
+6. If GemStore is not responding restart GemStore or reboot the register.
+
+  -  See Jewelry Launcher Menu
+
+  -  See Jewelry: Troubleshooting POS Register
+
+ 
+
+7. If you find a problem with the PIN pad itself, further PIN pad troubleshooting will be required.
+
+  - See Jewelry: MX915 PIN pad Troubleshooting
+
+ 
+
+ 
+
+ 
+
+Gift Card PIN pad Lockups
+Additional Knowledge:
+
+  - Jewelry: How to Research Electronic Transactions in Payment Systems (EPS)
+
+  - Jewelry Launcher Menu
+
+  - Jewelry: Troubleshooting POS Register
+
+  - Jewelry: MX915 PIN pad Troubleshooting
+
+ 
+
+  - Note : Verify the entire gift card number of the card when checking payment systems for approvals. 
+
+ 
+
+Required Incident actions and solution information.
+
+ 
+
+  - A screen shot of payment systems showing the transaction information in question.
+
+ 
+
+  - Entire Gift Card Number
+
+ 
+
+1. Check Payment systems to see if the funds were removed from the card and verify there are no reversals.
+
+ 
+
+Yes - Complete the transaction with the same steps in the previous section titled:
+
+          Visa, MC, American Express, Discover or Progressive Card PIN pad Lockups:
+
+  - The entire gift card number is needed rather than just the last 4.
+
+  - The store should keep the gift card if possible.
+
+ 
+
+No - Re-enter the card normally (swipe or hand key)
+
+ 
+
+  - Note: A screen shot of what is showing in payment systems for this transaction must be attached or copied and pasted into the ticket for all card types
+
+  - Note: For questions if funds were removed from the gift card contact Sales Audit or KCRC Gift card recovery 1-866-544-8062.
+
+ 
+
+2. If GemStore is not responding restart GemStore or reboot the register.
+
+  - See  Jewelry Launcher Menu
+
+  - See  Jewelry: Troubleshooting POS Register
+
+ 
+
+3. If you find a problem with the PIN pad itself, further PIN pad troubleshooting will be required.
+
+  - See Jewelry: MX915 Pinpad Troubleshooting Specific Errors and Issues

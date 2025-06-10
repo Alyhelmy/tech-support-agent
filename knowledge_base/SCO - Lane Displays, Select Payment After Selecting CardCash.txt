@@ -1,0 +1,29 @@
+SCO - Lane Displays, "Select Payment" After Selecting Card/Cash  
+**Document ID:** KB0012277  
+**Views:** 1  
+
+---
+
+**Description:**  
+Customer selects Cash/Card then sees the message:  
+**"Select Your Method of Payment"** with a green arrow pointing down.  
+Only option available is "Go Back".
+
+---
+
+**Cause:**  
+Software Bug
+
+---
+
+**Resolution:**
+
+1. **Transfer the Order to the Pay Station** to complete the transaction.
+2. If issue is occurring on more than one transaction:
+   - Send a **9-load** to the affected SCO lane.
+   - Retest the transaction.
+3. If issue remains:
+   - Get with **Frontend Tier 2** to escalate to **APP-POS (Priority 3)**.
+   - Attach **extract data** for escalation.
+
+4. If resolved, close the ticket.

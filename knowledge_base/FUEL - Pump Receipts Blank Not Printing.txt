@@ -1,0 +1,14 @@
+FUEL - Pump Receipts Blank / Not Printing *FZ*
+KB0011937  
+
+
+Description
+Receipts at the pumps are printing out blank.
+
+ 
+Resolution
+1. For a single pump not printing receipts or specific pumps having a recurring issue, follow normal pump troubleshooting. Verify if the receipts are jamming and that the receipt tape been changed. Have the site power cycle the pump. For specific pumps having a recurring issue dispatch pump tech per KSC Hardware Dispatching For All Pillars.
+
+2. If multiple pumps are not printing receipts or printing blank receipts, verify if the site is able to reprint the pump receipts at the POS with the Reprint Receipt option. If they are not, follow troubleshooting in linked Reprint Receipt entry.
+
+3. If the receipts print successfully at the POS, then reboot the Panther. If they are still not printing after a Panther Reboot, run FUELZIP and escalate to APP-FUEL, Sev3 since they can print them at the POS.

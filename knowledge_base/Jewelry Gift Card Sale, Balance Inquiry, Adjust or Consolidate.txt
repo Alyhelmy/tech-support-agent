@@ -1,0 +1,137 @@
+Jewelry: Gift Card Sale, Balance Inquiry, Adjust or Consolidate
+KB0011858 
+===============================================================
+
+SYNOPSIS:
+---------
+Covers:
+✔ Gift card sale or reload
+✔ Gift card balance inquiry
+✔ Adjusting a gift card value
+✔ Consolidating multiple gift cards
+✔ Gift card refunds
+
+---------------------------------------------------------------
+GIFT CARD TYPES:
+----------------
+New FMJ Cards: Begin with 603953  
+Old FMJ Cards: Begin with 600649 (still valid for purchases but NOT reloadable)
+
+✔ Max 6 gift cards per transaction online (FMJewelers sites)
+✔ Progressive/Direct Access accounts CANNOT be used to buy gift cards
+
+---------------------------------------------------------------
+LIMITS & SECURITY RESTRICTIONS:
+-------------------------------
+- Max $1,000 per card
+- Max $2,000 total activity (load + spend) per 24 hrs
+- Max 2 balance inquiries allowed on an empty/unused card — more than that will disable (brick) the card
+
+Note: Jewelry stores **cannot** load Enterprise Gift Cards (but they can accept them as tender)
+
+---------------------------------------------------------------
+SELL or RELOAD A GIFT CARD:
+---------------------------
+❌ DO NOT hand-key card when loading (this disables the card)
+
+1️⃣ Attach customer (or press Cancel to skip)
+2️⃣ Press "Gift Card Activate Reload"
+3️⃣ Swipe card through PIN pad (NOT scan)
+4️⃣ Press "RELOAD" → Select or enter amount
+5️⃣ Total and tender as usual
+
+💡 If card only loads $1.00 → Store is scanning, not swiping
+
+---------------------------------------------------------------
+EXPIRED / USED GIFT CARDS:
+---------------------------
+✔ Once balance reaches $0, card is expired and CANNOT be reloaded
+✔ No expiration by date — only balance determines expiration
+
+---------------------------------------------------------------
+GIFT CARD PROCESSING ERROR? CHECK:
+----------------------------------
+✅ Not trying to load > $1,000
+✅ Card is swiped, not scanned or hand-keyed
+✅ Card hasn’t had >2 inquiries before loading
+✅ Using FMJ card (not Enterprise)
+✅ Try a brand-new card if needed
+
+❗ Return Code 8334 = Card flagged as FRAUDULENT (“bricked”)
+
+💡 Bricked cards go in DSR envelope, NOT trash. Contact Inventory Control for replacements.
+
+---------------------------------------------------------------
+GIFT CARD REFUNDS:
+------------------
+🚫 Gift cards are generally **non-refundable**
+
+✅ EXCEPTION: Manager-approved, rare customer service case
+→ Use “Gift Card Balance Adjustment” per POS Gemstore Guide
+→ Tender as “Corporate Check”
+
+📩 Email ticket to: **BUS-JewelrySalesAudit**
+Include:
+- Customer Name
+- Original Transaction Date
+- Full Card #
+- Card Banner (FMJ, SM, etc.)
+- Dollar Amount
+- Store Number
+
+📢 Tell customer refund may take up to **2 business days**
+Store MUST keep the gift card until balance is confirmed $0.00  
+They’ll be notified via email once it's complete
+
+< $10? → May be “cashed out” at store’s discretion
+
+---------------------------------------------------------------
+BALANCE INQUIRY:
+----------------
+❗ Max 2 balance checks on blank cards (more = card bricked)
+
+1️⃣ Attach customer or press Cancel
+2️⃣ Press “Gift Card Activate Reload”
+3️⃣ Swipe card through PIN pad
+
+---------------------------------------------------------------
+INCORRECT BALANCE?
+-------------------
+Call **KCRC Gift Card Dept**: 866-544-8062  
+They can check history and re-add funds if applicable
+
+---------------------------------------------------------------
+ADJUST GIFT CARD VALUE:
+------------------------
+1️⃣ Press “Services” → “Gift Card Bal. Adj”
+2️⃣ Swipe gift card on PIN pad
+3️⃣ Enter new lower balance
+4️⃣ Refund the difference to the customer
+
+---------------------------------------------------------------
+CONSOLIDATE MULTIPLE CARDS:
+----------------------------
+1️⃣ Press “Services” → “Gift Card Consolidation”
+2️⃣ Swipe EACH card to consolidate
+3️⃣ Then swipe FINAL card to add total balance to
+4️⃣ Click "Complete Consolidation"
+
+❗ Pressing ESC = logs out associate → must start over
+
+---------------------------------------------------------------
+ORDERING / REPLACING GIFT CARDS:
+--------------------------------
+✔ Auto-replenish system in place
+✉️ For defective or deactivated cards, contact Inventory Control
+
+📌 Cards with issues → place in DSR, never thrown away
+
+---------------------------------------------------------------
+CONTACTS:
+---------
+✔ Balance Inquiry / History: KCRC – 866-544-8062
+✔ Accounting Issues: BUS-JewelrySalesAudit
+✔ Urgent Accounting: Nicole Woodbury (Backup: Jose Navarro)
+✔ Procedure Issues: BUS-JewelryOps
+✔ Urgent Procedure: Tomi Williams
+✔ Technical: App-Merch-ORE2.0-Jewelry
